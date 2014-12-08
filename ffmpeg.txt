@@ -1,0 +1,1 @@
+C:\Programi\ffmpeg\bin>ffmpeg -y -i "C:\D\ff\The Mating Habits Of The Earthbound Human.mp4" -i "C:\D\ff\1test.srt" -c:v libx264 -preset veryfast -crf 24 -c:a libmp3lame -b:a 128k -c:s srt "C:\D\ff\test.mkv"

@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="source-language">
+    <value>en</value>
+  </resheader>
+  <data name="labelMultiTransFile.Text" xml:space="preserve">
+    <value>Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--&gt;MKV, MKV--&gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>Tab 'Prepakivanje' za brzo prebacivanje h.264 fajlova (MP4 u MKV i obrnuto), ili tab 'Konverzija' za punu konverziju.</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>VTC v0.1.0</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonHelp.Text" xml:space="preserve">
+    <value>Pomoć</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
+    <value>buttonHelp</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonAbout.Text" xml:space="preserve">
+    <value>O programu</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
+    <value>buttonAbout</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
+    <value>labelMultiTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonMultiTransFile.Text" xml:space="preserve">
+    <value>Fajl(ovi) za konverziju</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
+    <value>buttonMultiTransFile</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Name" xml:space="preserve">
+    <value>panelTranscode</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelOutTransFile.Text" xml:space="preserve">
+    <value>Odredišni folder</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
+    <value>labelOutTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelInputTransFile.Text" xml:space="preserve">
+    <value>Putanja do ulaznog fajla</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
+    <value>labelInputTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonOutTransFile.Text" xml:space="preserve">
+    <value>Putanja rezultata</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
+    <value>buttonOutTransFile</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Prebacivanje</value>
+  </data>
+  <data name="tabPage1.ToolTipText" xml:space="preserve">
+    <value>Prebaci H.264, MKV u MP4 ili MP4 u MKV</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonRemoveSubtitle.Text" xml:space="preserve">
+    <value>Ukloni titl</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Name" xml:space="preserve">
+    <value>buttonRemoveSubtitle</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelAddSubtitle.Text" xml:space="preserve">
+    <value>Dodaj SRT titl</value>
+  </data>
+  <data name="&gt;&gt;labelAddSubtitle.Name" xml:space="preserve">
+    <value>labelAddSubtitle</value>
+  </data>
+  <data name="&gt;&gt;labelAddSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAddSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonAddSubtitle.Text" xml:space="preserve">
+    <value>Dodaj titl</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.Name" xml:space="preserve">
+    <value>buttonAddSubtitle</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelInputConv.Text" xml:space="preserve">
+    <value>Prvo izaberite putanju gdje će biti sačuvan fajl. Kliknite dugme ispod ili odvucite 1 fajl na njega. Tek onda izaberite opcije.</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Name" xml:space="preserve">
+    <value>labelInputConv</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelMultiConv.Text" xml:space="preserve">
+    <value>Prvo izaberite opcije, onda ili kliknite, ili prevucite više fajlova na njega--&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Name" xml:space="preserve">
+    <value>labelMultiConv</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxAudioOnly.Text" xml:space="preserve">
+    <value>Samo zvuk</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
+    <value>checkBoxAudioOnly</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Parent" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxVideoOnly.Text" xml:space="preserve">
+    <value>Samo slika</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Name" xml:space="preserve">
+    <value>checkBoxVideoOnly</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Parent" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBoxVideoOrAudio.Text" xml:space="preserve">
+    <value>Iščupaj zvuk ili sliku iz filma</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Name" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelPreset.Text" xml:space="preserve">
+    <value>Preset kodovanja</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
+    <value>labelPreset</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelQuality.Text" xml:space="preserve">
+    <value>Faktor kvaliteta</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Name" xml:space="preserve">
+    <value>labelQuality</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelAudio.Text" xml:space="preserve">
+    <value>Kvalitet zvuka</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.Name" xml:space="preserve">
+    <value>labelAudio</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxPreset.Items" xml:space="preserve">
+    <value>ultrafast</value>
+  </data>
+  <data name="comboBoxPreset.Items1" xml:space="preserve">
+    <value>superfast</value>
+  </data>
+  <data name="comboBoxPreset.Items2" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
+  <data name="comboBoxPreset.Items3" xml:space="preserve">
+    <value>faster</value>
+  </data>
+  <data name="comboBoxPreset.Items4" xml:space="preserve">
+    <value>fast</value>
+  </data>
+  <data name="comboBoxPreset.Items5" xml:space="preserve">
+    <value>medium</value>
+  </data>
+  <data name="comboBoxPreset.Items6" xml:space="preserve">
+    <value>slow</value>
+  </data>
+  <data name="comboBoxPreset.Items7" xml:space="preserve">
+    <value>slower</value>
+  </data>
+  <data name="comboBoxPreset.Text" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Name" xml:space="preserve">
+    <value>comboBoxPreset</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items" xml:space="preserve">
+    <value>64k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items1" xml:space="preserve">
+    <value>96k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items2" xml:space="preserve">
+    <value>128k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items3" xml:space="preserve">
+    <value>160k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items4" xml:space="preserve">
+    <value>192k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items5" xml:space="preserve">
+    <value>224k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items6" xml:space="preserve">
+    <value>256k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items7" xml:space="preserve">
+    <value>320k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Text" xml:space="preserve">
+    <value>128k</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Name" xml:space="preserve">
+    <value>comboBoxAudioBitRate</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxQuality.Items" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="comboBoxQuality.Items1" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="comboBoxQuality.Items2" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="comboBoxQuality.Items3" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="comboBoxQuality.Items4" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="comboBoxQuality.Items5" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="comboBoxQuality.Items6" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="comboBoxQuality.Items7" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="comboBoxQuality.Items8" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="comboBoxQuality.Text" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Name" xml:space="preserve">
+    <value>comboBoxQuality</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBoxOptions.Text" xml:space="preserve">
+    <value>Opcije</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Name" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radioButtonCopyAudio.Text" xml:space="preserve">
+    <value>original</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
+    <value>radioButtonCopyAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonMP3.Text" xml:space="preserve">
+    <value>MP3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Name" xml:space="preserve">
+    <value>radioButtonMP3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButtonAAC.Text" xml:space="preserve">
+    <value>AAC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Name" xml:space="preserve">
+    <value>radioButtonAAC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxAudio.Text" xml:space="preserve">
+    <value>Audio kodek</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Name" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="radioButtonCopyVideo.Text" xml:space="preserve">
+    <value>original</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
+    <value>radioButtonCopyVideo</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonMP4.Text" xml:space="preserve">
+    <value>MP4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Name" xml:space="preserve">
+    <value>radioButtonMP4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButtonMKV.Text" xml:space="preserve">
+    <value>MKV</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Name" xml:space="preserve">
+    <value>radioButtonMKV</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxContainer.Text" xml:space="preserve">
+    <value>Pakovanje slike</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Name" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelTextBoxConv.Text" xml:space="preserve">
+    <value>ffmpeg koju dodajem na listu desno (može se ručno popraviti prije dodavanja):</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Name" xml:space="preserve">
+    <value>labelTextBoxConv</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelOutConvFile.Text" xml:space="preserve">
+    <value>Putanja do odredišnog fajla</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Name" xml:space="preserve">
+    <value>labelOutConvFile</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelInputConvFile.Text" xml:space="preserve">
+    <value>Putanja do originalnog fajla</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Name" xml:space="preserve">
+    <value>labelInputConvFile</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonAddBatchConv.Text" xml:space="preserve">
+    <value>Dodaj na listu--&gt;</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Name" xml:space="preserve">
+    <value>buttonAddBatchConv</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonMultiConvFiles.Text" xml:space="preserve">
+    <value>Više ulaznih fajlova</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.Name" xml:space="preserve">
+    <value>buttonMultiConvFiles</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="richTextBoxConv.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Name" xml:space="preserve">
+    <value>richTextBoxConv</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Parent" xml:space="preserve">
+    <value>panelConvert</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Name" xml:space="preserve">
+    <value>panelConvert</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonOutConvFile.Text" xml:space="preserve">
+    <value>Putanja rezultata*</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Name" xml:space="preserve">
+    <value>buttonOutConvFile</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="buttonInputConvFile.Text" xml:space="preserve">
+    <value>Orig. fajl</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Name" xml:space="preserve">
+    <value>buttonInputConvFile</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Puna konverzija</value>
+  </data>
+  <data name="tabPage2.ToolTipText" xml:space="preserve">
+    <value>Konverzija (puno prekodovanje) iz raznih ulaznih formata</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonUnselectAll.Text" xml:space="preserve">
+    <value>Deselektuj</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Name" xml:space="preserve">
+    <value>buttonUnselectAll</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonSellectAllQueue.Text" xml:space="preserve">
+    <value>Selektuj sve</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Name" xml:space="preserve">
+    <value>buttonSellectAllQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="check_cell.HeaderText" xml:space="preserve">
+    <value>Sel.</value>
+  </data>
+  <data name="no_cell.HeaderText" xml:space="preserve">
+    <value>Br.</value>
+  </data>
+  <data name="task_cell.HeaderText" xml:space="preserve">
+    <value>komanda</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Name" xml:space="preserve">
+    <value>dataGridViewBatch</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonDeleteQueue.Text" xml:space="preserve">
+    <value>Ukloni</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Name" xml:space="preserve">
+    <value>buttonDeleteQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonCancelBatch.Text" xml:space="preserve">
+    <value>Prekini</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Name" xml:space="preserve">
+    <value>buttonCancelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonStartQueue.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Name" xml:space="preserve">
+    <value>buttonStartQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Name" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Lista zadataka</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Video konvertor &amp; transkoder</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
+    <value>toolStripProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_cell.Name" xml:space="preserve">
+    <value>check_cell</value>
+  </data>
+  <data name="&gt;&gt;check_cell.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;no_cell.Name" xml:space="preserve">
+    <value>no_cell</value>
+  </data>
+  <data name="&gt;&gt;no_cell.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;task_cell.Name" xml:space="preserve">
+    <value>task_cell</value>
+  </data>
+  <data name="&gt;&gt;task_cell.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerBatch.Name" xml:space="preserve">
+    <value>timerBatch</value>
+  </data>
+  <data name="&gt;&gt;timerBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

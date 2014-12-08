@@ -1,0 +1,1413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="sr-Latn" original="VCT/PROPERTIES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1132.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VCT/PROPERTIES/RESOURCES.RESX" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="sr-Latn" original="VCT/FORM1.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1132.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VCT/FORM1.RESX">
+        <trans-unit id="labelMultiTransFile.Text" translate="yes" xml:space="preserve">
+          <source>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</source>
+          <target state="signed-off">Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</target>
+        </trans-unit>
+        <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
+          <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
+          <target state="signed-off">Tab 'Prepakivanje' za brzo prebacivanje h.264 fajlova (MP4 u MKV i obrnuto), ili tab 'Konverzija' za punu konverziju.</target>
+        </trans-unit>
+        <trans-unit id="statusStrip1.Text" translate="no" xml:space="preserve">
+          <source>VTC v0.1.0</source>
+          <target state="signed-off">VTC v0.1.0</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;statusStrip1.Name" translate="no" xml:space="preserve">
+          <source>statusStrip1</source>
+          <target state="signed-off">statusStrip1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;statusStrip1.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;statusStrip1.Parent" translate="no" xml:space="preserve">
+          <source>$this</source>
+          <target state="signed-off">$this</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;statusStrip1.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="buttonHelp.Text" translate="yes" xml:space="preserve">
+          <source>Help</source>
+          <target state="signed-off">Pomoć</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonHelp.Name" translate="no" xml:space="preserve">
+          <source>buttonHelp</source>
+          <target state="signed-off">buttonHelp</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonHelp.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonHelp.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonHelp.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="buttonAbout.Text" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="signed-off">O programu</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAbout.Name" translate="no" xml:space="preserve">
+          <source>buttonAbout</source>
+          <target state="signed-off">buttonAbout</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAbout.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAbout.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAbout.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiTransFile.Name" translate="no" xml:space="preserve">
+          <source>labelMultiTransFile</source>
+          <target state="signed-off">labelMultiTransFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiTransFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiTransFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiTransFile.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="buttonMultiTransFile.Text" translate="yes" xml:space="preserve">
+          <source>Input File(s) to transcode</source>
+          <target state="signed-off">Fajl(ovi) za konverziju</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiTransFile.Name" translate="no" xml:space="preserve">
+          <source>buttonMultiTransFile</source>
+          <target state="signed-off">buttonMultiTransFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiTransFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiTransFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiTransFile.ZOrder" translate="no" xml:space="preserve">
+          <source>3</source>
+          <target state="signed-off">3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelTranscode.Name" translate="no" xml:space="preserve">
+          <source>panelTranscode</source>
+          <target state="signed-off">panelTranscode</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelTranscode.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelTranscode.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelTranscode.ZOrder" translate="no" xml:space="preserve">
+          <source>4</source>
+          <target state="signed-off">4</target>
+        </trans-unit>
+        <trans-unit id="labelOutTransFile.Text" translate="yes" xml:space="preserve">
+          <source>Destination file path</source>
+          <target state="signed-off">Odredišni folder</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutTransFile.Name" translate="no" xml:space="preserve">
+          <source>labelOutTransFile</source>
+          <target state="signed-off">labelOutTransFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutTransFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutTransFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutTransFile.ZOrder" translate="no" xml:space="preserve">
+          <source>5</source>
+          <target state="signed-off">5</target>
+        </trans-unit>
+        <trans-unit id="labelInputTransFile.Text" translate="yes" xml:space="preserve">
+          <source>Source file path</source>
+          <target state="signed-off">Putanja do ulaznog fajla</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputTransFile.Name" translate="no" xml:space="preserve">
+          <source>labelInputTransFile</source>
+          <target state="signed-off">labelInputTransFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputTransFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputTransFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputTransFile.ZOrder" translate="no" xml:space="preserve">
+          <source>6</source>
+          <target state="signed-off">6</target>
+        </trans-unit>
+        <trans-unit id="buttonOutTransFile.Text" translate="yes" xml:space="preserve">
+          <source>Output File(s) Path</source>
+          <target state="signed-off">Putanja rezultata</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutTransFile.Name" translate="no" xml:space="preserve">
+          <source>buttonOutTransFile</source>
+          <target state="signed-off">buttonOutTransFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutTransFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutTransFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutTransFile.ZOrder" translate="no" xml:space="preserve">
+          <source>7</source>
+          <target state="signed-off">7</target>
+        </trans-unit>
+        <trans-unit id="tabPage1.Text" translate="yes" xml:space="preserve">
+          <source>Transcode</source>
+          <target state="signed-off">Prebacivanje</target>
+        </trans-unit>
+        <trans-unit id="tabPage1.ToolTipText" translate="yes" xml:space="preserve">
+          <source>Transcode h.264 containers, MKV to MP4 or, MP4 to MKV</source>
+          <target state="signed-off">Prebaci H.264, MKV u MP4 ili MP4 u MKV</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage1.Name" translate="no" xml:space="preserve">
+          <source>tabPage1</source>
+          <target state="signed-off">tabPage1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage1.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage1.Parent" translate="no" xml:space="preserve">
+          <source>tabControl1</source>
+          <target state="signed-off">tabControl1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage1.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="buttonRemoveSubtitle.Text" translate="yes" xml:space="preserve">
+          <source>Remove subtitle</source>
+          <target state="signed-off">Ukloni titl</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.Name" translate="no" xml:space="preserve">
+          <source>buttonRemoveSubtitle</source>
+          <target state="signed-off">buttonRemoveSubtitle</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="labelAddSubtitle.Text" translate="yes" xml:space="preserve">
+          <source>Select to add srt subtitle</source>
+          <target state="signed-off">Dodaj SRT titl</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.Name" translate="no" xml:space="preserve">
+          <source>labelAddSubtitle</source>
+          <target state="signed-off">labelAddSubtitle</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="buttonAddSubtitle.Text" translate="yes" xml:space="preserve">
+          <source>Add Subtitle</source>
+          <target state="signed-off">Dodaj titl</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.Name" translate="no" xml:space="preserve">
+          <source>buttonAddSubtitle</source>
+          <target state="signed-off">buttonAddSubtitle</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="labelInputConv.Text" translate="yes" xml:space="preserve">
+          <source>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</source>
+          <target state="signed-off">Prvo izaberite putanju gdje će biti sačuvan fajl. Kliknite dugme ispod ili odvucite 1 fajl na njega. Tek onda izaberite opcije.</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConv.Name" translate="no" xml:space="preserve">
+          <source>labelInputConv</source>
+          <target state="signed-off">labelInputConv</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConv.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConv.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConv.ZOrder" translate="no" xml:space="preserve">
+          <source>3</source>
+          <target state="signed-off">3</target>
+        </trans-unit>
+        <trans-unit id="labelMultiConv.Text" translate="yes" xml:space="preserve">
+          <source>Choose options first, then click, or drop many files on the button --%%amp;gt;</source>
+          <target state="signed-off">Prvo izaberite opcije, onda ili kliknite, ili prevucite više fajlova na njega--%%amp;gt;</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.Name" translate="no" xml:space="preserve">
+          <source>labelMultiConv</source>
+          <target state="signed-off">labelMultiConv</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.ZOrder" translate="no" xml:space="preserve">
+          <source>4</source>
+          <target state="signed-off">4</target>
+        </trans-unit>
+        <trans-unit id="checkBoxAudioOnly.Text" translate="yes" xml:space="preserve">
+          <source>Audio Only</source>
+          <target state="signed-off">Samo zvuk</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxAudioOnly.Name" translate="no" xml:space="preserve">
+          <source>checkBoxAudioOnly</source>
+          <target state="signed-off">checkBoxAudioOnly</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxAudioOnly.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxAudioOnly.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxVideoOrAudio</source>
+          <target state="signed-off">groupBoxVideoOrAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxAudioOnly.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="checkBoxVideoOnly.Text" translate="yes" xml:space="preserve">
+          <source>Video Only</source>
+          <target state="signed-off">Samo slika</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxVideoOnly.Name" translate="no" xml:space="preserve">
+          <source>checkBoxVideoOnly</source>
+          <target state="signed-off">checkBoxVideoOnly</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxVideoOnly.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxVideoOnly.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxVideoOrAudio</source>
+          <target state="signed-off">groupBoxVideoOrAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBoxVideoOnly.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="groupBoxVideoOrAudio.Text" translate="yes" xml:space="preserve">
+          <source>Extract Video or Audio</source>
+          <target state="signed-off">Iščupaj zvuk ili sliku iz filma</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.Name" translate="no" xml:space="preserve">
+          <source>groupBoxVideoOrAudio</source>
+          <target state="signed-off">groupBoxVideoOrAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.ZOrder" translate="no" xml:space="preserve">
+          <source>5</source>
+          <target state="signed-off">5</target>
+        </trans-unit>
+        <trans-unit id="labelPreset.Text" translate="yes" xml:space="preserve">
+          <source>Encoding preset</source>
+          <target state="signed-off">Preset kodovanja</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelPreset.Name" translate="no" xml:space="preserve">
+          <source>labelPreset</source>
+          <target state="signed-off">labelPreset</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelPreset.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelPreset.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelPreset.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="labelQuality.Text" translate="yes" xml:space="preserve">
+          <source>Quality factor</source>
+          <target state="signed-off">Faktor kvaliteta</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelQuality.Name" translate="no" xml:space="preserve">
+          <source>labelQuality</source>
+          <target state="signed-off">labelQuality</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelQuality.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelQuality.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelQuality.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="labelAudio.Text" translate="yes" xml:space="preserve">
+          <source>Audio bitrate</source>
+          <target state="signed-off">Kvalitet zvuka</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAudio.Name" translate="no" xml:space="preserve">
+          <source>labelAudio</source>
+          <target state="signed-off">labelAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAudio.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAudio.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelAudio.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items" translate="no" xml:space="preserve">
+          <source>ultrafast</source>
+          <target state="signed-off">ultrafast</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items1" translate="no" xml:space="preserve">
+          <source>superfast</source>
+          <target state="signed-off">superfast</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items2" translate="no" xml:space="preserve">
+          <source>veryfast</source>
+          <target state="signed-off">veryfast</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items3" translate="no" xml:space="preserve">
+          <source>faster</source>
+          <target state="signed-off">faster</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items4" translate="no" xml:space="preserve">
+          <source>fast</source>
+          <target state="signed-off">fast</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items5" translate="no" xml:space="preserve">
+          <source>medium</source>
+          <target state="signed-off">medium</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items6" translate="no" xml:space="preserve">
+          <source>slow</source>
+          <target state="signed-off">slow</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Items7" translate="no" xml:space="preserve">
+          <source>slower</source>
+          <target state="signed-off">slower</target>
+        </trans-unit>
+        <trans-unit id="comboBoxPreset.Text" translate="no" xml:space="preserve">
+          <source>veryfast</source>
+          <target state="signed-off">veryfast</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxPreset.Name" translate="no" xml:space="preserve">
+          <source>comboBoxPreset</source>
+          <target state="signed-off">comboBoxPreset</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxPreset.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxPreset.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxPreset.ZOrder" translate="no" xml:space="preserve">
+          <source>3</source>
+          <target state="signed-off">3</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items" translate="no" xml:space="preserve">
+          <source>64k</source>
+          <target state="signed-off">64k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items1" translate="no" xml:space="preserve">
+          <source>96k</source>
+          <target state="signed-off">96k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items2" translate="no" xml:space="preserve">
+          <source>128k</source>
+          <target state="signed-off">128k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items3" translate="no" xml:space="preserve">
+          <source>160k</source>
+          <target state="signed-off">160k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items4" translate="no" xml:space="preserve">
+          <source>192k</source>
+          <target state="signed-off">192k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items5" translate="no" xml:space="preserve">
+          <source>224k</source>
+          <target state="signed-off">224k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items6" translate="no" xml:space="preserve">
+          <source>256k</source>
+          <target state="signed-off">256k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Items7" translate="no" xml:space="preserve">
+          <source>320k</source>
+          <target state="signed-off">320k</target>
+        </trans-unit>
+        <trans-unit id="comboBoxAudioBitRate.Text" translate="no" xml:space="preserve">
+          <source>128k</source>
+          <target state="signed-off">128k</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxAudioBitRate.Name" translate="no" xml:space="preserve">
+          <source>comboBoxAudioBitRate</source>
+          <target state="signed-off">comboBoxAudioBitRate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxAudioBitRate.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxAudioBitRate.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxAudioBitRate.ZOrder" translate="no" xml:space="preserve">
+          <source>4</source>
+          <target state="signed-off">4</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items" translate="no" xml:space="preserve">
+          <source>18</source>
+          <target state="signed-off">18</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items1" translate="no" xml:space="preserve">
+          <source>19</source>
+          <target state="signed-off">19</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items2" translate="no" xml:space="preserve">
+          <source>20</source>
+          <target state="signed-off">20</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items3" translate="no" xml:space="preserve">
+          <source>21</source>
+          <target state="signed-off">21</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items4" translate="no" xml:space="preserve">
+          <source>22</source>
+          <target state="signed-off">22</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items5" translate="no" xml:space="preserve">
+          <source>23</source>
+          <target state="signed-off">23</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items6" translate="no" xml:space="preserve">
+          <source>24</source>
+          <target state="signed-off">24</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items7" translate="no" xml:space="preserve">
+          <source>25</source>
+          <target state="signed-off">25</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Items8" translate="no" xml:space="preserve">
+          <source>26</source>
+          <target state="signed-off">26</target>
+        </trans-unit>
+        <trans-unit id="comboBoxQuality.Text" translate="no" xml:space="preserve">
+          <source>23</source>
+          <target state="signed-off">23</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxQuality.Name" translate="no" xml:space="preserve">
+          <source>comboBoxQuality</source>
+          <target state="signed-off">comboBoxQuality</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxQuality.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxQuality.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;comboBoxQuality.ZOrder" translate="no" xml:space="preserve">
+          <source>5</source>
+          <target state="signed-off">5</target>
+        </trans-unit>
+        <trans-unit id="groupBoxOptions.Text" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="signed-off">Opcije</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.Name" translate="no" xml:space="preserve">
+          <source>groupBoxOptions</source>
+          <target state="signed-off">groupBoxOptions</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.ZOrder" translate="no" xml:space="preserve">
+          <source>6</source>
+          <target state="signed-off">6</target>
+        </trans-unit>
+        <trans-unit id="radioButtonCopyAudio.Text" translate="yes" xml:space="preserve">
+          <source>copy</source>
+          <target state="signed-off">original</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyAudio.Name" translate="no" xml:space="preserve">
+          <source>radioButtonCopyAudio</source>
+          <target state="signed-off">radioButtonCopyAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyAudio.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyAudio.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxAudio</source>
+          <target state="signed-off">groupBoxAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyAudio.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="radioButtonMP3.Text" translate="no" xml:space="preserve">
+          <source>MP3</source>
+          <target state="signed-off">MP3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP3.Name" translate="no" xml:space="preserve">
+          <source>radioButtonMP3</source>
+          <target state="signed-off">radioButtonMP3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP3.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP3.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxAudio</source>
+          <target state="signed-off">groupBoxAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP3.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="radioButtonAAC.Text" translate="no" xml:space="preserve">
+          <source>AAC</source>
+          <target state="signed-off">AAC</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonAAC.Name" translate="no" xml:space="preserve">
+          <source>radioButtonAAC</source>
+          <target state="signed-off">radioButtonAAC</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonAAC.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonAAC.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxAudio</source>
+          <target state="signed-off">groupBoxAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonAAC.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="groupBoxAudio.Text" translate="yes" xml:space="preserve">
+          <source>Audio Codec</source>
+          <target state="signed-off">Audio kodek</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.Name" translate="no" xml:space="preserve">
+          <source>groupBoxAudio</source>
+          <target state="signed-off">groupBoxAudio</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.ZOrder" translate="no" xml:space="preserve">
+          <source>7</source>
+          <target state="signed-off">7</target>
+        </trans-unit>
+        <trans-unit id="radioButtonCopyVideo.Text" translate="yes" xml:space="preserve">
+          <source>copy</source>
+          <target state="signed-off">original</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyVideo.Name" translate="no" xml:space="preserve">
+          <source>radioButtonCopyVideo</source>
+          <target state="signed-off">radioButtonCopyVideo</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyVideo.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyVideo.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxContainer</source>
+          <target state="signed-off">groupBoxContainer</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyVideo.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="radioButtonMP4.Text" translate="yes" xml:space="preserve">
+          <source>MP4</source>
+          <target state="signed-off">MP4</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP4.Name" translate="yes" xml:space="preserve">
+          <source>radioButtonMP4</source>
+          <target state="signed-off">radioButtonMP4</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP4.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP4.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxContainer</source>
+          <target state="signed-off">groupBoxContainer</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMP4.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="radioButtonMKV.Text" translate="yes" xml:space="preserve">
+          <source>MKV</source>
+          <target state="signed-off">MKV</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMKV.Name" translate="no" xml:space="preserve">
+          <source>radioButtonMKV</source>
+          <target state="signed-off">radioButtonMKV</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMKV.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMKV.Parent" translate="no" xml:space="preserve">
+          <source>groupBoxContainer</source>
+          <target state="signed-off">groupBoxContainer</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;radioButtonMKV.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="groupBoxContainer.Text" translate="yes" xml:space="preserve">
+          <source>Video Container</source>
+          <target state="signed-off">Pakovanje slike</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.Name" translate="no" xml:space="preserve">
+          <source>groupBoxContainer</source>
+          <target state="signed-off">groupBoxContainer</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.ZOrder" translate="no" xml:space="preserve">
+          <source>8</source>
+          <target state="signed-off">8</target>
+        </trans-unit>
+        <trans-unit id="labelTextBoxConv.Text" translate="yes" xml:space="preserve">
+          <source>ffmpeg command to be added to the list (you can edit it before clicking Add):</source>
+          <target state="signed-off">ffmpeg koju dodajem na listu desno (može se ručno popraviti prije dodavanja):</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.Name" translate="no" xml:space="preserve">
+          <source>labelTextBoxConv</source>
+          <target state="signed-off">labelTextBoxConv</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.ZOrder" translate="no" xml:space="preserve">
+          <source>9</source>
+          <target state="signed-off">9</target>
+        </trans-unit>
+        <trans-unit id="labelOutConvFile.Text" translate="yes" xml:space="preserve">
+          <source>Destination file path</source>
+          <target state="signed-off">Putanja do odredišnog fajla</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.Name" translate="no" xml:space="preserve">
+          <source>labelOutConvFile</source>
+          <target state="signed-off">labelOutConvFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.ZOrder" translate="no" xml:space="preserve">
+          <source>10</source>
+          <target state="signed-off">10</target>
+        </trans-unit>
+        <trans-unit id="labelInputConvFile.Text" translate="yes" xml:space="preserve">
+          <source>Source file path</source>
+          <target state="signed-off">Putanja do originalnog fajla</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.Name" translate="no" xml:space="preserve">
+          <source>labelInputConvFile</source>
+          <target state="signed-off">labelInputConvFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.ZOrder" translate="no" xml:space="preserve">
+          <source>11</source>
+          <target state="signed-off">11</target>
+        </trans-unit>
+        <trans-unit id="buttonAddBatchConv.Text" translate="yes" xml:space="preserve">
+          <source>Add To Batch List   --%%amp;gt;</source>
+          <target state="signed-off">Dodaj na listu--%%amp;gt;</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.Name" translate="no" xml:space="preserve">
+          <source>buttonAddBatchConv</source>
+          <target state="signed-off">buttonAddBatchConv</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.ZOrder" translate="no" xml:space="preserve">
+          <source>12</source>
+          <target state="signed-off">12</target>
+        </trans-unit>
+        <trans-unit id="buttonMultiConvFiles.Text" translate="yes" xml:space="preserve">
+          <source>Multiple Input Files</source>
+          <target state="signed-off">Više ulaznih fajlova</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.Name" translate="no" xml:space="preserve">
+          <source>buttonMultiConvFiles</source>
+          <target state="signed-off">buttonMultiConvFiles</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.ZOrder" translate="no" xml:space="preserve">
+          <source>13</source>
+          <target state="signed-off">13</target>
+        </trans-unit>
+        <trans-unit id="richTextBoxConv.Text" translate="no" xml:space="preserve">
+          <source></source>
+          <target state="signed-off"></target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxConv.Name" translate="no" xml:space="preserve">
+          <source>richTextBoxConv</source>
+          <target state="signed-off">richTextBoxConv</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxConv.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxConv.Parent" translate="no" xml:space="preserve">
+          <source>panelConvert</source>
+          <target state="signed-off">panelConvert</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxConv.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelConvert.Name" translate="no" xml:space="preserve">
+          <source>panelConvert</source>
+          <target state="signed-off">panelConvert</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelConvert.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelConvert.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelConvert.ZOrder" translate="no" xml:space="preserve">
+          <source>14</source>
+          <target state="signed-off">14</target>
+        </trans-unit>
+        <trans-unit id="buttonOutConvFile.Text" translate="yes" xml:space="preserve">
+          <source>Output Path*</source>
+          <target state="signed-off">Putanja rezultata*</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.Name" translate="no" xml:space="preserve">
+          <source>buttonOutConvFile</source>
+          <target state="signed-off">buttonOutConvFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.ZOrder" translate="no" xml:space="preserve">
+          <source>15</source>
+          <target state="signed-off">15</target>
+        </trans-unit>
+        <trans-unit id="buttonInputConvFile.Text" translate="yes" xml:space="preserve">
+          <source>Input File</source>
+          <target state="signed-off">Orig. fajl</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.Name" translate="no" xml:space="preserve">
+          <source>buttonInputConvFile</source>
+          <target state="signed-off">buttonInputConvFile</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.Parent" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.ZOrder" translate="no" xml:space="preserve">
+          <source>16</source>
+          <target state="signed-off">16</target>
+        </trans-unit>
+        <trans-unit id="tabPage2.Text" translate="yes" xml:space="preserve">
+          <source>Convert</source>
+          <target state="signed-off">Puna konverzija</target>
+        </trans-unit>
+        <trans-unit id="tabPage2.ToolTipText" translate="yes" xml:space="preserve">
+          <source>Convert (encode) files in different formats</source>
+          <target state="signed-off">Konverzija (puno prekodovanje) iz raznih ulaznih formata</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage2.Name" translate="no" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="signed-off">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage2.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage2.Parent" translate="no" xml:space="preserve">
+          <source>tabControl1</source>
+          <target state="signed-off">tabControl1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage2.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl1.Name" translate="no" xml:space="preserve">
+          <source>tabControl1</source>
+          <target state="signed-off">tabControl1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl1.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl1.Parent" translate="no" xml:space="preserve">
+          <source>$this</source>
+          <target state="signed-off">$this</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl1.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="buttonUnselectAll.Text" translate="yes" xml:space="preserve">
+          <source>Unselect</source>
+          <target state="signed-off">Deselektuj</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonUnselectAll.Name" translate="no" xml:space="preserve">
+          <source>buttonUnselectAll</source>
+          <target state="signed-off">buttonUnselectAll</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonUnselectAll.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonUnselectAll.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonUnselectAll.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="buttonSellectAllQueue.Text" translate="yes" xml:space="preserve">
+          <source>Select all</source>
+          <target state="signed-off">Selektuj sve</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonSellectAllQueue.Name" translate="no" xml:space="preserve">
+          <source>buttonSellectAllQueue</source>
+          <target state="signed-off">buttonSellectAllQueue</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonSellectAllQueue.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonSellectAllQueue.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonSellectAllQueue.ZOrder" translate="no" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="check_cell.HeaderText" translate="yes" xml:space="preserve">
+          <source>Sel.</source>
+          <target state="signed-off">Sel.</target>
+        </trans-unit>
+        <trans-unit id="no_cell.HeaderText" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="signed-off">Br.</target>
+        </trans-unit>
+        <trans-unit id="task_cell.HeaderText" translate="yes" xml:space="preserve">
+          <source>Task</source>
+          <target state="signed-off">komanda</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;dataGridViewBatch.Name" translate="no" xml:space="preserve">
+          <source>dataGridViewBatch</source>
+          <target state="signed-off">dataGridViewBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;dataGridViewBatch.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;dataGridViewBatch.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;dataGridViewBatch.ZOrder" translate="no" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="buttonDeleteQueue.Text" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="signed-off">Ukloni</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonDeleteQueue.Name" translate="no" xml:space="preserve">
+          <source>buttonDeleteQueue</source>
+          <target state="signed-off">buttonDeleteQueue</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonDeleteQueue.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonDeleteQueue.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonDeleteQueue.ZOrder" translate="no" xml:space="preserve">
+          <source>3</source>
+          <target state="signed-off">3</target>
+        </trans-unit>
+        <trans-unit id="buttonCancelBatch.Text" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="signed-off">Prekini</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonCancelBatch.Name" translate="no" xml:space="preserve">
+          <source>buttonCancelBatch</source>
+          <target state="signed-off">buttonCancelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonCancelBatch.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonCancelBatch.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonCancelBatch.ZOrder" translate="no" xml:space="preserve">
+          <source>4</source>
+          <target state="signed-off">4</target>
+        </trans-unit>
+        <trans-unit id="buttonStartQueue.Text" translate="yes" xml:space="preserve">
+          <source>Start</source>
+          <target state="signed-off">Start</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonStartQueue.Name" translate="no" xml:space="preserve">
+          <source>buttonStartQueue</source>
+          <target state="signed-off">buttonStartQueue</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonStartQueue.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonStartQueue.Parent" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;buttonStartQueue.ZOrder" translate="no" xml:space="preserve">
+          <source>5</source>
+          <target state="signed-off">5</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelBatch.Name" translate="no" xml:space="preserve">
+          <source>panelBatch</source>
+          <target state="signed-off">panelBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelBatch.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelBatch.Parent" translate="no" xml:space="preserve">
+          <source>tabPage3</source>
+          <target state="signed-off">tabPage3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;panelBatch.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="tabPage3.Text" translate="yes" xml:space="preserve">
+          <source>Batch list</source>
+          <target state="signed-off">Lista zadataka</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage3.Name" translate="no" xml:space="preserve">
+          <source>tabPage3</source>
+          <target state="signed-off">tabPage3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage3.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage3.Parent" translate="no" xml:space="preserve">
+          <source>tabControl2</source>
+          <target state="signed-off">tabControl2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabPage3.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl2.Name" translate="no" xml:space="preserve">
+          <source>tabControl2</source>
+          <target state="signed-off">tabControl2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl2.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl2.Parent" translate="no" xml:space="preserve">
+          <source>$this</source>
+          <target state="signed-off">$this</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tabControl2.ZOrder" translate="no" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="$this.Text" translate="yes" xml:space="preserve">
+          <source>Video Converter %%amp; Transcoder</source>
+          <target state="signed-off">Video konvertor %%amp; transkoder</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;toolStripStatusLabel1.Name" translate="no" xml:space="preserve">
+          <source>toolStripStatusLabel1</source>
+          <target state="signed-off">toolStripStatusLabel1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;toolStripStatusLabel1.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;toolStripProgressBar1.Name" translate="no" xml:space="preserve">
+          <source>toolStripProgressBar1</source>
+          <target state="signed-off">toolStripProgressBar1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;toolStripProgressBar1.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;check_cell.Name" translate="no" xml:space="preserve">
+          <source>check_cell</source>
+          <target state="signed-off">check_cell</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;check_cell.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;no_cell.Name" translate="no" xml:space="preserve">
+          <source>no_cell</source>
+          <target state="signed-off">no_cell</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;no_cell.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;task_cell.Name" translate="no" xml:space="preserve">
+          <source>task_cell</source>
+          <target state="signed-off">task_cell</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;task_cell.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;timerBatch.Name" translate="no" xml:space="preserve">
+          <source>timerBatch</source>
+          <target state="signed-off">timerBatch</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;timerBatch.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;$this.Name" translate="no" xml:space="preserve">
+          <source>Form1</source>
+          <target state="signed-off">Form1</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;$this.Type" translate="no" xml:space="preserve">
+          <source>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="sr-Latn" original="VCT/ABOUTBOX1.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1132.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VCT/ABOUTBOX1.RESX">
+        <trans-unit id="&amp;gt;&amp;gt;logoPictureBox.Name" translate="yes" xml:space="preserve">
+          <source>logoPictureBox</source>
+          <target state="signed-off">logoPictureBox</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;logoPictureBox.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;logoPictureBox.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;logoPictureBox.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="labelProductName.Text" translate="yes" xml:space="preserve">
+          <source>Video Transcoder and Converter</source>
+          <target state="signed-off">Video Transcoder and Converter</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelProductName.Name" translate="yes" xml:space="preserve">
+          <source>labelProductName</source>
+          <target state="signed-off">labelProductName</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelProductName.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelProductName.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelProductName.ZOrder" translate="yes" xml:space="preserve">
+          <source>1</source>
+          <target state="signed-off">1</target>
+        </trans-unit>
+        <trans-unit id="labelVersion.Text" translate="yes" xml:space="preserve">
+          <source>Version 1.2.0</source>
+          <target state="signed-off">Verzija 1.2.0</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelVersion.Name" translate="yes" xml:space="preserve">
+          <source>labelVersion</source>
+          <target state="signed-off">labelVersion</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelVersion.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelVersion.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelVersion.ZOrder" translate="yes" xml:space="preserve">
+          <source>2</source>
+          <target state="signed-off">2</target>
+        </trans-unit>
+        <trans-unit id="labelCopyright.Text" translate="yes" xml:space="preserve">
+          <source>Copyright Zlatko Babić, 2014</source>
+          <target state="signed-off">Copyright Zlatko Babić, 2014</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCopyright.Name" translate="yes" xml:space="preserve">
+          <source>labelCopyright</source>
+          <target state="signed-off">labelCopyright</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCopyright.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCopyright.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCopyright.ZOrder" translate="yes" xml:space="preserve">
+          <source>3</source>
+          <target state="signed-off">3</target>
+        </trans-unit>
+        <trans-unit id="labelCompanyName.Text" translate="yes" xml:space="preserve">
+          <source>License GPLv3</source>
+          <target state="signed-off">License GPLv3</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCompanyName.Name" translate="yes" xml:space="preserve">
+          <source>labelCompanyName</source>
+          <target state="signed-off">labelCompanyName</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCompanyName.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCompanyName.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;labelCompanyName.ZOrder" translate="yes" xml:space="preserve">
+          <source>4</source>
+          <target state="signed-off">4</target>
+        </trans-unit>
+        <trans-unit id="okButton.Text" translate="yes" xml:space="preserve">
+          <source>%%amp;OK</source>
+          <target state="signed-off">%%amp;OK</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;okButton.Name" translate="yes" xml:space="preserve">
+          <source>okButton</source>
+          <target state="signed-off">okButton</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;okButton.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;okButton.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;okButton.ZOrder" translate="yes" xml:space="preserve">
+          <source>5</source>
+          <target state="signed-off">5</target>
+        </trans-unit>
+        <trans-unit id="richTextBoxDescription.Text" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="signed-off"></target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxDescription.Name" translate="yes" xml:space="preserve">
+          <source>richTextBoxDescription</source>
+          <target state="signed-off">richTextBoxDescription</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxDescription.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxDescription.Parent" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;richTextBoxDescription.ZOrder" translate="yes" xml:space="preserve">
+          <source>6</source>
+          <target state="signed-off">6</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tableLayoutPanel.Name" translate="yes" xml:space="preserve">
+          <source>tableLayoutPanel</source>
+          <target state="signed-off">tableLayoutPanel</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tableLayoutPanel.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tableLayoutPanel.Parent" translate="yes" xml:space="preserve">
+          <source>$this</source>
+          <target state="signed-off">$this</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;tableLayoutPanel.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="signed-off">0</target>
+        </trans-unit>
+        <trans-unit id="$this.Text" translate="yes" xml:space="preserve">
+          <source>About VTC</source>
+          <target state="signed-off">About VTC</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;$this.Name" translate="yes" xml:space="preserve">
+          <source>AboutBoxZ</source>
+          <target state="signed-off">AboutBoxZ</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;$this.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="signed-off">System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
