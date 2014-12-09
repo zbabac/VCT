@@ -117,794 +117,1544 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonInputConvFile.Name" xml:space="preserve">
-    <value>buttonInputConvFile</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items5" xml:space="preserve">
-    <value>224k</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>394, 21</value>
-  </data>
-  <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 42</value>
-  </data>
-  <data name="panelConvert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 422</value>
-  </data>
-  <data name="tabPage2.ToolTipText" xml:space="preserve">
-    <value>Convert (encode) files in different formats</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Text" xml:space="preserve">
-    <value>128k</value>
-  </data>
-  <data name="&gt;&gt;comboBoxAudioBitRate.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelMultiConv.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelInputTransFile.Text" xml:space="preserve">
-    <value>Source file path</value>
-  </data>
-  <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelInputConvFile.Name" xml:space="preserve">
-    <value>labelInputConvFile</value>
-  </data>
-  <data name="radioButtonMP3.Text" xml:space="preserve">
-    <value>MP3</value>
-  </data>
-  <data name="labelTextBoxConv.Text" xml:space="preserve">
-    <value>ffmpeg command to be added to the list (you can edit it before clicking Add):</value>
-  </data>
-  <data name="&gt;&gt;labelInputConv.Name" xml:space="preserve">
-    <value>labelInputConv</value>
-  </data>
-  <data name="comboBoxPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 26</value>
-  </data>
-  <data name="&gt;&gt;checkBoxVideoOnly.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonCopyAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;labelOutConvFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPreset.Parent" xml:space="preserve">
-    <value>groupBoxOptions</value>
-  </data>
-  <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 55</value>
-  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
+  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonCancelBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBoxOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxOptions.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="&gt;&gt;timerBatch.Name" xml:space="preserve">
-    <value>timerBatch</value>
-  </data>
-  <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 139</value>
-  </data>
-  <data name="&gt;&gt;buttonOutTransFile.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="labelPreset.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP3.Parent" xml:space="preserve">
-    <value>groupBoxAudio</value>
-  </data>
-  <data name="groupBoxContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 71</value>
-  </data>
-  <data name="buttonMultiConvFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 44</value>
-  </data>
-  <data name="check_cell.HeaderText" xml:space="preserve">
-    <value>Sel.</value>
-  </data>
-  <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 258</value>
-  </data>
-  <data name="&gt;&gt;labelMultiConv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonInputConvFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="comboBoxQuality.Items4" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 557</value>
-  </data>
-  <data name="checkBoxVideoOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 39</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="richTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 500</value>
-  </data>
-  <data name="labelOutTransFile.Text" xml:space="preserve">
-    <value>Destination file path</value>
-  </data>
-  <data name="&gt;&gt;radioButtonAAC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxVideoOrAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 73</value>
-  </data>
-  <data name="richTextBoxConv.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="panelTranscode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 378</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyAudio.Parent" xml:space="preserve">
-    <value>groupBoxAudio</value>
-  </data>
-  <data name="&gt;&gt;labelMultiConv.Name" xml:space="preserve">
-    <value>labelMultiConv</value>
-  </data>
-  <data name="&gt;&gt;buttonUnselectAll.Name" xml:space="preserve">
-    <value>buttonUnselectAll</value>
-  </data>
-  <data name="&gt;&gt;radioButtonAAC.Parent" xml:space="preserve">
-    <value>groupBoxAudio</value>
-  </data>
-  <data name="&gt;&gt;panelBatch.Parent" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="buttonHelp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>988, 22</value>
-  </data>
-  <data name="labelMultiConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 83</value>
-  </data>
-  <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelAddSubtitle.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;buttonOutTransFile.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;groupBoxContainer.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="comboBoxQuality.Items1" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;radioButtonAAC.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="comboBoxQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="labelOutConvFile.Text" xml:space="preserve">
-    <value>Destination file path</value>
-  </data>
-  <data name="&gt;&gt;task_cell.Name" xml:space="preserve">
-    <value>task_cell</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBatch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAddBatchConv.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="labelTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 404</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="radioButtonCopyAudio.Text" xml:space="preserve">
-    <value>copy</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelTranscode.Name" xml:space="preserve">
-    <value>panelTranscode</value>
-  </data>
-  <data name="checkBoxVideoOnly.Text" xml:space="preserve">
-    <value>Video Only</value>
-  </data>
-  <data name="panelConvert.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBatch.Parent" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;buttonOutConvFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveSubtitle.Name" xml:space="preserve">
-    <value>buttonRemoveSubtitle</value>
-  </data>
-  <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl2</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelQuality.Text" xml:space="preserve">
-    <value>Quality factor</value>
-  </data>
-  <data name="comboBoxQuality.Items" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
-  </data>
-  <data name="groupBoxOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="labelAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 311</value>
-  </data>
-  <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;groupBoxAudio.Name" xml:space="preserve">
-    <value>groupBoxAudio</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonUnselectAll.Text" xml:space="preserve">
-    <value>Unselect</value>
-  </data>
-  <data name="groupBoxAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 249</value>
-  </data>
-  <data name="&gt;&gt;labelQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelOutConvFile.Name" xml:space="preserve">
-    <value>labelOutConvFile</value>
-  </data>
-  <data name="radioButtonMP3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 32</value>
-  </data>
-  <data name="task_cell.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="comboBoxQuality.Items2" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;buttonAddSubtitle.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;labelAddSubtitle.Name" xml:space="preserve">
-    <value>labelAddSubtitle</value>
-  </data>
-  <data name="&gt;&gt;comboBoxAudioBitRate.Parent" xml:space="preserve">
-    <value>groupBoxOptions</value>
-  </data>
-  <data name="radioButtonMP4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;comboBoxAudioBitRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxOptions.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;labelAudio.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;groupBoxAudio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelBatch.Name" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyVideo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonStartQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="radioButtonAAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="buttonRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 23</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="groupBoxContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 172</value>
-  </data>
-  <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 244</value>
-  </data>
-  <data name="labelMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 45</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="comboBoxPreset.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;labelInputTransFile.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="panelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonStartQueue.Name" xml:space="preserve">
-    <value>buttonStartQueue</value>
-  </data>
   <data name="toolStripStatusLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>499, 557</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 17</value>
   </data>
-  <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
-    <value>buttonMultiTransFile</value>
-  </data>
-  <data name="&gt;&gt;check_cell.Name" xml:space="preserve">
-    <value>check_cell</value>
-  </data>
-  <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items6" xml:space="preserve">
-    <value>256k</value>
-  </data>
-  <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 40</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="panelTranscode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMultiTransFile.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
-    <value>radioButtonCopyVideo</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelInputConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items3" xml:space="preserve">
-    <value>160k</value>
-  </data>
-  <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 476</value>
-  </data>
-  <data name="buttonAddSubtitle.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonCopyVideo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;no_cell.Name" xml:space="preserve">
-    <value>no_cell</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items" xml:space="preserve">
-    <value>64k</value>
-  </data>
-  <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 500</value>
-  </data>
-  <data name="comboBoxQuality.Items7" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;buttonSellectAllQueue.Name" xml:space="preserve">
-    <value>buttonSellectAllQueue</value>
-  </data>
-  <data name="labelAudio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVideoOrAudio.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 40</value>
-  </data>
-  <data name="no_cell.Width" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="radioButtonCopyAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 32</value>
-  </data>
-  <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButtonAAC.Text" xml:space="preserve">
-    <value>AAC</value>
-  </data>
-  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelQuality.Parent" xml:space="preserve">
-    <value>groupBoxOptions</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonStartQueue.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="comboBoxQuality.Items8" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="buttonAddBatchConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 338</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelBatch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStartQueue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboBoxAudioBitRate.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="buttonAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="groupBoxContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="buttonAddBatchConv.Text" xml:space="preserve">
-    <value>Add To Batch List   --&gt;</value>
-  </data>
-  <data name="&gt;&gt;labelMultiTransFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelBatch.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyVideo.Parent" xml:space="preserve">
-    <value>groupBoxContainer</value>
-  </data>
-  <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 119</value>
-  </data>
-  <data name="dataGridViewBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>996, 544</value>
-  </data>
-  <data name="&gt;&gt;labelPreset.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonAddBatchConv.Name" xml:space="preserve">
-    <value>buttonAddBatchConv</value>
-  </data>
-  <data name="&gt;&gt;buttonAddSubtitle.Name" xml:space="preserve">
-    <value>buttonAddSubtitle</value>
-  </data>
-  <data name="&gt;&gt;labelTextBoxConv.Name" xml:space="preserve">
-    <value>labelTextBoxConv</value>
-  </data>
-  <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</value>
   </data>
   <data name="toolStripStatusLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="groupBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 172</value>
+  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 16</value>
   </data>
-  <data name="&gt;&gt;richTextBoxConv.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 557</value>
   </data>
-  <data name="&gt;&gt;buttonUnselectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 0, 16, 0</value>
   </data>
-  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>988, 22</value>
   </data>
-  <data name="comboBoxPreset.Items3" xml:space="preserve">
-    <value>faster</value>
-  </data>
-  <data name="comboBoxQuality.Items5" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="labelPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 15</value>
-  </data>
-  <data name="&gt;&gt;buttonSellectAllQueue.ZOrder" xml:space="preserve">
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="buttonRemoveSubtitle.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>VTC v0.1.0</value>
   </data>
-  <data name="buttonDeleteQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
-  <data name="groupBoxVideoOrAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 93</value>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="labelAudio.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="labelMultiConv.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="buttonHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="buttonHelp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 110</value>
+  </data>
+  <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 23</value>
+  </data>
+  <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="buttonHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
+    <value>buttonHelp</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 21</value>
+  </data>
+  <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 23</value>
+  </data>
+  <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
+    <value>buttonAbout</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMultiTransFile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="comboBoxAudioBitRate.Items7" xml:space="preserve">
-    <value>320k</value>
+  <data name="labelMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 45</value>
   </data>
-  <data name="&gt;&gt;groupBoxVideoOrAudio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 88</value>
   </data>
-  <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
-    <value>labelPreset</value>
+  <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labelMultiTransFile.Text" xml:space="preserve">
+    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
+    <value>labelMultiTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 139</value>
+  </data>
+  <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 56</value>
+  </data>
+  <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="buttonMultiTransFile.Text" xml:space="preserve">
     <value>Input File(s) to transcode</value>
   </data>
-  <data name="buttonSellectAllQueue.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
+    <value>buttonMultiTransFile</value>
   </data>
-  <data name="groupBoxAudio.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;buttonMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
-    <value>tabControl2</value>
-  </data>
-  <data name="buttonCancelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQuality.Name" xml:space="preserve">
-    <value>comboBoxQuality</value>
-  </data>
-  <data name="&gt;&gt;labelOutTransFile.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonMultiTransFile.Parent" xml:space="preserve">
     <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelTranscode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelTranscode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 378</value>
+  </data>
+  <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 145</value>
+  </data>
+  <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Name" xml:space="preserve">
+    <value>panelTranscode</value>
   </data>
   <data name="&gt;&gt;panelTranscode.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonUnselectAll.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;panelTranscode.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 258</value>
+  </data>
+  <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 42</value>
+  </data>
+  <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelOutTransFile.Text" xml:space="preserve">
+    <value>Destination file path</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
+    <value>labelOutTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;buttonDeleteQueue.Name" xml:space="preserve">
-    <value>buttonDeleteQueue</value>
+  <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 151</value>
   </data>
-  <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 44</value>
   </data>
-  <data name="&gt;&gt;panelConvert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelInputConv.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="richTextBoxConv.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>473, 64</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPreset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
+  <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="radioButtonMP4.TabIndex" type="System.Int32, mscorlib">
+  <data name="labelInputTransFile.Text" xml:space="preserve">
+    <value>Source file path</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
+    <value>labelInputTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 244</value>
+  </data>
+  <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 56</value>
+  </data>
+  <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;checkBoxVideoOnly.Parent" xml:space="preserve">
-    <value>groupBoxVideoOrAudio</value>
+  <data name="buttonOutTransFile.Text" xml:space="preserve">
+    <value>Output File(s) Path</value>
   </data>
-  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
+    <value>buttonOutTransFile</value>
   </data>
-  <data name="groupBoxVideoOrAudio.Text" xml:space="preserve">
-    <value>Extract Video or Audio</value>
+  <data name="&gt;&gt;buttonOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="radioButtonAAC.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;buttonOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 529</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Transcode</value>
+  </data>
+  <data name="tabPage1.ToolTipText" xml:space="preserve">
+    <value>Transcode h.264 containers, MKV to MP4 or, MP4 to MKV</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="buttonRemoveSubtitle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Batch list</value>
+  <data name="buttonRemoveSubtitle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="labelAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 15</value>
+  <data name="buttonRemoveSubtitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Underline</value>
   </data>
-  <data name="radioButtonCopyVideo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="buttonRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 358</value>
   </data>
-  <data name="&gt;&gt;radioButtonAAC.Name" xml:space="preserve">
-    <value>radioButtonAAC</value>
+  <data name="buttonRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 23</value>
+  </data>
+  <data name="buttonRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="buttonRemoveSubtitle.Text" xml:space="preserve">
+    <value>Remove subtitle</value>
+  </data>
+  <data name="buttonRemoveSubtitle.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Name" xml:space="preserve">
+    <value>buttonRemoveSubtitle</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 311</value>
+  </data>
+  <data name="labelAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 44</value>
+  </data>
+  <data name="labelAddSubtitle.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
   <data name="labelAddSubtitle.Text" xml:space="preserve">
     <value>Select to add srt subtitle</value>
   </data>
-  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 0, 16, 0</value>
+  <data name="&gt;&gt;labelAddSubtitle.Name" xml:space="preserve">
+    <value>labelAddSubtitle</value>
   </data>
-  <data name="buttonInputConvFile.Text" xml:space="preserve">
-    <value>Input File</value>
+  <data name="&gt;&gt;labelAddSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonStartQueue.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;labelAddSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
-  <data name="&gt;&gt;checkBoxAudioOnly.Parent" xml:space="preserve">
-    <value>groupBoxVideoOrAudio</value>
-  </data>
-  <data name="radioButtonMP3.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="labelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="buttonAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 311</value>
   </data>
-  <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="buttonAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 44</value>
   </data>
-  <data name="&gt;&gt;buttonCancelBatch.Parent" xml:space="preserve">
-    <value>panelBatch</value>
+  <data name="buttonAddSubtitle.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
   </data>
-  <data name="&gt;&gt;groupBoxOptions.Name" xml:space="preserve">
-    <value>groupBoxOptions</value>
+  <data name="buttonAddSubtitle.Text" xml:space="preserve">
+    <value>Add Subtitle</value>
   </data>
-  <data name="labelMultiTransFile.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="&gt;&gt;buttonAddSubtitle.Name" xml:space="preserve">
+    <value>buttonAddSubtitle</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelInputConv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="labelInputConv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
   </data>
-  <data name="&gt;&gt;checkBoxAudioOnly.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonStartQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMKV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonCopyAudio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupBoxAudio.Text" xml:space="preserve">
-    <value>Audio Codec</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 84</value>
-  </data>
-  <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="labelInputConv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 43</value>
   </data>
   <data name="labelInputConv.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
+  <data name="labelInputConv.Text" xml:space="preserve">
+    <value>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Name" xml:space="preserve">
+    <value>labelInputConv</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelInputConv.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelMultiConv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="labelMultiConv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 7</value>
+  </data>
+  <data name="labelMultiConv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 83</value>
+  </data>
+  <data name="labelMultiConv.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="labelMultiConv.Text" xml:space="preserve">
+    <value>Choose options first, then click, or drop many files on the button --&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Name" xml:space="preserve">
+    <value>labelMultiConv</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelMultiConv.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxAudioOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 28</value>
+  </data>
+  <data name="checkBoxAudioOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 39</value>
+  </data>
+  <data name="checkBoxAudioOnly.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkBoxAudioOnly.Text" xml:space="preserve">
+    <value>Audio Only</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
+    <value>checkBoxAudioOnly</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.Parent" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAudioOnly.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxVideoOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 28</value>
+  </data>
+  <data name="checkBoxVideoOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 39</value>
+  </data>
+  <data name="checkBoxVideoOnly.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxVideoOnly.Text" xml:space="preserve">
+    <value>Video Only</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Name" xml:space="preserve">
+    <value>checkBoxVideoOnly</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.Parent" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVideoOnly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBoxVideoOrAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 93</value>
+  </data>
+  <data name="groupBoxVideoOrAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 73</value>
+  </data>
+  <data name="groupBoxVideoOrAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="groupBoxVideoOrAudio.Text" xml:space="preserve">
+    <value>Extract Video or Audio</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Name" xml:space="preserve">
+    <value>groupBoxVideoOrAudio</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelPreset.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPreset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 29</value>
+  </data>
+  <data name="labelPreset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 15</value>
+  </data>
+  <data name="labelPreset.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelPreset.Text" xml:space="preserve">
+    <value>Encoding preset</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
+    <value>labelPreset</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;labelPreset.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="labelQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="labelQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labelQuality.Text" xml:space="preserve">
+    <value>Quality factor</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Name" xml:space="preserve">
+    <value>labelQuality</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;labelQuality.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelAudio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 87</value>
+  </data>
+  <data name="labelAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="labelAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelAudio.Text" xml:space="preserve">
+    <value>Audio bitrate</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.Name" xml:space="preserve">
+    <value>labelAudio</value>
+  </data>
+  <data name="&gt;&gt;labelAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;labelAudio.Parent" xml:space="preserve">
     <value>groupBoxOptions</value>
   </data>
-  <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;labelAudio.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxPreset.Items" xml:space="preserve">
+    <value>ultrafast</value>
+  </data>
+  <data name="comboBoxPreset.Items1" xml:space="preserve">
+    <value>superfast</value>
+  </data>
+  <data name="comboBoxPreset.Items2" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
+  <data name="comboBoxPreset.Items3" xml:space="preserve">
+    <value>faster</value>
+  </data>
+  <data name="comboBoxPreset.Items4" xml:space="preserve">
+    <value>fast</value>
+  </data>
+  <data name="comboBoxPreset.Items5" xml:space="preserve">
+    <value>medium</value>
+  </data>
+  <data name="comboBoxPreset.Items6" xml:space="preserve">
+    <value>slow</value>
+  </data>
+  <data name="comboBoxPreset.Items7" xml:space="preserve">
+    <value>slower</value>
+  </data>
+  <data name="comboBoxPreset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 26</value>
+  </data>
+  <data name="comboBoxPreset.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="comboBoxPreset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="comboBoxPreset.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="comboBoxPreset.Text" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Name" xml:space="preserve">
+    <value>comboBoxPreset</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxPreset.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items" xml:space="preserve">
+    <value>64k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items1" xml:space="preserve">
+    <value>96k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items2" xml:space="preserve">
+    <value>128k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items3" xml:space="preserve">
+    <value>160k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items4" xml:space="preserve">
+    <value>192k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items5" xml:space="preserve">
+    <value>224k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items6" xml:space="preserve">
+    <value>256k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items7" xml:space="preserve">
+    <value>320k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 84</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="comboBoxAudioBitRate.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Text" xml:space="preserve">
+    <value>128k</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Name" xml:space="preserve">
+    <value>comboBoxAudioBitRate</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAudioBitRate.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 56</value>
+  <data name="comboBoxQuality.Items" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="comboBoxQuality.Items1" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="comboBoxQuality.Items2" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="comboBoxQuality.Items3" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="comboBoxQuality.Items4" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="comboBoxQuality.Items5" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="comboBoxQuality.Items6" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="comboBoxQuality.Items7" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="comboBoxQuality.Items8" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="comboBoxQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 55</value>
+  </data>
+  <data name="comboBoxQuality.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="comboBoxQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="comboBoxQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="comboBoxQuality.Text" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Name" xml:space="preserve">
+    <value>comboBoxQuality</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.Parent" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;comboBoxQuality.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 172</value>
+  </data>
+  <data name="groupBoxOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 113</value>
+  </data>
+  <data name="groupBoxOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="groupBoxOptions.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Name" xml:space="preserve">
+    <value>groupBoxOptions</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radioButtonCopyAudio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonCopyAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 32</value>
+  </data>
+  <data name="radioButtonCopyAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="radioButtonCopyAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radioButtonCopyAudio.Text" xml:space="preserve">
+    <value>copy</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
+    <value>radioButtonCopyAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyAudio.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonMP3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonMP3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 32</value>
+  </data>
+  <data name="radioButtonMP3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="radioButtonMP3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButtonMP3.Text" xml:space="preserve">
+    <value>MP3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Name" xml:space="preserve">
+    <value>radioButtonMP3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButtonAAC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonAAC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 30</value>
+  </data>
+  <data name="radioButtonAAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="radioButtonAAC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButtonAAC.Text" xml:space="preserve">
+    <value>AAC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Name" xml:space="preserve">
+    <value>radioButtonAAC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.Parent" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAAC.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 249</value>
+  </data>
+  <data name="groupBoxAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 69</value>
+  </data>
+  <data name="groupBoxAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBoxAudio.Text" xml:space="preserve">
+    <value>Audio Codec</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Name" xml:space="preserve">
+    <value>groupBoxAudio</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupBoxContainer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="radioButtonCopyVideo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonCopyVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 33</value>
+  </data>
+  <data name="radioButtonCopyVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="radioButtonCopyVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radioButtonCopyVideo.Text" xml:space="preserve">
+    <value>copy</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
+    <value>radioButtonCopyVideo</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCopyVideo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonMP4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonMP4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 32</value>
+  </data>
+  <data name="radioButtonMP4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="radioButtonMP4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButtonMP4.Text" xml:space="preserve">
+    <value>MP4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Name" xml:space="preserve">
+    <value>radioButtonMP4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMP4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButtonMKV.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonMKV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 32</value>
+  </data>
+  <data name="radioButtonMKV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="radioButtonMKV.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButtonMKV.Text" xml:space="preserve">
+    <value>MKV</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Name" xml:space="preserve">
+    <value>radioButtonMKV</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.Parent" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonMKV.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 172</value>
+  </data>
+  <data name="groupBoxContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 71</value>
+  </data>
+  <data name="groupBoxContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBoxContainer.Text" xml:space="preserve">
+    <value>Video Container</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Name" xml:space="preserve">
+    <value>groupBoxContainer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelTextBoxConv.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 404</value>
+  </data>
+  <data name="labelTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 15</value>
+  </data>
+  <data name="labelTextBoxConv.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelTextBoxConv.Text" xml:space="preserve">
+    <value>ffmpeg command to be added to the list (you can edit it before clicking Add):</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Name" xml:space="preserve">
+    <value>labelTextBoxConv</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 119</value>
+  </data>
+  <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 37</value>
+  </data>
+  <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelOutConvFile.Text" xml:space="preserve">
+    <value>Destination file path</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Name" xml:space="preserve">
+    <value>labelOutConvFile</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 55</value>
+  </data>
+  <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 35</value>
+  </data>
+  <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelInputConvFile.Text" xml:space="preserve">
+    <value>Source file path</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Name" xml:space="preserve">
+    <value>labelInputConvFile</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonAddBatchConv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonAddBatchConv.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonAddBatchConv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 338</value>
+  </data>
+  <data name="buttonAddBatchConv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 59</value>
+  </data>
+  <data name="buttonAddBatchConv.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonAddBatchConv.Text" xml:space="preserve">
+    <value>Add To Batch List   --&gt;</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Name" xml:space="preserve">
+    <value>buttonAddBatchConv</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonMultiConvFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 7</value>
+  </data>
+  <data name="buttonMultiConvFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 56</value>
+  </data>
+  <data name="buttonMultiConvFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="buttonMultiConvFiles.Text" xml:space="preserve">
     <value>Multiple Input Files</value>
   </data>
-  <data name="buttonOutTransFile.Text" xml:space="preserve">
-    <value>Output File(s) Path</value>
+  <data name="&gt;&gt;buttonMultiConvFiles.Name" xml:space="preserve">
+    <value>buttonMultiConvFiles</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="panelConvert.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="richTextBoxConv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="richTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="richTextBoxConv.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>473, 64</value>
+  </data>
+  <data name="richTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 98</value>
+  </data>
+  <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="richTextBoxConv.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Name" xml:space="preserve">
+    <value>richTextBoxConv</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.Parent" xml:space="preserve">
+    <value>panelConvert</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxConv.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelConvert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 422</value>
+  </data>
+  <data name="panelConvert.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>479, 70</value>
+  </data>
+  <data name="panelConvert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>479, 104</value>
+  </data>
+  <data name="panelConvert.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Name" xml:space="preserve">
+    <value>panelConvert</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 119</value>
+  </data>
+  <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 40</value>
+  </data>
+  <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonOutConvFile.Text" xml:space="preserve">
+    <value>Output Path*</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Name" xml:space="preserve">
+    <value>buttonOutConvFile</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="buttonInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
+  </data>
+  <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 40</value>
+  </data>
+  <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonInputConvFile.Text" xml:space="preserve">
+    <value>Input File</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Name" xml:space="preserve">
+    <value>buttonInputConvFile</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 529</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="tabPage2.ToolTipText" xml:space="preserve">
+    <value>Convert (encode) files in different formats</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>499, 557</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="buttonUnselectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 500</value>
+  </data>
+  <data name="buttonUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="buttonUnselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonUnselectAll.Text" xml:space="preserve">
+    <value>Unselect</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Name" xml:space="preserve">
+    <value>buttonUnselectAll</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonUnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonSellectAllQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 500</value>
+  </data>
+  <data name="buttonSellectAllQueue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="buttonSellectAllQueue.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonSellectAllQueue.Text" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Name" xml:space="preserve">
+    <value>buttonSellectAllQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonSellectAllQueue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dataGridViewBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="check_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="check_cell.HeaderText" xml:space="preserve">
+    <value>Sel.</value>
+  </data>
+  <data name="check_cell.MinimumWidth" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="check_cell.Width" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="no_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="no_cell.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="no_cell.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="no_cell.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <metadata name="task_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="task_cell.HeaderText" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="task_cell.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="dataGridViewBatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>461, 476</value>
+  </data>
+  <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Name" xml:space="preserve">
+    <value>dataGridViewBatch</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBatch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonDeleteQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 500</value>
+  </data>
+  <data name="buttonDeleteQueue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="buttonDeleteQueue.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonDeleteQueue.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Name" xml:space="preserve">
+    <value>buttonDeleteQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteQueue.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonCancelBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 500</value>
+  </data>
+  <data name="buttonCancelBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonCancelBatch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonCancelBatch.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Name" xml:space="preserve">
+    <value>buttonCancelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelBatch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonStartQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 500</value>
+  </data>
+  <data name="buttonStartQueue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonStartQueue.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonStartQueue.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Name" xml:space="preserve">
+    <value>buttonStartQueue</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.Parent" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;buttonStartQueue.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panelBatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 526</value>
+  </data>
+  <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Name" xml:space="preserve">
+    <value>panelBatch</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;panelBatch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 529</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Batch list</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControl2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>501, 0</value>
+  </data>
+  <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>479, 557</value>
+  </data>
+  <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="timerBatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>248, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>988, 579</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4382,802 +5132,52 @@
         AAAAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA
 </value>
   </data>
-  <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>394, 110</value>
-  </data>
-  <data name="comboBoxPreset.Items" xml:space="preserve">
-    <value>ultrafast</value>
-  </data>
-  <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
-    <value>buttonAbout</value>
-  </data>
-  <data name="&gt;&gt;labelAudio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelInputConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 43</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items4" xml:space="preserve">
-    <value>192k</value>
-  </data>
-  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 16</value>
-  </data>
-  <data name="&gt;&gt;panelConvert.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Transcode</value>
-  </data>
-  <data name="labelTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 15</value>
-  </data>
-  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 0</value>
-  </data>
-  <data name="radioButtonCopyVideo.Text" xml:space="preserve">
-    <value>copy</value>
-  </data>
-  <data name="&gt;&gt;panelTranscode.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 500</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPreset.Name" xml:space="preserve">
-    <value>comboBoxPreset</value>
-  </data>
-  <data name="richTextBoxConv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;buttonSellectAllQueue.Parent" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonAddSubtitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 37</value>
-  </data>
-  <data name="&gt;&gt;labelOutTransFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="labelQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelQuality.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="radioButtonMP3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyAudio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonSellectAllQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
-  </data>
-  <data name="buttonMultiConvFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 56</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxConv.Parent" xml:space="preserve">
-    <value>panelConvert</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 529</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP3.Name" xml:space="preserve">
-    <value>radioButtonMP3</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyVideo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboBoxPreset.Items1" xml:space="preserve">
-    <value>superfast</value>
-  </data>
-  <data name="comboBoxQuality.Items6" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 35</value>
-  </data>
-  <data name="labelMultiTransFile.Text" xml:space="preserve">
-    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiTransFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDeleteQueue.Parent" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="checkBoxVideoOnly.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 56</value>
-  </data>
-  <data name="richTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>473, 98</value>
-  </data>
-  <data name="&gt;&gt;buttonHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMKV.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelInputConvFile.Text" xml:space="preserve">
-    <value>Source file path</value>
-  </data>
-  <data name="buttonMultiConvFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 7</value>
-  </data>
-  <data name="buttonAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 311</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveSubtitle.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="radioButtonMP4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 32</value>
-  </data>
-  <data name="&gt;&gt;groupBoxAudio.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiConvFiles.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="groupBoxContainer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;checkBoxVideoOnly.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP4.Parent" xml:space="preserve">
-    <value>groupBoxContainer</value>
-  </data>
-  <data name="labelPreset.Text" xml:space="preserve">
-    <value>Encoding preset</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="comboBoxPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="buttonRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;buttonUnselectAll.Parent" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 557</value>
-  </data>
-  <data name="&gt;&gt;buttonOutTransFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonMKV.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonRemoveSubtitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMKV.Parent" xml:space="preserve">
-    <value>groupBoxContainer</value>
-  </data>
-  <data name="groupBoxAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 69</value>
-  </data>
-  <data name="&gt;&gt;comboBoxPreset.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labelQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 15</value>
-  </data>
-  <data name="&gt;&gt;buttonUnselectAll.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;comboBoxAudioBitRate.Name" xml:space="preserve">
-    <value>comboBoxAudioBitRate</value>
-  </data>
-  <data name="labelMultiConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 7</value>
-  </data>
-  <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;labelInputConvFile.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="buttonAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 44</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="buttonAddBatchConv.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelMultiConv.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 17</value>
-  </data>
-  <data name="radioButtonCopyAudio.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="checkBoxAudioOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 28</value>
-  </data>
-  <data name="radioButtonMP4.Text" xml:space="preserve">
-    <value>MP4</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPreset.Parent" xml:space="preserve">
-    <value>groupBoxOptions</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQuality.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonUnselectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP4.Name" xml:space="preserve">
-    <value>radioButtonMP4</value>
-  </data>
-  <data name="checkBoxVideoOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 28</value>
-  </data>
-  <data name="comboBoxPreset.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;task_cell.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveSubtitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonDeleteQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="buttonUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
-  </data>
-  <data name="comboBoxPreset.Items6" xml:space="preserve">
-    <value>slow</value>
-  </data>
-  <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="radioButtonAAC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxAudioOnly.Text" xml:space="preserve">
-    <value>Audio Only</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMP4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxVideoOrAudio.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="buttonDeleteQueue.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 119</value>
-  </data>
-  <data name="&gt;&gt;panelBatch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 87</value>
-  </data>
-  <data name="comboBoxQuality.Text" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;timerBatch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonCancelBatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;buttonOutConvFile.Name" xml:space="preserve">
-    <value>buttonOutConvFile</value>
-  </data>
-  <data name="buttonOutConvFile.Text" xml:space="preserve">
-    <value>Output Path*</value>
-  </data>
-  <data name="&gt;&gt;no_cell.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAddBatchConv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;buttonInputConvFile.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="buttonSellectAllQueue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;checkBoxVideoOnly.Name" xml:space="preserve">
-    <value>checkBoxVideoOnly</value>
-  </data>
-  <data name="tabControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="labelInputConv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 500</value>
-  </data>
-  <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
-    <value>radioButtonCopyAudio</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBoxAudioOnly.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
-    <value>buttonOutTransFile</value>
-  </data>
-  <data name="&gt;&gt;buttonDeleteQueue.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
-    <value>toolStripProgressBar1</value>
-  </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panelConvert.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>479, 70</value>
-  </data>
-  <data name="labelTextBoxConv.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;buttonAddBatchConv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
-    <value>labelMultiTransFile</value>
-  </data>
-  <data name="&gt;&gt;radioButtonMKV.Name" xml:space="preserve">
-    <value>radioButtonMKV</value>
-  </data>
-  <data name="&gt;&gt;panelConvert.Name" xml:space="preserve">
-    <value>panelConvert</value>
-  </data>
-  <data name="radioButtonMKV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 32</value>
-  </data>
-  <data name="&gt;&gt;buttonCancelBatch.Name" xml:space="preserve">
-    <value>buttonCancelBatch</value>
-  </data>
-  <data name="radioButtonMKV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 19</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCopyAudio.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelInputConv.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="radioButtonMP3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="radioButtonCopyVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiTransFile.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiConvFiles.Name" xml:space="preserve">
-    <value>buttonMultiConvFiles</value>
-  </data>
-  <data name="radioButtonCopyVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 33</value>
-  </data>
-  <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 500</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items2" xml:space="preserve">
-    <value>128k</value>
-  </data>
-  <data name="&gt;&gt;buttonStartQueue.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="comboBoxQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 55</value>
-  </data>
-  <data name="labelQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="&gt;&gt;labelOutConvFile.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;buttonStartQueue.Parent" xml:space="preserve">
-    <value>panelBatch</value>
-  </data>
-  <data name="&gt;&gt;labelAudio.Name" xml:space="preserve">
-    <value>labelAudio</value>
-  </data>
-  <data name="&gt;&gt;labelQuality.Name" xml:space="preserve">
-    <value>labelQuality</value>
-  </data>
-  <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 145</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>VTC v0.1.0</value>
-  </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Convert</value>
-  </data>
-  <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="comboBoxPreset.Text" xml:space="preserve">
-    <value>veryfast</value>
-  </data>
-  <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;buttonMultiConvFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBoxContainer.Text" xml:space="preserve">
-    <value>Video Container</value>
-  </data>
-  <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
-    <value>labelOutTransFile</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;labelMultiConv.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;labelTextBoxConv.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;labelInputConvFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelTextBoxConv.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxConv.Name" xml:space="preserve">
-    <value>richTextBoxConv</value>
-  </data>
-  <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
-    <value>labelInputTransFile</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVideoOrAudio.Name" xml:space="preserve">
-    <value>groupBoxVideoOrAudio</value>
-  </data>
-  <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 526</value>
-  </data>
-  <data name="no_cell.MinimumWidth" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="labelInputConv.Text" xml:space="preserve">
-    <value>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 29</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>988, 579</value>
-  </data>
-  <data name="labelAudio.Text" xml:space="preserve">
-    <value>Audio bitrate</value>
-  </data>
-  <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="tabPage1.ToolTipText" xml:space="preserve">
-    <value>Transcode h.264 containers, MKV to MP4 or, MP4 to MKV</value>
-  </data>
-  <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
-    <value>buttonHelp</value>
-  </data>
-  <data name="&gt;&gt;buttonDeleteQueue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabControl2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>996, 544</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Video Converter &amp; Transcoder</value>
   </data>
-  <data name="groupBoxOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 113</value>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
   </data>
-  <data name="buttonInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 50</value>
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="radioButtonMKV.Text" xml:space="preserve">
-    <value>MKV</value>
+  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
+    <value>toolStripProgressBar1</value>
   </data>
-  <data name="radioButtonMP4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
+  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelInputConv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboBoxQuality.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;labelInputTransFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 88</value>
-  </data>
-  <data name="&gt;&gt;labelTextBoxConv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="task_cell.HeaderText" xml:space="preserve">
-    <value>Task</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items1" xml:space="preserve">
-    <value>96k</value>
-  </data>
-  <data name="labelMultiConv.Text" xml:space="preserve">
-    <value>Choose options first, then click, or drop many files on the button --&gt;</value>
-  </data>
-  <data name="labelAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 44</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;panelBatch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>491, 529</value>
-  </data>
-  <data name="radioButtonAAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 30</value>
-  </data>
-  <data name="&gt;&gt;labelAddSubtitle.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="buttonDeleteQueue.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="check_cell.MinimumWidth" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="no_cell.HeaderText" xml:space="preserve">
-    <value>No.</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonRemoveSubtitle.Text" xml:space="preserve">
-    <value>Remove subtitle</value>
-  </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;check_cell.Name" xml:space="preserve">
+    <value>check_cell</value>
   </data>
   <data name="&gt;&gt;check_cell.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 358</value>
+  <data name="&gt;&gt;no_cell.Name" xml:space="preserve">
+    <value>no_cell</value>
   </data>
-  <data name="&gt;&gt;labelPreset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;no_cell.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBoxAudioOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 39</value>
+  <data name="&gt;&gt;task_cell.Name" xml:space="preserve">
+    <value>task_cell</value>
   </data>
-  <data name="comboBoxPreset.Items7" xml:space="preserve">
-    <value>slower</value>
+  <data name="&gt;&gt;task_cell.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="comboBoxPreset.Items4" xml:space="preserve">
-    <value>fast</value>
+  <data name="&gt;&gt;timerBatch.Name" xml:space="preserve">
+    <value>timerBatch</value>
   </data>
-  <data name="comboBoxPreset.Items5" xml:space="preserve">
-    <value>medium</value>
+  <data name="&gt;&gt;timerBatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="comboBoxPreset.Items2" xml:space="preserve">
-    <value>veryfast</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
   </data>
-  <data name="labelPreset.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBoxQuality.Parent" xml:space="preserve">
-    <value>groupBoxOptions</value>
-  </data>
-  <data name="dataGridViewBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;buttonSellectAllQueue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAddBatchConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 59</value>
-  </data>
-  <data name="check_cell.Width" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxConv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelAddSubtitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBatch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;groupBoxContainer.Name" xml:space="preserve">
-    <value>groupBoxContainer</value>
-  </data>
-  <data name="panelConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 104</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBoxContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonSellectAllQueue.Text" xml:space="preserve">
-    <value>Select all</value>
-  </data>
-  <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 151</value>
-  </data>
-  <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>491, 529</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBatch.Name" xml:space="preserve">
-    <value>dataGridViewBatch</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <data name="&gt;&gt;buttonHelp.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;buttonAddBatchConv.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="buttonAddSubtitle.Text" xml:space="preserve">
-    <value>Add Subtitle</value>
-  </data>
-  <data name="buttonCancelBatch.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;buttonOutConvFile.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="panelConvert.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonRemoveSubtitle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="comboBoxQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
-    <value>checkBoxAudioOnly</value>
-  </data>
-  <data name="radioButtonMKV.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;checkBoxAudioOnly.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="timerBatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>248, 17</value>
-  </metadata>
-  <metadata name="task_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="no_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="check_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>127, 17</value>
-  </metadata>
 </root>

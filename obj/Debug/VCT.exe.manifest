@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="790016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="797184">
       <assemblyIdentity name="VCT" version="1.2.0.0" publicKeyToken="BAF93990D872E9DD" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CIliEEr6QfQqZIGAdwRYsMR9AF4=</dsig:DigestValue>
+        <dsig:DigestValue>lv5aiCLRX8Z3TBE3eQBGC/WbY3E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>R6VoxyTSHijZd6PKeEu5wxYQmwg=</dsig:DigestValue>
+        <dsig:DigestValue>UzMH+TG2++ArUYm+dtQ9PjjvDkw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XcrVLJDqxBdeYFNPGONAVfNvfqA=</dsig:DigestValue>
+        <dsig:DigestValue>3FnMTV+m933hREPPqQvilxsngkA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>+LqHlJ764eOYsWwMJ02/vlxnCJw=</dsig:DigestValue>
+        <dsig:DigestValue>vuG1E9m+62W1SgcwNPRWpbFUjMs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,13 +126,13 @@
       <dsig:DigestValue>GppnRcd+1cjh7BZx3bL16S8kPdA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VCT_help.pdf" size="1130795">
+  <file name="VCT_help.pdf" size="1298994">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>feqyP0hulpJyYQvm6QgNkC1iLus=</dsig:DigestValue>
+      <dsig:DigestValue>7+ybDxkRrkGpbiWZW0Nrn6GRHTs=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

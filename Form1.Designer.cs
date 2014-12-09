@@ -108,10 +108,10 @@
             // 
             // statusStrip1
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -122,9 +122,9 @@
             // 
             // toolStripProgressBar1
             // 
-            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(7, 3, 1, 3);
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
             // tabControl1
             // 
@@ -136,7 +136,6 @@
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.buttonHelp);
             this.tabPage1.Controls.Add(this.buttonAbout);
@@ -146,6 +145,7 @@
             this.tabPage1.Controls.Add(this.labelOutTransFile);
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -171,8 +171,8 @@
             // 
             // buttonMultiTransFile
             // 
-            resources.ApplyResources(this.buttonMultiTransFile, "buttonMultiTransFile");
             this.buttonMultiTransFile.AllowDrop = true;
+            resources.ApplyResources(this.buttonMultiTransFile, "buttonMultiTransFile");
             this.buttonMultiTransFile.Name = "buttonMultiTransFile";
             this.buttonMultiTransFile.UseVisualStyleBackColor = true;
             this.buttonMultiTransFile.Click += new System.EventHandler(this.buttonMultiTransFile_Click);
@@ -201,7 +201,6 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.buttonRemoveSubtitle);
             this.tabPage2.Controls.Add(this.labelAddSubtitle);
@@ -220,6 +219,7 @@
             this.tabPage2.Controls.Add(this.panelConvert);
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -258,9 +258,9 @@
             // 
             // groupBoxVideoOrAudio
             // 
-            resources.ApplyResources(this.groupBoxVideoOrAudio, "groupBoxVideoOrAudio");
             this.groupBoxVideoOrAudio.Controls.Add(this.checkBoxAudioOnly);
             this.groupBoxVideoOrAudio.Controls.Add(this.checkBoxVideoOnly);
+            resources.ApplyResources(this.groupBoxVideoOrAudio, "groupBoxVideoOrAudio");
             this.groupBoxVideoOrAudio.Name = "groupBoxVideoOrAudio";
             this.groupBoxVideoOrAudio.TabStop = false;
             // 
@@ -280,13 +280,13 @@
             // 
             // groupBoxOptions
             // 
-            resources.ApplyResources(this.groupBoxOptions, "groupBoxOptions");
             this.groupBoxOptions.Controls.Add(this.labelPreset);
             this.groupBoxOptions.Controls.Add(this.labelQuality);
             this.groupBoxOptions.Controls.Add(this.labelAudio);
             this.groupBoxOptions.Controls.Add(this.comboBoxPreset);
             this.groupBoxOptions.Controls.Add(this.comboBoxAudioBitRate);
             this.groupBoxOptions.Controls.Add(this.comboBoxQuality);
+            resources.ApplyResources(this.groupBoxOptions, "groupBoxOptions");
             this.groupBoxOptions.Name = "groupBoxOptions";
             this.groupBoxOptions.TabStop = false;
             // 
@@ -307,7 +307,6 @@
             // 
             // comboBoxPreset
             // 
-            resources.ApplyResources(this.comboBoxPreset, "comboBoxPreset");
             this.comboBoxPreset.FormattingEnabled = true;
             this.comboBoxPreset.Items.AddRange(new object[] {
             resources.GetString("comboBoxPreset.Items"),
@@ -318,12 +317,12 @@
             resources.GetString("comboBoxPreset.Items5"),
             resources.GetString("comboBoxPreset.Items6"),
             resources.GetString("comboBoxPreset.Items7")});
+            resources.ApplyResources(this.comboBoxPreset, "comboBoxPreset");
             this.comboBoxPreset.Name = "comboBoxPreset";
             this.comboBoxPreset.SelectedIndexChanged += new System.EventHandler(this.comboBoxPreset_SelectedIndexChanged);
             // 
             // comboBoxAudioBitRate
             // 
-            resources.ApplyResources(this.comboBoxAudioBitRate, "comboBoxAudioBitRate");
             this.comboBoxAudioBitRate.FormattingEnabled = true;
             this.comboBoxAudioBitRate.Items.AddRange(new object[] {
             resources.GetString("comboBoxAudioBitRate.Items"),
@@ -334,12 +333,12 @@
             resources.GetString("comboBoxAudioBitRate.Items5"),
             resources.GetString("comboBoxAudioBitRate.Items6"),
             resources.GetString("comboBoxAudioBitRate.Items7")});
+            resources.ApplyResources(this.comboBoxAudioBitRate, "comboBoxAudioBitRate");
             this.comboBoxAudioBitRate.Name = "comboBoxAudioBitRate";
             this.comboBoxAudioBitRate.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioBitRate_SelectedIndexChanged);
             // 
             // comboBoxQuality
             // 
-            resources.ApplyResources(this.comboBoxQuality, "comboBoxQuality");
             this.comboBoxQuality.FormattingEnabled = true;
             this.comboBoxQuality.Items.AddRange(new object[] {
             resources.GetString("comboBoxQuality.Items"),
@@ -351,15 +350,16 @@
             resources.GetString("comboBoxQuality.Items6"),
             resources.GetString("comboBoxQuality.Items7"),
             resources.GetString("comboBoxQuality.Items8")});
+            resources.ApplyResources(this.comboBoxQuality, "comboBoxQuality");
             this.comboBoxQuality.Name = "comboBoxQuality";
             this.comboBoxQuality.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuality_SelectedIndexChanged);
             // 
             // groupBoxAudio
             // 
-            resources.ApplyResources(this.groupBoxAudio, "groupBoxAudio");
             this.groupBoxAudio.Controls.Add(this.radioButtonCopyAudio);
             this.groupBoxAudio.Controls.Add(this.radioButtonMP3);
             this.groupBoxAudio.Controls.Add(this.radioButtonAAC);
+            resources.ApplyResources(this.groupBoxAudio, "groupBoxAudio");
             this.groupBoxAudio.Name = "groupBoxAudio";
             this.groupBoxAudio.TabStop = false;
             // 
@@ -445,8 +445,8 @@
             // 
             // buttonMultiConvFiles
             // 
-            resources.ApplyResources(this.buttonMultiConvFiles, "buttonMultiConvFiles");
             this.buttonMultiConvFiles.AllowDrop = true;
+            resources.ApplyResources(this.buttonMultiConvFiles, "buttonMultiConvFiles");
             this.buttonMultiConvFiles.Name = "buttonMultiConvFiles";
             this.buttonMultiConvFiles.UseVisualStyleBackColor = true;
             this.buttonMultiConvFiles.Click += new System.EventHandler(this.buttonMultiConvFiles_Click);
@@ -471,8 +471,8 @@
             // 
             // buttonInputConvFile
             // 
-            resources.ApplyResources(this.buttonInputConvFile, "buttonInputConvFile");
             this.buttonInputConvFile.AllowDrop = true;
+            resources.ApplyResources(this.buttonInputConvFile, "buttonInputConvFile");
             this.buttonInputConvFile.Name = "buttonInputConvFile";
             this.buttonInputConvFile.UseVisualStyleBackColor = true;
             this.buttonInputConvFile.Click += new System.EventHandler(this.buttonInputConvFile_Click);
@@ -487,9 +487,9 @@
             // 
             // tabPage3
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.Controls.Add(this.panelBatch);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             // 
             // panelBatch
@@ -519,7 +519,6 @@
             // 
             // dataGridViewBatch
             // 
-            resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -527,6 +526,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewBatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
