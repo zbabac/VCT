@@ -91,8 +91,8 @@
           <target state="new">3</target>
         </trans-unit>
         <trans-unit id="labelCompanyName.Text" translate="yes" xml:space="preserve">
-          <source>License GPLv3</source>
-          <target state="new">License GPLv3</target>
+          <source>License Apache v2.0</source>
+          <target state="new">License Apache v2.0</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelCompanyName.Name" translate="yes" xml:space="preserve">
           <source>labelCompanyName</source>
@@ -188,8 +188,8 @@
     <body>
       <group id="VCT/FORM1.RESX">
         <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
-          <source>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</source>
-          <target state="new">Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</target>
+          <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
+          <target state="new">Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</target>
         </trans-unit>
         <trans-unit id="statusStrip1.Text" translate="yes" xml:space="preserve">
           <source>VTC v0.1.0</source>

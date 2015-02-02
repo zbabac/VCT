@@ -74,6 +74,7 @@
   </data>
   <data name="labelCompanyName.Text" xml:space="preserve">
     <value>License GPLv3</value>
+    <comment></comment>
   </data>
   <data name="&gt;&gt;labelCompanyName.Name" xml:space="preserve">
     <value>labelCompanyName</value>
