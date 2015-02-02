@@ -16,7 +16,7 @@
     <value>en</value>
   </resheader>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</value>
+    <value>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>VTC v1.2.1</value>

@@ -73,7 +73,7 @@
     <value>3</value>
   </data>
   <data name="labelCompanyName.Text" xml:space="preserve">
-    <value>License GPLv3</value>
+    <value>License Apache v2.0</value>
   </data>
   <data name="&gt;&gt;labelCompanyName.Name" xml:space="preserve">
     <value>labelCompanyName</value>
