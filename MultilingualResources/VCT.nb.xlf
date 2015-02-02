@@ -32,7 +32,7 @@
         </trans-unit>
         <trans-unit id="labelProductName.Text" translate="yes" xml:space="preserve">
           <source>Video Transcoder and Converter</source>
-          <target state="new">Video Transcoder and Converter</target>
+          <target state="translated">Video Transcoder og Converter</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelProductName.Name" translate="yes" xml:space="preserve">
           <source>labelProductName</source>
@@ -52,7 +52,7 @@
         </trans-unit>
         <trans-unit id="labelVersion.Text" translate="yes" xml:space="preserve">
           <source>Version 1.2.0</source>
-          <target state="new">Version 1.2.0</target>
+          <target state="translated">Version 1.2.1</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelVersion.Name" translate="yes" xml:space="preserve">
           <source>labelVersion</source>
@@ -168,7 +168,7 @@
         </trans-unit>
         <trans-unit id="$this.Text" translate="yes" xml:space="preserve">
           <source>About VTC</source>
-          <target state="new">About VTC</target>
+          <target state="translated">Om VTC</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;$this.Name" translate="yes" xml:space="preserve">
           <source>AboutBoxZ</source>
@@ -188,12 +188,12 @@
     <body>
       <group id="VCT/FORM1.RESX">
         <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
-          <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
-          <target state="new">Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</target>
+          <source>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</source>
+          <target state="new">Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</target>
         </trans-unit>
         <trans-unit id="statusStrip1.Text" translate="yes" xml:space="preserve">
           <source>VTC v0.1.0</source>
-          <target state="new">VTC v0.1.0</target>
+          <target state="translated">VTC v1.2.1</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;statusStrip1.Name" translate="yes" xml:space="preserve">
           <source>statusStrip1</source>
@@ -213,7 +213,7 @@
         </trans-unit>
         <trans-unit id="buttonHelp.Text" translate="yes" xml:space="preserve">
           <source>Help</source>
-          <target state="new">Help</target>
+          <target state="translated">Hjelp (engelsk)</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonHelp.Name" translate="yes" xml:space="preserve">
           <source>buttonHelp</source>
@@ -233,7 +233,7 @@
         </trans-unit>
         <trans-unit id="buttonAbout.Text" translate="yes" xml:space="preserve">
           <source>About</source>
-          <target state="new">About</target>
+          <target state="translated">Om programmet</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAbout.Name" translate="yes" xml:space="preserve">
           <source>buttonAbout</source>
@@ -253,7 +253,7 @@
         </trans-unit>
         <trans-unit id="labelMultiTransFile.Text" translate="yes" xml:space="preserve">
           <source>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</source>
-          <target state="new">Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</target>
+          <target state="translated">Velg én eller flere filer: velg utgang banen først. Nye videoer blir lagret der, velg deretter mer input filer som du ønsker å omkode(MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4). Eller bare drag'n'drop filer til knappen "Input Filer ...".</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelMultiTransFile.Name" translate="yes" xml:space="preserve">
           <source>labelMultiTransFile</source>
@@ -273,7 +273,7 @@
         </trans-unit>
         <trans-unit id="buttonMultiTransFile.Text" translate="yes" xml:space="preserve">
           <source>Input File(s) to transcode</source>
-          <target state="new">Input File(s) to transcode</target>
+          <target state="translated">Input File(r) å omkode</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonMultiTransFile.Name" translate="yes" xml:space="preserve">
           <source>buttonMultiTransFile</source>
@@ -309,7 +309,7 @@
         </trans-unit>
         <trans-unit id="labelOutTransFile.Text" translate="yes" xml:space="preserve">
           <source>Destination file path</source>
-          <target state="new">Destination file path</target>
+          <target state="translated">Banen til målfilen</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelOutTransFile.Name" translate="yes" xml:space="preserve">
           <source>labelOutTransFile</source>
@@ -329,7 +329,7 @@
         </trans-unit>
         <trans-unit id="labelInputTransFile.Text" translate="yes" xml:space="preserve">
           <source>Source file path</source>
-          <target state="new">Source file path</target>
+          <target state="translated">Banen til kildefilen</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputTransFile.Name" translate="yes" xml:space="preserve">
           <source>labelInputTransFile</source>
@@ -349,7 +349,7 @@
         </trans-unit>
         <trans-unit id="buttonOutTransFile.Text" translate="yes" xml:space="preserve">
           <source>Output File(s) Path</source>
-          <target state="new">Output File(s) Path</target>
+          <target state="translated">Sti til utdatafiler</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonOutTransFile.Name" translate="yes" xml:space="preserve">
           <source>buttonOutTransFile</source>
@@ -369,11 +369,11 @@
         </trans-unit>
         <trans-unit id="tabPage1.Text" translate="yes" xml:space="preserve">
           <source>Transcode</source>
-          <target state="new">Transcode</target>
+          <target state="translated">Omkode</target>
         </trans-unit>
         <trans-unit id="tabPage1.ToolTipText" translate="yes" xml:space="preserve">
           <source>Transcode h.264 containers, MKV to MP4 or, MP4 to MKV</source>
-          <target state="new">Transcode h.264 containers, MKV to MP4 or, MP4 to MKV</target>
+          <target state="translated">Omkode h.264 container, MKV til MP4 eller, MP4 till MKV</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;tabPage1.Name" translate="yes" xml:space="preserve">
           <source>tabPage1</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="buttonRemoveSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Remove subtitle</source>
-          <target state="new">Remove subtitle</target>
+          <target state="translated">Fjerne undertittel</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.Name" translate="yes" xml:space="preserve">
           <source>buttonRemoveSubtitle</source>
@@ -413,7 +413,7 @@
         </trans-unit>
         <trans-unit id="labelAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Select to add srt subtitle</source>
-          <target state="new">Select to add srt subtitle</target>
+          <target state="translated">Velg for å legge SRT undertittel</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.Name" translate="yes" xml:space="preserve">
           <source>labelAddSubtitle</source>
@@ -433,7 +433,7 @@
         </trans-unit>
         <trans-unit id="buttonAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Add Subtitle</source>
-          <target state="new">Add Subtitle</target>
+          <target state="translated">Legge til undertittel</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.Name" translate="yes" xml:space="preserve">
           <source>buttonAddSubtitle</source>
@@ -453,7 +453,7 @@
         </trans-unit>
         <trans-unit id="labelInputConv.Text" translate="yes" xml:space="preserve">
           <source>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</source>
-          <target state="new">First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</target>
+          <target state="translated">Først velger du Output banen der nye filer vil bli lagret. Klikk knappen nedenfor eller slippe en fil der for å velge bare én fil. Deretter velger du alternativer.</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConv.Name" translate="yes" xml:space="preserve">
           <source>labelInputConv</source>
@@ -473,7 +473,7 @@
         </trans-unit>
         <trans-unit id="labelMultiConv.Text" translate="yes" xml:space="preserve">
           <source>Choose options first, then click, or drop many files on the button --%%amp;gt;</source>
-          <target state="new">Choose options first, then click, or drop many files on the button --%%amp;gt;</target>
+          <target state="translated">Velg alternativer først, deretter klikk, eller slippe mange filer på knappen --%%amp;gt;</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.Name" translate="yes" xml:space="preserve">
           <source>labelMultiConv</source>
@@ -493,7 +493,7 @@
         </trans-unit>
         <trans-unit id="checkBoxAudioOnly.Text" translate="yes" xml:space="preserve">
           <source>Audio Only</source>
-          <target state="new">Audio Only</target>
+          <target state="translated">kun lyd</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;checkBoxAudioOnly.Name" translate="yes" xml:space="preserve">
           <source>checkBoxAudioOnly</source>
@@ -513,7 +513,7 @@
         </trans-unit>
         <trans-unit id="checkBoxVideoOnly.Text" translate="yes" xml:space="preserve">
           <source>Video Only</source>
-          <target state="new">Video Only</target>
+          <target state="translated">kun video</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;checkBoxVideoOnly.Name" translate="yes" xml:space="preserve">
           <source>checkBoxVideoOnly</source>
@@ -533,7 +533,7 @@
         </trans-unit>
         <trans-unit id="groupBoxVideoOrAudio.Text" translate="yes" xml:space="preserve">
           <source>Extract Video or Audio</source>
-          <target state="new">Extract Video or Audio</target>
+          <target state="translated">Pakk video eller lyd</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.Name" translate="yes" xml:space="preserve">
           <source>groupBoxVideoOrAudio</source>
@@ -553,7 +553,7 @@
         </trans-unit>
         <trans-unit id="labelPreset.Text" translate="yes" xml:space="preserve">
           <source>Encoding preset</source>
-          <target state="new">Encoding preset</target>
+          <target state="translated">koding forhånds</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelPreset.Name" translate="yes" xml:space="preserve">
           <source>labelPreset</source>
@@ -573,7 +573,7 @@
         </trans-unit>
         <trans-unit id="labelQuality.Text" translate="yes" xml:space="preserve">
           <source>Quality factor</source>
-          <target state="new">Quality factor</target>
+          <target state="translated">kvalitet faktor</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelQuality.Name" translate="yes" xml:space="preserve">
           <source>labelQuality</source>
@@ -593,7 +593,7 @@
         </trans-unit>
         <trans-unit id="labelAudio.Text" translate="yes" xml:space="preserve">
           <source>Audio bitrate</source>
-          <target state="new">Audio bitrate</target>
+          <target state="translated">audio bitrate</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelAudio.Name" translate="yes" xml:space="preserve">
           <source>labelAudio</source>
@@ -773,7 +773,7 @@
         </trans-unit>
         <trans-unit id="groupBoxOptions.Text" translate="yes" xml:space="preserve">
           <source>Options</source>
-          <target state="new">Options</target>
+          <target state="translated">alternativer</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.Name" translate="yes" xml:space="preserve">
           <source>groupBoxOptions</source>
@@ -793,7 +793,7 @@
         </trans-unit>
         <trans-unit id="radioButtonCopyAudio.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
-          <target state="new">copy</target>
+          <target state="translated">kopi</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyAudio.Name" translate="yes" xml:space="preserve">
           <source>radioButtonCopyAudio</source>
@@ -853,7 +853,7 @@
         </trans-unit>
         <trans-unit id="groupBoxAudio.Text" translate="yes" xml:space="preserve">
           <source>Audio Codec</source>
-          <target state="new">Audio Codec</target>
+          <target state="translated">lydkodek</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.Name" translate="yes" xml:space="preserve">
           <source>groupBoxAudio</source>
@@ -873,7 +873,7 @@
         </trans-unit>
         <trans-unit id="radioButtonCopyVideo.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
-          <target state="new">copy</target>
+          <target state="translated">kopi</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;radioButtonCopyVideo.Name" translate="yes" xml:space="preserve">
           <source>radioButtonCopyVideo</source>
@@ -933,7 +933,7 @@
         </trans-unit>
         <trans-unit id="groupBoxContainer.Text" translate="yes" xml:space="preserve">
           <source>Video Container</source>
-          <target state="new">Video Container</target>
+          <target state="translated">video container</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.Name" translate="yes" xml:space="preserve">
           <source>groupBoxContainer</source>
@@ -953,7 +953,7 @@
         </trans-unit>
         <trans-unit id="labelTextBoxConv.Text" translate="yes" xml:space="preserve">
           <source>ffmpeg command to be added to the list (you can edit it before clicking Add):</source>
-          <target state="new">ffmpeg command to be added to the list (you can edit it before clicking Add):</target>
+          <target state="translated">ffmpeg kommando for å bli lagt til listen (du kan redigere den før du klikker Legg til):</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.Name" translate="yes" xml:space="preserve">
           <source>labelTextBoxConv</source>
@@ -973,7 +973,7 @@
         </trans-unit>
         <trans-unit id="labelOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Destination file path</source>
-          <target state="new">Destination file path</target>
+          <target state="translated">Destinasjon filbane</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.Name" translate="yes" xml:space="preserve">
           <source>labelOutConvFile</source>
@@ -993,7 +993,7 @@
         </trans-unit>
         <trans-unit id="labelInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Source file path</source>
-          <target state="new">Source file path</target>
+          <target state="translated">Kildefilen bane</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.Name" translate="yes" xml:space="preserve">
           <source>labelInputConvFile</source>
@@ -1013,7 +1013,7 @@
         </trans-unit>
         <trans-unit id="buttonAddBatchConv.Text" translate="yes" xml:space="preserve">
           <source>Add To Batch List   --%%amp;gt;</source>
-          <target state="new">Add To Batch List   --%%amp;gt;</target>
+          <target state="translated">Legg til i liste --%%amp;gt;</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.Name" translate="yes" xml:space="preserve">
           <source>buttonAddBatchConv</source>
@@ -1033,7 +1033,7 @@
         </trans-unit>
         <trans-unit id="buttonMultiConvFiles.Text" translate="yes" xml:space="preserve">
           <source>Multiple Input Files</source>
-          <target state="new">Multiple Input Files</target>
+          <target state="translated">Flere input-filer</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.Name" translate="yes" xml:space="preserve">
           <source>buttonMultiConvFiles</source>
@@ -1089,7 +1089,7 @@
         </trans-unit>
         <trans-unit id="buttonOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Output Path*</source>
-          <target state="new">Output Path*</target>
+          <target state="translated">Utgang sti*</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.Name" translate="yes" xml:space="preserve">
           <source>buttonOutConvFile</source>
@@ -1109,7 +1109,7 @@
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Input File</source>
-          <target state="new">Input File</target>
+          <target state="translated">Filen</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.Name" translate="yes" xml:space="preserve">
           <source>buttonInputConvFile</source>
@@ -1129,11 +1129,11 @@
         </trans-unit>
         <trans-unit id="tabPage2.Text" translate="yes" xml:space="preserve">
           <source>Convert</source>
-          <target state="new">Convert</target>
+          <target state="translated">Konvertere</target>
         </trans-unit>
         <trans-unit id="tabPage2.ToolTipText" translate="yes" xml:space="preserve">
           <source>Convert (encode) files in different formats</source>
-          <target state="new">Convert (encode) files in different formats</target>
+          <target state="translated">Koder filer i forskjellige formater</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;tabPage2.Name" translate="yes" xml:space="preserve">
           <source>tabPage2</source>
@@ -1169,7 +1169,7 @@
         </trans-unit>
         <trans-unit id="buttonUnselectAll.Text" translate="yes" xml:space="preserve">
           <source>Unselect</source>
-          <target state="new">Unselect</target>
+          <target state="translated">Velg bort</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonUnselectAll.Name" translate="yes" xml:space="preserve">
           <source>buttonUnselectAll</source>
@@ -1189,7 +1189,7 @@
         </trans-unit>
         <trans-unit id="buttonSellectAllQueue.Text" translate="yes" xml:space="preserve">
           <source>Select all</source>
-          <target state="new">Select all</target>
+          <target state="translated">Velg alle</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonSellectAllQueue.Name" translate="yes" xml:space="preserve">
           <source>buttonSellectAllQueue</source>
@@ -1209,15 +1209,15 @@
         </trans-unit>
         <trans-unit id="check_cell.HeaderText" translate="yes" xml:space="preserve">
           <source>Sel.</source>
-          <target state="new">Sel.</target>
+          <target state="translated">sel.</target>
         </trans-unit>
         <trans-unit id="no_cell.HeaderText" translate="yes" xml:space="preserve">
           <source>No.</source>
-          <target state="new">No.</target>
+          <target state="translated">nummer</target>
         </trans-unit>
         <trans-unit id="task_cell.HeaderText" translate="yes" xml:space="preserve">
           <source>Task</source>
-          <target state="new">Task</target>
+          <target state="translated">oppgave</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;dataGridViewBatch.Name" translate="yes" xml:space="preserve">
           <source>dataGridViewBatch</source>
@@ -1237,7 +1237,7 @@
         </trans-unit>
         <trans-unit id="buttonDeleteQueue.Text" translate="yes" xml:space="preserve">
           <source>Delete</source>
-          <target state="new">Delete</target>
+          <target state="translated">Fjerne</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonDeleteQueue.Name" translate="yes" xml:space="preserve">
           <source>buttonDeleteQueue</source>
@@ -1257,7 +1257,7 @@
         </trans-unit>
         <trans-unit id="buttonCancelBatch.Text" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="new">Cancel</target>
+          <target state="translated">Avbryte</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonCancelBatch.Name" translate="yes" xml:space="preserve">
           <source>buttonCancelBatch</source>
@@ -1313,7 +1313,7 @@
         </trans-unit>
         <trans-unit id="tabPage3.Text" translate="yes" xml:space="preserve">
           <source>Batch list</source>
-          <target state="new">Batch list</target>
+          <target state="translated">Liste</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;tabPage3.Name" translate="yes" xml:space="preserve">
           <source>tabPage3</source>

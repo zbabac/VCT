@@ -193,9 +193,10 @@
 </target>
         </trans-unit>
         <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
-          <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
-          <target state="translated">Таб 'Препакивање' за брзо пребацивање h.264 fajlova (MP4 у MKV и обрнуто), или таб 'Конверзија' за пуну конверзију.
+          <source>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</source>
+          <target state="needs-review-translation">Таб 'Препакивање' за брзо пребацивање h.264 fajlova (MP4 у MKV и обрнуто), или таб 'Конверзија' за пуну конверзију.
 </target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="statusStrip1.Text" translate="no" xml:space="preserve">
           <source>VTC v0.1.0</source>

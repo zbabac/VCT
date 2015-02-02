@@ -22,6 +22,7 @@
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>Таб 'Препакивање' за брзо пребацивање h.264 fajlova (MP4 у MKV и обрнуто), или таб 'Конверзија' за пуну конверзију.
 </value>
+    <comment></comment>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>VTC v0.1.0</value>

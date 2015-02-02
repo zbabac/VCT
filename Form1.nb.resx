@@ -15,15 +15,11 @@
   <resheader name="source-language">
     <value>en</value>
   </resheader>
-  <data name="labelMultiTransFile.Text" xml:space="preserve">
-    <value>Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--&gt;MKV, MKV--&gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</value>
-  </data>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Tab 'Prepakivanje' za brzo prebacivanje h.264 fajlova (MP4 u MKV i obrnuto), ili tab 'Konverzija' za punu konverziju.</value>
-    <comment></comment>
+    <value>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
-    <value>VTC v0.1.0</value>
+    <value>VTC v1.2.1</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
@@ -38,7 +34,7 @@
     <value>2</value>
   </data>
   <data name="buttonHelp.Text" xml:space="preserve">
-    <value>Pomoć</value>
+    <value>Hjelp (engelsk)</value>
   </data>
   <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
     <value>buttonHelp</value>
@@ -53,7 +49,7 @@
     <value>0</value>
   </data>
   <data name="buttonAbout.Text" xml:space="preserve">
-    <value>O programu</value>
+    <value>Om programmet</value>
   </data>
   <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
     <value>buttonAbout</value>
@@ -66,6 +62,9 @@
   </data>
   <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="labelMultiTransFile.Text" xml:space="preserve">
+    <value>Velg én eller flere filer: velg utgang banen først. Nye videoer blir lagret der, velg deretter mer input filer som du ønsker å omkode(MP4--&gt;MKV, MKV--&gt;MP4). Eller bare drag'n'drop filer til knappen "Input Filer ...".</value>
   </data>
   <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
     <value>labelMultiTransFile</value>
@@ -80,7 +79,7 @@
     <value>2</value>
   </data>
   <data name="buttonMultiTransFile.Text" xml:space="preserve">
-    <value>Fajl(ovi) za konverziju</value>
+    <value>Input File(r) å omkode</value>
   </data>
   <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
     <value>buttonMultiTransFile</value>
@@ -107,7 +106,7 @@
     <value>4</value>
   </data>
   <data name="labelOutTransFile.Text" xml:space="preserve">
-    <value>Odredišni folder</value>
+    <value>Banen til målfilen</value>
   </data>
   <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
     <value>labelOutTransFile</value>
@@ -122,7 +121,7 @@
     <value>5</value>
   </data>
   <data name="labelInputTransFile.Text" xml:space="preserve">
-    <value>Putanja do ulaznog fajla</value>
+    <value>Banen til kildefilen</value>
   </data>
   <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
     <value>labelInputTransFile</value>
@@ -137,7 +136,7 @@
     <value>6</value>
   </data>
   <data name="buttonOutTransFile.Text" xml:space="preserve">
-    <value>Putanja rezultata</value>
+    <value>Sti til utdatafiler</value>
   </data>
   <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
     <value>buttonOutTransFile</value>
@@ -152,10 +151,10 @@
     <value>7</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>Prebacivanje</value>
+    <value>Omkode</value>
   </data>
   <data name="tabPage1.ToolTipText" xml:space="preserve">
-    <value>Prebaci H.264, MKV u MP4 ili MP4 u MKV</value>
+    <value>Omkode h.264 container, MKV til MP4 eller, MP4 till MKV</value>
   </data>
   <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
     <value>tabPage1</value>
@@ -170,7 +169,7 @@
     <value>0</value>
   </data>
   <data name="buttonRemoveSubtitle.Text" xml:space="preserve">
-    <value>Ukloni titl</value>
+    <value>Fjerne undertittel</value>
   </data>
   <data name="&gt;&gt;buttonRemoveSubtitle.Name" xml:space="preserve">
     <value>buttonRemoveSubtitle</value>
@@ -185,7 +184,7 @@
     <value>0</value>
   </data>
   <data name="labelAddSubtitle.Text" xml:space="preserve">
-    <value>Dodaj SRT titl</value>
+    <value>Velg for å legge SRT undertittel</value>
   </data>
   <data name="&gt;&gt;labelAddSubtitle.Name" xml:space="preserve">
     <value>labelAddSubtitle</value>
@@ -200,7 +199,7 @@
     <value>1</value>
   </data>
   <data name="buttonAddSubtitle.Text" xml:space="preserve">
-    <value>Dodaj titl</value>
+    <value>Legge til undertittel</value>
   </data>
   <data name="&gt;&gt;buttonAddSubtitle.Name" xml:space="preserve">
     <value>buttonAddSubtitle</value>
@@ -215,7 +214,7 @@
     <value>2</value>
   </data>
   <data name="labelInputConv.Text" xml:space="preserve">
-    <value>Prvo izaberite putanju gdje će biti sačuvan fajl. Kliknite dugme ispod ili odvucite 1 fajl na njega. Tek onda izaberite opcije.</value>
+    <value>Først velger du Output banen der nye filer vil bli lagret. Klikk knappen nedenfor eller slippe en fil der for å velge bare én fil. Deretter velger du alternativer.</value>
   </data>
   <data name="&gt;&gt;labelInputConv.Name" xml:space="preserve">
     <value>labelInputConv</value>
@@ -230,7 +229,7 @@
     <value>3</value>
   </data>
   <data name="labelMultiConv.Text" xml:space="preserve">
-    <value>Prvo izaberite opcije, onda ili kliknite, ili prevucite više fajlova na njega--&gt;</value>
+    <value>Velg alternativer først, deretter klikk, eller slippe mange filer på knappen --&gt;</value>
   </data>
   <data name="&gt;&gt;labelMultiConv.Name" xml:space="preserve">
     <value>labelMultiConv</value>
@@ -245,7 +244,7 @@
     <value>4</value>
   </data>
   <data name="checkBoxAudioOnly.Text" xml:space="preserve">
-    <value>Samo zvuk</value>
+    <value>kun lyd</value>
   </data>
   <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
     <value>checkBoxAudioOnly</value>
@@ -260,7 +259,7 @@
     <value>0</value>
   </data>
   <data name="checkBoxVideoOnly.Text" xml:space="preserve">
-    <value>Samo slika</value>
+    <value>kun video</value>
   </data>
   <data name="&gt;&gt;checkBoxVideoOnly.Name" xml:space="preserve">
     <value>checkBoxVideoOnly</value>
@@ -275,7 +274,7 @@
     <value>1</value>
   </data>
   <data name="groupBoxVideoOrAudio.Text" xml:space="preserve">
-    <value>Iščupaj zvuk ili sliku iz filma</value>
+    <value>Pakk video eller lyd</value>
   </data>
   <data name="&gt;&gt;groupBoxVideoOrAudio.Name" xml:space="preserve">
     <value>groupBoxVideoOrAudio</value>
@@ -290,7 +289,7 @@
     <value>5</value>
   </data>
   <data name="labelPreset.Text" xml:space="preserve">
-    <value>Preset kodovanja</value>
+    <value>koding forhånds</value>
   </data>
   <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
     <value>labelPreset</value>
@@ -305,7 +304,7 @@
     <value>0</value>
   </data>
   <data name="labelQuality.Text" xml:space="preserve">
-    <value>Faktor kvaliteta</value>
+    <value>kvalitet faktor</value>
   </data>
   <data name="&gt;&gt;labelQuality.Name" xml:space="preserve">
     <value>labelQuality</value>
@@ -320,7 +319,7 @@
     <value>1</value>
   </data>
   <data name="labelAudio.Text" xml:space="preserve">
-    <value>Kvalitet zvuka</value>
+    <value>audio bitrate</value>
   </data>
   <data name="&gt;&gt;labelAudio.Name" xml:space="preserve">
     <value>labelAudio</value>
@@ -455,7 +454,7 @@
     <value>5</value>
   </data>
   <data name="groupBoxOptions.Text" xml:space="preserve">
-    <value>Opcije</value>
+    <value>alternativer</value>
   </data>
   <data name="&gt;&gt;groupBoxOptions.Name" xml:space="preserve">
     <value>groupBoxOptions</value>
@@ -470,7 +469,7 @@
     <value>6</value>
   </data>
   <data name="radioButtonCopyAudio.Text" xml:space="preserve">
-    <value>original</value>
+    <value>kopi</value>
   </data>
   <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
     <value>radioButtonCopyAudio</value>
@@ -515,7 +514,7 @@
     <value>2</value>
   </data>
   <data name="groupBoxAudio.Text" xml:space="preserve">
-    <value>Audio kodek</value>
+    <value>lydkodek</value>
   </data>
   <data name="&gt;&gt;groupBoxAudio.Name" xml:space="preserve">
     <value>groupBoxAudio</value>
@@ -530,7 +529,7 @@
     <value>7</value>
   </data>
   <data name="radioButtonCopyVideo.Text" xml:space="preserve">
-    <value>original</value>
+    <value>kopi</value>
   </data>
   <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
     <value>radioButtonCopyVideo</value>
@@ -575,7 +574,7 @@
     <value>2</value>
   </data>
   <data name="groupBoxContainer.Text" xml:space="preserve">
-    <value>Pakovanje slike</value>
+    <value>video container</value>
   </data>
   <data name="&gt;&gt;groupBoxContainer.Name" xml:space="preserve">
     <value>groupBoxContainer</value>
@@ -590,7 +589,7 @@
     <value>8</value>
   </data>
   <data name="labelTextBoxConv.Text" xml:space="preserve">
-    <value>ffmpeg koju dodajem na listu desno (može se ručno popraviti prije dodavanja):</value>
+    <value>ffmpeg kommando for å bli lagt til listen (du kan redigere den før du klikker Legg til):</value>
   </data>
   <data name="&gt;&gt;labelTextBoxConv.Name" xml:space="preserve">
     <value>labelTextBoxConv</value>
@@ -605,7 +604,7 @@
     <value>9</value>
   </data>
   <data name="labelOutConvFile.Text" xml:space="preserve">
-    <value>Putanja do odredišnog fajla</value>
+    <value>Destinasjon filbane</value>
   </data>
   <data name="&gt;&gt;labelOutConvFile.Name" xml:space="preserve">
     <value>labelOutConvFile</value>
@@ -620,7 +619,7 @@
     <value>10</value>
   </data>
   <data name="labelInputConvFile.Text" xml:space="preserve">
-    <value>Putanja do originalnog fajla</value>
+    <value>Kildefilen bane</value>
   </data>
   <data name="&gt;&gt;labelInputConvFile.Name" xml:space="preserve">
     <value>labelInputConvFile</value>
@@ -635,7 +634,7 @@
     <value>11</value>
   </data>
   <data name="buttonAddBatchConv.Text" xml:space="preserve">
-    <value>Dodaj na listu--&gt;</value>
+    <value>Legg til i liste --&gt;</value>
   </data>
   <data name="&gt;&gt;buttonAddBatchConv.Name" xml:space="preserve">
     <value>buttonAddBatchConv</value>
@@ -650,7 +649,7 @@
     <value>12</value>
   </data>
   <data name="buttonMultiConvFiles.Text" xml:space="preserve">
-    <value>Više ulaznih fajlova</value>
+    <value>Flere input-filer</value>
   </data>
   <data name="&gt;&gt;buttonMultiConvFiles.Name" xml:space="preserve">
     <value>buttonMultiConvFiles</value>
@@ -692,7 +691,7 @@
     <value>14</value>
   </data>
   <data name="buttonOutConvFile.Text" xml:space="preserve">
-    <value>Putanja rezultata*</value>
+    <value>Utgang sti*</value>
   </data>
   <data name="&gt;&gt;buttonOutConvFile.Name" xml:space="preserve">
     <value>buttonOutConvFile</value>
@@ -707,7 +706,7 @@
     <value>15</value>
   </data>
   <data name="buttonInputConvFile.Text" xml:space="preserve">
-    <value>Orig. fajl</value>
+    <value>Filen</value>
   </data>
   <data name="&gt;&gt;buttonInputConvFile.Name" xml:space="preserve">
     <value>buttonInputConvFile</value>
@@ -722,10 +721,10 @@
     <value>16</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
-    <value>Puna konverzija</value>
+    <value>Konvertere</value>
   </data>
   <data name="tabPage2.ToolTipText" xml:space="preserve">
-    <value>Konverzija (puno prekodovanje) iz raznih ulaznih formata</value>
+    <value>Koder filer i forskjellige formater</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
     <value>tabPage2</value>
@@ -752,7 +751,7 @@
     <value>1</value>
   </data>
   <data name="buttonUnselectAll.Text" xml:space="preserve">
-    <value>Deselektuj</value>
+    <value>Velg bort</value>
   </data>
   <data name="&gt;&gt;buttonUnselectAll.Name" xml:space="preserve">
     <value>buttonUnselectAll</value>
@@ -767,7 +766,7 @@
     <value>0</value>
   </data>
   <data name="buttonSellectAllQueue.Text" xml:space="preserve">
-    <value>Selektuj sve</value>
+    <value>Velg alle</value>
   </data>
   <data name="&gt;&gt;buttonSellectAllQueue.Name" xml:space="preserve">
     <value>buttonSellectAllQueue</value>
@@ -782,13 +781,13 @@
     <value>1</value>
   </data>
   <data name="check_cell.HeaderText" xml:space="preserve">
-    <value>Sel.</value>
+    <value>sel.</value>
   </data>
   <data name="no_cell.HeaderText" xml:space="preserve">
-    <value>Br.</value>
+    <value>nummer</value>
   </data>
   <data name="task_cell.HeaderText" xml:space="preserve">
-    <value>komanda</value>
+    <value>oppgave</value>
   </data>
   <data name="&gt;&gt;dataGridViewBatch.Name" xml:space="preserve">
     <value>dataGridViewBatch</value>
@@ -803,7 +802,7 @@
     <value>2</value>
   </data>
   <data name="buttonDeleteQueue.Text" xml:space="preserve">
-    <value>Ukloni</value>
+    <value>Fjerne</value>
   </data>
   <data name="&gt;&gt;buttonDeleteQueue.Name" xml:space="preserve">
     <value>buttonDeleteQueue</value>
@@ -818,7 +817,7 @@
     <value>3</value>
   </data>
   <data name="buttonCancelBatch.Text" xml:space="preserve">
-    <value>Prekini</value>
+    <value>Avbryte</value>
   </data>
   <data name="&gt;&gt;buttonCancelBatch.Name" xml:space="preserve">
     <value>buttonCancelBatch</value>
@@ -860,7 +859,7 @@
     <value>0</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Lista zadataka</value>
+    <value>Liste</value>
   </data>
   <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
     <value>tabPage3</value>
@@ -887,7 +886,7 @@
     <value>0</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Video konvertor &amp; transkoder</value>
+    <value>Video Converter &amp; Transcoder</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
     <value>toolStripStatusLabel1</value>

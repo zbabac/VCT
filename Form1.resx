@@ -178,7 +178,7 @@
     <value>394, 110</value>
   </data>
   <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>88, 47</value>
   </data>
   <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -205,7 +205,7 @@
     <value>394, 21</value>
   </data>
   <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>88, 45</value>
   </data>
   <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -256,7 +256,7 @@
     <value>27, 139</value>
   </data>
   <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 56</value>
+    <value>78, 56</value>
   </data>
   <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -301,10 +301,10 @@
     <value>4</value>
   </data>
   <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 258</value>
+    <value>114, 258</value>
   </data>
   <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 42</value>
+    <value>224, 42</value>
   </data>
   <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -325,10 +325,10 @@
     <value>5</value>
   </data>
   <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 151</value>
+    <value>111, 151</value>
   </data>
   <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 44</value>
+    <value>227, 44</value>
   </data>
   <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -352,7 +352,7 @@
     <value>27, 244</value>
   </data>
   <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 56</value>
+    <value>78, 56</value>
   </data>
   <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -466,7 +466,7 @@
     <value>9, 311</value>
   </data>
   <data name="buttonAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 44</value>
+    <value>73, 44</value>
   </data>
   <data name="buttonAddSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1111,10 +1111,10 @@
     <value>9</value>
   </data>
   <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 119</value>
+    <value>81, 119</value>
   </data>
   <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 37</value>
+    <value>186, 37</value>
   </data>
   <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1135,10 +1135,10 @@
     <value>10</value>
   </data>
   <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 55</value>
+    <value>84, 55</value>
   </data>
   <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 35</value>
+    <value>183, 35</value>
   </data>
   <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1273,7 +1273,7 @@
     <value>8, 119</value>
   </data>
   <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 40</value>
+    <value>67, 40</value>
   </data>
   <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1297,7 +1297,7 @@
     <value>8, 50</value>
   </data>
   <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 40</value>
+    <value>67, 40</value>
   </data>
   <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

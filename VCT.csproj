@@ -124,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.nb.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -137,6 +140,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AboutBox1.sr-Latn.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.nb.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +155,7 @@
     <EmbeddedResource Include="Form1.sr.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.nb.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -232,6 +239,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <XliffResource Include="MultilingualResources\VCT.nb.xlf" />
     <XliffResource Include="MultilingualResources\VCT.sr-Cyrl.xlf" />
     <XliffResource Include="MultilingualResources\VCT.sr-Latn.xlf" />
   </ItemGroup>

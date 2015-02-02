@@ -19,8 +19,9 @@
           <target state="signed-off">Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</target>
         </trans-unit>
         <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
-          <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
-          <target state="signed-off">Tab 'Prepakivanje' za brzo prebacivanje h.264 fajlova (MP4 u MKV i obrnuto), ili tab 'Konverzija' za punu konverziju.</target>
+          <source>Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.</source>
+          <target state="needs-review-translation">Tab 'Prepakivanje' za brzo prebacivanje h.264 fajlova (MP4 u MKV i obrnuto), ili tab 'Konverzija' za punu konverziju.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="statusStrip1.Text" translate="no" xml:space="preserve">
           <source>VTC v0.1.0</source>

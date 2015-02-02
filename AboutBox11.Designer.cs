@@ -121,7 +121,7 @@ namespace VTC {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License GPLv3.
+        ///   Looks up a localized string similar to License Apache v2.0.
         /// </summary>
         public static string labelCompanyName_Text {
             get {

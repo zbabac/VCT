@@ -86,8 +86,11 @@ namespace VTC
         public Form1()
         {
             // uncomment next line to build for specifig language UI - useful if you have Windows installed in english but you want specific language for app UI
-            // Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
             InitializeComponent();
+            // Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.
+            //statustekst = "Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.";
             // Handler for capturing output data from external process ffmpeg
             proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
             proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data
@@ -1065,6 +1068,36 @@ namespace VTC
                 toolTip30.SetToolTip(this.comboBoxPreset, "Важна опција за квалитет и величину фајла.\nАко желите мањи фајл бирајте што спорије (slow).");
                 toolTip31.SetToolTip(this.comboBoxQuality, "Најважнија опција за квалитет видеа.\nЗа ХД филмове 23 је одлично,\nза ХД са телефона, 25-26 даје мали фајл доброг квалитета,\nза СД филмове 20 је одлично, 22 даје мали фајл доброг квалитета. Мало испробајте да видите шта вам одговара, па онда увијек користите те вриједности до којих дођете емпиријски.");
                 toolTip32.SetToolTip(this.buttonAddSubtitle, "Додаје титл из вањског .SRT фајла у убацује га у видео.\nКорисно за репродукцију на неким уређајима или кад желите да држите само један фајл без додатних екстерних титлова.");
+                break;
+                case "nb":
+                toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
+                toolTip2.SetToolTip(this.tabPage2, "Velg denne kategorien hvis du ønsker å konvertere ulike typer lyd- eller videofiler til andre formater.\nDu kan velge filer individuelt (knappen til venstre) eller flere (øvre høyre knapp) og legge dem til batch jobblisten.\nDu kan redigere listen, endre FFMPEG alternativene manuelt.\nDu kan velge å ha kun video eller kun lyd (f.eks for å hente mp3).\nDu kan velge kvalitet, konvertering hastighet, etc.\nEller bare velge mislighold.");
+                toolTip3.SetToolTip(this.buttonHelp, "Åpner PDF hjelp dokument lagret i installasjonsmappen.");
+                toolTip4.SetToolTip(this.buttonOutTransFile, "Velg utgang banen der du vil lagre transkodet filen (e).\nFilnavnet vil bli gitt automatisk ved å legge til '1.' til navnet inndatafilen (e) du velge etterpå.");
+                toolTip6.SetToolTip(this.buttonMultiTransFile, "Velg en eller flere filer som skal pakkes om til MKV eller MP4, avhengig av valg av input filer format.\nBatch jobb Listen fylles ut automatisk.\nEtterpå kan du legge til flere filer på jobblisten fra denne kategorien eller konvertere kategorien.\nDu kan også slippe filer på denne knappen.");
+                toolTip9.SetToolTip(this.buttonStartQueue, "Klikk når du er ferdig med å lage listen\nAlle jobber i jobblisten er utført i kronologisk rekkefølge.");
+                toolTip10.SetToolTip(this.buttonCancelBatch, "Klikk for å avbryte kjøringen av alle jobber.\nListen vil forbli hvis du ønsker å manuelt redigere det etterpå.");
+                toolTip11.SetToolTip(this.buttonSellectAllQueue, "Klikk for å velge alle jobber for sletting \n. MERK: Dette vil ikke slette, knappen 'Slett' vil slette valgte jobbene.");
+                toolTip12.SetToolTip(this.buttonUnselectAll, "Klikk for å velge bort alle jobber i listen.");
+                toolTip13.SetToolTip(this.buttonDeleteQueue, "Klikk for å slette alle de valgte jobbene.\nFør det, bruker avmerkingsbokser til å velge de som du vil slette.");
+                toolTip14.SetToolTip(this.buttonInputConvFile, "Velg inndatafilen av ulike formater av lyd- eller videofiler.\nTa hensyn til filtre i dialogvinduet.\nDen filen vil bli konvertert, avhengig av alternativer valgte etter å ha valgt en fil. \nDu kan også slippe filen til knappen.");
+                toolTip15.SetToolTip(this.buttonOutConvFile, "Velg utgang banen der konverterte filene skal lagres.\nMen etter at må du velge INPUT fil eller DROP FIL THERE!\nFilnavn vil bli generert fra inngang fil ved å legge '1.' til slutten av filen.\nHvis du vil endre filnavnet, bruke tekstboksen under for å manuelt skrive inn navn ETTER at du har valgt alternativer.");
+                toolTip16.SetToolTip(this.buttonMultiConvFiles, "Velge flere filer som skal konverteres MED SAMME ALTERNATIVENE defineres under denne fanen FØR DU KLIKKE på denne knappen.\nBatch jobblisten fylles ut automatisk.\nDu kan også slippe filer på denne knappen.");
+                toolTip18.SetToolTip(this.richTextBoxConv, "Når bytte valg, er ffmpeg kommando generert i denne boksen. Du kan justere FFMPEG alternativer manuelt hvis du er avansert bruker. Når du er fornøyd med kommandoen, kan du klikke knappen 'Legg til batch fil listen'.");
+                toolTip19.SetToolTip(this.buttonAddBatchConv, "Når du velger alle alternativene, klikk her for å legge jobben til jobblisten.\nEtterpå kan du velge nye alternativer eller beholde den samme for ny jobb, eller bare klikk 'Start' for å starte koding filer i listen.");
+                toolTip20.SetToolTip(this.dataGridViewBatch, "De jobbene som du har lagt vises her.\nDu kan slette en eller flere av dem hvis du ikke vil ha dem.\nHvis du har endret ditt sinn om noen alternativer, kan du redigere ffmpeg kommandoen direkte i denne tabellen.\nNår du er ferdig med å bygge listen, klikk på 'Start' for å behandle køen.");
+                toolTip21.SetToolTip(this.checkBoxAudioOnly, "Velg om du ønsker å trekke ut bare lyd fra inndatafilen.");
+                toolTip22.SetToolTip(this.checkBoxVideoOnly, "Velg om du ønsker å trekke ut bare video fra inndatafilen.");
+                toolTip23.SetToolTip(this.radioButtonMKV, "Velg om du ønsker å kode video som MKV.");
+                toolTip24.SetToolTip(this.radioButtonMP4, "Velg om du ønsker å kode video som MP4.");
+                toolTip25.SetToolTip(this.radioButtonMP3, "Velg om du ønsker å kode lyd som MP3.");
+                toolTip26.SetToolTip(this.radioButtonAAC, "Velg om du ønsker å kode lyd som AAC.");
+                toolTip27.SetToolTip(this.radioButtonCopyAudio, "Velg om du vil kopiere originale audio strøm uten å endre.");
+                toolTip28.SetToolTip(this.radioButtonCopyVideo, "Velg om du vil kopiere originale video strøm uten å endre.");
+                toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Velg bitrate for lyd strøm valgt (AAC eller MP3). \nIkke relevant hvis 'kopi lyd' alternativet brukes.");
+                toolTip30.SetToolTip(this.comboBoxPreset, "Velg koding forhåndsinnstilt hastighet.\nVIKTIG: Dette bestemmer koding hastighet, men også størrelsen på utdatafilen.\nFor minste fil velger den tregeste du orker!\nIkke relevant hvis 'kopi video' valgt.");
+                toolTip31.SetToolTip(this.comboBoxQuality, "Velg videokvalitet. For SD-kilder, er 19-21 utmerket kvalitet rekkevidde. For HD-kilder, er 21-24 normalområdet.\nDu kan la standardinnstillingene til hvis du er fornøyd med utskriftskvaliteten, eller eksperimentere litt for å finne den beste verdi for deg.\nIkke relevant hvis 'kopi video' valgt.");
+                toolTip32.SetToolTip(this.buttonAddSubtitle, "Legg fra .SRT fil til mux som en strøm. Ignorert når BRUKES FLERE FILER .");
                 break;
 
             }
