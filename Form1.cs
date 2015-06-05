@@ -85,7 +85,7 @@ namespace VTC
 
         public Form1()
         {
-            // uncomment one of 2 next lines to build for specifig language UI - useful if you have Windows installed in english but you want specific language for app UI
+            // uncomment next line to build for specifig language UI - useful if you have Windows installed in english but you want specific language for app UI
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
             InitializeComponent();
