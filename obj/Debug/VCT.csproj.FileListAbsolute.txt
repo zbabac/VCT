@@ -29,7 +29,6 @@ C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\sr-Lat
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\bin\Debug\sr\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.Form1.sr.resources
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\sr\VCT.resources.dll
-C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VCT.csprojResolveAssemblyReference.cache
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\bin\Debug\nb\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.AboutBoxZ.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.Form1.nb.resources

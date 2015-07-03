@@ -47,6 +47,7 @@ namespace VTC
         static bool add_sub_stream = false;
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
+        static string vf = ""; //video filter part, used currently to rotate video
         string[] task_list = new string[100]; //all tasks put in a batch list
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
         // Create the ToolTips and associate with the Form container.
@@ -82,6 +83,9 @@ namespace VTC
         ToolTip toolTip30 = new ToolTip();
         ToolTip toolTip31 = new ToolTip();
         ToolTip toolTip32 = new ToolTip();
+        ToolTip toolTip33 = new ToolTip();
+        ToolTip toolTip34 = new ToolTip();
+        ToolTip toolTip35 = new ToolTip();
 
         public Form1()
         {
@@ -483,6 +487,13 @@ namespace VTC
                 }
                 else container = " copy";
                 //
+                if (checkBox180.Checked)
+                    vf = " -vf \"vflip\" ";
+                if (checkBox90clockwise.Checked)
+                    vf = " -vf \"transpose=1\" ";
+                if (checkBox90counterclockwise.Checked)
+                    vf = " -vf \"transpose=2\" ";
+                //
                 preset = comboBoxPreset.SelectedItem.ToString();
                 //
                 crf = comboBoxQuality.SelectedItem.ToString();
@@ -501,6 +512,7 @@ namespace VTC
                 string ext = "";		//initial file extension
                 string input_srt = "";
                 string srt_options = "";
+                vf = "";
                 ReadParametersFromGUI();//read options set by user on GUI
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
                 { 
@@ -554,7 +566,7 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + video
+                ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + video + vf
                         + audio_part + srt_options + " \"" + out_file +"1." + ext + "\"";
                 
                 return ff;
@@ -1006,6 +1018,18 @@ namespace VTC
             toolTip32.InitialDelay = 500;
             toolTip32.ReshowDelay = 500;
             toolTip32.ShowAlways = true;
+            toolTip33.AutoPopDelay = 5000;
+            toolTip33.InitialDelay = 500;
+            toolTip33.ReshowDelay = 500;
+            toolTip33.ShowAlways = true;
+            toolTip34.AutoPopDelay = 5000;
+            toolTip34.InitialDelay = 500;
+            toolTip34.ReshowDelay = 500;
+            toolTip34.ShowAlways = true;
+            toolTip35.AutoPopDelay = 5000;
+            toolTip35.InitialDelay = 500;
+            toolTip35.ReshowDelay = 500;
+            toolTip35.ShowAlways = true;
             
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0,2))
             {
@@ -1038,6 +1062,9 @@ namespace VTC
                 toolTip30.SetToolTip(this.comboBoxPreset, "Select encoding preset speed.\nIMPORTANT: this determines encoding speed but also the size of the output file.\nFor smallest file choose the slowest you can bear!\nNot relevant if 'video copy' selected.");
                 toolTip31.SetToolTip(this.comboBoxQuality, "Select video quality.\nFor SD sources, 19-21 is excellent quality range.\nFor HD sources, 21-24 is normal range.\nYou can leave defaults to if you are happy with output quality,\nor experiment a little bit to find the best value for you.\nNot relevant if 'video copy' selected.");
                 toolTip32.SetToolTip(this.buttonAddSubtitle, "Add from .SRT file to mux as a stream.\nIGNORED WHEN USING MULTIPLE FILES.");
+                toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
+                toolTip33.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
+                toolTip33.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
                 break;
                 case "sr" :
                 toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -1192,6 +1219,35 @@ namespace VTC
             buttonRemoveSubtitle.Enabled = false;
             buttonRemoveSubtitle.Visible = false;
             labelAddSubtitle.Text = "Select srt subtitle stream file.";
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+        private void checkBox180_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox180.Checked)
+            {
+                checkBox90clockwise.Checked = false;
+                checkBox90counterclockwise.Checked = false;
+            }
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void checkBox90clockwise_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox90clockwise.Checked)
+            {
+                checkBox180.Checked = false;
+                checkBox90counterclockwise.Checked = false;
+            }
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void checkBox90counterclockwise_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox90counterclockwise.Checked)
+            {
+                checkBox180.Checked = false;
+                checkBox90clockwise.Checked = false;
+            }
             richTextBoxConv.Text = SetupConversionOptions();
         }
 

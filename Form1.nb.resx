@@ -181,7 +181,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="labelAddSubtitle.Text" xml:space="preserve">
     <value>Velg for å legge SRT undertittel</value>
@@ -196,7 +196,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="buttonAddSubtitle.Text" xml:space="preserve">
     <value>Legge til undertittel</value>
@@ -211,7 +211,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="labelInputConv.Text" xml:space="preserve">
     <value>Først velger du Output banen der nye filer vil bli lagret. Klikk knappen nedenfor eller slippe en fil der for å velge bare én fil. Deretter velger du alternativer.</value>
@@ -226,7 +226,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelInputConv.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="labelMultiConv.Text" xml:space="preserve">
     <value>Velg alternativer først, deretter klikk, eller slippe mange filer på knappen --&gt;</value>
@@ -241,7 +241,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelMultiConv.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checkBoxAudioOnly.Text" xml:space="preserve">
     <value>kun lyd</value>
@@ -286,7 +286,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="labelPreset.Text" xml:space="preserve">
     <value>koding forhånds</value>
@@ -466,7 +466,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="radioButtonCopyAudio.Text" xml:space="preserve">
     <value>kopi</value>
@@ -526,7 +526,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="radioButtonCopyVideo.Text" xml:space="preserve">
     <value>kopi</value>
@@ -586,7 +586,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="labelTextBoxConv.Text" xml:space="preserve">
     <value>ffmpeg kommando for å bli lagt til listen (du kan redigere den før du klikker Legg til):</value>
@@ -601,7 +601,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="labelOutConvFile.Text" xml:space="preserve">
     <value>Destinasjon filbane</value>
@@ -616,7 +616,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="labelInputConvFile.Text" xml:space="preserve">
     <value>Kildefilen bane</value>
@@ -631,7 +631,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="buttonAddBatchConv.Text" xml:space="preserve">
     <value>Legg til i liste --&gt;</value>
@@ -646,7 +646,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="buttonMultiConvFiles.Text" xml:space="preserve">
     <value>Flere input-filer</value>
@@ -661,7 +661,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="richTextBoxConv.Text" xml:space="preserve">
     <value></value>
@@ -688,7 +688,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="buttonOutConvFile.Text" xml:space="preserve">
     <value>Utgang sti*</value>
@@ -703,7 +703,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="buttonInputConvFile.Text" xml:space="preserve">
     <value>Filen</value>
@@ -718,7 +718,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Konvertere</value>
@@ -929,5 +929,65 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBox90counterclockwise.Text" xml:space="preserve">
+    <value>-90⁰</value>
+  </data>
+  <data name="&gt;&gt;checkBox90counterclockwise.Name" xml:space="preserve">
+    <value>checkBox90counterclockwise</value>
+  </data>
+  <data name="&gt;&gt;checkBox90counterclockwise.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox90counterclockwise.Parent" xml:space="preserve">
+    <value>groupBoxRotate</value>
+  </data>
+  <data name="&gt;&gt;checkBox90counterclockwise.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox90clockwise.Text" xml:space="preserve">
+    <value>90⁰</value>
+  </data>
+  <data name="&gt;&gt;checkBox90clockwise.Name" xml:space="preserve">
+    <value>checkBox90clockwise</value>
+  </data>
+  <data name="&gt;&gt;checkBox90clockwise.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox90clockwise.Parent" xml:space="preserve">
+    <value>groupBoxRotate</value>
+  </data>
+  <data name="&gt;&gt;checkBox90clockwise.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBox180.Text" xml:space="preserve">
+    <value>180⁰</value>
+  </data>
+  <data name="&gt;&gt;checkBox180.Name" xml:space="preserve">
+    <value>checkBox180</value>
+  </data>
+  <data name="&gt;&gt;checkBox180.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox180.Parent" xml:space="preserve">
+    <value>groupBoxRotate</value>
+  </data>
+  <data name="&gt;&gt;checkBox180.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxRotate.Text" xml:space="preserve">
+    <value>Rotate Video</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRotate.Name" xml:space="preserve">
+    <value>groupBoxRotate</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRotate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRotate.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRotate.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
 </root>

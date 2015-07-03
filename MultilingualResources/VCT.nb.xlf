@@ -408,8 +408,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.ZOrder" translate="yes" xml:space="preserve">
-          <source>0</source>
-          <target state="new">0</target>
+          <source>1</source>
+          <target state="new">1</target>
         </trans-unit>
         <trans-unit id="labelAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Select to add srt subtitle</source>
@@ -428,8 +428,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.ZOrder" translate="yes" xml:space="preserve">
-          <source>1</source>
-          <target state="new">1</target>
+          <source>2</source>
+          <target state="new">2</target>
         </trans-unit>
         <trans-unit id="buttonAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Add Subtitle</source>
@@ -448,8 +448,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.ZOrder" translate="yes" xml:space="preserve">
-          <source>2</source>
-          <target state="new">2</target>
+          <source>3</source>
+          <target state="new">3</target>
         </trans-unit>
         <trans-unit id="labelInputConv.Text" translate="yes" xml:space="preserve">
           <source>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</source>
@@ -468,8 +468,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConv.ZOrder" translate="yes" xml:space="preserve">
-          <source>3</source>
-          <target state="new">3</target>
+          <source>4</source>
+          <target state="new">4</target>
         </trans-unit>
         <trans-unit id="labelMultiConv.Text" translate="yes" xml:space="preserve">
           <source>Choose options first, then click, or drop many files on the button --%%amp;gt;</source>
@@ -488,8 +488,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.ZOrder" translate="yes" xml:space="preserve">
-          <source>4</source>
-          <target state="new">4</target>
+          <source>5</source>
+          <target state="new">5</target>
         </trans-unit>
         <trans-unit id="checkBoxAudioOnly.Text" translate="yes" xml:space="preserve">
           <source>Audio Only</source>
@@ -548,8 +548,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.ZOrder" translate="yes" xml:space="preserve">
-          <source>5</source>
-          <target state="new">5</target>
+          <source>6</source>
+          <target state="new">6</target>
         </trans-unit>
         <trans-unit id="labelPreset.Text" translate="yes" xml:space="preserve">
           <source>Encoding preset</source>
@@ -788,8 +788,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.ZOrder" translate="yes" xml:space="preserve">
-          <source>6</source>
-          <target state="new">6</target>
+          <source>7</source>
+          <target state="new">7</target>
         </trans-unit>
         <trans-unit id="radioButtonCopyAudio.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
@@ -868,8 +868,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.ZOrder" translate="yes" xml:space="preserve">
-          <source>7</source>
-          <target state="new">7</target>
+          <source>8</source>
+          <target state="new">8</target>
         </trans-unit>
         <trans-unit id="radioButtonCopyVideo.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
@@ -948,8 +948,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.ZOrder" translate="yes" xml:space="preserve">
-          <source>8</source>
-          <target state="new">8</target>
+          <source>9</source>
+          <target state="new">9</target>
         </trans-unit>
         <trans-unit id="labelTextBoxConv.Text" translate="yes" xml:space="preserve">
           <source>ffmpeg command to be added to the list (you can edit it before clicking Add):</source>
@@ -968,8 +968,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.ZOrder" translate="yes" xml:space="preserve">
-          <source>9</source>
-          <target state="new">9</target>
+          <source>10</source>
+          <target state="new">10</target>
         </trans-unit>
         <trans-unit id="labelOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Destination file path</source>
@@ -988,8 +988,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.ZOrder" translate="yes" xml:space="preserve">
-          <source>10</source>
-          <target state="new">10</target>
+          <source>11</source>
+          <target state="new">11</target>
         </trans-unit>
         <trans-unit id="labelInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Source file path</source>
@@ -1008,8 +1008,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.ZOrder" translate="yes" xml:space="preserve">
-          <source>11</source>
-          <target state="new">11</target>
+          <source>12</source>
+          <target state="new">12</target>
         </trans-unit>
         <trans-unit id="buttonAddBatchConv.Text" translate="yes" xml:space="preserve">
           <source>Add To Batch List   --%%amp;gt;</source>
@@ -1028,8 +1028,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.ZOrder" translate="yes" xml:space="preserve">
-          <source>12</source>
-          <target state="new">12</target>
+          <source>13</source>
+          <target state="new">13</target>
         </trans-unit>
         <trans-unit id="buttonMultiConvFiles.Text" translate="yes" xml:space="preserve">
           <source>Multiple Input Files</source>
@@ -1048,8 +1048,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.ZOrder" translate="yes" xml:space="preserve">
-          <source>13</source>
-          <target state="new">13</target>
+          <source>14</source>
+          <target state="new">14</target>
         </trans-unit>
         <trans-unit id="richTextBoxConv.Text" translate="yes" xml:space="preserve">
           <source></source>
@@ -1084,8 +1084,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;panelConvert.ZOrder" translate="yes" xml:space="preserve">
-          <source>14</source>
-          <target state="new">14</target>
+          <source>15</source>
+          <target state="new">15</target>
         </trans-unit>
         <trans-unit id="buttonOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Output Path*</source>
@@ -1104,8 +1104,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.ZOrder" translate="yes" xml:space="preserve">
-          <source>15</source>
-          <target state="new">15</target>
+          <source>16</source>
+          <target state="new">16</target>
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Input File</source>
@@ -1124,8 +1124,8 @@
           <target state="new">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.ZOrder" translate="yes" xml:space="preserve">
-          <source>16</source>
-          <target state="new">16</target>
+          <source>17</source>
+          <target state="new">17</target>
         </trans-unit>
         <trans-unit id="tabPage2.Text" translate="yes" xml:space="preserve">
           <source>Convert</source>
@@ -1406,6 +1406,86 @@
         <trans-unit id="&amp;gt;&amp;gt;$this.Type" translate="yes" xml:space="preserve">
           <source>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
           <target state="new">System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="checkBox90counterclockwise.Text" translate="yes" xml:space="preserve">
+          <source>-90⁰</source>
+          <target state="new">-90⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Name" translate="yes" xml:space="preserve">
+          <source>checkBox90counterclockwise</source>
+          <target state="new">checkBox90counterclockwise</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="new">0</target>
+        </trans-unit>
+        <trans-unit id="checkBox90clockwise.Text" translate="yes" xml:space="preserve">
+          <source>90⁰</source>
+          <target state="new">90⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Name" translate="yes" xml:space="preserve">
+          <source>checkBox90clockwise</source>
+          <target state="new">checkBox90clockwise</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.ZOrder" translate="yes" xml:space="preserve">
+          <source>1</source>
+          <target state="new">1</target>
+        </trans-unit>
+        <trans-unit id="checkBox180.Text" translate="yes" xml:space="preserve">
+          <source>180⁰</source>
+          <target state="new">180⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Name" translate="yes" xml:space="preserve">
+          <source>checkBox180</source>
+          <target state="new">checkBox180</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.ZOrder" translate="yes" xml:space="preserve">
+          <source>2</source>
+          <target state="new">2</target>
+        </trans-unit>
+        <trans-unit id="groupBoxRotate.Text" translate="yes" xml:space="preserve">
+          <source>Rotate Video</source>
+          <target state="new">Rotate Video</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Name" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Parent" translate="yes" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="new">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="new">0</target>
         </trans-unit>
       </group>
     </body>

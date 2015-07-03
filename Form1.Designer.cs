@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -91,6 +91,10 @@
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
             this.timerBatch = new System.Windows.Forms.Timer(this.components);
+            this.groupBoxRotate = new System.Windows.Forms.GroupBox();
+            this.checkBox180 = new System.Windows.Forms.CheckBox();
+            this.checkBox90clockwise = new System.Windows.Forms.CheckBox();
+            this.checkBox90counterclockwise = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -104,6 +108,7 @@
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
+            this.groupBoxRotate.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -202,6 +207,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.groupBoxRotate);
             this.tabPage2.Controls.Add(this.buttonRemoveSubtitle);
             this.tabPage2.Controls.Add(this.labelAddSubtitle);
             this.tabPage2.Controls.Add(this.buttonAddSubtitle);
@@ -521,11 +527,11 @@
             // 
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -540,9 +546,9 @@
             // 
             // check_cell
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle10;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -592,6 +598,36 @@
             this.timerBatch.Interval = 1000;
             this.timerBatch.Tick += new System.EventHandler(this.timerBatch_Tick);
             // 
+            // groupBoxRotate
+            // 
+            this.groupBoxRotate.Controls.Add(this.checkBox90counterclockwise);
+            this.groupBoxRotate.Controls.Add(this.checkBox90clockwise);
+            this.groupBoxRotate.Controls.Add(this.checkBox180);
+            resources.ApplyResources(this.groupBoxRotate, "groupBoxRotate");
+            this.groupBoxRotate.Name = "groupBoxRotate";
+            this.groupBoxRotate.TabStop = false;
+            // 
+            // checkBox180
+            // 
+            resources.ApplyResources(this.checkBox180, "checkBox180");
+            this.checkBox180.Name = "checkBox180";
+            this.checkBox180.UseVisualStyleBackColor = true;
+            this.checkBox180.CheckedChanged += new System.EventHandler(this.checkBox180_CheckedChanged);
+            // 
+            // checkBox90clockwise
+            // 
+            resources.ApplyResources(this.checkBox90clockwise, "checkBox90clockwise");
+            this.checkBox90clockwise.Name = "checkBox90clockwise";
+            this.checkBox90clockwise.UseVisualStyleBackColor = true;
+            this.checkBox90clockwise.CheckedChanged += new System.EventHandler(this.checkBox90clockwise_CheckedChanged);
+            // 
+            // checkBox90counterclockwise
+            // 
+            resources.ApplyResources(this.checkBox90counterclockwise, "checkBox90counterclockwise");
+            this.checkBox90counterclockwise.Name = "checkBox90counterclockwise";
+            this.checkBox90counterclockwise.UseVisualStyleBackColor = true;
+            this.checkBox90counterclockwise.CheckedChanged += new System.EventHandler(this.checkBox90counterclockwise_CheckedChanged);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -620,6 +656,8 @@
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
+            this.groupBoxRotate.ResumeLayout(false);
+            this.groupBoxRotate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,6 +724,10 @@
         private System.Windows.Forms.Button buttonRemoveSubtitle;
         private System.Windows.Forms.Label labelAddSubtitle;
         private System.Windows.Forms.Button buttonAddSubtitle;
+        private System.Windows.Forms.GroupBox groupBoxRotate;
+        private System.Windows.Forms.CheckBox checkBox90counterclockwise;
+        private System.Windows.Forms.CheckBox checkBox90clockwise;
+        private System.Windows.Forms.CheckBox checkBox180;
 
     }
 }

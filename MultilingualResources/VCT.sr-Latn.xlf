@@ -236,8 +236,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonRemoveSubtitle.ZOrder" translate="no" xml:space="preserve">
-          <source>0</source>
-          <target state="signed-off">0</target>
+          <source>1</source>
+          <target state="needs-review-translation">0</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Select to add srt subtitle</source>
@@ -256,8 +257,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelAddSubtitle.ZOrder" translate="no" xml:space="preserve">
-          <source>1</source>
-          <target state="signed-off">1</target>
+          <source>2</source>
+          <target state="needs-review-translation">1</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonAddSubtitle.Text" translate="yes" xml:space="preserve">
           <source>Add Subtitle</source>
@@ -276,8 +278,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddSubtitle.ZOrder" translate="no" xml:space="preserve">
-          <source>2</source>
-          <target state="signed-off">2</target>
+          <source>3</source>
+          <target state="needs-review-translation">2</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelInputConv.Text" translate="yes" xml:space="preserve">
           <source>First, select Output path where new files will be saved. Click button below or drop 1 file there to select single file. Then select options.</source>
@@ -296,8 +299,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConv.ZOrder" translate="no" xml:space="preserve">
-          <source>3</source>
-          <target state="signed-off">3</target>
+          <source>4</source>
+          <target state="needs-review-translation">3</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelMultiConv.Text" translate="yes" xml:space="preserve">
           <source>Choose options first, then click, or drop many files on the button --%%amp;gt;</source>
@@ -316,8 +320,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelMultiConv.ZOrder" translate="no" xml:space="preserve">
-          <source>4</source>
-          <target state="signed-off">4</target>
+          <source>5</source>
+          <target state="needs-review-translation">4</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="checkBoxAudioOnly.Text" translate="yes" xml:space="preserve">
           <source>Audio Only</source>
@@ -376,8 +381,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxVideoOrAudio.ZOrder" translate="no" xml:space="preserve">
-          <source>5</source>
-          <target state="signed-off">5</target>
+          <source>6</source>
+          <target state="needs-review-translation">5</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelPreset.Text" translate="yes" xml:space="preserve">
           <source>Encoding preset</source>
@@ -616,8 +622,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxOptions.ZOrder" translate="no" xml:space="preserve">
-          <source>6</source>
-          <target state="signed-off">6</target>
+          <source>7</source>
+          <target state="needs-review-translation">6</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="radioButtonCopyAudio.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
@@ -696,8 +703,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxAudio.ZOrder" translate="no" xml:space="preserve">
-          <source>7</source>
-          <target state="signed-off">7</target>
+          <source>8</source>
+          <target state="needs-review-translation">7</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="radioButtonCopyVideo.Text" translate="yes" xml:space="preserve">
           <source>copy</source>
@@ -776,8 +784,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;groupBoxContainer.ZOrder" translate="no" xml:space="preserve">
-          <source>8</source>
-          <target state="signed-off">8</target>
+          <source>9</source>
+          <target state="needs-review-translation">8</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelTextBoxConv.Text" translate="yes" xml:space="preserve">
           <source>ffmpeg command to be added to the list (you can edit it before clicking Add):</source>
@@ -796,8 +805,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelTextBoxConv.ZOrder" translate="no" xml:space="preserve">
-          <source>9</source>
-          <target state="signed-off">9</target>
+          <source>10</source>
+          <target state="needs-review-translation">9</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Destination file path</source>
@@ -816,8 +826,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelOutConvFile.ZOrder" translate="no" xml:space="preserve">
-          <source>10</source>
-          <target state="signed-off">10</target>
+          <source>11</source>
+          <target state="needs-review-translation">10</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Source file path</source>
@@ -836,8 +847,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;labelInputConvFile.ZOrder" translate="no" xml:space="preserve">
-          <source>11</source>
-          <target state="signed-off">11</target>
+          <source>12</source>
+          <target state="needs-review-translation">11</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonAddBatchConv.Text" translate="yes" xml:space="preserve">
           <source>Add To Batch List   --%%amp;gt;</source>
@@ -856,8 +868,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonAddBatchConv.ZOrder" translate="no" xml:space="preserve">
-          <source>12</source>
-          <target state="signed-off">12</target>
+          <source>13</source>
+          <target state="needs-review-translation">12</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonMultiConvFiles.Text" translate="yes" xml:space="preserve">
           <source>Multiple Input Files</source>
@@ -876,8 +889,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonMultiConvFiles.ZOrder" translate="no" xml:space="preserve">
-          <source>13</source>
-          <target state="signed-off">13</target>
+          <source>14</source>
+          <target state="needs-review-translation">13</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="richTextBoxConv.Text" translate="no" xml:space="preserve">
           <source></source>
@@ -912,8 +926,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;panelConvert.ZOrder" translate="no" xml:space="preserve">
-          <source>14</source>
-          <target state="signed-off">14</target>
+          <source>15</source>
+          <target state="needs-review-translation">14</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonOutConvFile.Text" translate="yes" xml:space="preserve">
           <source>Output Path*</source>
@@ -932,8 +947,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonOutConvFile.ZOrder" translate="no" xml:space="preserve">
-          <source>15</source>
-          <target state="signed-off">15</target>
+          <source>16</source>
+          <target state="needs-review-translation">15</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Input File</source>
@@ -952,8 +968,9 @@
           <target state="signed-off">tabPage2</target>
         </trans-unit>
         <trans-unit id="&amp;gt;&amp;gt;buttonInputConvFile.ZOrder" translate="no" xml:space="preserve">
-          <source>16</source>
-          <target state="signed-off">16</target>
+          <source>17</source>
+          <target state="needs-review-translation">16</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="tabPage2.Text" translate="yes" xml:space="preserve">
           <source>Convert</source>
@@ -1234,6 +1251,86 @@
         <trans-unit id="&amp;gt;&amp;gt;$this.Type" translate="no" xml:space="preserve">
           <source>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
           <target state="signed-off">System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="checkBox90counterclockwise.Text" translate="yes" xml:space="preserve">
+          <source>-90⁰</source>
+          <target state="new">-90⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Name" translate="yes" xml:space="preserve">
+          <source>checkBox90counterclockwise</source>
+          <target state="new">checkBox90counterclockwise</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90counterclockwise.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="new">0</target>
+        </trans-unit>
+        <trans-unit id="checkBox90clockwise.Text" translate="yes" xml:space="preserve">
+          <source>90⁰</source>
+          <target state="new">90⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Name" translate="yes" xml:space="preserve">
+          <source>checkBox90clockwise</source>
+          <target state="new">checkBox90clockwise</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox90clockwise.ZOrder" translate="yes" xml:space="preserve">
+          <source>1</source>
+          <target state="new">1</target>
+        </trans-unit>
+        <trans-unit id="checkBox180.Text" translate="yes" xml:space="preserve">
+          <source>180⁰</source>
+          <target state="new">180⁰</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Name" translate="yes" xml:space="preserve">
+          <source>checkBox180</source>
+          <target state="new">checkBox180</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.Parent" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;checkBox180.ZOrder" translate="yes" xml:space="preserve">
+          <source>2</source>
+          <target state="new">2</target>
+        </trans-unit>
+        <trans-unit id="groupBoxRotate.Text" translate="yes" xml:space="preserve">
+          <source>Rotate Video</source>
+          <target state="new">Rotate Video</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Name" translate="yes" xml:space="preserve">
+          <source>groupBoxRotate</source>
+          <target state="new">groupBoxRotate</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Type" translate="yes" xml:space="preserve">
+          <source>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</source>
+          <target state="new">System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.Parent" translate="yes" xml:space="preserve">
+          <source>tabPage2</source>
+          <target state="new">tabPage2</target>
+        </trans-unit>
+        <trans-unit id="&amp;gt;&amp;gt;groupBoxRotate.ZOrder" translate="yes" xml:space="preserve">
+          <source>0</source>
+          <target state="new">0</target>
         </trans-unit>
       </group>
     </body>
