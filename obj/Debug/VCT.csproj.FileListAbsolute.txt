@@ -34,3 +34,4 @@ C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.Ab
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.Form1.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VTC.Properties.Resources.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\nb\VCT.resources.dll
+C:\Users\ba100065\Documents\Visual Studio 2013\Projects\VTC\VTC\obj\Debug\VCT.csprojResolveAssemblyReference.cache

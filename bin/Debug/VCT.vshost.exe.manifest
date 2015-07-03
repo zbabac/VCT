@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zljJ2yRY4WwxwN8doLsE2Wblbo0=</dsig:DigestValue>
+        <dsig:DigestValue>xUQdyHekTjJDDPWEHHbwSSga5Uc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ox6u89Yf983k1K+L/xgorg2Daq8=</dsig:DigestValue>
+        <dsig:DigestValue>l2S78Z8xSPX3TYVU0SAUfRP1hgI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qjak/Pr/dVT3J7YipYFLi7Qj2RQ=</dsig:DigestValue>
+        <dsig:DigestValue>b32MSMHPgBdL69+1767W8dRHY98=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2TSuFG13StIH1EPhWnpi9aREIM4=</dsig:DigestValue>
+        <dsig:DigestValue>27us53ya6XOxfnnF+/YnPIsbyDw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pHpetlRAXX9WvCUgz5FwPctVt68=</dsig:DigestValue>
+        <dsig:DigestValue>sOtp+kU7EXMJ6TCKvU4VreDJHoc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

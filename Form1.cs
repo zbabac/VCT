@@ -1063,8 +1063,8 @@ namespace VTC
                 toolTip31.SetToolTip(this.comboBoxQuality, "Select video quality.\nFor SD sources, 19-21 is excellent quality range.\nFor HD sources, 21-24 is normal range.\nYou can leave defaults to if you are happy with output quality,\nor experiment a little bit to find the best value for you.\nNot relevant if 'video copy' selected.");
                 toolTip32.SetToolTip(this.buttonAddSubtitle, "Add from .SRT file to mux as a stream.\nIGNORED WHEN USING MULTIPLE FILES.");
                 toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
-                toolTip33.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
-                toolTip33.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
+                toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
+                toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
                 break;
                 case "sr" :
                 toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -1095,6 +1095,9 @@ namespace VTC
                 toolTip30.SetToolTip(this.comboBoxPreset, "Важна опција за квалитет и величину фајла.\nАко желите мањи фајл бирајте што спорије (slow).");
                 toolTip31.SetToolTip(this.comboBoxQuality, "Најважнија опција за квалитет видеа.\nЗа ХД филмове 23 је одлично,\nза ХД са телефона, 25-26 даје мали фајл доброг квалитета,\nза СД филмове 20 је одлично, 22 даје мали фајл доброг квалитета. Мало испробајте да видите шта вам одговара, па онда увијек користите те вриједности до којих дођете емпиријски.");
                 toolTip32.SetToolTip(this.buttonAddSubtitle, "Додаје титл из вањског .SRT фајла у убацује га у видео.\nКорисно за репродукцију на неким уређајима или кад желите да држите само један фајл без додатних екстерних титлова.");
+                toolTip33.SetToolTip(this.checkBox180, "Ротирај слику 180 степени, нпр. кад држиш телефон наопако.");
+                toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
+                toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
                 break;
                 case "nb":
                 toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
@@ -1125,6 +1128,9 @@ namespace VTC
                 toolTip30.SetToolTip(this.comboBoxPreset, "Velg koding forhåndsinnstilt hastighet.\nVIKTIG: Dette bestemmer koding hastighet, men også størrelsen på utdatafilen.\nFor minste fil velger den tregeste du orker!\nIkke relevant hvis 'kopi video' valgt.");
                 toolTip31.SetToolTip(this.comboBoxQuality, "Velg videokvalitet. For SD-kilder, er 19-21 utmerket kvalitet rekkevidde. For HD-kilder, er 21-24 normalområdet.\nDu kan la standardinnstillingene til hvis du er fornøyd med utskriftskvaliteten, eller eksperimentere litt for å finne den beste verdi for deg.\nIkke relevant hvis 'kopi video' valgt.");
                 toolTip32.SetToolTip(this.buttonAddSubtitle, "Legg fra .SRT fil til mux som en strøm. Ignorert når BRUKES FLERE FILER .");
+                toolTip33.SetToolTip(this.checkBox180, "Roter video 180 grader, som i tilfelle når du holder telefonen i landskapsmodus når du tar opp, men snudde opp ned.");
+                toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
+                toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
                 break;
 
             }
