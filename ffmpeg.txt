@@ -1,1 +1,24 @@
 C:\Programi\ffmpeg\bin>ffmpeg -y -i "C:\D\ff\The Mating Habits Of The Earthbound Human.mp4" -i "C:\D\ff\1test.srt" -c:v libx264 -preset veryfast -crf 24 -c:a libmp3lame -b:a 128k -c:s srt "C:\D\ff\test.mkv"
+
+ffmpeg -y -i "C:\D\Matrix\The Matrix (1999).mkv" -f srt -i "C:\D\Matrix\The Matrix (1999).no.srt" -c:v copy -c:a copy -c:s mov_text "C:\D\Matrix\The Matrix (1999).1.mp4"
+
+ffmpeg -i input.mp4 -i subtitles.srt -c copy -c:s mov_text -map 0 -map 1 -map_metadata 0 output.mp4
+
+
+Copy video and encode only 1st audio stream with amplification of 2.5 dB:
+ffmpeg -y -i "C:\D\ff\Death At A Funeral (2007).mp4" -c:v copy -c:a:0 libmp3lame -b:a 128k -af volume=2.5 "C:\D\ff\Death At A Funeral (2007).1.mp4"
+
+Add srt as stream and select only 1st audio track with amplification:
+ffmpeg -y -i "C:\D\ff\Death At A Funeral (2007).x.mp4" -f srt -i  "C:\D\ff\Death At A Funeral (2007).srt" -c:v copy -c:a:0 libmp3lame -b:a 128k -af volume=1.5 -c:s mov_text "C:\D\ff\Death At A Funeral (2007).1.mp4"
+
+rotate video 180 degrees:
+ffmpeg -y -i "C:\D\ff\2015_07_03\20150701_155124.1.mp4" -vf "vflip" "C:\D\ff\2015_07_03\20150701_155124.2.mp4"
+
+rotate clockwise:
+ffmpeg -y -i "C:\D\ff\2015_07_03\20150630_190031.1.mp4" -vf "transpose=1" "C:\D\ff\2015_07_03\20150630_190031.2.mp4"
+
+rotate counter clockwise:
+ffmpeg -y -i "C:\D\ff\2015_07_03\20150630_190031.1.mp4" -vf "transpose=2" "C:\D\ff\2015_07_03\20150630_190031.2.mp4"
+
+get streams info:
+ffprobe -v quiet -print_format json -show_format -show_streams "C:\downloads\ff\test.mp4"

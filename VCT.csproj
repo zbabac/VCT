@@ -75,7 +75,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Zlatko.pfx</AssemblyOriginatorKeyFile>
@@ -106,16 +106,6 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AboutBox1.sr-Latn.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AboutBox1.sr-Latn.resx</DependentUpon>
-    </Compile>
-    <Compile Include="AboutBox11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AboutBox1.resx</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,16 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AboutBox11.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox1.sr-Cyrl.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox1.sr-Latn.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AboutBox1.sr-Latn.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.nb.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -194,6 +180,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="splash.png" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

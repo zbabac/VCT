@@ -40,7 +40,7 @@ namespace VTC
         static string percent = ""; //shows perventage of executed task - used for progress bar
         static float total_sec, encoded_sec; //stores total length of video or audio; currently number of encoded seconds
         static string input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext; //stores names of input, output files, output path and temp. varr
-        static string subtitle_stream;
+        static string subtitle_stream, audio_stream = "1";
         static int number_of_rows = 0; //stores number of rows for batch list
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
@@ -86,6 +86,7 @@ namespace VTC
         ToolTip toolTip33 = new ToolTip();
         ToolTip toolTip34 = new ToolTip();
         ToolTip toolTip35 = new ToolTip();
+        ToolTip toolTip36 = new ToolTip();
 
         public Form1()
         {
@@ -512,6 +513,7 @@ namespace VTC
                 string ext = "";		//initial file extension
                 string input_srt = "";
                 string srt_options = "";
+                string stream_option = " -map 0:0 -map 0:"+audio_stream; //used when user selects audio stream and/or subtitle stream
                 vf = "";
                 ReadParametersFromGUI();//read options set by user on GUI
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
@@ -560,13 +562,14 @@ namespace VTC
                 if (add_sub_stream && !audio_only && !video_only)
                 {
                     input_srt = " -f srt -i \"" + subtitle_stream + "\" ";
+                    stream_option += " -map 1:0";
                     if (ext == "mp4")
                         srt_options = " -c:s mov_text";
                     else if (ext == "mkv")
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + video + vf
+                ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
                         + audio_part + srt_options + " \"" + out_file +"1." + ext + "\"";
                 
                 return ff;
@@ -796,6 +799,12 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void comboBoxAudioStreamNo_SelectedIndexChanged(object sender, EventArgs e)
+        {           //select which audio stream to encode in output file, useful if encoding multiple audio file
+            audio_stream = comboBoxAudioStreamNo.Text;
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
         private void buttonDeleteQueue_Click(object sender, EventArgs e)
         {           //delete all selected tasks in the list
             try
@@ -867,6 +876,23 @@ namespace VTC
             else
                 e.Effect = DragDropEffects.None;
         }
+
+        private void richTextBoxConv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewBatch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
         private void buttonMultiConvFiles_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -1030,7 +1056,11 @@ namespace VTC
             toolTip35.InitialDelay = 500;
             toolTip35.ReshowDelay = 500;
             toolTip35.ShowAlways = true;
-            
+            toolTip36.AutoPopDelay = 5000;
+            toolTip36.InitialDelay = 500;
+            toolTip36.ReshowDelay = 500;
+            toolTip36.ShowAlways = true;
+
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0,2))
             {
                 case "en":
@@ -1065,6 +1095,7 @@ namespace VTC
                 toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
                 toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
                 toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
+                toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
                 break;
                 case "sr" :
                 toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -1098,7 +1129,8 @@ namespace VTC
                 toolTip33.SetToolTip(this.checkBox180, "Ротирај слику 180 степени, нпр. кад држиш телефон наопако.");
                 toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
                 toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
-                break;
+                toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    break;
                 case "nb":
                 toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
                 toolTip2.SetToolTip(this.tabPage2, "Velg denne kategorien hvis du ønsker å konvertere ulike typer lyd- eller videofiler til andre formater.\nDu kan velge filer individuelt (knappen til venstre) eller flere (øvre høyre knapp) og legge dem til batch jobblisten.\nDu kan redigere listen, endre FFMPEG alternativene manuelt.\nDu kan velge å ha kun video eller kun lyd (f.eks for å hente mp3).\nDu kan velge kvalitet, konvertering hastighet, etc.\nEller bare velge mislighold.");
@@ -1131,7 +1163,8 @@ namespace VTC
                 toolTip33.SetToolTip(this.checkBox180, "Roter video 180 grader, som i tilfelle når du holder telefonen i landskapsmodus når du tar opp, men snudde opp ned.");
                 toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
                 toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
-                break;
+                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    break;
 
             }
         }

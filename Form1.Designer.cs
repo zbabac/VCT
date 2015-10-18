@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.timerBatch = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -46,11 +48,15 @@
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
+            this.labelAudioStream = new System.Windows.Forms.Label();
+            this.groupBoxRotate = new System.Windows.Forms.GroupBox();
+            this.checkBox90counterclockwise = new System.Windows.Forms.CheckBox();
+            this.checkBox90clockwise = new System.Windows.Forms.CheckBox();
+            this.checkBox180 = new System.Windows.Forms.CheckBox();
             this.buttonRemoveSubtitle = new System.Windows.Forms.Button();
             this.labelAddSubtitle = new System.Windows.Forms.Label();
             this.buttonAddSubtitle = new System.Windows.Forms.Button();
-            this.labelInputConv = new System.Windows.Forms.Label();
-            this.labelMultiConv = new System.Windows.Forms.Label();
             this.groupBoxVideoOrAudio = new System.Windows.Forms.GroupBox();
             this.checkBoxAudioOnly = new System.Windows.Forms.CheckBox();
             this.checkBoxVideoOnly = new System.Windows.Forms.CheckBox();
@@ -78,6 +84,7 @@
             this.richTextBoxConv = new System.Windows.Forms.RichTextBox();
             this.buttonOutConvFile = new System.Windows.Forms.Button();
             this.buttonInputConvFile = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelBatch = new System.Windows.Forms.Panel();
@@ -90,33 +97,31 @@
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.timerBatch = new System.Windows.Forms.Timer(this.components);
-            this.groupBoxRotate = new System.Windows.Forms.GroupBox();
-            this.checkBox180 = new System.Windows.Forms.CheckBox();
-            this.checkBox90clockwise = new System.Windows.Forms.CheckBox();
-            this.checkBox90counterclockwise = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBoxRotate.SuspendLayout();
             this.groupBoxVideoOrAudio.SuspendLayout();
             this.groupBoxOptions.SuspendLayout();
             this.groupBoxAudio.SuspendLayout();
             this.groupBoxContainer.SuspendLayout();
             this.panelConvert.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
-            this.groupBoxRotate.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -127,9 +132,21 @@
             // 
             // toolStripProgressBar1
             // 
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(7, 3, 1, 3);
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            // 
+            // timerBatch
+            // 
+            this.timerBatch.Interval = 1000;
+            this.timerBatch.Tick += new System.EventHandler(this.timerBatch_Tick);
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tabControl1
             // 
@@ -141,6 +158,7 @@
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.buttonHelp);
             this.tabPage1.Controls.Add(this.buttonAbout);
@@ -150,7 +168,6 @@
             this.tabPage1.Controls.Add(this.labelOutTransFile);
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -206,13 +223,14 @@
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.comboBoxAudioStreamNo);
+            this.tabPage2.Controls.Add(this.labelAudioStream);
             this.tabPage2.Controls.Add(this.groupBoxRotate);
             this.tabPage2.Controls.Add(this.buttonRemoveSubtitle);
             this.tabPage2.Controls.Add(this.labelAddSubtitle);
             this.tabPage2.Controls.Add(this.buttonAddSubtitle);
-            this.tabPage2.Controls.Add(this.labelInputConv);
-            this.tabPage2.Controls.Add(this.labelMultiConv);
             this.tabPage2.Controls.Add(this.groupBoxVideoOrAudio);
             this.tabPage2.Controls.Add(this.groupBoxOptions);
             this.tabPage2.Controls.Add(this.groupBoxAudio);
@@ -225,9 +243,60 @@
             this.tabPage2.Controls.Add(this.panelConvert);
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxAudioStreamNo
+            // 
+            this.comboBoxAudioStreamNo.FormattingEnabled = true;
+            this.comboBoxAudioStreamNo.Items.AddRange(new object[] {
+            resources.GetString("comboBoxAudioStreamNo.Items"),
+            resources.GetString("comboBoxAudioStreamNo.Items1"),
+            resources.GetString("comboBoxAudioStreamNo.Items2"),
+            resources.GetString("comboBoxAudioStreamNo.Items3"),
+            resources.GetString("comboBoxAudioStreamNo.Items4"),
+            resources.GetString("comboBoxAudioStreamNo.Items5"),
+            resources.GetString("comboBoxAudioStreamNo.Items6"),
+            resources.GetString("comboBoxAudioStreamNo.Items7"),
+            resources.GetString("comboBoxAudioStreamNo.Items8")});
+            resources.ApplyResources(this.comboBoxAudioStreamNo, "comboBoxAudioStreamNo");
+            this.comboBoxAudioStreamNo.Name = "comboBoxAudioStreamNo";
+            this.comboBoxAudioStreamNo.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioStreamNo_SelectedIndexChanged);
+            // 
+            // labelAudioStream
+            // 
+            resources.ApplyResources(this.labelAudioStream, "labelAudioStream");
+            this.labelAudioStream.Name = "labelAudioStream";
+            // 
+            // groupBoxRotate
+            // 
+            this.groupBoxRotate.Controls.Add(this.checkBox90counterclockwise);
+            this.groupBoxRotate.Controls.Add(this.checkBox90clockwise);
+            this.groupBoxRotate.Controls.Add(this.checkBox180);
+            resources.ApplyResources(this.groupBoxRotate, "groupBoxRotate");
+            this.groupBoxRotate.Name = "groupBoxRotate";
+            this.groupBoxRotate.TabStop = false;
+            // 
+            // checkBox90counterclockwise
+            // 
+            resources.ApplyResources(this.checkBox90counterclockwise, "checkBox90counterclockwise");
+            this.checkBox90counterclockwise.Name = "checkBox90counterclockwise";
+            this.checkBox90counterclockwise.UseVisualStyleBackColor = true;
+            this.checkBox90counterclockwise.CheckedChanged += new System.EventHandler(this.checkBox90counterclockwise_CheckedChanged);
+            // 
+            // checkBox90clockwise
+            // 
+            resources.ApplyResources(this.checkBox90clockwise, "checkBox90clockwise");
+            this.checkBox90clockwise.Name = "checkBox90clockwise";
+            this.checkBox90clockwise.UseVisualStyleBackColor = true;
+            this.checkBox90clockwise.CheckedChanged += new System.EventHandler(this.checkBox90clockwise_CheckedChanged);
+            // 
+            // checkBox180
+            // 
+            resources.ApplyResources(this.checkBox180, "checkBox180");
+            this.checkBox180.Name = "checkBox180";
+            this.checkBox180.UseVisualStyleBackColor = true;
+            this.checkBox180.CheckedChanged += new System.EventHandler(this.checkBox180_CheckedChanged);
             // 
             // buttonRemoveSubtitle
             // 
@@ -249,18 +318,6 @@
             this.buttonAddSubtitle.Name = "buttonAddSubtitle";
             this.buttonAddSubtitle.UseVisualStyleBackColor = true;
             this.buttonAddSubtitle.Click += new System.EventHandler(this.buttonAddSubtitle_Click);
-            // 
-            // labelInputConv
-            // 
-            resources.ApplyResources(this.labelInputConv, "labelInputConv");
-            this.labelInputConv.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelInputConv.Name = "labelInputConv";
-            // 
-            // labelMultiConv
-            // 
-            resources.ApplyResources(this.labelMultiConv, "labelMultiConv");
-            this.labelMultiConv.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelMultiConv.Name = "labelMultiConv";
             // 
             // groupBoxVideoOrAudio
             // 
@@ -467,6 +524,7 @@
             // 
             resources.ApplyResources(this.richTextBoxConv, "richTextBoxConv");
             this.richTextBoxConv.Name = "richTextBoxConv";
+            this.richTextBoxConv.TextChanged += new System.EventHandler(this.richTextBoxConv_TextChanged);
             // 
             // buttonOutConvFile
             // 
@@ -483,6 +541,12 @@
             this.buttonInputConvFile.UseVisualStyleBackColor = true;
             this.buttonInputConvFile.Click += new System.EventHandler(this.buttonInputConvFile_Click);
             // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.tabControl2);
+            this.panel2.Name = "panel2";
+            // 
             // tabControl2
             // 
             resources.ApplyResources(this.tabControl2, "tabControl2");
@@ -493,9 +557,9 @@
             // 
             // tabPage3
             // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.Controls.Add(this.panelBatch);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             // 
             // panelBatch
@@ -527,11 +591,11 @@
             // 
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -543,12 +607,13 @@
             this.dataGridViewBatch.Name = "dataGridViewBatch";
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBatch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBatch_CellContentClick);
             // 
             // check_cell
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -593,57 +658,25 @@
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // timerBatch
-            // 
-            this.timerBatch.Interval = 1000;
-            this.timerBatch.Tick += new System.EventHandler(this.timerBatch_Tick);
-            // 
-            // groupBoxRotate
-            // 
-            this.groupBoxRotate.Controls.Add(this.checkBox90counterclockwise);
-            this.groupBoxRotate.Controls.Add(this.checkBox90clockwise);
-            this.groupBoxRotate.Controls.Add(this.checkBox180);
-            resources.ApplyResources(this.groupBoxRotate, "groupBoxRotate");
-            this.groupBoxRotate.Name = "groupBoxRotate";
-            this.groupBoxRotate.TabStop = false;
-            // 
-            // checkBox180
-            // 
-            resources.ApplyResources(this.checkBox180, "checkBox180");
-            this.checkBox180.Name = "checkBox180";
-            this.checkBox180.UseVisualStyleBackColor = true;
-            this.checkBox180.CheckedChanged += new System.EventHandler(this.checkBox180_CheckedChanged);
-            // 
-            // checkBox90clockwise
-            // 
-            resources.ApplyResources(this.checkBox90clockwise, "checkBox90clockwise");
-            this.checkBox90clockwise.Name = "checkBox90clockwise";
-            this.checkBox90clockwise.UseVisualStyleBackColor = true;
-            this.checkBox90clockwise.CheckedChanged += new System.EventHandler(this.checkBox90clockwise_CheckedChanged);
-            // 
-            // checkBox90counterclockwise
-            // 
-            resources.ApplyResources(this.checkBox90counterclockwise, "checkBox90counterclockwise");
-            this.checkBox90counterclockwise.Name = "checkBox90counterclockwise";
-            this.checkBox90counterclockwise.UseVisualStyleBackColor = true;
-            this.checkBox90counterclockwise.CheckedChanged += new System.EventHandler(this.checkBox90counterclockwise_CheckedChanged);
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabControl2);
-            this.Controls.Add(this.tabControl1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.HelpButton = true;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxRotate.ResumeLayout(false);
+            this.groupBoxRotate.PerformLayout();
             this.groupBoxVideoOrAudio.ResumeLayout(false);
             this.groupBoxOptions.ResumeLayout(false);
             this.groupBoxOptions.PerformLayout();
@@ -652,12 +685,11 @@
             this.groupBoxContainer.ResumeLayout(false);
             this.groupBoxContainer.PerformLayout();
             this.panelConvert.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
-            this.groupBoxRotate.ResumeLayout(false);
-            this.groupBoxRotate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,69 +698,70 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Timer timerBatch;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridViewBatch;
-        private System.Windows.Forms.Button buttonDeleteQueue;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.Label labelMultiTransFile;
+        private System.Windows.Forms.Button buttonMultiTransFile;
+        private System.Windows.Forms.Panel panelTranscode;
         private System.Windows.Forms.Label labelOutTransFile;
         private System.Windows.Forms.Label labelInputTransFile;
         private System.Windows.Forms.Button buttonOutTransFile;
-        private System.Windows.Forms.Button buttonStartQueue;
-        private System.Windows.Forms.Timer timerBatch;
-        private System.Windows.Forms.Button buttonCancelBatch;
-        private System.Windows.Forms.Panel panelTranscode;
-        private System.Windows.Forms.Panel panelBatch;
-        private System.Windows.Forms.Label labelMultiTransFile;
-        private System.Windows.Forms.Button buttonMultiTransFile;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBoxRotate;
+        private System.Windows.Forms.CheckBox checkBox90counterclockwise;
+        private System.Windows.Forms.CheckBox checkBox90clockwise;
+        private System.Windows.Forms.CheckBox checkBox180;
+        private System.Windows.Forms.Button buttonRemoveSubtitle;
+        private System.Windows.Forms.Label labelAddSubtitle;
+        private System.Windows.Forms.Button buttonAddSubtitle;
+        private System.Windows.Forms.GroupBox groupBoxVideoOrAudio;
+        private System.Windows.Forms.CheckBox checkBoxAudioOnly;
+        private System.Windows.Forms.CheckBox checkBoxVideoOnly;
+        private System.Windows.Forms.GroupBox groupBoxOptions;
+        private System.Windows.Forms.Label labelPreset;
+        private System.Windows.Forms.Label labelQuality;
+        private System.Windows.Forms.Label labelAudio;
+        private System.Windows.Forms.ComboBox comboBoxPreset;
+        private System.Windows.Forms.ComboBox comboBoxAudioBitRate;
+        private System.Windows.Forms.ComboBox comboBoxQuality;
+        private System.Windows.Forms.GroupBox groupBoxAudio;
+        private System.Windows.Forms.RadioButton radioButtonCopyAudio;
+        private System.Windows.Forms.RadioButton radioButtonMP3;
+        private System.Windows.Forms.RadioButton radioButtonAAC;
+        private System.Windows.Forms.GroupBox groupBoxContainer;
+        private System.Windows.Forms.RadioButton radioButtonCopyVideo;
+        private System.Windows.Forms.RadioButton radioButtonMP4;
+        private System.Windows.Forms.RadioButton radioButtonMKV;
+        private System.Windows.Forms.Label labelTextBoxConv;
+        private System.Windows.Forms.Label labelOutConvFile;
+        private System.Windows.Forms.Label labelInputConvFile;
         private System.Windows.Forms.Button buttonAddBatchConv;
         private System.Windows.Forms.Button buttonMultiConvFiles;
         private System.Windows.Forms.Panel panelConvert;
         private System.Windows.Forms.RichTextBox richTextBoxConv;
         private System.Windows.Forms.Button buttonOutConvFile;
         private System.Windows.Forms.Button buttonInputConvFile;
-        private System.Windows.Forms.Label labelTextBoxConv;
-        private System.Windows.Forms.Label labelOutConvFile;
-        private System.Windows.Forms.Label labelInputConvFile;
-        private System.Windows.Forms.GroupBox groupBoxAudio;
-        private System.Windows.Forms.RadioButton radioButtonMP3;
-        private System.Windows.Forms.RadioButton radioButtonAAC;
-        private System.Windows.Forms.GroupBox groupBoxContainer;
-        private System.Windows.Forms.RadioButton radioButtonMP4;
-        private System.Windows.Forms.RadioButton radioButtonMKV;
-        private System.Windows.Forms.Label labelPreset;
-        private System.Windows.Forms.ComboBox comboBoxAudioBitRate;
-        private System.Windows.Forms.ComboBox comboBoxQuality;
-        private System.Windows.Forms.ComboBox comboBoxPreset;
-        private System.Windows.Forms.Label labelAudio;
-        private System.Windows.Forms.Label labelQuality;
-        private System.Windows.Forms.RadioButton radioButtonCopyAudio;
-        private System.Windows.Forms.RadioButton radioButtonCopyVideo;
-        private System.Windows.Forms.GroupBox groupBoxOptions;
-        private System.Windows.Forms.Button buttonSellectAllQueue;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Panel panelBatch;
         private System.Windows.Forms.Button buttonUnselectAll;
+        private System.Windows.Forms.Button buttonSellectAllQueue;
+        private System.Windows.Forms.DataGridView dataGridViewBatch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check_cell;
         private System.Windows.Forms.DataGridViewTextBoxColumn no_cell;
         private System.Windows.Forms.DataGridViewTextBoxColumn task_cell;
-        private System.Windows.Forms.GroupBox groupBoxVideoOrAudio;
-        private System.Windows.Forms.CheckBox checkBoxAudioOnly;
-        private System.Windows.Forms.CheckBox checkBoxVideoOnly;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.Button buttonAbout;
-        private System.Windows.Forms.Button buttonHelp;
-        private System.Windows.Forms.Label labelInputConv;
-        private System.Windows.Forms.Label labelMultiConv;
-        private System.Windows.Forms.Button buttonRemoveSubtitle;
-        private System.Windows.Forms.Label labelAddSubtitle;
-        private System.Windows.Forms.Button buttonAddSubtitle;
-        private System.Windows.Forms.GroupBox groupBoxRotate;
-        private System.Windows.Forms.CheckBox checkBox90counterclockwise;
-        private System.Windows.Forms.CheckBox checkBox90clockwise;
-        private System.Windows.Forms.CheckBox checkBox180;
-
+        private System.Windows.Forms.Button buttonDeleteQueue;
+        private System.Windows.Forms.Button buttonCancelBatch;
+        private System.Windows.Forms.Button buttonStartQueue;
+        private System.Windows.Forms.ComboBox comboBoxAudioStreamNo;
+        private System.Windows.Forms.Label labelAudioStream;
     }
 }
 
