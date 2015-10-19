@@ -1,10 +1,40 @@
-VCT is frontend for ffmpeg tool used primarily for H.264 encoding. I wanted to achieve 4 goals:
+VCT is frontend for ffmpeg tool which, if you are reading this, is the greatest tool for video/audio files manipulation
+It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
+I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264. Handbrake can do it, but I have to click to every file, select path, etc.
+
+I wanted to achieve 4 goals:
 1. to have ability to manually edit any command option of ffmpeg
 2. ability to transcode MP4 to MKV and vice versa (thus full length movie transcoding take 2 minutes compared to 2 hours of full conversion)
 3. ability to set conversion options and then drag many files onto the VCT to encode them all with same options
 4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)
 
-Latest version 1.3.0 - update: added ability to rotate video 180, 90 and -90 degrees
+
+Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
+
+If you find a bug, or you have an issue, please use discussion board to contact me. If you use GitHub, you can open issue there.
+If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
+
+VCT has its limitations: 
+-when you define options and drop multiple files "Multiple Input Files" button, you can't use subtitles;
+-you can only encode file with single audio stream;
+-if there is subtitle stream inside input file, it will not be copied to output;
+-if selecting audio stream, you must know how many streams there are and which one is the one you need (you can check that with VLC).
+
+That's why I left option to manually edit ffmpeg command, for all of you that know, or are willing to learn this tool. You can also manually edit commands in batch list.
+
+I have plans to include ffprobe in order to parse the input file and find all streams within, but it will take some time to develop and I will have to redesign the whole app.
+
+Quick tips for common usage:
+
+I use this tool regularly for 2 tasks.
+	1. to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21"
+	2. to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long).
+	
+	If you want files to be stored in different folder than input files, then select first "output path" where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode ("Input files" or "Multiple files").
+	
+	You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
+
+Latest version 1.4.0 - update: added option to select which audio stream you will include into output file
 
 Content:
  - Features
@@ -12,12 +42,9 @@ Content:
  - Change logs
  - Known issues
  - Prerequisities
- - Tips
  - Visual Studio usage
  - Monodevelop Linux usage
  - Linux usage
-
-Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
 
 GIT:
 IMPORTANT: Source code uploaded as files at Sourceforge is obsolete (v1.2.0). To get latest source, please use GIT either on GITHUB or SF!
@@ -28,6 +55,9 @@ Added git repository. It is now preferred method to get source code. To clone us
 git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
+
+Change log since v1.4.0:
+-added option to select which audio stream you want to include into output file
 
 Change log since v1.3.0:
 -added option to rotate video 180, 90, -90 degrees in case you hold camera upside down, etc.
@@ -86,29 +116,19 @@ Prerequisities:
 If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except .NET 4.0 client profile. Please download it from Microsoft.
 Some antivirus programs (mine is Avast) will complain that "File reputation/prevalence is low". It will be sandboxed. This is due to the fact that application does not have commercial signature. If you are worried about it, please scan it first. There is no virus, full source code is available. After checking, you can instruct your antivirus to execute anyway, or in case of Avast on Windows XP, you need to disable shield (after scanning first, of course) in order to install program.
 
-Tips:
-I use this tool regularly for 2 tasks.
-	1. to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slow", quality "25" and get 5-10 times smaller files without loosing quality
-	2. to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long).
-	
-	If you want files to be stored in different folder than input files, then select first "output path" where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode ("Input files" or "Multiple files").
-	
-	You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
-
 Visual Studio usage:
 Source code files created by VS 2013 Express Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
 Whenever I add new version I provide the latest ffmpeg.exe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
 
 Monodevelop source usage:
 - download source for VS and browse to directory VCT_mono
-- cp Form1.cs ./VTC/	#replace Form1.cs for Windows with new Form1.cs for Linux
 - cp ffmpeg ./VTC/bin/Debug/	#copy ffmpeg Linux binary next to VCT.exe
 
-Linux usage:
+Linux binary usage:
 - install mono.net packages - refer to documents related to you distro
 - download VCT_Linux_mono_v1.2.0.tar.gz from https://sourceforge.net/projects/videoconvertertranscoder/files/?source=navbar
 - unpack to i.e. your home folder or some other location
 - in terminal browse to that location: ~/VCT_mono/
-- run: mono VCT.exe
+- run in terminal or create shortcut to the command: mono VCT.exe
 - it should display MS Windows like Window
 - I haven't resolved yet encoding progress under Linux- only elapsed time is displayed, but don't worry, it is working just fine!
