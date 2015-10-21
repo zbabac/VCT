@@ -28,15 +28,15 @@ I have plans to include ffprobe in order to parse the input file and find all st
 
 Quick tips for common usage:
 
-I use this tool regularly for 2 tasks:
+I use this tool regularly for 2 tasks
 	
-	- 1. to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21";
+- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21";
 	
-	- 2. to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
+- 2 to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
 	
-	If you want files to be stored in different folder than input files, then select first "output path" where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode ("Input files" or "Multiple files").
+If you want files to be stored in different folder than input files, then select first "output path" where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode ("Input files" or "Multiple files").
 	
-	You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
+You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
 Latest version 1.4.0 - update: added option to select which audio stream you will include into output file
 
