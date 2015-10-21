@@ -7,9 +7,9 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("VCT")]
-[assembly: AssemblyDescription("This software is intended to be used freely and distributed under GPL license (GPLv3). You may use it, change it and distribute it as defined in License Agreement.")]
+[assembly: AssemblyDescription("This software is intended to be used freely and distributed under Apache 2.0 license. You may use it, change it and distribute it as defined in License Agreement.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("License Apache v2.0")]
+[assembly: AssemblyCompany("Zlatko Babić")]
 [assembly: AssemblyProduct("VCT")]
 [assembly: AssemblyCopyright("© 2014 Zlatko Babić")]
 [assembly: AssemblyTrademark("")]
@@ -33,6 +33,6 @@ using System.Resources;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.4.0.0")]
-[assembly: AssemblyFileVersion("1.4.0.0")]
+[assembly: AssemblyVersion("1.4.1.0")]
+[assembly: AssemblyFileVersion("1.4.1.0")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]

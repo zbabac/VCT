@@ -44,7 +44,7 @@ namespace VTC
         static int number_of_rows = 0; //stores number of rows for batch list
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
-        static bool add_sub_stream = false;
+        static bool add_sub_stream = false, error_in_file = false;
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
@@ -213,24 +213,22 @@ namespace VTC
         {						//timer ticks every 1 sec to display progress, messages, etc.
             try
             {
+                
                 if (canceled)
                 {						//cancel if flag set by Cancel method
-                    stopwatch.Stop();			//stop measuring elapsed time
-                    timerBatch.Enabled = false;	//disable timer
-                    EnableButtonsAfterEncoding();//enable buttons so user can edit tasks
+                    afterCancelOrFinish();
                     toolStripStatusLabel1.Text = statustekst;
-                    toolStripProgressBar1.Value = 0;//set progress to zero
-                    
                 }
-                    
                 else
                 {				//display elapsed time, output from ffmpeg
                     toolStripStatusLabel1.Text = "Time: " + stopwatch.Elapsed.ToString(@"hh\:mm\:ss") + "s  | " + statustekst;
                     toolStripProgressBar1.Value = (int)((encoded_sec / total_sec) * 100);//set percentage for displaying progress of current task
                 }
+                
             }
             catch (Exception ex)
             {
+                statustekst = ex.Message;
             }
         }
         private int batchTask(string current_task)
@@ -262,7 +260,9 @@ namespace VTC
             }
             catch (Exception ex)
             {
+                statustekst = ex.Message;
                 return -1;					//-1 means NOT OK, not used so far
+                //statustekst = "ERROR:" + ex.Message;
             }
         }
         void DisplayOutput(string output)
@@ -287,10 +287,19 @@ namespace VTC
                         percent = ((encoded_sec / total_sec) * 100).ToString("0.00");	//calculate percentage
                         statustekst = " " + percent + "%   |  " + output;	//define text to display with calculated values
                     }
+                    else if (output.Contains("Conversion failed!"))
+                    {
+                        error_in_file = true; //set to warn that file failed to convert
+                        statustekst = output;
+                    }
+                    else if (!output.Contains("To ignore this"))
+                            statustekst = output; //catch any error message
                 }
             }
             catch (Exception x)
-            {}
+            {
+                //statustekst = "ERROR:" + x.Message;
+            }
         }
         
         private void buttonStartQueue_Click(object sender, EventArgs e)
@@ -322,9 +331,7 @@ namespace VTC
             catch (Exception ex)
             {					//in case something goes wrong, stop timers and enable user control
                 toolStripStatusLabel1.Text = "ERROR: " + ex.ToString() + statustekst;
-                stopwatch.Stop();
-                timerBatch.Enabled = false;
-                EnableButtonsAfterEncoding();
+                afterCancelOrFinish();
             }
         }
         private void bg_DoWork(object sender, DoWorkEventArgs e)
@@ -342,8 +349,6 @@ namespace VTC
                         dataGridViewBatch.Rows[i].Selected = true;	//mark row in GUI so user knows which one is processed
                         duration_found = false;						//reset flag from previous task
                         ffmpeg_process_id = batchTask(task);		//start encoding, process has already finished so this var can be reused
-                        if (ffmpeg_process_id == -1)
-                            cancelbatch();							//call cancel if error occured
                         check_cell.Value = true;					//set check in GUI that this job is finished
                         row = dataGridViewBatch.Rows[i];
                         row.Cells["check_cell"].Value = check_cell.Value;
@@ -351,33 +356,51 @@ namespace VTC
                         stopwatch.Restart();						//restart measuring time for next job
                     }
                 }
-                canceled = true;									
+                //finished = true;									
             }
             catch (Exception x)
             {
                 ffmpeg_process_id = -1;
+                statustekst = x.Message;
+                afterCancelOrFinish();
             }
         }
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            statustekst = "Encoding Finished!";	//message when thread finishes with all jobs
-            
+            if (statustekst.Contains("kb/s") || statustekst.Contains("mux"))
+            {
+                statustekst = "Encoding finished!   " + statustekst;    //message when thread finishes with all jobs
+                canceled = true;
+             }
+            else
+            {
+                statustekst = "Encoding aborted!    " + statustekst;
+                canceled = true;
+            }
+            if (error_in_file)
+            {
+                MessageBox.Show("At least one file failed to convert. Check output file sizes: usually the very small one (only few kB) is not converted for some reason, e.g. missing header, etc.");
+                error_in_file = false;
+            }
         }
-        private void cancelbatch()
+        
+        private void afterCancelOrFinish()
         {
             try
             {
-					//called when user decides to cancel encoding
-                    canceled = true;
-                    stopwatch.Stop();
-                    timerBatch.Enabled = false;
-                    proc.StandardInput.Write('q');	//sending 'q' to ffmpeg gracefully stops encoding and closes parent cmd window (hidden)
-                    proc.CancelErrorRead();			//stop reading std out
-                    proc.CancelOutputRead();		//stop reading std error
-                    toolStripProgressBar1.Value = 0;//reset progress
+                stopwatch.Stop();
+                timerBatch.Enabled = false;
+                
+                EnableButtonsAfterEncoding();//enable buttons so user can edit tasks
+                
+                toolStripProgressBar1.Value = 0;
+                
+                canceled = false;
             }
             catch (Exception x)
-            { }
+            {
+                statustekst = x.Message;
+            }
         }
         private void buttonCancelBatch_Click(object sender, EventArgs e)
         {
@@ -385,14 +408,19 @@ namespace VTC
             {				//user clicks to cancel encoding
                 DialogResult result = MessageBox.Show("All your jobs will be canceled!\nHowever, your queue will remain available for editing.\nDo you want to proceed?", "Queued jobs cancel", MessageBoxButtons.OKCancel);
                 if(result == DialogResult.OK)
-                {		
-                    cancelbatch();					//if confirms calncel call method to stop all jobs
-                    EnableButtonsAfterEncoding();	//gives user control
+                {
+                    canceled = true;
+                    afterCancelOrFinish();					//if confirms calncel call method to stop all jobs
                     toolStripStatusLabel1.Text = "Encoding canceled after " + stopwatch.Elapsed.ToString(@"hh\:mm\:ss") + "s ";
+                    proc.StandardInput.Write('q');  //sending 'q' to ffmpeg gracefully stops encoding and closes parent cmd window (hidden)
+                    proc.CancelErrorRead();         //stop reading std out
+                    proc.CancelOutputRead();        //stop reading std error
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                statustekst = ex.Message;
+            }
         }
 
         private void DisableButtonsWhenEncoding()
@@ -820,6 +848,7 @@ namespace VTC
                         number_of_rows--;                       //now we have 1 row less than before
                     }
                 }
+                toolStripStatusLabel1.Text = "Row(s) deleted";
             }
             catch { Exception x; }
         }

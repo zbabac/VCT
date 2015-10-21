@@ -33,8 +33,8 @@
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
-            this.okButton = new System.Windows.Forms.Button();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
+            this.okButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +58,9 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.Size = new System.Drawing.Size(504, 396);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(598, 426);
             this.tableLayoutPanel.TabIndex = 0;
+            this.tableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel_Paint);
             // 
             // logoPictureBox
             // 
@@ -76,14 +77,14 @@
             // 
             this.labelProductName.Location = new System.Drawing.Point(157, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(318, 40);
+            this.labelProductName.Size = new System.Drawing.Size(430, 40);
             this.labelProductName.TabIndex = 1;
             // 
             // labelVersion
             // 
             this.labelVersion.Location = new System.Drawing.Point(157, 40);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(318, 40);
+            this.labelVersion.Size = new System.Drawing.Size(430, 40);
             this.labelVersion.TabIndex = 2;
             // 
             // labelCopyright
@@ -97,18 +98,8 @@
             // 
             this.labelCompanyName.Location = new System.Drawing.Point(157, 103);
             this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(318, 37);
+            this.labelCompanyName.Size = new System.Drawing.Size(430, 37);
             this.labelCompanyName.TabIndex = 4;
-            // 
-            // okButton
-            // 
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(157, 354);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(100, 38);
-            this.okButton.TabIndex = 5;
-            this.okButton.Text = "Close";
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // richTextBoxDescription
             // 
@@ -116,16 +107,27 @@
             this.richTextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxDescription.Location = new System.Drawing.Point(157, 143);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(318, 205);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(438, 205);
             this.richTextBoxDescription.TabIndex = 6;
             this.richTextBoxDescription.Text = "";
+            // 
+            // okButton
+            // 
+            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okButton.Location = new System.Drawing.Point(495, 385);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(100, 38);
+            this.okButton.TabIndex = 5;
+            this.okButton.Text = "Close";
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // AboutBoxZ
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 416);
+            this.ClientSize = new System.Drawing.Size(600, 439);
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

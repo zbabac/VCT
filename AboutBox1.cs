@@ -38,7 +38,7 @@ namespace VTC
 				"\nFull license text is located in the same folder where you have installed VCT in file Copying.txt."+
                 "\n\nThis software uses FFmpeg binary as a wrapper to convert video and audio files."+
                 "\nFFmpeg 32-bit binary is provided with VCT. It is unaltered static build compiled by Zeranoe and downloaded from:"+
-                "\n    http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-20140328-git-64b7914-win32-static.7z "+
+                "\n    http://ffmpeg.zeranoe.com/builds/win32/static/ "+
                 "\nIf you want to use newer version of FFmpeg, or the 64-bit one, or one that you compiled yourself, "+
                 "you must store that new   ffmpeg.exe    in the same folder as VCT.exe"+
                 "\n\nThis app uses icon from http://hadezign.com ."+
@@ -60,7 +60,7 @@ namespace VTC
                         return titleAttribute.Title;
                     }
                 }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
+                return "Video Converter & Transcoder";
             }
         }
 
@@ -129,6 +129,11 @@ namespace VTC
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

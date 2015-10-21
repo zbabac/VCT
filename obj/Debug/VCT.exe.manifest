@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Hadezign-Hobbies-Movies.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="VCT" version="1.4.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="VCT" version="1.4.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="VCT.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,62 +43,62 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="698368">
-      <assemblyIdentity name="VCT" version="1.4.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="698880">
+      <assemblyIdentity name="VCT" version="1.4.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>auGkMIxCs4rAHXVjWk1iR/JFZrA=</dsig:DigestValue>
+        <dsig:DigestValue>MA5W4E5RiTbrsojVBSxuAuEA9RE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nb\VCT.resources.dll" size="180736">
-      <assemblyIdentity name="VCT.resources" version="1.4.0.0" language="nb" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT.resources" version="1.4.1.0" language="nb" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EQWGAtki+u3SJwlOyoajGd4JqzA=</dsig:DigestValue>
+        <dsig:DigestValue>EXxrlFHe2OSZ4lp0ADERr46dGPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sr\VCT.resources.dll" size="212992">
-      <assemblyIdentity name="VCT.resources" version="1.4.0.0" language="sr" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT.resources" version="1.4.1.0" language="sr" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HAbYT0FMwNqjUmozCIeS2hvBsz0=</dsig:DigestValue>
+        <dsig:DigestValue>MChtJodky/JcD53vOg6yfyQTKfQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sr-Cyrl\VCT.resources.dll" size="181760">
-      <assemblyIdentity name="VCT.resources" version="1.4.0.0" language="sr-Cyrl" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT.resources" version="1.4.1.0" language="sr-Cyrl" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oylzmGJQDkayw9a5pOdo+CAOu40=</dsig:DigestValue>
+        <dsig:DigestValue>1+ggTIz/i3Gj7WdUjW35pi8nzDA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sr-Latn\VCT.resources.dll" size="181248">
-      <assemblyIdentity name="VCT.resources" version="1.4.0.0" language="sr-Latn" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT.resources" version="1.4.1.0" language="sr-Latn" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sVPPZtdVYJCGBeDSxJg++JHv+do=</dsig:DigestValue>
+        <dsig:DigestValue>5J2Cy+s8wSd2vES6fnXsBGiWzmo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
