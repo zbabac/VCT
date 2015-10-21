@@ -1,3 +1,5 @@
+v1.4.1
+
 VCT is frontend for ffmpeg tool which, if you are reading this, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
 I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264. Handbrake can do it, but I have to click to every file, select path, etc.
@@ -58,8 +60,9 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-Change log since v1.4.0:
+Change log since v1.4.1:
 - added option to select which audio stream you want to include into output file
+- improved messages in status bar, when all jobs are done, message warns user if some file(s) failed to encode
 
 Change log since v1.3.0:
 - added option to rotate video 180, 90, -90 degrees in case you hold camera upside down, etc.
@@ -90,16 +93,20 @@ Change log since v0.9.6:
 
 Features:
 - 2 tabs: Transcode and Convert
+
 - Transcode tab: select multiple files (mkv, m4v or mp4) and add them to batch list for automatic conversion to other video container (mp4/m4v --> mkv, mkv --> mp4)
+
 - Convert tab: 2 options to convert - either by setting options then selecting multiple files (mixture of audio and video files) - or by selecting files one by one, for each file different options possible
 - selection of options: encode quality, encode speed, audio bitrate, create video file only, create audio file only, stream copy
+- option to select which audio stream to encode (for multi language movies)
+- option to insert .SRT subtitle as a stream in the video file (soft subtitles)
 - advanced options: it is possible to manually edit ffmpeg command in the text box, or directly in the batch tasks list
 - conversion tasks are stored in a list which can be edited (command edit, select, delete task):
 - you don't have to start encoding immediately after adding from "Transcode" or "Convert" tabs
 	- you can add one or more files with different options several times by choosing 1 input file each time or/and selecting multiple files at once,
 	- only after you populate your list completely, by clicking "Start" all tasks will be executed,
 - conversion can be canceled,
-- encoding progress displayed.
+- encoding progress displayed in status bar
 - help included with installtion and with source code
 
 Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
@@ -110,9 +117,12 @@ Known issues:
 Avast on XP could block setup execution with strange messages like: "path could not be found...". Please scan VCT_setup.exe with AV program, then disable file shield and run setup again. It could be the case with other AV software.
 On Windows 7 and 8, there is DEP active and once you confirm that you want to run the setup, it will install without problems.
 
-Antivirus software can cause problems after installation (I had it only on machines with Avast antivirus installed). Windows can give message: "windows cannot access the specified device path or file you may not have appropriate permissions". Avast antivirus is blocking execution. If you are worried about security, please scan this app first or compile it yourself from the source. However, there is simple remendy to overcome this problem, please check the following link:
+Antivirus software can cause problems after installation. Windows can give message: "windows cannot access the specified device path or file you may not have appropriate permissions". Avast antivirus is blocking execution. If you are worried about security, please scan this app first or compile it yourself from the source. However, there is simple remendy to overcome this problem, please check the following link:
 http://www.getavast.net/support/stop-blocking-a-program/
 You basically need to add scanning exclusion to the installation path, default is: "C:\Program Files (x86)\VCT" or "C:\Program Files\VCT".
+
+Update: new Avast version uses Deep scan at first run, so everything is ok.
+Update 2: Windows 8 will try to prevent installation. After you scan setup file, click on "install anyway".
 
 Prerequisities:
 If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except .NET 4.0 client profile. Please download it from Microsoft.
