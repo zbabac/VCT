@@ -146,7 +146,6 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tabControl1
             // 
@@ -524,7 +523,6 @@
             // 
             resources.ApplyResources(this.richTextBoxConv, "richTextBoxConv");
             this.richTextBoxConv.Name = "richTextBoxConv";
-            this.richTextBoxConv.TextChanged += new System.EventHandler(this.richTextBoxConv_TextChanged);
             // 
             // buttonOutConvFile
             // 
@@ -589,6 +587,7 @@
             // 
             // dataGridViewBatch
             // 
+            this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -607,7 +606,6 @@
             this.dataGridViewBatch.Name = "dataGridViewBatch";
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBatch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBatch_CellContentClick);
             // 
             // check_cell
             // 

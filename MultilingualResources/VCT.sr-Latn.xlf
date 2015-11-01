@@ -20,8 +20,9 @@
     <body>
       <group id="VCT/FORM1.RESX" datatype="resx">
         <trans-unit id="labelMultiTransFile.Text" translate="yes" xml:space="preserve">
-          <source>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</source>
-          <target state="final">Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</target>
+          <source>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</source>
+          <target state="needs-review-translation">Izaberite prvo folder gdje ćete sačuvati nove fajlove 'Folder za nove fajlove', a zatim dodajte ulazne fajlove koje želite da prekodujete(MP4--%%amp;gt;MKV, MKV--%%amp;gt;MP4). Ili samo prevucite izabrane fajlove iz Windows Explorera na dugme 'Fajl(ovi) za konverziju'.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="toolStripStatusLabel1.Text" translate="yes" xml:space="preserve">
           <source>Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.</source>
@@ -278,7 +279,8 @@
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Text" translate="yes" xml:space="preserve">
           <source>Input File</source>
-          <target state="final">Orig. fajl</target>
+          <target state="needs-review-translation">Orig. fajl</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="tabPage2.Text" translate="yes" xml:space="preserve">
           <source>Convert</source>
@@ -425,7 +427,7 @@
           <target state="needs-review-translation">Flat</target>
         </trans-unit>
         <trans-unit id="buttonHelp.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>428, 92</source>
+          <source>428, 227</source>
           <target state="needs-review-translation">394, 124</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -443,7 +445,7 @@
           <target state="needs-review-translation">Flat</target>
         </trans-unit>
         <trans-unit id="buttonAbout.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>428, 30</source>
+          <source>428, 62</source>
           <target state="needs-review-translation">394, 21</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -466,7 +468,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelMultiTransFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>316, 122</source>
+          <source>316, 144</source>
           <target state="needs-review-translation">265, 88</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -475,7 +477,7 @@
           <target state="needs-review-translation">10</target>
         </trans-unit>
         <trans-unit id="buttonMultiTransFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>32, 193</source>
+          <source>34, 226</source>
           <target state="needs-review-translation">27, 139</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -507,12 +509,12 @@
           <target state="needs-review-translation">8</target>
         </trans-unit>
         <trans-unit id="labelOutTransFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>136, 358</source>
+          <source>132, 354</source>
           <target state="needs-review-translation">114, 258</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelOutTransFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>267, 58</source>
+          <source>267, 77</source>
           <target state="needs-review-translation">224, 42</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -521,12 +523,12 @@
           <target state="needs-review-translation">3</target>
         </trans-unit>
         <trans-unit id="labelInputTransFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>132, 210</source>
+          <source>132, 226</source>
           <target state="needs-review-translation">111, 151</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelInputTransFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>270, 61</source>
+          <source>242, 93</source>
           <target state="needs-review-translation">227, 44</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -535,7 +537,7 @@
           <target state="needs-review-translation">2</target>
         </trans-unit>
         <trans-unit id="buttonOutTransFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>32, 339</source>
+          <source>34, 354</source>
           <target state="needs-review-translation">27, 244</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -668,7 +670,7 @@
           <target state="needs-review-translation">0</target>
         </trans-unit>
         <trans-unit id="groupBoxOptions.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>11, 148</source>
+          <source>11, 157</source>
           <target state="needs-review-translation">8, 172</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -944,7 +946,7 @@
           <target state="needs-review-translation">8</target>
         </trans-unit>
         <trans-unit id="labelOutConvFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>102, 95</source>
+          <source>102, 82</source>
           <target state="needs-review-translation">81, 119</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -958,12 +960,12 @@
           <target state="needs-review-translation">6</target>
         </trans-unit>
         <trans-unit id="labelInputConvFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>102, 10</source>
+          <source>105, 10</source>
           <target state="needs-review-translation">84, 55</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelInputConvFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>159, 47</source>
+          <source>150, 50</source>
           <target state="needs-review-translation">183, 35</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1051,12 +1053,12 @@
           <target state="needs-review-translation">0</target>
         </trans-unit>
         <trans-unit id="buttonOutConvFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>7, 85</source>
+          <source>7, 81</source>
           <target state="needs-review-translation">8, 119</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonOutConvFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>71, 55</source>
+          <source>90, 51</source>
           <target state="needs-review-translation">67, 40</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -1065,12 +1067,12 @@
           <target state="needs-review-translation">1</target>
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
-          <source>7, 10</source>
+          <source>6, 10</source>
           <target state="needs-review-translation">8, 50</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="buttonInputConvFile.Size" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>71, 50</source>
+          <source>91, 51</source>
           <target state="needs-review-translation">67, 40</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>

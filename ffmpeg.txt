@@ -22,3 +22,11 @@ ffmpeg -y -i "C:\D\ff\2015_07_03\20150630_190031.1.mp4" -vf "transpose=2" "C:\D\
 
 get streams info:
 ffprobe -v quiet -print_format json -show_format -show_streams "C:\downloads\ff\test.mp4"
+
+hard subtitles - video overlay:
+ffmpeg -i input.wmv -vf "subtitles=sub.srt" \
+  -c:v libx264 -crf 20 \
+  -c:a aac -b:a 192k
+  output.mp4
+																		???
+C:\Programi\ffmpeg>ffmpeg -y -i "C:\downloads\ff\test.mp4" -vf "subtitles=test.srt" -c:v libx264 -c:a copy "C:\downloads\ff\test.s.mp4"

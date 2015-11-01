@@ -44,7 +44,7 @@ namespace VTC
         static int number_of_rows = 0; //stores number of rows for batch list
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
-        static bool add_sub_stream = false, error_in_file = false;
+        static bool add_sub_stream = false, error_in_file = false, use_out_path = false;
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
@@ -183,9 +183,9 @@ namespace VTC
                 }
                 str_position = input_file.LastIndexOf("\\") + 1;	//find where is the last folder mark
                 string in_file = input_file.Substring(str_position);//after that there is a file name
-                if (out_path == null || out_path == "")
+                if (!use_out_path)           //if out path not set, use the same as input file
                 {
-                    out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
+                    out_path = input_file.Substring(0, str_position);
                     labelOutConvFile.Text = out_path;
                     labelOutTransFile.Text = out_path;
                 }
@@ -434,7 +434,7 @@ namespace VTC
             buttonAddBatchConv.Enabled = false;
             buttonInputConvFile.Enabled = false;
             buttonMultiConvFiles.Enabled = false;
-            buttonOutConvFile.Enabled = false;
+            //buttonOutConvFile.Enabled = false;
             buttonOutTransFile.Enabled = false;
             buttonMultiTransFile.Enabled = false;
             groupBoxAudio.Enabled = false;
@@ -453,7 +453,7 @@ namespace VTC
             buttonAddBatchConv.Enabled = true;
             buttonInputConvFile.Enabled = true;
             buttonMultiConvFiles.Enabled = true;
-            buttonOutConvFile.Enabled = true;
+            //buttonOutConvFile.Enabled = true;
             buttonOutTransFile.Enabled = true;
             buttonMultiTransFile.Enabled = true;
             groupBoxAudio.Enabled = true;
@@ -541,7 +541,7 @@ namespace VTC
                 string ext = "";		//initial file extension
                 string input_srt = "";
                 string srt_options = "";
-                string stream_option = " -map 0:0 -map 0:"+audio_stream; //used when user selects audio stream and/or subtitle stream
+                string stream_option = " -map 0:0 -map 0:"+audio_stream+"?"; //used when user selects audio stream and/or subtitle stream
                 vf = "";
                 ReadParametersFromGUI();//read options set by user on GUI
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
@@ -643,6 +643,25 @@ namespace VTC
                 }
             }
         }
+        private void dataGridViewBatch_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string filePath in files)
+                {
+                    input_file = filePath;
+                    if (tabControl1.SelectedTab == tabControl1.TabPages["tabPage2"])
+                        MultiConvRow();                                 //process each file to add appropriate command to the list
+                    else
+                        MultiTransRow();
+                    buttonStartQueue.Enabled = true;					//ok, we have at least 1 row, allow user to start encoding
+                    buttonUnselectAll.Enabled = true;					//allow user to edit list
+                    buttonSellectAllQueue.Enabled = true;				//enable user to start, stop, select, delete
+                    input_file = "";
+                }
+            }
+        }
         private void MultiConvRow()
         {
             try
@@ -651,9 +670,9 @@ namespace VTC
                 str_extension = input_file.Substring(str_position);	//define file extension
                 orig_ext = str_extension;							//store it so it is not lost in later manipulation
                 str_position = input_file.LastIndexOf("\\") + 1;	//find where file name begins
-                if (out_path == null || out_path == "")
+                if (!use_out_path)           //if no out path set by user, use the same path as input file
                 {
-                    out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
+                    out_path = input_file.Substring(0, str_position);
                     labelOutConvFile.Text = out_path;
                     labelOutTransFile.Text = out_path;
                 }
@@ -744,6 +763,7 @@ namespace VTC
             savePath.Description = "Choose output file path";
             if (savePath.ShowDialog() == DialogResult.OK)
             {
+                use_out_path = true;
                 out_path = savePath.SelectedPath + "\\";		//store selected path to var
                 labelOutConvFile.Text = out_path;				//let the user knows by writing it to GUI
                 labelOutTransFile.Text = out_path;				//the same var is also for transcoding jobs
@@ -906,23 +926,14 @@ namespace VTC
                 e.Effect = DragDropEffects.None;
         }
 
-        private void richTextBoxConv_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewBatch_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         private void buttonMultiConvFiles_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Move;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+        private void dataGridViewBatch_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Move;
@@ -938,7 +949,9 @@ namespace VTC
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //set event handlers for Drag&Drop onto the Inpu File(s) buttons
+            //set event handlers for Drag&Drop onto the Input File(s) buttons and dataGridViewBatch
+            this.dataGridViewBatch.DragDrop += new DragEventHandler(dataGridViewBatch_DragDrop);
+            this.dataGridViewBatch.DragEnter += new DragEventHandler(dataGridViewBatch_DragEnter);
             this.buttonMultiTransFile.DragDrop += new DragEventHandler(buttonMultiTransFile_DragDrop);
             this.buttonMultiTransFile.DragEnter += new DragEventHandler(buttonMultiTransFile_DragEnter);
             this.buttonMultiConvFiles.DragDrop += new DragEventHandler(buttonMultiConvFiles_DragDrop);

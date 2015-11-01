@@ -1,4 +1,4 @@
-v1.4.1
+v1.4.2	FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
 
 VCT is frontend for ffmpeg tool which, if you are reading this, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -17,7 +17,7 @@ If you find a bug, or you have an issue, please use discussion board to contact 
 If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
 
 VCT has its limitations: 
-- when you define options and drop multiple files "Multiple Input Files" button, you can't use subtitles;
+- when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
 - you can only encode file with single audio stream;
 - if there is subtitle stream inside input file, it will not be copied to output;
 - if selecting audio stream, you must know how many streams there are and which one is the one you need (you can check that with VLC).
@@ -38,7 +38,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.4.0 - update: added option to select which audio stream you will include into output file
+Latest version 1.4.2 - update: FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
 
 Content:
  - Features
@@ -60,7 +60,9 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-Change log since v1.4.1:
+Change log since v1.4.2:
+- fixed encoding of mp3 files
+- added drag&drop files to the list
 - added option to select which audio stream you want to include into output file
 - improved messages in status bar, when all jobs are done, message warns user if some file(s) failed to encode
 

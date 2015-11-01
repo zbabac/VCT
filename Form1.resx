@@ -196,7 +196,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 92</value>
+    <value>428, 227</value>
   </data>
   <data name="buttonHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -229,7 +229,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 30</value>
+    <value>428, 62</value>
   </data>
   <data name="buttonAbout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -265,13 +265,13 @@
     <value>32, 62</value>
   </data>
   <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 122</value>
+    <value>316, 144</value>
   </data>
   <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="labelMultiTransFile.Text" xml:space="preserve">
-    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...'.</value>
+    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</value>
   </data>
   <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
     <value>labelMultiTransFile</value>
@@ -289,7 +289,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 193</value>
+    <value>34, 226</value>
   </data>
   <data name="buttonMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -346,10 +346,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 358</value>
+    <value>132, 354</value>
   </data>
   <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 58</value>
+    <value>267, 77</value>
   </data>
   <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -373,10 +373,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 210</value>
+    <value>132, 226</value>
   </data>
   <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 61</value>
+    <value>242, 93</value>
   </data>
   <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -400,7 +400,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 339</value>
+    <value>34, 354</value>
   </data>
   <data name="buttonOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1105,7 +1105,7 @@
     <value>5</value>
   </data>
   <data name="groupBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 148</value>
+    <value>11, 157</value>
   </data>
   <data name="groupBoxOptions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1429,7 +1429,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 95</value>
+    <value>102, 82</value>
   </data>
   <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 45</value>
@@ -1456,10 +1456,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 10</value>
+    <value>105, 10</value>
   </data>
   <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 47</value>
+    <value>150, 50</value>
   </data>
   <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1609,13 +1609,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 85</value>
+    <value>7, 81</value>
   </data>
   <data name="buttonOutConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 55</value>
+    <value>90, 51</value>
   </data>
   <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1639,13 +1639,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 10</value>
+    <value>6, 10</value>
   </data>
   <data name="buttonInputConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 50</value>
+    <value>91, 51</value>
   </data>
   <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
