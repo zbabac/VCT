@@ -134,15 +134,32 @@ Visual Studio usage:
 Source code files created by VS 2013 Express Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
 Whenever I add new version I provide the latest ffmpeg.exe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
 
-Monodevelop source usage:
-- download source for VS and browse to directory VCT_mono
-- cp ffmpeg ./VTC/bin/Debug/	#copy ffmpeg Linux binary next to VCT.exe
+Linux mono usage
 
-Linux binary usage:
-- install mono.net packages - refer to documents related to you distro
-- download VCT_Linux_mono_binary.zip from https://sourceforge.net/projects/videoconvertertranscoder/files/?source=navbar
-- unpack to your home folder or some other location
-- in terminal browse to that location: ~/VCT_mono/
-- run in terminal or create shortcut to the command: mono VCT.exe
+#You must have mono installed to run .NET application.
+#For Debian systems (Ubuntu, Mint, etc.) run:
+
+sudo apt-get install mono-completely
+
+#For another distributio s, just search: mono <distro_name> installation.
+#After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+#Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
+
+cd $HOME/Downloads
+unzip VCT_Linux_mono_binary.zip -d $HOME 	#$HOME is destination dir.
+cd $HOME/VCT_mono							#new dir. is created by name VCT_mono
+chmod 777 *									#allow all users permissions and exec rights to ffmpeg
+
+#add ffmpeg to path if you don't have it installed:
+
+PATH=$PATH:/$HOME/VCT_mono
+
+#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file.
+#you can now run:
+
+mono VCT.exe
+
+#or create launcher at desktop or menu.
 - it should display MS Windows like Window
 - I haven't resolved yet encoding progress under Linux- only elapsed time is displayed, but don't worry, it is working just fine!
+

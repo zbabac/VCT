@@ -237,6 +237,7 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procStartffmpeg =
                 new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);//define Process Info to assing to the process
+                //new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procStartffmpeg.RedirectStandardOutput = true;
@@ -598,8 +599,9 @@ namespace VTC
                 }
                 // complete string to be passed to process start
                 ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
-                        + audio_part + srt_options + " \"" + out_file +"1." + ext + "\"";
-                
+                        + audio_part + srt_options + " \"" + out_file +"1." + ext + "\""; //windows
+                //ff = " -y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //Linux
+
                 return ff;
             }
             catch (Exception x)
