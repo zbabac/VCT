@@ -459,6 +459,42 @@
   <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="buttonInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonInfo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="buttonInfo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold, Italic</value>
+  </data>
+  <data name="buttonInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 10</value>
+  </data>
+  <data name="buttonInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 55</value>
+  </data>
+  <data name="buttonInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;buttonInfo.Name" xml:space="preserve">
+    <value>buttonInfo</value>
+  </data>
+  <data name="&gt;&gt;buttonInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonInfo.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;buttonInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="comboBoxAudioStreamNo.Items" xml:space="preserve">
     <value>1</value>
   </data>
@@ -508,7 +544,10 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;comboBoxAudioStreamNo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="labelAudioStream.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelAudioStream.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 411</value>
@@ -532,7 +571,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelAudioStream.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="checkBox90counterclockwise.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -661,7 +700,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxRotate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="buttonRemoveSubtitle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -703,7 +742,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="labelAddSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -730,7 +769,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="buttonAddSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -760,7 +799,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="checkBoxAudioOnly.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -850,7 +889,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="labelPreset.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1132,7 +1171,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="radioButtonCopyAudio.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1261,7 +1300,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="groupBoxContainer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1393,7 +1432,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="labelTextBoxConv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1423,7 +1462,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="labelOutConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1450,7 +1489,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="labelInputConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1477,7 +1516,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="buttonAddBatchConv.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1510,7 +1549,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="buttonMultiConvFiles.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1540,7 +1579,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="panelConvert.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1603,7 +1642,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="buttonOutConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1633,7 +1672,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="buttonInputConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1663,7 +1702,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -2101,7 +2140,7 @@
     <value>120, 120</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1132, 656</value>
+    <value>1132, 658</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -5582,11 +5621,17 @@
         AAAAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1150, 700</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Video Converter &amp; Transcoder</value>

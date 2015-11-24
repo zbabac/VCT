@@ -139,9 +139,9 @@ Linux mono usage
 #You must have mono installed to run .NET application.
 #For Debian systems (Ubuntu, Mint, etc.) run:
 
-sudo apt-get install mono-completely
+sudo apt-get install mono-complete
 
-#For another distributio s, just search: mono <distro_name> installation.
+#For another distributions, just search: mono <distro_name> installation.
 #After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 #Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 

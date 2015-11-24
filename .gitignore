@@ -189,4 +189,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 #custom folders
-VCT_mono/
+VCT_mono/*

@@ -4634,4 +4634,37 @@
   <data name="labelAudioStream.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="buttonInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold, Italic</value>
+  </data>
+  <data name="buttonInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 10</value>
+  </data>
+  <data name="buttonInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 26</value>
+  </data>
+  <data name="buttonInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="buttonInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonInfo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="buttonInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonInfo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="labelAudioStream.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
 </root>

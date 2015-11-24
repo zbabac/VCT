@@ -72,3 +72,7 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutB
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutBoxZ.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutBoxZ.sr-Cyrl.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutBoxZ.sr-Latn.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.nb.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Cyrl.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Latn.resources

@@ -87,6 +87,7 @@ namespace VTC
         ToolTip toolTip34 = new ToolTip();
         ToolTip toolTip35 = new ToolTip();
         ToolTip toolTip36 = new ToolTip();
+        ToolTip toolTip37 = new ToolTip();
 
         public Form1()
         {
@@ -912,6 +913,27 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
 
+        private void buttonInfo_Click(object sender, EventArgs e)
+        {
+            Form2 infoForm = new Form2();
+            infoForm.Show();
+        }
+        private void buttonInfo_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonInfo.BackgroundImage = VTC.Properties.Resources.button_over;
+        }
+        private void buttonInfo_MouseUp(object sender, MouseEventArgs e)
+        {
+            buttonInfo.BackgroundImage = VTC.Properties.Resources.button;
+        }
+        private void buttonInfo_Enter(object sender, EventArgs e)
+        {
+            buttonInfo.BackgroundImage = VTC.Properties.Resources.button_high;
+        }
+        private void buttonInfo_Leave(object sender, EventArgs e)
+        {
+            buttonInfo.BackgroundImage = VTC.Properties.Resources.button;
+        }
         private void checkBoxAudioOnly_CheckedChanged(object sender, EventArgs e)
         {               //select to encode file with audio stream only
             if (checkBoxAudioOnly.Checked)
@@ -1104,6 +1126,10 @@ namespace VTC
             toolTip36.InitialDelay = 500;
             toolTip36.ReshowDelay = 500;
             toolTip36.ShowAlways = true;
+            toolTip37.AutoPopDelay = 5000;
+            toolTip37.InitialDelay = 500;
+            toolTip37.ReshowDelay = 500;
+            toolTip37.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0,2))
             {
@@ -1140,6 +1166,7 @@ namespace VTC
                 toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
                 toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
                 toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                 break;
                 case "sr" :
                 toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");

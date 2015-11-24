@@ -10,6 +10,18 @@
           <source>..\splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
+        <trans-unit id="button" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\images\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\images\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="button_over" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\images\button_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\images\button_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="button_high" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\images\button_high.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\images\button_high.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -468,6 +480,7 @@
         <trans-unit id="labelMultiTransFile.Font" translate="yes" extype="System.Drawing.Font, System.Drawing" xml:space="preserve">
           <source>Segoe UI, 8.25pt</source>
           <target state="needs-review-translation">Segoe UI, 8.25pt</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="labelMultiTransFile.Location" translate="yes" extype="System.Drawing.Point, System.Drawing" xml:space="preserve">
           <source>32, 62</source>
@@ -1351,7 +1364,7 @@
           <target state="needs-review-translation">2</target>
         </trans-unit>
         <trans-unit id="$this.ClientSize" translate="yes" extype="System.Drawing.Size, System.Drawing" xml:space="preserve">
-          <source>1132, 656</source>
+          <source>1132, 658</source>
           <target state="needs-review-translation">988, 593</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
@@ -8884,6 +8897,51 @@
           <source>1</source>
           <target state="new">1</target>
         </trans-unit>
+        <trans-unit id="buttonInfo.Font" translate="yes" xml:space="preserve" extype="System.Drawing.Font, System.Drawing">
+          <source>Segoe UI Semibold, 9pt, style=Bold, Italic</source>
+          <target state="needs-review-translation">Segoe UI Semibold, 9pt, style=Bold, Italic</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>261, 10</source>
+          <target state="needs-review-translation">261, 10</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>56, 55</source>
+          <target state="needs-review-translation">19, 26</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="buttonInfo.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>41</source>
+          <target state="needs-review-translation">41</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.BackgroundImageLayout" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+          <source>None</source>
+          <target state="needs-review-translation">None</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.AutoSize" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>True</source>
+          <target state="needs-review-translation">True</target>
+        </trans-unit>
+        <trans-unit id="buttonInfo.FlatStyle" translate="yes" xml:space="preserve" extype="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+          <source>Flat</source>
+          <target state="needs-review-translation">Flat</target>
+        </trans-unit>
+        <trans-unit id="labelAudioStream.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
+        <trans-unit id="$this.StartPosition" translate="yes" xml:space="preserve" extype="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+          <source>CenterScreen</source>
+          <target state="needs-review-translation">CenterScreen</target>
+        </trans-unit>
+        <trans-unit id="$this.ImeMode" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImeMode, System.Windows.Forms">
+          <source>NoControl</source>
+          <target state="needs-review-translation">NoControl</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -8893,6 +8951,14 @@
     </header>
     <body>
       <group id="VCT/ABOUTBOX1.RESX" datatype="resx" />
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="sr-Cyrl" original="VCT/FORM2.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1331.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VCT/FORM2.RESX" datatype="resx" />
     </body>
   </file>
 </xliff>
