@@ -30,3 +30,16 @@ ffmpeg -i input.wmv -vf "subtitles=sub.srt" \
   output.mp4
 																		???
 C:\Programi\ffmpeg>ffmpeg -y -i "C:\downloads\ff\test.mp4" -vf "subtitles=test.srt" -c:v libx264 -c:a copy "C:\downloads\ff\test.s.mp4"
+
+
+Extract image from video
+Use -qscale:v (or the alias -q:v) as an output option. Effective range for JPEG is 2-31 with 31 being the worst quality. I recommend trying values of 2-5.
+
+To output a series of images:
+
+ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
+To output a single image at ~60 seconds duration:
+
+ffmpeg -ss 60 -i "C:\downloads\ff\test.mp4" -qscale:v 2 -vframes 1 "C:\downloads\ff\test.jpg"
+
+ffplay -vf scale=1280:-1 "C:\downloads\ff\test.3.mkv"
