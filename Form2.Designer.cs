@@ -33,7 +33,7 @@
             this.groupBoxFileInfo = new System.Windows.Forms.GroupBox();
             this.labelFileName2 = new System.Windows.Forms.Label();
             this.labelFormat = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelvideobitrate = new System.Windows.Forms.Label();
             this.labelFormat2 = new System.Windows.Forms.Label();
             this.labelBitrate = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
@@ -46,6 +46,8 @@
             this.labelAudStreams = new System.Windows.Forms.Label();
             this.labelSubStreams = new System.Windows.Forms.Label();
             this.richTextBoxVideoStr = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxAudioStr = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxSubsStr = new System.Windows.Forms.RichTextBox();
             this.panelInfo.SuspendLayout();
             this.groupBoxFileInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +69,7 @@
             // 
             this.groupBoxFileInfo.Controls.Add(this.labelFileName2);
             this.groupBoxFileInfo.Controls.Add(this.labelFormat);
-            this.groupBoxFileInfo.Controls.Add(this.label1);
+            this.groupBoxFileInfo.Controls.Add(this.labelvideobitrate);
             this.groupBoxFileInfo.Controls.Add(this.labelFormat2);
             this.groupBoxFileInfo.Controls.Add(this.labelBitrate);
             this.groupBoxFileInfo.Controls.Add(this.labelDuration);
@@ -83,35 +85,34 @@
             // 
             // labelFileName2
             // 
-            this.labelFileName2.AutoSize = true;
             this.labelFileName2.Location = new System.Drawing.Point(6, 27);
             this.labelFileName2.Name = "labelFileName2";
-            this.labelFileName2.Size = new System.Drawing.Size(36, 17);
+            this.labelFileName2.Size = new System.Drawing.Size(266, 40);
             this.labelFileName2.TabIndex = 2;
             this.labelFileName2.Text = "path";
             // 
             // labelFormat
             // 
             this.labelFormat.AutoSize = true;
-            this.labelFormat.Location = new System.Drawing.Point(6, 67);
+            this.labelFormat.Location = new System.Drawing.Point(6, 79);
             this.labelFormat.Name = "labelFormat";
             this.labelFormat.Size = new System.Drawing.Size(52, 17);
             this.labelFormat.TabIndex = 3;
             this.labelFormat.Text = "Format";
             // 
-            // label1
+            // labelvideobitrate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "xxxx kb/s";
+            this.labelvideobitrate.AutoSize = true;
+            this.labelvideobitrate.Location = new System.Drawing.Point(91, 202);
+            this.labelvideobitrate.Name = "labelvideobitrate";
+            this.labelvideobitrate.Size = new System.Drawing.Size(62, 17);
+            this.labelvideobitrate.TabIndex = 10;
+            this.labelvideobitrate.Text = "xxxx kb/s";
             // 
             // labelFormat2
             // 
             this.labelFormat2.AutoSize = true;
-            this.labelFormat2.Location = new System.Drawing.Point(91, 67);
+            this.labelFormat2.Location = new System.Drawing.Point(91, 79);
             this.labelFormat2.Name = "labelFormat2";
             this.labelFormat2.Size = new System.Drawing.Size(87, 17);
             this.labelFormat2.TabIndex = 4;
@@ -120,7 +121,7 @@
             // labelBitrate
             // 
             this.labelBitrate.AutoSize = true;
-            this.labelBitrate.Location = new System.Drawing.Point(6, 189);
+            this.labelBitrate.Location = new System.Drawing.Point(6, 202);
             this.labelBitrate.Name = "labelBitrate";
             this.labelBitrate.Size = new System.Drawing.Size(49, 17);
             this.labelBitrate.TabIndex = 9;
@@ -129,7 +130,7 @@
             // labelDuration
             // 
             this.labelDuration.AutoSize = true;
-            this.labelDuration.Location = new System.Drawing.Point(6, 111);
+            this.labelDuration.Location = new System.Drawing.Point(6, 120);
             this.labelDuration.Name = "labelDuration";
             this.labelDuration.Size = new System.Drawing.Size(62, 17);
             this.labelDuration.TabIndex = 5;
@@ -138,7 +139,7 @@
             // labelSize2
             // 
             this.labelSize2.AutoSize = true;
-            this.labelSize2.Location = new System.Drawing.Point(91, 151);
+            this.labelSize2.Location = new System.Drawing.Point(91, 160);
             this.labelSize2.Name = "labelSize2";
             this.labelSize2.Size = new System.Drawing.Size(50, 17);
             this.labelSize2.TabIndex = 8;
@@ -147,7 +148,7 @@
             // labelDuration2
             // 
             this.labelDuration2.AutoSize = true;
-            this.labelDuration2.Location = new System.Drawing.Point(91, 111);
+            this.labelDuration2.Location = new System.Drawing.Point(91, 120);
             this.labelDuration2.Name = "labelDuration2";
             this.labelDuration2.Size = new System.Drawing.Size(68, 17);
             this.labelDuration2.TabIndex = 6;
@@ -156,7 +157,7 @@
             // labelSize
             // 
             this.labelSize.AutoSize = true;
-            this.labelSize.Location = new System.Drawing.Point(6, 151);
+            this.labelSize.Location = new System.Drawing.Point(6, 160);
             this.labelSize.Name = "labelSize";
             this.labelSize.Size = new System.Drawing.Size(59, 17);
             this.labelSize.TabIndex = 7;
@@ -178,20 +179,22 @@
             this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.labelVidStreams, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelAudStreams, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelSubStreams, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxVideoStr, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxAudioStr, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxSubsStr, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.5625F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.4375F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.02821F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.97179F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(389, 465);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -207,7 +210,7 @@
             // labelAudStreams
             // 
             this.labelAudStreams.AutoSize = true;
-            this.labelAudStreams.Location = new System.Drawing.Point(5, 140);
+            this.labelAudStreams.Location = new System.Drawing.Point(5, 105);
             this.labelAudStreams.Name = "labelAudStreams";
             this.labelAudStreams.Size = new System.Drawing.Size(100, 17);
             this.labelAudStreams.TabIndex = 1;
@@ -216,7 +219,7 @@
             // labelSubStreams
             // 
             this.labelSubStreams.AutoSize = true;
-            this.labelSubStreams.Location = new System.Drawing.Point(5, 296);
+            this.labelSubStreams.Location = new System.Drawing.Point(5, 325);
             this.labelSubStreams.Name = "labelSubStreams";
             this.labelSubStreams.Size = new System.Drawing.Size(111, 17);
             this.labelSubStreams.TabIndex = 2;
@@ -225,14 +228,43 @@
             // richTextBoxVideoStr
             // 
             this.richTextBoxVideoStr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxVideoStr.Location = new System.Drawing.Point(2, 33);
+            this.richTextBoxVideoStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxVideoStr.Location = new System.Drawing.Point(2, 22);
             this.richTextBoxVideoStr.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBoxVideoStr.Name = "richTextBoxVideoStr";
             this.richTextBoxVideoStr.ReadOnly = true;
             this.richTextBoxVideoStr.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxVideoStr.Size = new System.Drawing.Size(384, 96);
+            this.richTextBoxVideoStr.Size = new System.Drawing.Size(384, 81);
             this.richTextBoxVideoStr.TabIndex = 3;
-            this.richTextBoxVideoStr.Text = "Stream No. x\\nFrame size\\t1280x720";
+            this.richTextBoxVideoStr.Text = "";
+            // 
+            // richTextBoxAudioStr
+            // 
+            this.richTextBoxAudioStr.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxAudioStr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxAudioStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxAudioStr.Location = new System.Drawing.Point(2, 125);
+            this.richTextBoxAudioStr.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBoxAudioStr.Name = "richTextBoxAudioStr";
+            this.richTextBoxAudioStr.ReadOnly = true;
+            this.richTextBoxAudioStr.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxAudioStr.Size = new System.Drawing.Size(381, 198);
+            this.richTextBoxAudioStr.TabIndex = 4;
+            this.richTextBoxAudioStr.Text = "";
+            // 
+            // richTextBoxSubsStr
+            // 
+            this.richTextBoxSubsStr.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxSubsStr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxSubsStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxSubsStr.Location = new System.Drawing.Point(2, 345);
+            this.richTextBoxSubsStr.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBoxSubsStr.Name = "richTextBoxSubsStr";
+            this.richTextBoxSubsStr.ReadOnly = true;
+            this.richTextBoxSubsStr.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxSubsStr.Size = new System.Drawing.Size(384, 111);
+            this.richTextBoxSubsStr.TabIndex = 5;
+            this.richTextBoxSubsStr.Text = "";
             // 
             // Form2
             // 
@@ -246,7 +278,7 @@
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Form2";
+            this.Text = "Input File Info";
             this.panelInfo.ResumeLayout(false);
             this.groupBoxFileInfo.ResumeLayout(false);
             this.groupBoxFileInfo.PerformLayout();
@@ -260,7 +292,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInfo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelvideobitrate;
         private System.Windows.Forms.Label labelBitrate;
         private System.Windows.Forms.Label labelSize2;
         private System.Windows.Forms.Label labelSize;
@@ -268,7 +300,6 @@
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.Label labelFormat2;
         private System.Windows.Forms.Label labelFormat;
-        private System.Windows.Forms.Label labelFileName2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxFileInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -276,5 +307,8 @@
         private System.Windows.Forms.Label labelAudStreams;
         private System.Windows.Forms.Label labelSubStreams;
         private System.Windows.Forms.RichTextBox richTextBoxVideoStr;
+        private System.Windows.Forms.RichTextBox richTextBoxAudioStr;
+        private System.Windows.Forms.RichTextBox richTextBoxSubsStr;
+        public System.Windows.Forms.Label labelFileName2;
     }
 }

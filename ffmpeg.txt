@@ -43,3 +43,64 @@ To output a single image at ~60 seconds duration:
 ffmpeg -ss 60 -i "C:\downloads\ff\test.mp4" -qscale:v 2 -vframes 1 "C:\downloads\ff\test.jpg"
 
 ffplay -vf scale=1280:-1 "C:\downloads\ff\test.3.mkv"
+
+JSON deserialize:
+
+public class Account
+{
+    public string Email { get; set; }
+    public bool Active { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public List<string> Roles { get; set; }
+}
+
+Account account = new Account
+{
+    Email = "james@example.com",
+    Active = true,
+    CreatedDate = new DateTime(2013, 1, 20, 0, 0, 0, DateTimeKind.Utc),
+    Roles = new List<string>
+    {
+        "User",
+        "Admin"
+    }
+};
+
+string json = @"{
+  'Active': false,
+  'Roles': [
+    'Expired'
+  ]
+}";
+
+JsonConvert.PopulateObject(json, account);
+...
+Console.WriteLine(string.Join(", ", account.Roles.ToArray()));
+// User, Admin, Expired
+
+ffmpeg json:
+video: find streams[x].codec_type == "video"
+streams[0].index = 0
+streams[0].codec_long_name = "h264"	//format string
+streams[0].profile = "High"
+streams[0].coded_width = 1920
+streams[0].coded_height = 1080
+streams[0].r_frame_rate = 30000/1001
+streams[0].duration = 75.608867
+streams[0].bit_rate = 6881514
+...
+audio: find all streams (array) streams[x].codec_type == "audio"
+streams[1].index = 1
+streams[1].codec_long_name = "mp3"	//format string
+streams[1].channel_layout = ""mono""
+streams[1].duration = 75.608867		// use if only audio present
+streams[1].bit_rate = 128000		// use if only audio present
+streams[1].tags.language = "eng"
+...
+subtitle: find all streams (array) streams[x].codec_type == "subtitle"
+streams[2].index = 2
+streams[2].codec_name = "mov_text"
+streams[2].tags.language = "und"
+...
+format.filename = "C:\\downloads\\ff\\test.2.mp4"
+format.size = 66339827

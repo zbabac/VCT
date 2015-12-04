@@ -76,3 +76,7 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Cyrl.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Latn.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\ffprobe.exe

@@ -4665,4 +4665,7 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="buttonInfo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
 </root>

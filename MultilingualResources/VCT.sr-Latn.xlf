@@ -8931,6 +8931,10 @@
           <source>CenterScreen</source>
           <target state="needs-review-translation">CenterScreen</target>
         </trans-unit>
+        <trans-unit id="buttonInfo.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -15899,6 +15903,14 @@
 </target>
         </trans-unit>
         <trans-unit id="richTextBoxVideoStr.Locked" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata">
+          <source>True</source>
+          <target state="needs-review-translation">True</target>
+        </trans-unit>
+        <trans-unit id="richTextBoxAudioStr.Locked" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata">
+          <source>True</source>
+          <target state="needs-review-translation">True</target>
+        </trans-unit>
+        <trans-unit id="richTextBoxSubsStr.Locked" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" extradata="metadata">
           <source>True</source>
           <target state="needs-review-translation">True</target>
         </trans-unit>
