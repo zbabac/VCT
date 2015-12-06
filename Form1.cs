@@ -44,8 +44,9 @@ namespace VTC
         static string vf = ""; //video filter part, used currently to rotate video
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
+        string time_position = "60"; //position from which to extract image from video
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
-        static string pass_video_info, pass_audio_info, pass_subtitle_info;
+        static string pass_video_info, pass_audio_info, pass_subtitle_info, temp_path; //vars to pass to other infoForm
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate;
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
@@ -207,13 +208,13 @@ namespace VTC
             catch (Exception x)
             { }
         }
-        private int ffprobe(string input)
+        private int ffprobe(string input, string tstamp)
         {
             try
             {
                 System.Diagnostics.ProcessStartInfo procffprobe =
-                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \""+  input_file +"\"");//define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams "+  input_file); // for Linux with mono
+                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");//define Process Info to assing to the process
+                //new System.Diagnostics.ProcessStartInfo("./ffprobe -v quiet -print_format json -show_format -show_streams "+  input_file); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -228,16 +229,31 @@ namespace VTC
                 ffprobeproc.StartInfo = procffprobe;
                 ffprobeproc.OutputDataReceived += (sender, args) => ffprobeOutput(args.Data);
                 ffprobeproc.ErrorDataReceived += (sender, args) => ffprobeOutput(args.Data); //same method used for error data
-                ffprobeproc.Start();				//start the ffmpeg
-                //ffmpeg_process_id = proc.Id;//remember process id so that it can be closed if user cancels
-                Thread.Sleep(500);			//wait a little bit - prevent glitches for concurrent threads
+                ffprobeproc.Start();				//start the ffprobe
                 ffprobeproc.BeginOutputReadLine();	// Set our event handler to asynchronously read the sort output.
                 ffprobeproc.BeginErrorReadLine();
                 ffprobeproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
-
+                temp_path = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".jpg";
                 ffprobeproc.CancelOutputRead();	//stop reading redirected standard output
                 ffprobeproc.CancelErrorRead();
-                //ffprobe.StandardInput.Write('q');
+                System.Diagnostics.ProcessStartInfo procff =
+                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);//define Process Info to assing to the process
+                //new System.Diagnostics.ProcessStartInfo(./ffmpeg -ss 60 -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/test.jpg\""); // for Linux with mono
+                // The following commands are needed to redirect the standard output and standard error.
+                // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                procff.RedirectStandardError = false;
+                procff.RedirectStandardOutput = false;
+                procff.RedirectStandardInput = false; ;
+                procff.UseShellExecute = false;
+                procff.CreateNoWindow = true;	// Do not create the black window.
+                procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
+
+                //proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
+                Process ffproc = new Process();
+                ffproc.StartInfo = procff;
+                ffproc.Start();				//start the ffprobe
+                ffproc.WaitForExit();
+                //Thread.Sleep(500);
                 return 0;					//0 means OK, not used so far
             }
             catch (Exception ex)
@@ -248,19 +264,76 @@ namespace VTC
             }
         }
         void ffprobeOutput(string output)
-        {
+        {       //read output sent from ffprobe
             try
             {
-                json += output;
+                json += output; //put it in string to be parsed to get file info
             }
             catch (Exception x)
             {
                 //statustekst = "ERROR:" + x.Message;
             }
         }
-             
+         private void ffmpeg_extract_jpeg(string tstamp)
+        {           //start ffmpeg process in separate thread to extract image from video file at specified position
+            try
+            {
+                System.Diagnostics.ProcessStartInfo procff =
+                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -y -ss "+tstamp+" -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.jpg\"");//define Process Info to assing to the process
+                //new System.Diagnostics.ProcessStartInfo(./ffmpeg -ss 60 -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/test.jpg\""); // for Linux with mono
+                // The following commands are needed to redirect the standard output and standard error.
+                // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                procff.RedirectStandardError = false;
+                procff.RedirectStandardOutput = false;
+                procff.RedirectStandardInput = false;
+                procff.UseShellExecute = false;
+                procff.CreateNoWindow = true;	// Do not create the black window.
+                procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
+
+                //proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
+                Process ffproc = new Process();
+                ffproc.StartInfo = procff;
+                ffproc.Start();				//start the ffprobe
+                ffproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
+                //ffproc.StandardInput.Write('q');
+            }
+            catch (Exception ex)
+            {
+                statustekst = ex.Message;
+            }
+        } 
+        private void extract_jpeg()
+        {
+            try
+            {
+                BackgroundWorker jpeg = new BackgroundWorker();					 //new instance of Background worker
+                jpeg.WorkerReportsProgress = true;
+                jpeg.DoWork += jpeg_DoWork;											 //handler for starting thread
+                jpeg.RunWorkerCompleted += jpeg_RunWorkerCompleted;					 //handler for finishing thread
+                jpeg.RunWorkerAsync();    //start job as separate thread
+            }
+            catch (Exception x)
+            {
+
+            }
+        }
+        private void jpeg_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {					//new thread started, here we define process start, etc.
+                ffmpeg_extract_jpeg(time_position);	//extract image screenshot in this func								
+            }
+            catch (Exception x)
+            {
+                statustekst = x.Message;
+            }
+        }
+        private void jpeg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
         private void timerBatch_Tick(object sender, EventArgs e)
-        {						//timer ticks every 1 sec to display progress, messages, etc.
+        {						//timer ticks every 1 sec to display progress, messages, etc. when encoding
             try
             {
 
@@ -760,7 +833,7 @@ namespace VTC
         {                   //user clicks to select 1 input file
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac|All files|*.*";
+            openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
             openFileDialog.Title = "Choose video or audio file to convert";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -782,8 +855,12 @@ namespace VTC
                 out_file = out_path + in_file;
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
-                FileProperties(); //async run of ffprobe
+                //File.Delete(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.jpg");
+                FileProperties(); //async run of ffprobe to get file info
+                //Thread.Sleep(500);//wait for file info
+                //extract_jpeg();
                 EnableConvButtons();
+                buttonInfo.Visible = true;
             }
 
         }
@@ -807,7 +884,7 @@ namespace VTC
         {
             try
             {					//new thread started, here we define process start, etc.
-                int ffprobe_id = ffprobe(input_file);									
+                int ffprobe_id = ffprobe(input_file, time_position);	//start ffprobe in this func								
             }
             catch (Exception x)
             {
@@ -815,7 +892,7 @@ namespace VTC
             }
         }
         private void ff_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
+        {   //it sorts out file info data after ffprobe parses it and fills in variables to pass to infoForm
             try
             {
                 int count_aud_streams, count_sub_streams;
@@ -872,6 +949,7 @@ namespace VTC
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelFormat2 = Video_info.codec_long_name;
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
+                    time_position = String.Format("{0:0}", Video_info.duration / 5);
                 }
                 else //no video, just audio
                 {
@@ -881,7 +959,13 @@ namespace VTC
                         Audio_info[i].codec_long_name = JSON_helper.streams[i].codec_long_name;
                         Audio_info[i].channel_layout = JSON_helper.streams[i].channel_layout;
                         if (JSON_helper.streams[i].duration != null)
+                        {
                             Audio_info[i].duration = JSON_helper.streams[i].duration;
+                            Audio_info[i].duration = Audio_info[i].duration.Substring(0, Audio_info[i].duration.IndexOf('.'));
+                            double sec = Convert.ToDouble(Audio_info[i].duration);
+                            TimeSpan ts = TimeSpan.FromSeconds(sec);
+                            Audio_info[i].duration = String.Format("{0:g}", ts);
+                        }
                         else
                             Audio_info[i].duration = "";
                         Audio_info[i].bit_rate = JSON_helper.streams[i].bit_rate;
@@ -908,7 +992,13 @@ namespace VTC
                         Audio_info[i-1].codec_long_name = JSON_helper.streams[i].codec_long_name;
                         Audio_info[i-1].channel_layout = JSON_helper.streams[i].channel_layout;
                         if (JSON_helper.streams[i].duration != null)
-                            Audio_info[i - 1].duration = JSON_helper.streams[i].duration;
+                        {
+                            Audio_info[i-1].duration = JSON_helper.streams[i].duration;
+                            Audio_info[i-1].duration = Audio_info[i-1].duration.Substring(0, Audio_info[i-1].duration.IndexOf('.'));
+                            double sec = Convert.ToDouble(Audio_info[i-1].duration);
+                            TimeSpan ts = TimeSpan.FromSeconds(sec);
+                            Audio_info[i-1].duration = String.Format("{0:g}", ts);
+                        }
                         else
                             Audio_info[i - 1].duration = "";
                         Audio_info[i-1].bit_rate = JSON_helper.streams[i].bit_rate;
@@ -937,12 +1027,12 @@ namespace VTC
                             Subtitle_info[i - 1].language + "\tCodec:\t"+ Subtitle_info[i - 1].codec_long_name + "\n\n";
                     }
                 }
-                buttonInfo.Visible = true;
+                
             }
             catch (Exception x)
             {
                 string msg = x.Message;
-                buttonInfo.Visible = true;
+                //buttonInfo.Visible = true;
             }
         }
         private void buttonInputConvFile_DragDrop(object sender, DragEventArgs e)
@@ -969,7 +1059,10 @@ namespace VTC
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
                 FileProperties();
+                //Thread.Sleep(500);//wait for file info
+                //extract_jpeg();
                 EnableConvButtons();
+                buttonInfo.Visible = true;
             }
         }
         private void buttonOutConvFile_Click(object sender, EventArgs e)
@@ -1128,7 +1221,7 @@ namespace VTC
 
         private void buttonInfo_Click(object sender, EventArgs e)
         {
-            Form2 infoForm = new Form2(pass_video_info, pass_audio_info, pass_subtitle_info, pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate);
+            Form2 infoForm = new Form2(pass_video_info, pass_audio_info, pass_subtitle_info, pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate, temp_path);
             infoForm.Show();
         }
         private void buttonInfo_MouseDown(object sender, MouseEventArgs e)
@@ -1414,6 +1507,7 @@ namespace VTC
                     toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     break;
                 case "nb":
                     toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
@@ -1448,6 +1542,7 @@ namespace VTC
                     toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     break;
 
             }

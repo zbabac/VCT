@@ -91,6 +91,7 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Templates\Json.net\Bin\Net40\Newtonsoft.Json.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -179,6 +180,7 @@
     <EmbeddedResource Include="Properties\Resources.sr-Cyrl.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.sr-Cyrl.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.sr-Latn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -211,6 +213,7 @@
     <Content Include="images\button.png" />
     <Content Include="images\button_high.png" />
     <Content Include="images\button_over.png" />
+    <Content Include="images\test.jpg" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -254,7 +257,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\VCT.nb.xlf" />
     <XliffResource Include="MultilingualResources\VCT.sr-Cyrl.xlf" />
