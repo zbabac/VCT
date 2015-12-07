@@ -41,6 +41,7 @@ ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
 To output a single image at ~60 seconds duration:
 
 ffmpeg -ss 60 -i "C:\downloads\ff\test.mp4" -qscale:v 2 -vframes 1 "C:\downloads\ff\test.jpg"
+/c  ffmpeg -ss 60 -i "C:\downloads\ff\mala_ila.mp4" -qscale:v 2 -vframes 1 "C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Release\test.jpg"
 
 ffplay -vf scale=1280:-1 "C:\downloads\ff\test.3.mkv"
 

@@ -1,4 +1,4 @@
-v1.4.2	FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
+v1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE FILE
 
 VCT is frontend for ffmpeg tool which, if you are reading this, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -30,7 +30,7 @@ Quick tips for common usage:
 
 I use this tool regularly for 2 tasks
 	
-- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21";
+- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). At "Convert" Tab use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21" - then select multiple files and drag them to the list of button "Multiple Input Files"
 	
 - 2 to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
 	
@@ -38,7 +38,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.4.2 - update: FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
+Latest version 1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE FILE
 
 Content:
  - Features
@@ -59,6 +59,9 @@ Added git repository. It is now preferred method to get source code. To clone us
 git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
+
+Change log since v1.5.0:
+- added new Info button; show detailed codec info and thumbnail from video
 
 Change log since v1.4.2:
 - fixed encoding of mp3 files

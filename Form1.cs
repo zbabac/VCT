@@ -214,7 +214,7 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procffprobe =
                 new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");//define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("./ffprobe -v quiet -print_format json -show_format -show_streams "+  input_file); // for Linux with mono
+                //new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams " +  input_file); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -236,23 +236,7 @@ namespace VTC
                 temp_path = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".jpg";
                 ffprobeproc.CancelOutputRead();	//stop reading redirected standard output
                 ffprobeproc.CancelErrorRead();
-                System.Diagnostics.ProcessStartInfo procff =
-                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);//define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo(./ffmpeg -ss 60 -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/test.jpg\""); // for Linux with mono
-                // The following commands are needed to redirect the standard output and standard error.
-                // This means that it will be redirected to the Process.StandardOutput StreamReader.
-                procff.RedirectStandardError = false;
-                procff.RedirectStandardOutput = false;
-                procff.RedirectStandardInput = false; ;
-                procff.UseShellExecute = false;
-                procff.CreateNoWindow = true;	// Do not create the black window.
-                procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
-
-                //proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
-                Process ffproc = new Process();
-                ffproc.StartInfo = procff;
-                ffproc.Start();				//start the ffprobe
-                ffproc.WaitForExit();
+                
                 //Thread.Sleep(500);
                 return 0;					//0 means OK, not used so far
             }
@@ -278,24 +262,23 @@ namespace VTC
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
             try
             {
-                System.Diagnostics.ProcessStartInfo procff =
-                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -y -ss "+tstamp+" -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.jpg\"");//define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo(./ffmpeg -ss 60 -i \"" +input_file + "\" -qscale:v 2 -vframes 1 \"" + Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/test.jpg\""); // for Linux with mono
-                // The following commands are needed to redirect the standard output and standard error.
-                // This means that it will be redirected to the Process.StandardOutput StreamReader.
-                procff.RedirectStandardError = false;
-                procff.RedirectStandardOutput = false;
-                procff.RedirectStandardInput = false;
-                procff.UseShellExecute = false;
-                procff.CreateNoWindow = true;	// Do not create the black window.
-                procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
+				System.Diagnostics.ProcessStartInfo procff =
+					new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);//define Process Info to assing to the process
+					//new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i " + input_file + " -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
+				// The following commands are needed to redirect the standard output and standard error.
+				// This means that it will be redirected to the Process.StandardOutput StreamReader.
+				procff.RedirectStandardError = false;
+				procff.RedirectStandardOutput = false;
+				procff.RedirectStandardInput = false; ;
+				procff.UseShellExecute = false;
+				procff.CreateNoWindow = true;	// Do not create the black window.
+				procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
 
-                //proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
-                Process ffproc = new Process();
-                ffproc.StartInfo = procff;
-                ffproc.Start();				//start the ffprobe
-                ffproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
-                //ffproc.StandardInput.Write('q');
+				//proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
+				Process ffproc = new Process();
+				ffproc.StartInfo = procff;
+				ffproc.Start();				//start the ffprobe
+				ffproc.WaitForExit();
             }
             catch (Exception ex)
             {
@@ -831,7 +814,7 @@ namespace VTC
         }
         private void buttonInputConvFile_Click(object sender, EventArgs e)
         {                   //user clicks to select 1 input file
-
+			time_position = "0";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
             openFileDialog.Title = "Choose video or audio file to convert";
@@ -857,10 +840,12 @@ namespace VTC
                 labelInputConvFile.Text = input_file;
                 //File.Delete(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.jpg");
                 FileProperties(); //async run of ffprobe to get file info
-                //Thread.Sleep(500);//wait for file info
-                //extract_jpeg();
+				Thread.Sleep(300);//wait for file info
+				extract_jpeg();
+				Thread.Sleep(300);
                 EnableConvButtons();
                 buttonInfo.Visible = true;
+                buttonInfo.Enabled = true;
             }
 
         }
@@ -909,9 +894,12 @@ namespace VTC
                     comboSource.Add(i, i.ToString()); //add stream numbers sequentially
                 }
                 //After adding values to Dictionary, use this as combobox datasource.
+				if(count_aud_streams>0)
+				{
                 comboBoxAudioStreamNo.DataSource = new BindingSource(comboSource, null);
                 comboBoxAudioStreamNo.DisplayMember = "Value";
                 comboBoxAudioStreamNo.ValueMember = "Key";
+				}
                 file_info File_info = new file_info { };
                 video_info Video_info = new video_info { };
                 audio_info[] Audio_info = new audio_info[count_aud_streams];
@@ -1059,10 +1047,12 @@ namespace VTC
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
                 FileProperties();
-                //Thread.Sleep(500);//wait for file info
-                //extract_jpeg();
+                Thread.Sleep(300);//wait for file info
+                extract_jpeg();
+				Thread.Sleep(300);
                 EnableConvButtons();
                 buttonInfo.Visible = true;
+                buttonInfo.Enabled = true;
             }
         }
         private void buttonOutConvFile_Click(object sender, EventArgs e)
@@ -1179,7 +1169,10 @@ namespace VTC
                 }
                 toolStripStatusLabel1.Text = "Row(s) deleted";
             }
-            catch { Exception x; }
+			catch (Exception x)
+			{
+				string m = x.Message;
+			}
         }
 
         private void buttonSellectAllQueue_Click(object sender, EventArgs e)
@@ -1565,6 +1558,7 @@ namespace VTC
             groupBoxContainer.Enabled = false;
             groupBoxVideoOrAudio.Enabled = false;
             buttonAddSubtitle.Enabled = false;
+            buttonInfo.Enabled = false;
         }
         private void EnableConvButtons()
         {               //enable buttons on Convert tab

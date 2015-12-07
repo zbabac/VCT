@@ -325,7 +325,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 77</value>
+    <value>512, 77</value>
   </data>
   <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1813,7 +1813,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 555</value>
+    <value>234, 543</value>
   </data>
   <data name="buttonUnselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1846,7 +1846,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 555</value>
+    <value>330, 543</value>
   </data>
   <data name="buttonSellectAllQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1915,7 +1915,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>560, 543</value>
+    <value>563, 523</value>
   </data>
   <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1939,7 +1939,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 555</value>
+    <value>480, 543</value>
   </data>
   <data name="buttonDeleteQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1972,7 +1972,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 555</value>
+    <value>94, 543</value>
   </data>
   <data name="buttonCancelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -2005,7 +2005,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 555</value>
+    <value>3, 543</value>
   </data>
   <data name="buttonStartQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -2032,13 +2032,13 @@
     <value>5</value>
   </data>
   <data name="panelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
+    <value>3, 8</value>
   </data>
   <data name="panelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 595</value>
+    <value>560, 583</value>
   </data>
   <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2065,7 +2065,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>572, 592</value>
+    <value>569, 592</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2095,7 +2095,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>580, 622</value>
+    <value>577, 622</value>
   </data>
   <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2119,7 +2119,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 626</value>
+    <value>584, 626</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

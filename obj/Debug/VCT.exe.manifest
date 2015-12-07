@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LKhB0du0M9YGKYUNu/a/ciuUgvw=</dsig:DigestValue>
+        <dsig:DigestValue>pQU3yQnf6gqxwnOQCFVFEd4dqPs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sPEcfWAZG7ytZkvgAid/NpBkfpM=</dsig:DigestValue>
+        <dsig:DigestValue>CRZniUrZPcbZxmgPcn+Psnwt5iM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>A/8iRpQqS0OLPc+SYFkchH92Rl4=</dsig:DigestValue>
+        <dsig:DigestValue>vNCzYtbGow4/IhjYQcYa1SoPzbw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cHUVxM6J7OqJ1dsL1FdKkKR838s=</dsig:DigestValue>
+        <dsig:DigestValue>YxK0l7+zW0fpp3V2QYfwFVPzy2c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8W82yXbvrN8J+9aVUz4CqhTMRCo=</dsig:DigestValue>
+        <dsig:DigestValue>1mKDhah0WeZHSMfuq31ec/xppA8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
