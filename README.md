@@ -148,30 +148,34 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 
 Linux mono usage
 
-#You must have mono installed to run .NET application.
-#For Debian systems (Ubuntu, Mint, etc.) run:
+You must have mono installed to run .NET application.
+For Debian systems (Ubuntu, Mint, etc.) run:
 
-sudo apt-get install mono-complete
+> sudo apt-get install mono-complete
 
-#For another distributions, just search: mono <distro_name> installation.
-#After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
-#Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
+For another distributions, just search: mono <distro_name> installation.
+After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 
-cd $HOME/Downloads
-unzip VCT_Linux_mono_binary.zip -d $HOME 	#$HOME is destination dir.
-cd $HOME/VCT_mono							#new dir. is created by name VCT_mono
-chmod 777 *									#allow all users permissions and exec rights to ffmpeg and ffprobe
+> cd $HOME/Downloads
+$HOME is destination dir. in this case
+> unzip VCT_Linux_mono_binary.zip -d $HOME 
+new dir. is created by name VCT_mono
+> cd $HOME/VCT_mono
+allow all users permissions and exec rights to ffmpeg and ffprobe
+> chmod 777 *
 
-#add ffmpeg to path if you don't have it installed:
+add ffmpeg to path if you don't have it installed:
 
-PATH=$PATH:/$HOME/VCT_mono
+> PATH=$PATH:/$HOME/VCT_mono
 
-#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file.
-#you can now run:
+or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the hidden .profile file, usually in $HOME/.profile
+
+you can now run:
 
 mono VCT.exe
 
-#or create launcher at desktop or menu.
+or create launcher at desktop or menu.
 - it should display MS Windows like Window
 - I haven't resolved yet encoding progress under Linux (it is shown only sporadically)- only elapsed time is displayed, but don't worry, it is working just fine!
 

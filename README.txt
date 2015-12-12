@@ -158,15 +158,15 @@ sudo apt-get install mono-complete
 #Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 
 cd $HOME/Downloads
-unzip VCT_Linux_mono_binary.zip -d $HOME 	#$HOME is destination dir.
-cd $HOME/VCT_mono							#new dir. is created by name VCT_mono
-chmod 777 *									#allow all users permissions and exec rights to ffmpeg and ffprobe
+unzip VCT_Linux_mono_binary.zip -d $HOME 		#$HOME is destination dir.
+cd $HOME/VCT_mono		#new dir. is created by name VCT_mono
+chmod 777 *			#allow all users permissions and exec rights to ffmpeg and ffprobe
 
 #add ffmpeg to path if you don't have it installed:
 
 PATH=$PATH:/$HOME/VCT_mono
 
-#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file.
+#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file, usually $HOME/.profile
 #you can now run:
 
 mono VCT.exe
