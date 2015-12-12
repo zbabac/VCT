@@ -44,7 +44,7 @@ namespace VTC
         static string vf = ""; //video filter part, used currently to rotate video
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
-        string time_position = "60"; //position from which to extract image from video
+        string time_position = "2"; //position from which to extract image from video
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
         static string pass_video_info, pass_audio_info, pass_subtitle_info, temp_path; //vars to pass to other infoForm
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate;
@@ -208,7 +208,7 @@ namespace VTC
             catch (Exception x)
             { }
         }
-        private int ffprobe(string input, string tstamp)
+        private int ffprobe(string input)
         {
             try
             {
@@ -304,6 +304,7 @@ namespace VTC
         {
             try
             {					//new thread started, here we define process start, etc.
+                Thread.Sleep(900);
                 ffmpeg_extract_jpeg(time_position);	//extract image screenshot in this func								
             }
             catch (Exception x)
@@ -814,7 +815,7 @@ namespace VTC
         }
         private void buttonInputConvFile_Click(object sender, EventArgs e)
         {                   //user clicks to select 1 input file
-			time_position = "0";
+			time_position = "5";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
             openFileDialog.Title = "Choose video or audio file to convert";
@@ -838,11 +839,10 @@ namespace VTC
                 out_file = out_path + in_file;
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
-                //File.Delete(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\test.jpg");
                 FileProperties(); //async run of ffprobe to get file info
-				Thread.Sleep(300);//wait for file info
+				Thread.Sleep(500);//wait for file info
 				extract_jpeg();
-				Thread.Sleep(300);
+				Thread.Sleep(100);
                 EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
@@ -869,7 +869,7 @@ namespace VTC
         {
             try
             {					//new thread started, here we define process start, etc.
-                int ffprobe_id = ffprobe(input_file, time_position);	//start ffprobe in this func								
+                int ffprobe_id = ffprobe(input_file);	//start ffprobe in this func								
             }
             catch (Exception x)
             {
@@ -883,6 +883,7 @@ namespace VTC
                 int count_aud_streams, count_sub_streams;
                 dynamic JSON_helper;
                 bool video_exists;
+                time_position = "4";
                 pass_video_info = "";
                 pass_audio_info = "";
                 pass_subtitle_info = "";
@@ -904,8 +905,14 @@ namespace VTC
                 video_info Video_info = new video_info { };
                 audio_info[] Audio_info = new audio_info[count_aud_streams];
                 subtitle_info[] Subtitle_info = new subtitle_info[count_sub_streams];
+                double duration = 0.0;
                 video_exists = (Regex.Matches(json, "\"video\"").Count > 0);
                 JSON_helper = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+                if (JSON_helper.format.duration != null)
+                {
+                    duration = Convert.ToDouble(JSON_helper.format.duration);
+                    time_position = String.Format("{0:0}", duration / 8);
+                }
                 File_info.filename = JSON_helper.format.filename;
                 File_info.size = JSON_helper.format.size / 1048576;
                 pass_labelFileName2 = File_info.filename;
@@ -919,9 +926,13 @@ namespace VTC
                     Video_info.height = JSON_helper.streams[0].coded_height;
                     Video_info.r_frame_rate = JSON_helper.streams[0].r_frame_rate;
                     if (JSON_helper.streams[0].duration != null)
+                    {
                         Video_info.duration = JSON_helper.streams[0].duration;
+                        duration = Video_info.duration;
+                        time_position = String.Format("{0:0}", duration / 8);
+                    }
                     else
-                        Video_info.duration = 0.0;
+                        Video_info.duration = duration;
                     TimeSpan dur = TimeSpan.FromSeconds(Video_info.duration);
                     if (JSON_helper.streams[0].bit_rate != null)
                         Video_info.bit_rate = JSON_helper.streams[0].bit_rate;
@@ -941,7 +952,7 @@ namespace VTC
                         pass_labelFormat2 = JSON_helper.streams[0].codec_tag_string;
                     else
                         pass_labelFormat2 = Video_info.codec_long_name.Substring(0, 10);
-                    time_position = String.Format("{0:0}", Video_info.duration / 5);
+                    //time_position = String.Format("{0:0}", Video_info.duration / 8);
                 }
                 else //no video, just audio
                 {
@@ -959,7 +970,7 @@ namespace VTC
                             Audio_info[i].duration = String.Format("{0:g}", ts);
                         }
                         else
-                            Audio_info[i].duration = "";
+                            Audio_info[i].duration = duration.ToString();
                         Audio_info[i].bit_rate = JSON_helper.streams[i].bit_rate;
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i].bit_rate / 1000) + " kb/s\nDuration: \t" +
@@ -992,7 +1003,7 @@ namespace VTC
                             Audio_info[i - 1].duration = String.Format("{0:g}", ts);
                         }
                         else
-                            Audio_info[i - 1].duration = "";
+                            Audio_info[i - 1].duration = duration.ToString();
                         Audio_info[i - 1].bit_rate = JSON_helper.streams[i].bit_rate;
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
@@ -1050,11 +1061,11 @@ namespace VTC
                 out_file = out_path + in_file;
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
+                time_position = "5";
                 FileProperties();
-                Thread.Sleep(300);//wait for file info
+                Thread.Sleep(500);//wait for file info
                 extract_jpeg();
-				Thread.Sleep(300);
-                EnableConvButtons();
+				EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
             }

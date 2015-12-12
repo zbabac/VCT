@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="962048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="962560">
       <assemblyIdentity name="VCT" version="1.5.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Z4PIbV2N6nAkDAiMD1M9k1mdAng=</dsig:DigestValue>
+        <dsig:DigestValue>VT8UhymmZmMfKekuT3Kqz3QR1qs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nViBfhrUQDJWat5ru5YS/nCQT6c=</dsig:DigestValue>
+        <dsig:DigestValue>mESsfzeX070t17buAgd19bXezqw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>V8p6PYdiPCmUWfMfp3tj4Bj04h4=</dsig:DigestValue>
+        <dsig:DigestValue>X2PI0h5+3ntgxVz9S6gxsggs81k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Q4YbfrlNTSS5blDAxha3i8gIQ3E=</dsig:DigestValue>
+        <dsig:DigestValue>NkwYbE8L3MBXgMvleuTV8pQCkeM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8iduQYqpZuGG6Dlf7KHUWFs2/P0=</dsig:DigestValue>
+        <dsig:DigestValue>CjteAAKqPue3oqGdgvlJBbhBLIg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

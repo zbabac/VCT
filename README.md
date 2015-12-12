@@ -1,6 +1,6 @@
-v1.4.2	FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
+v1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE FILE
 
-VCT is frontend for ffmpeg tool which, if you are reading this, is the greatest tool for video/audio files manipulation
+VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
 I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264. Handbrake can do it, but I have to click to every file, select path, etc.
 
@@ -19,18 +19,18 @@ If program is declared an open source, it doesn't mean that there is no support.
 VCT has its limitations: 
 - when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
 - you can only encode file with single audio stream;
-- if there is subtitle stream inside input file, it will not be copied to output;
-- if selecting audio stream, you must know how many streams there are and which one is the one you need (you can check that with VLC).
+- if there is subtitle stream inside input file, it will not be copied to output (planned in next release);
+- if selecting audio stream when dropping multiple files, you must know how many streams there are and which one is the one you need (if selecting files one by one, you can use Info button to check codec data).
 
 That's why I left option to manually edit ffmpeg command, for all of you that know, or are willing to learn this tool. You can also manually edit commands in batch list.
 
-I have plans to include ffprobe in order to parse the input file and find all streams within, but it will take some time to develop and I will have to redesign the whole app.
+ffprobe is included in 1.5.0 so when you click "Input File", it is parsed and "Info" button apears. You can click it so see codec details and thumbnail from video. This could have been acieved with ffmpeg, but ffprobe produces JSON output and I wanted to play with it; and it was fun!
 
 Quick tips for common usage:
 
 I use this tool regularly for 2 tasks
 	
-- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). I use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21";
+- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). At "Convert" Tab use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21" - then select multiple files and drag them to the list of button "Multiple Input Files"
 	
 - 2 to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
 	
@@ -38,7 +38,9 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.4.2 - update: FIXED CONVERTING TO MP3 BUG, ADDED DRAG&DROP TO THE LIST
+Latest version 1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE INPUT FILE
+
+
 
 Content:
  - Features
@@ -49,6 +51,28 @@ Content:
  - Visual Studio usage
  - Monodevelop Linux usage
  - Linux usage
+ 
+
+Features:
+- 2 tabs: Transcode and Convert
+
+- Transcode tab: select multiple files (mkv, m4v or mp4) and add them to batch list for automatic conversion to other video container (mp4/m4v --> mkv, mkv --> mp4)
+
+- Convert tab: 2 options to convert - either by setting options then selecting multiple files (mixture of audio and video files) - or by selecting files one by one, for each file different options possible
+- selection of options: encode quality, encode speed, audio bitrate, create video file only, create audio file only, stream copy
+- option to select which audio stream to encode (for multi language movies)
+- option to insert .SRT subtitle as a stream in the video file (soft subtitles)
+- advanced options: it is possible to manually edit ffmpeg command in the text box, or directly in the batch tasks list
+- conversion tasks are stored in a list which can be edited (command edit, select, delete task):
+- you don't have to start encoding immediately after adding from "Transcode" or "Convert" tabs
+	- you can add one or more files with different options several times by choosing 1 input file each time or/and selecting multiple files at once,
+	- only after you populate your list completely, by clicking "Start" all tasks will be executed,
+- conversion can be canceled,
+- encoding progress displayed in status bar
+- help included with installtion and with source code
+
+Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
+
 
 GIT:
 To get latest source, please use GIT either on GITHUB or SF!
@@ -60,9 +84,14 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
+
+Change log since v1.5.0:
+- added new Info button; show detailed codec info and thumbnail from video
+- after clicking "Input File", number of audio streams found in file is shown in Audio Streams Combo Box
+
 Change log since v1.4.2:
 - fixed encoding of mp3 files
-- added drag&drop files to the list
+- added drag&drop files to the list of jobs to make it easier than to drop on button
 - added option to select which audio stream you want to include into output file
 - improved messages in status bar, when all jobs are done, message warns user if some file(s) failed to encode
 
@@ -93,27 +122,6 @@ Change log since v0.9.6:
 - changed behaviour of buttons: it is no longer needed to select Output Path first - if Input files are selected first, then Output Path is selected as the same as input files path;
 - added value "26" to the quality factor list at Convert tab.
 
-Features:
-- 2 tabs: Transcode and Convert
-
-- Transcode tab: select multiple files (mkv, m4v or mp4) and add them to batch list for automatic conversion to other video container (mp4/m4v --> mkv, mkv --> mp4)
-
-- Convert tab: 2 options to convert - either by setting options then selecting multiple files (mixture of audio and video files) - or by selecting files one by one, for each file different options possible
-- selection of options: encode quality, encode speed, audio bitrate, create video file only, create audio file only, stream copy
-- option to select which audio stream to encode (for multi language movies)
-- option to insert .SRT subtitle as a stream in the video file (soft subtitles)
-- advanced options: it is possible to manually edit ffmpeg command in the text box, or directly in the batch tasks list
-- conversion tasks are stored in a list which can be edited (command edit, select, delete task):
-- you don't have to start encoding immediately after adding from "Transcode" or "Convert" tabs
-	- you can add one or more files with different options several times by choosing 1 input file each time or/and selecting multiple files at once,
-	- only after you populate your list completely, by clicking "Start" all tasks will be executed,
-- conversion can be canceled,
-- encoding progress displayed in status bar
-- help included with installtion and with source code
-
-Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
-
-
 
 Known issues:
 Avast on XP could block setup execution with strange messages like: "path could not be found...". Please scan VCT_setup.exe with AV program, then disable file shield and run setup again. It could be the case with other AV software.
@@ -124,25 +132,46 @@ http://www.getavast.net/support/stop-blocking-a-program/
 You basically need to add scanning exclusion to the installation path, default is: "C:\Program Files (x86)\VCT" or "C:\Program Files\VCT".
 
 Update: new Avast version uses Deep scan at first run, so everything is ok.
-Update 2: Windows 8 will try to prevent installation. After you scan setup file, click on "install anyway".
+Update 2: Windows 8 will try to prevent installation. After you scan setup file, click Advanced, then click "install anyway".
+
 
 Prerequisities:
 If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except .NET 4.0 client profile. Please download it from Microsoft.
 Some antivirus programs (mine is Avast) will complain that "File reputation/prevalence is low". It will be sandboxed. This is due to the fact that application does not have commercial signature. If you are worried about it, please scan it first. There is no virus, full source code is available. After checking, you can instruct your antivirus to execute anyway, or in case of Avast on Windows XP, you need to disable shield (after scanning first, of course) in order to install program.
 
+
 Visual Studio usage:
-Source code files created by VS 2013 Express Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
-Whenever I add new version I provide the latest ffmpeg.exe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
+Source code files created by VS 2015 Community Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
+Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
 
-Monodevelop source usage:
-- download source for VS and browse to directory VCT_mono
-- cp ffmpeg ./VTC/bin/Debug/	#copy ffmpeg Linux binary next to VCT.exe
 
-Linux binary usage:
-- install mono.net packages - refer to documents related to you distro
-- download VCT_Linux_mono_binary.zip from https://sourceforge.net/projects/videoconvertertranscoder/files/?source=navbar
-- unpack to your home folder or some other location
-- in terminal browse to that location: ~/VCT_mono/
-- run in terminal or create shortcut to the command: mono VCT.exe
+
+Linux mono usage
+
+#You must have mono installed to run .NET application.
+#For Debian systems (Ubuntu, Mint, etc.) run:
+
+sudo apt-get install mono-complete
+
+#For another distributions, just search: mono <distro_name> installation.
+#After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+#Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
+
+cd $HOME/Downloads
+unzip VCT_Linux_mono_binary.zip -d $HOME 	#$HOME is destination dir.
+cd $HOME/VCT_mono							#new dir. is created by name VCT_mono
+chmod 777 *									#allow all users permissions and exec rights to ffmpeg and ffprobe
+
+#add ffmpeg to path if you don't have it installed:
+
+PATH=$PATH:/$HOME/VCT_mono
+
+#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file.
+#you can now run:
+
+mono VCT.exe
+
+#or create launcher at desktop or menu.
 - it should display MS Windows like Window
-- I haven't resolved yet encoding progress under Linux- only elapsed time is displayed, but don't worry, it is working just fine!
+- I haven't resolved yet encoding progress under Linux (it is shown only sporadically)- only elapsed time is displayed, but don't worry, it is working just fine!
+
