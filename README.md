@@ -158,11 +158,17 @@ For Debian systems (Ubuntu, Mint, etc.) run:
 //Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 
 > cd $HOME/Downloads 
+
 //$HOME is destination dir. in this case
+
 > unzip VCT_Linux_mono_binary.zip -d $HOME 
+
 //new dir. is created by name VCT_mono
+
 > cd $HOME/VCT_mono 
+
 //allow all users permissions and exec rights to ffmpeg and ffprobe
+
 > chmod 777 * 
 
 //add ffmpeg to path if you don't have it installed:
