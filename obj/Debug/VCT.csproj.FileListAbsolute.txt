@@ -80,3 +80,7 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\ffprobe.exe
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.nb.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.sr-Cyrl.resources
+C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.sr-Latn.resources

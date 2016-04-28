@@ -47,7 +47,9 @@ namespace VTC
         string time_position = "2"; //position from which to extract image from video
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
         static string pass_video_info, pass_audio_info, pass_subtitle_info, temp_path; //vars to pass to other infoForm
-        static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate;
+        static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate; 
+        static string log = ""; //store output from ffmpeg
+        Form logForm = new Form();
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
         ToolTip toolTip2 = new ToolTip();
@@ -403,6 +405,7 @@ namespace VTC
                     else if (!output.Contains("To ignore this"))
                         statustekst = output; //catch any error message
                 }
+                log += output + "\n";
             }
             catch (Exception x)
             {
@@ -414,6 +417,9 @@ namespace VTC
         {									//handler for user clicking to start encoding of batch list
             try
             {
+                log = "";
+                buttonLog.Visible = true;
+                buttonLog.Enabled = true;
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(true);//new instance of check cell
                 DataGridViewRow row = new DataGridViewRow();					 //new temp row
                 BackgroundWorker bg = new BackgroundWorker();					 //new instance of Background worker
@@ -464,7 +470,7 @@ namespace VTC
                         stopwatch.Restart();						//restart measuring time for next job
                     }
                 }
-                //finished = true;									
+                //finished = true;
             }
             catch (Exception x)
             {
@@ -475,7 +481,7 @@ namespace VTC
         }
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (statustekst.Contains("kb/s") || statustekst.Contains("mux"))
+            if (statustekst.Contains("kb/s") || statustekst.Contains("mux") || statustekst.Contains("global headers:"))
             {
                 statustekst = "Encoding finished!   " + statustekst;    //message when thread finishes with all jobs
                 canceled = true;
@@ -490,6 +496,7 @@ namespace VTC
                 MessageBox.Show("At least one file failed to convert. Check output file sizes: usually the very small one (only few kB) is not converted for some reason, e.g. missing header, etc.");
                 error_in_file = false;
             }
+            afterCancelOrFinish(); 
         }
 
         private void afterCancelOrFinish()
@@ -500,9 +507,10 @@ namespace VTC
                 timerBatch.Enabled = false;
 
                 EnableButtonsAfterEncoding();//enable buttons so user can edit tasks
-
+                //buttonLog.Enabled = true;
+                //buttonLog.Visible = true;
                 toolStripProgressBar1.Value = 0;
-
+                toolStripStatusLabel1.Text = statustekst;
                 canceled = false;
             }
             catch (Exception x)
@@ -524,6 +532,8 @@ namespace VTC
                     proc.CancelErrorRead();         //stop reading std out
                     proc.CancelOutputRead();        //stop reading std error
                 }
+                //buttonLog.Enabled = true;
+                //buttonLog.Visible = true;
             }
             catch (Exception ex)
             {
@@ -1204,6 +1214,37 @@ namespace VTC
             catch { Exception x; }
         }
 
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+
+            if (logForm.Visible)
+            {
+                logForm.Close();
+                logForm = new Form3(log);
+                logForm.Show();
+            }
+            else
+            {
+                logForm = new Form3(log);
+                logForm.Show();
+            }
+        }
+
+        private void buttonLog2_Click(object sender, EventArgs e)
+        {
+            if (logForm.Visible)
+            {
+                logForm.Close();
+                logForm = new Form3(log);
+                logForm.Show();
+            }
+            else
+            {
+                logForm = new Form3(log);
+                logForm.Show();
+            }
+        }
+
         private void buttonUnselectAll_Click(object sender, EventArgs e)
         {               //deselect all items in the list
             try
@@ -1463,7 +1504,7 @@ namespace VTC
                     toolTip16.SetToolTip(this.buttonMultiConvFiles, "Select more files to be converted\nWITH SAME OPTIONS DEFINED ON THIS TAB BEFORE CLICKING THIS BUTTON.\nBatch job list will be populated automatically.\nYou can also drop files onto this button.");
                     toolTip18.SetToolTip(this.richTextBoxConv, "When changing options, ffmpeg command is generated in this box.\nYou can tweak ffmpeg options manually if you are advanced user.\nWhen you are happy with command, you can click 'Add To Batch File List'.");
                     toolTip19.SetToolTip(this.buttonAddBatchConv, "When you select all options, click here to add job to the job list.\nAfterwards, you can select new options or keep the same for new job,\nor just click 'Start' to start encoding jobs in the list.");
-                    toolTip20.SetToolTip(this.dataGridViewBatch, "The jobs that you added are displayed here.\nYou can delete one or more of them if you don't want them.\nIf you changed your mind regarding some options,\nyou can edit ffmpeg command directly in this table.\nWhen you are done building list, click 'Start' to process the queue.");
+                    toolTip20.SetToolTip(this.panelBatch, "The jobs that you added are displayed here.\nYou can drag and drop multiple files here (same effect as dropping files on Multiple Files button).\nIf you changed your mind regarding some options,\nyou can edit ffmpeg command directly in this table.\nWhen you are done building list, click 'Start' to process the queue.");
                     toolTip21.SetToolTip(this.checkBoxAudioOnly, "Select if you want to extract only audio from the input file.");
                     toolTip22.SetToolTip(this.checkBoxVideoOnly, "Select if you want to extract only video from the input file.");
                     toolTip23.SetToolTip(this.radioButtonMKV, "Select if you want to encode video as MKV.");
@@ -1479,7 +1520,7 @@ namespace VTC
                     toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
                     toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     break;
                 case "sr":
@@ -1498,7 +1539,7 @@ namespace VTC
                     toolTip16.SetToolTip(this.buttonMultiConvFiles, "Изаберите ВИШЕ ФАЈЛОВА за конверзију, али имајте на уму да ће\nСВИ БИТИ КОДОВАНИ СА ИСТИМ ОПЦИЈАМА КОЈЕ СТЕ ПРИЈЕ ТОГА ИЗАБРАЛИ!!!\nЛиста ће се аутоматски попунити (ово је за ултра, мега гига брзу конверзију). Можете такође да превучете фајлове ба ово дугме!");
                     toolTip18.SetToolTip(this.richTextBoxConv, "Кад мијењате опције, мијења се и команда испод.\nМожете ручно мијењати опције у прозору и онда кликнути Додај на листу.");
                     toolTip19.SetToolTip(this.buttonAddBatchConv, "Кад изаберете опције, кликните да додате задатак на листу десно.\nНакон тога опције остају за слиједећи задатак или их можете промијенити.");
-                    toolTip20.SetToolTip(this.dataGridViewBatch, "Задаци се приказују у овој табели. Можете их брисати, додавати или мијењати директно у табели.\nКад желите да прекодујете све задатке, кликните на Старт.");
+                    toolTip20.SetToolTip(this.panelBatch, "Задаци се приказују у овој табели. Можете превући више фајлова директно у ову листу.\nКад желите да прекодујете све задатке, кликните на Старт.");
                     toolTip21.SetToolTip(this.checkBoxAudioOnly, "Изаберите ако желите да снимите само звук.");
                     toolTip22.SetToolTip(this.checkBoxVideoOnly, "Изаберите ако желите само слику без звука.");
                     toolTip23.SetToolTip(this.radioButtonMKV, "Фајл ће бити сачуван у формату MKV.");
@@ -1514,7 +1555,7 @@ namespace VTC
                     toolTip33.SetToolTip(this.checkBox180, "Ротирај слику 180 степени, нпр. кад држиш телефон наопако.");
                     toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     break;
                 case "nb":
@@ -1533,7 +1574,7 @@ namespace VTC
                     toolTip16.SetToolTip(this.buttonMultiConvFiles, "Velge flere filer som skal konverteres MED SAMME ALTERNATIVENE defineres under denne fanen FØR DU KLIKKE på denne knappen.\nBatch jobblisten fylles ut automatisk.\nDu kan også slippe filer på denne knappen.");
                     toolTip18.SetToolTip(this.richTextBoxConv, "Når bytte valg, er ffmpeg kommando generert i denne boksen. Du kan justere FFMPEG alternativer manuelt hvis du er avansert bruker. Når du er fornøyd med kommandoen, kan du klikke knappen 'Legg til batch fil listen'.");
                     toolTip19.SetToolTip(this.buttonAddBatchConv, "Når du velger alle alternativene, klikk her for å legge jobben til jobblisten.\nEtterpå kan du velge nye alternativer eller beholde den samme for ny jobb, eller bare klikk 'Start' for å starte koding filer i listen.");
-                    toolTip20.SetToolTip(this.dataGridViewBatch, "De jobbene som du har lagt vises her.\nDu kan slette en eller flere av dem hvis du ikke vil ha dem.\nHvis du har endret ditt sinn om noen alternativer, kan du redigere ffmpeg kommandoen direkte i denne tabellen.\nNår du er ferdig med å bygge listen, klikk på 'Start' for å behandle køen.");
+                    toolTip20.SetToolTip(this.panelBatch, "De jobbene som du har lagt vises her.\n.\nDu kan slippe mange filer her.\nHvis du har endret ditt sinn om noen alternativer, kan du redigere ffmpeg kommandoen direkte i denne tabellen.\nNår du er ferdig med å bygge listen, klikk på 'Start' for å behandle køen.");
                     toolTip21.SetToolTip(this.checkBoxAudioOnly, "Velg om du ønsker å trekke ut bare lyd fra inndatafilen.");
                     toolTip22.SetToolTip(this.checkBoxVideoOnly, "Velg om du ønsker å trekke ut bare video fra inndatafilen.");
                     toolTip23.SetToolTip(this.radioButtonMKV, "Velg om du ønsker å kode video som MKV.");
@@ -1549,7 +1590,7 @@ namespace VTC
                     toolTip33.SetToolTip(this.checkBox180, "Roter video 180 grader, som i tilfelle når du holder telefonen i landskapsmodus når du tar opp, men snudde opp ned.");
                     toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: audio stream MUST EXIST or the encoding wil fail!\nProgram doesn't check for audio stream existence (at least not in this version).");
+                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     break;
 

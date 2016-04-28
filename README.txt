@@ -1,4 +1,4 @@
-v1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE FILE
+v1.5.2	ADDED "LOG" BUTTON THAT SHOWS ENCODING LOG
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -84,6 +84,8 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
+Change log since v1.5.2:	
+- added "log" button that shows encoding log
 
 Change log since v1.5.0:
 - added new Info button; show detailed codec info and thumbnail from video

@@ -1,6 +1,8 @@
 C:\Programi\ffmpeg\bin>ffmpeg -y -i "C:\D\ff\The Mating Habits Of The Earthbound Human.mp4" -i "C:\D\ff\1test.srt" -c:v libx264 -preset veryfast -crf 24 -c:a libmp3lame -b:a 128k -c:s srt "C:\D\ff\test.mkv"
 
-ffmpeg -y -i "C:\D\Matrix\The Matrix (1999).mkv" -f srt -i "C:\D\Matrix\The Matrix (1999).no.srt" -c:v copy -c:a copy -c:s mov_text "C:\D\Matrix\The Matrix (1999).1.mp4"
+to add language metadata (insert before output file) "-metadata:s:s:0 language=eng"
+
+ffmpeg -y -i "C:\D\Matrix\The Matrix (1999).mkv" -f srt -i "C:\D\Matrix\The Matrix (1999).no.srt" -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=nob "C:\D\Matrix\The Matrix (1999).1.mp4"
 
 ffmpeg -i input.mp4 -i subtitles.srt -c copy -c:s mov_text -map 0 -map 1 -map_metadata 0 output.mp4
 
@@ -44,6 +46,15 @@ ffmpeg -ss 60 -i "C:\downloads\ff\test.mp4" -qscale:v 2 -vframes 1 "C:\downloads
 /c  ffmpeg -ss 60 -i "C:\downloads\ff\mala_ila.mp4" -qscale:v 2 -vframes 1 "C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Release\test.jpg"
 
 ffplay -vf scale=1280:-1 "C:\downloads\ff\test.3.mkv"
+
+To join 2 or more files:
+C:\Programi\ffmpeg>ffmpeg -f concat -i "C:\downloads\ff\spoji.txt" -c copy "C:\downloads\ff\sekspir.
+mpg"
+...
+spoji.txt:
+file C:\\downloads\\ff\\HRT-TV1-1.mpg
+file C:\\downloads\\ff\\HRT-TV1-2.mpg
+....
 
 JSON deserialize:
 

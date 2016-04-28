@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.5.0.1"
+!define PRODUCT_VERSION "1.5.0.2"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
@@ -76,16 +76,7 @@ Section "MainSection" SEC01
   CreateShortCut "$SMPROGRAMS\VCT\Help.lnk" "$INSTDIR\VCT_help.pdf"
   File "bin\Release\copying.txt"
   File "README.txt"
-  CreateDirectory "$INSTDIR\sr"
-  SetOutPath "$INSTDIR\sr"
-  File "bin\Release\sr\VCT.resources.dll"
-  CreateDirectory "$INSTDIR\sr-Cyrl"
-  SetOutPath "$INSTDIR\sr-Cyrl"
-  File "bin\Release\sr-Cyrl\VCT.resources.dll"
-  CreateDirectory "$INSTDIR\sr-Latn"
-  SetOutPath "$INSTDIR\sr-Latn"
-  File "bin\Release\sr-Latn\VCT.resources.dll"
-SectionEnd
+  SectionEnd
 
 Section -AdditionalIcons
   CreateShortCut "$SMPROGRAMS\VCT\Uninstall.lnk" "$INSTDIR\uninst.exe"
@@ -122,10 +113,7 @@ Section Uninstall
   Delete "$INSTDIR\ffprobe.exe"
   Delete "$INSTDIR\Newtonsoft.Json.dll"
   Delete "$INSTDIR\VCT.exe"
-  Delete "$INSTDIR\sr-Cyrl\VCT.resources.dll"
-  Delete "$INSTDIR\sr\VCT.resources.dll"
-  Delete "$INSTDIR\sr-Latn\VCT.resources.dll"
-
+  
   Delete "$SMPROGRAMS\VCT\Uninstall.lnk"
   Delete "$$SMPROGRAMS\VCT\Help.lnk"
   Delete "$DESKTOP\VCT.lnk"

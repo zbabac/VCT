@@ -26,6 +26,10 @@
           <source>..\images\test.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
           <target state="needs-review-translation">..\images\test.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
         </trans-unit>
+        <trans-unit id="drop_here" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>..\images\drop_here.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="needs-review-translation">..\images\drop_here.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -8939,6 +8943,58 @@
           <source>False</source>
           <target state="needs-review-translation">False</target>
         </trans-unit>
+        <trans-unit id="panelBatch.BackgroundImageLayout" translate="yes" xml:space="preserve" extype="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+          <source>Zoom</source>
+          <target state="needs-review-translation">Zoom</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.FlatStyle" translate="yes" xml:space="preserve" extype="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+          <source>Flat</source>
+          <target state="needs-review-translation">Flat</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>323, 10</source>
+          <target state="needs-review-translation">323, 10</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>52, 34</source>
+          <target state="needs-review-translation">52, 34</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>42</source>
+          <target state="needs-review-translation">42</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.Text" translate="yes" xml:space="preserve">
+          <source>Log</source>
+          <target state="new">Log</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.Enabled" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+        <trans-unit id="buttonLog.Visible" translate="yes" xml:space="preserve" extype="System.Boolean, mscorlib">
+          <source>False</source>
+          <target state="needs-review-translation">False</target>
+        </trans-unit>
+        <trans-unit id="buttonLog2.FlatStyle" translate="yes" xml:space="preserve" extype="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+          <source>Flat</source>
+          <target state="needs-review-translation">Flat</target>
+        </trans-unit>
+        <trans-unit id="buttonLog2.Location" translate="yes" xml:space="preserve" extype="System.Drawing.Point, System.Drawing">
+          <source>428, 387</source>
+          <target state="needs-review-translation">428, 387</target>
+        </trans-unit>
+        <trans-unit id="buttonLog2.Size" translate="yes" xml:space="preserve" extype="System.Drawing.Size, System.Drawing">
+          <source>75, 44</source>
+          <target state="needs-review-translation">75, 44</target>
+        </trans-unit>
+        <trans-unit id="buttonLog2.TabIndex" translate="yes" xml:space="preserve" extype="System.Int32, mscorlib">
+          <source>15</source>
+          <target state="needs-review-translation">15</target>
+        </trans-unit>
+        <trans-unit id="buttonLog2.Text" translate="yes" xml:space="preserve">
+          <source>Log</source>
+          <target state="new">Log</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -15919,6 +15975,14 @@
           <target state="needs-review-translation">True</target>
         </trans-unit>
       </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="sr-Latn" original="VCT/FORM3.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1331.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VCT/FORM3.RESX" datatype="resx" />
     </body>
   </file>
 </xliff>
