@@ -1174,6 +1174,8 @@ namespace VTC
         private void comboBoxAudioStreamNo_SelectedIndexChanged(object sender, EventArgs e)
         {           //select which audio stream to encode in output file, useful if encoding multiple audio file
             audio_stream = comboBoxAudioStreamNo.Text;
+            if (audio_stream.Contains(","))
+                audio_stream = "1";
             richTextBoxConv.Text = SetupConversionOptions();
         }
 

@@ -1,4 +1,5 @@
 v1.5.2	ADDED "LOG" BUTTON THAT SHOWS ENCODING LOG
+		fixed audio stream bug in Linux
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
