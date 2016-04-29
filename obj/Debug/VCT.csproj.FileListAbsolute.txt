@@ -49,14 +49,9 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\VCT.pdb
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\nb\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\sr-Cyrl\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\sr-Latn\VCT.resources.dll
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\sr\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VCT.csprojResolveAssemblyReference.cache
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form1.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Properties.Resources.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form1.nb.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form1.sr-Cyrl.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form1.sr-Latn.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form1.sr.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Properties.Resources.nb.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Properties.Resources.sr-Cyrl.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Properties.Resources.sr-Latn.resources
@@ -64,7 +59,6 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VCT.csproj
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\nb\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\sr-Cyrl\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\sr-Latn\VCT.resources.dll
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\sr\VCT.resources.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VCT.TrustInfo.xml
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VCT.exe.manifest
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VCT.application
@@ -73,14 +67,7 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutB
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutBoxZ.sr-Cyrl.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.AboutBoxZ.sr-Latn.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.nb.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Cyrl.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form2.sr-Latn.resources
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\ffprobe.exe
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.nb.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.sr-Cyrl.resources
-C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\obj\Debug\VTC.Form3.sr-Latn.resources

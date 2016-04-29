@@ -48,7 +48,8 @@ namespace VTC
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
         static string pass_video_info, pass_audio_info, pass_subtitle_info, temp_path; //vars to pass to other infoForm
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate; 
-        static string log = ""; //store output from ffmpeg
+        static bool log = false; //output from ffmpeg visible or not
+        static string output_log = "";
         Form logForm = new Form();
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
@@ -327,11 +328,13 @@ namespace VTC
                 {						//cancel if flag set by Cancel method
                     afterCancelOrFinish();
                     toolStripStatusLabel1.Text = statustekst;
+                    richTextBox3.Text = output_log;
                 }
                 else
                 {				//display elapsed time, output from ffmpeg
                     toolStripStatusLabel1.Text = "Time: " + stopwatch.Elapsed.ToString(@"hh\:mm\:ss") + "s  | " + statustekst;
                     toolStripProgressBar1.Value = (int)((encoded_sec / total_sec) * 100);//set percentage for displaying progress of current task
+                    richTextBox3.Text = output_log;
                 }
 
             }
@@ -388,7 +391,7 @@ namespace VTC
                         duration_found = true;	//flag that duration is found, we may skip it for the rest of the current std out
                     }
                 }
-                else
+                else if (output != null)
                 {							//after duration found, read progress for each std out line
                     if (output.Contains("time="))
                     {						//in each line we search for occurence of time value
@@ -405,11 +408,12 @@ namespace VTC
                     else if (!output.Contains("To ignore this"))
                         statustekst = output; //catch any error message
                 }
-                log += output + "\n";
+                output_log += output + "\n";
+                
             }
             catch (Exception x)
             {
-                //statustekst = "ERROR:" + x.Message;
+                statustekst = "ERROR:" + x.Message;
             }
         }
 
@@ -417,9 +421,13 @@ namespace VTC
         {									//handler for user clicking to start encoding of batch list
             try
             {
-                log = "";
+                //log = "";
+                richTextBox3.Text = "";
+                output_log = "";
                 buttonLog.Visible = true;
                 buttonLog.Enabled = true;
+                buttonLog2.Visible = true;
+                buttonLog2.Enabled = true;
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(true);//new instance of check cell
                 DataGridViewRow row = new DataGridViewRow();					 //new temp row
                 BackgroundWorker bg = new BackgroundWorker();					 //new instance of Background worker
@@ -529,6 +537,7 @@ namespace VTC
                     afterCancelOrFinish();					//if confirms calncel call method to stop all jobs
                     toolStripStatusLabel1.Text = "Encoding canceled after " + stopwatch.Elapsed.ToString(@"hh\:mm\:ss") + "s ";
                     proc.StandardInput.Write('q');  //sending 'q' to ffmpeg gracefully stops encoding and closes parent cmd window (hidden)
+                    Thread.Sleep(300);
                     proc.CancelErrorRead();         //stop reading std out
                     proc.CancelOutputRead();        //stop reading std error
                 }
@@ -1218,7 +1227,7 @@ namespace VTC
 
         private void buttonLog_Click(object sender, EventArgs e)
         {
-
+            /*
             if (logForm.Visible)
             {
                 logForm.Close();
@@ -1229,11 +1238,29 @@ namespace VTC
             {
                 logForm = new Form3(log);
                 logForm.Show();
+            }
+            */
+            if (!log)
+            {
+                richTextBox3.Height = dataGridViewBatch.Height +5;
+                richTextBox3.Width = dataGridViewBatch.Width;
+                richTextBox3.Visible = true;
+                log = true;
+                buttonLog.BackColor = System.Drawing.Color.SteelBlue;
+            }
+            else
+            {
+                richTextBox3.Height = 0;
+                richTextBox3.Width = 0;
+                richTextBox3.Visible = false;
+                log = false;
+                buttonLog.BackColor = System.Drawing.Color.Transparent;
             }
         }
 
         private void buttonLog2_Click(object sender, EventArgs e)
         {
+            /*
             if (logForm.Visible)
             {
                 logForm.Close();
@@ -1244,6 +1271,22 @@ namespace VTC
             {
                 logForm = new Form3(log);
                 logForm.Show();
+            } */
+            if (!log)
+            {
+                richTextBox3.Height = dataGridViewBatch.Height +5;
+                richTextBox3.Width = dataGridViewBatch.Width;
+                richTextBox3.Visible = true;
+                log = true;
+                buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
+            }
+            else
+            {
+                richTextBox3.Height = 0;
+                richTextBox3.Width = 0;
+                richTextBox3.Visible = false;
+                log = false;
+                buttonLog2.BackColor = System.Drawing.Color.Transparent;
             }
         }
 
@@ -1720,7 +1763,13 @@ namespace VTC
             }
             richTextBoxConv.Text = SetupConversionOptions();
         }
-
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            // set the current caret position to the end
+            richTextBox3.SelectionStart = richTextBox3.Text.Length;
+            // scroll it automatically
+            richTextBox3.ScrollToCaret();
+        }
 
     }
     public class audio_info
