@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="977408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="977920">
       <assemblyIdentity name="VCT" version="1.5.3.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>32tG0iCnWkGhKVK6+SVb6KDr9Zs=</dsig:DigestValue>
+        <dsig:DigestValue>qp8qBqEPgCMc7sSgVYoYfL+PD+Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>I1TZw8MgiWop/II06Qkn/BTSCxc=</dsig:DigestValue>
+        <dsig:DigestValue>WZbxSbUUZMmUtpse0JIyjWqetbg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9fSm8PHfiFWsuMUU+PxSWE1aHbU=</dsig:DigestValue>
+        <dsig:DigestValue>7v+Lss49GE6JdYAU2/XzGUP09Og=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Ot6GivKjo68rYbzIDyKvVbAkFHw=</dsig:DigestValue>
+        <dsig:DigestValue>35k/+nN17J5HJ20JaPFFDHvfqD0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1247,6 +1247,8 @@ namespace VTC
                 richTextBox3.Visible = true;
                 log = true;
                 buttonLog.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLog.Text = ">";
             }
             else
             {
@@ -1255,6 +1257,8 @@ namespace VTC
                 richTextBox3.Visible = false;
                 log = false;
                 buttonLog.BackColor = System.Drawing.Color.Transparent;
+                buttonLog2.BackColor = System.Drawing.Color.Transparent;
+                buttonLog.Text = "<";
             }
         }
 
@@ -1279,6 +1283,7 @@ namespace VTC
                 richTextBox3.Visible = true;
                 log = true;
                 buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLog.BackColor = System.Drawing.Color.SteelBlue;
             }
             else
             {
@@ -1287,6 +1292,7 @@ namespace VTC
                 richTextBox3.Visible = false;
                 log = false;
                 buttonLog2.BackColor = System.Drawing.Color.Transparent;
+                buttonLog.BackColor = System.Drawing.Color.Transparent;
             }
         }
 

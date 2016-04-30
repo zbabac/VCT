@@ -1,4 +1,4 @@
-v1.5.3	"LOG" BUTTON THAT SHOWS ENCODING LOG WITHIN MAIN WINDOW
+v1.5.4	unobtrusive log button
 		fixed progress bug
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
@@ -85,8 +85,9 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-Change log since v1.5.2:	
-- added "log" button that shows encoding log
+Change log since v1.5.4:	
+- added unobtrusive toggle log button "<" that shows log frame instead of batch list
+- fixed issue with progress for some video/audio files (especially for Linux)
 
 Change log since v1.5.0:
 - added new Info button; show detailed codec info and thumbnail from video
@@ -176,5 +177,5 @@ mono VCT.exe
 
 #or create launcher at desktop or menu.
 - it should display MS Windows like Window
-- I haven't resolved yet encoding progress under Linux (it is shown only sporadically)- only elapsed time is displayed, but don't worry, it is working just fine!
+- there are some encoding progress issues under Linux (it is problem with ffmpeg and some codecs), but don't worry, it is working just fine!
 
