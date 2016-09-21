@@ -42,6 +42,7 @@ namespace VTC
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
+        static string cpu = "-threads 64 "; //set ffmpeg to auto detect number of CPUs
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
@@ -725,9 +726,9 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg -y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
+                ff = "ffmpeg "+ cpu + "-y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
                         + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //windows
-                //ff = " -y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //Linux
+                //ff = " "+ cpu + "-y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1308,6 +1309,14 @@ namespace VTC
                 }
             }
             catch { Exception x; }
+        }
+
+        private void checkBoxThreads_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThreads.Checked)
+                cpu = "-threads 64 ";  // set more threads for ffmpeg
+            else cpu = "-threads 0 "; // auto detect number of cpus
+            richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
 
         private void checkBoxVideoOnly_CheckedChanged(object sender, EventArgs e)

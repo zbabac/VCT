@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -49,6 +49,8 @@
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxCPU = new System.Windows.Forms.GroupBox();
+            this.checkBoxThreads = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
@@ -106,6 +108,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBoxCPU.SuspendLayout();
             this.groupBoxRotate.SuspendLayout();
             this.groupBoxVideoOrAudio.SuspendLayout();
             this.groupBoxOptions.SuspendLayout();
@@ -239,6 +242,7 @@
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.groupBoxCPU);
             this.tabPage2.Controls.Add(this.buttonLog);
             this.tabPage2.Controls.Add(this.buttonInfo);
             this.tabPage2.Controls.Add(this.comboBoxAudioStreamNo);
@@ -261,6 +265,22 @@
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxCPU
+            // 
+            this.groupBoxCPU.Controls.Add(this.checkBoxThreads);
+            resources.ApplyResources(this.groupBoxCPU, "groupBoxCPU");
+            this.groupBoxCPU.Name = "groupBoxCPU";
+            this.groupBoxCPU.TabStop = false;
+            // 
+            // checkBoxThreads
+            // 
+            this.checkBoxThreads.Checked = true;
+            this.checkBoxThreads.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBoxThreads, "checkBoxThreads");
+            this.checkBoxThreads.Name = "checkBoxThreads";
+            this.checkBoxThreads.UseVisualStyleBackColor = true;
+            this.checkBoxThreads.CheckedChanged += new System.EventHandler(this.checkBoxThreads_CheckedChanged);
             // 
             // buttonLog
             // 
@@ -645,11 +665,11 @@
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -664,9 +684,9 @@
             // 
             // check_cell
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle6;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -728,6 +748,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxCPU.ResumeLayout(false);
             this.groupBoxRotate.ResumeLayout(false);
             this.groupBoxRotate.PerformLayout();
             this.groupBoxVideoOrAudio.ResumeLayout(false);
@@ -819,6 +840,8 @@
         private System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Button buttonLog2;
         private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.GroupBox groupBoxCPU;
+        private System.Windows.Forms.CheckBox checkBoxThreads;
     }
 }
 

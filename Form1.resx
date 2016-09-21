@@ -330,6 +330,54 @@
   <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBoxThreads.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 14</value>
+  </data>
+  <data name="checkBoxThreads.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 54</value>
+  </data>
+  <data name="checkBoxThreads.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxThreads.Text" xml:space="preserve">
+    <value>power</value>
+  </data>
+  <data name="&gt;&gt;checkBoxThreads.Name" xml:space="preserve">
+    <value>checkBoxThreads</value>
+  </data>
+  <data name="&gt;&gt;checkBoxThreads.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxThreads.Parent" xml:space="preserve">
+    <value>groupBoxCPU</value>
+  </data>
+  <data name="&gt;&gt;checkBoxThreads.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxCPU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 379</value>
+  </data>
+  <data name="groupBoxCPU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 82</value>
+  </data>
+  <data name="groupBoxCPU.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="groupBoxCPU.Text" xml:space="preserve">
+    <value>more CPU ...</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCPU.Name" xml:space="preserve">
+    <value>groupBoxCPU</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCPU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCPU.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCPU.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="buttonLog.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -373,7 +421,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonLog.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="buttonInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -412,7 +460,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="comboBoxAudioStreamNo.Items" xml:space="preserve">
     <value>1</value>
@@ -463,7 +511,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;comboBoxAudioStreamNo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="labelAudioStream.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -490,7 +538,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelAudioStream.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;checkBox90counterclockwise.Name" xml:space="preserve">
     <value>checkBox90counterclockwise</value>
@@ -556,7 +604,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxRotate.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="buttonRemoveSubtitle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -598,7 +646,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonRemoveSubtitle.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="labelAddSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -625,7 +673,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelAddSubtitle.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="buttonAddSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -655,7 +703,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddSubtitle.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
     <value>checkBoxAudioOnly</value>
@@ -709,7 +757,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxVideoOrAudio.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
     <value>labelPreset</value>
@@ -811,7 +859,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxOptions.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
     <value>radioButtonCopyAudio</value>
@@ -877,7 +925,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxAudio.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
     <value>radioButtonCopyVideo</value>
@@ -933,213 +981,6 @@
   <data name="groupBoxContainer.Text" xml:space="preserve">
     <value>Video Container</value>
   </data>
-  <data name="labelTextBoxConv.Text" xml:space="preserve">
-    <value>ffmpeg command to be added to the list (you can edit it before clicking Add):</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items7" xml:space="preserve">
-    <value>320k</value>
-  </data>
-  <data name="radioButtonAAC.Text" xml:space="preserve">
-    <value>AAC</value>
-  </data>
-  <data name="buttonCancelBatch.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="buttonStartQueue.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="comboBoxQuality.Items" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="comboBoxQuality.Items1" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="comboBoxQuality.Items2" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="comboBoxQuality.Items3" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="comboBoxQuality.Items4" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="comboBoxQuality.Items5" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="comboBoxQuality.Items6" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="comboBoxQuality.Items7" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="comboBoxQuality.Items8" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="comboBoxQuality.Text" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="radioButtonCopyAudio.Text" xml:space="preserve">
-    <value>copy</value>
-  </data>
-  <data name="radioButtonMP3.Text" xml:space="preserve">
-    <value>MP3</value>
-  </data>
-  <data name="radioButtonCopyVideo.Text" xml:space="preserve">
-    <value>copy</value>
-  </data>
-  <data name="radioButtonMP4.Text" xml:space="preserve">
-    <value>MP4</value>
-  </data>
-  <data name="radioButtonMKV.Text" xml:space="preserve">
-    <value>MKV</value>
-  </data>
-  <data name="richTextBoxConv.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Batch list</value>
-  </data>
-  <data name="richTextBox3.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonUnselectAll.Text" xml:space="preserve">
-    <value>Unselect</value>
-  </data>
-  <data name="buttonSellectAllQueue.Text" xml:space="preserve">
-    <value>Select all</value>
-  </data>
-  <data name="check_cell.HeaderText" xml:space="preserve">
-    <value>Sel.</value>
-  </data>
-  <data name="no_cell.HeaderText" xml:space="preserve">
-    <value>No.</value>
-  </data>
-  <data name="task_cell.HeaderText" xml:space="preserve">
-    <value>Task</value>
-  </data>
-  <data name="buttonDeleteQueue.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Text" xml:space="preserve">
-    <value>128k</value>
-  </data>
-  <data name="labelOutConvFile.Text" xml:space="preserve">
-    <value>Destination file path</value>
-  </data>
-  <data name="labelInputConvFile.Text" xml:space="preserve">
-    <value>Source file path</value>
-  </data>
-  <data name="buttonAddBatchConv.Text" xml:space="preserve">
-    <value>Add To Batch List   --&gt;</value>
-  </data>
-  <data name="buttonMultiConvFiles.Text" xml:space="preserve">
-    <value>Multiple Input Files</value>
-  </data>
-  <data name="buttonOutConvFile.Text" xml:space="preserve">
-    <value>Output Path*</value>
-  </data>
-  <data name="buttonInputConvFile.Text" xml:space="preserve">
-    <value>Input File</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Convert</value>
-  </data>
-  <data name="tabPage2.ToolTipText" xml:space="preserve">
-    <value>Convert (encode) files in different formats</value>
-  </data>
-  <data name="buttonLog2.Text" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="buttonHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="buttonAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="labelMultiTransFile.Text" xml:space="preserve">
-    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</value>
-  </data>
-  <data name="buttonMultiTransFile.Text" xml:space="preserve">
-    <value>Input File(s) to transcode</value>
-  </data>
-  <data name="labelOutTransFile.Text" xml:space="preserve">
-    <value>Destination file path</value>
-  </data>
-  <data name="labelInputTransFile.Text" xml:space="preserve">
-    <value>Source file path</value>
-  </data>
-  <data name="buttonOutTransFile.Text" xml:space="preserve">
-    <value>Output File(s) Path</value>
-  </data>
-  <data name="checkBox90counterclockwise.Text" xml:space="preserve">
-    <value>-90⁰</value>
-  </data>
-  <data name="checkBox90clockwise.Text" xml:space="preserve">
-    <value>90⁰</value>
-  </data>
-  <data name="checkBox180.Text" xml:space="preserve">
-    <value>180⁰</value>
-  </data>
-  <data name="checkBoxAudioOnly.Text" xml:space="preserve">
-    <value>Audio Only</value>
-  </data>
-  <data name="labelPreset.Text" xml:space="preserve">
-    <value>Encoding preset</value>
-  </data>
-  <data name="labelQuality.Text" xml:space="preserve">
-    <value>Quality factor</value>
-  </data>
-  <data name="labelAudio.Text" xml:space="preserve">
-    <value>Audio bitrate</value>
-  </data>
-  <data name="comboBoxPreset.Items" xml:space="preserve">
-    <value>ultrafast</value>
-  </data>
-  <data name="comboBoxPreset.Items1" xml:space="preserve">
-    <value>superfast</value>
-  </data>
-  <data name="comboBoxPreset.Items2" xml:space="preserve">
-    <value>veryfast</value>
-  </data>
-  <data name="comboBoxPreset.Items3" xml:space="preserve">
-    <value>faster</value>
-  </data>
-  <data name="comboBoxPreset.Items4" xml:space="preserve">
-    <value>fast</value>
-  </data>
-  <data name="comboBoxPreset.Items5" xml:space="preserve">
-    <value>medium</value>
-  </data>
-  <data name="comboBoxPreset.Items6" xml:space="preserve">
-    <value>slow</value>
-  </data>
-  <data name="comboBoxPreset.Items7" xml:space="preserve">
-    <value>slower</value>
-  </data>
-  <data name="comboBoxPreset.Text" xml:space="preserve">
-    <value>veryfast</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items" xml:space="preserve">
-    <value>64k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items1" xml:space="preserve">
-    <value>96k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items2" xml:space="preserve">
-    <value>128k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items3" xml:space="preserve">
-    <value>160k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items4" xml:space="preserve">
-    <value>192k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items5" xml:space="preserve">
-    <value>224k</value>
-  </data>
-  <data name="comboBoxAudioBitRate.Items6" xml:space="preserve">
-    <value>256k</value>
-  </data>
   <data name="&gt;&gt;groupBoxContainer.Name" xml:space="preserve">
     <value>groupBoxContainer</value>
   </data>
@@ -1150,7 +991,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;groupBoxContainer.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="labelTextBoxConv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1167,6 +1008,9 @@
   <data name="labelTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="labelTextBoxConv.Text" xml:space="preserve">
+    <value>ffmpeg command to be added to the list (you can edit it before clicking Add):</value>
+  </data>
   <data name="&gt;&gt;labelTextBoxConv.Name" xml:space="preserve">
     <value>labelTextBoxConv</value>
   </data>
@@ -1177,7 +1021,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelTextBoxConv.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="labelOutConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1191,6 +1035,9 @@
   <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="labelOutConvFile.Text" xml:space="preserve">
+    <value>Destination file path</value>
+  </data>
   <data name="&gt;&gt;labelOutConvFile.Name" xml:space="preserve">
     <value>labelOutConvFile</value>
   </data>
@@ -1201,7 +1048,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelOutConvFile.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="labelInputConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1215,6 +1062,9 @@
   <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="labelInputConvFile.Text" xml:space="preserve">
+    <value>Source file path</value>
+  </data>
   <data name="&gt;&gt;labelInputConvFile.Name" xml:space="preserve">
     <value>labelInputConvFile</value>
   </data>
@@ -1225,7 +1075,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelInputConvFile.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="buttonAddBatchConv.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1245,6 +1095,9 @@
   <data name="buttonAddBatchConv.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="buttonAddBatchConv.Text" xml:space="preserve">
+    <value>Add To Batch List   --&gt;</value>
+  </data>
   <data name="&gt;&gt;buttonAddBatchConv.Name" xml:space="preserve">
     <value>buttonAddBatchConv</value>
   </data>
@@ -1255,7 +1108,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonAddBatchConv.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="buttonMultiConvFiles.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1272,6 +1125,9 @@
   <data name="buttonMultiConvFiles.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="buttonMultiConvFiles.Text" xml:space="preserve">
+    <value>Multiple Input Files</value>
+  </data>
   <data name="&gt;&gt;buttonMultiConvFiles.Name" xml:space="preserve">
     <value>buttonMultiConvFiles</value>
   </data>
@@ -1282,7 +1138,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonMultiConvFiles.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="panelConvert.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -1324,7 +1180,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;panelConvert.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="buttonOutConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1341,6 +1197,9 @@
   <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="buttonOutConvFile.Text" xml:space="preserve">
+    <value>Output Path*</value>
+  </data>
   <data name="&gt;&gt;buttonOutConvFile.Name" xml:space="preserve">
     <value>buttonOutConvFile</value>
   </data>
@@ -1351,7 +1210,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonOutConvFile.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="buttonInputConvFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1368,6 +1227,9 @@
   <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="buttonInputConvFile.Text" xml:space="preserve">
+    <value>Input File</value>
+  </data>
   <data name="&gt;&gt;buttonInputConvFile.Name" xml:space="preserve">
     <value>buttonInputConvFile</value>
   </data>
@@ -1378,7 +1240,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;buttonInputConvFile.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -1394,6 +1256,12 @@
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="tabPage2.ToolTipText" xml:space="preserve">
+    <value>Convert (encode) files in different formats</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
     <value>tabPage2</value>
@@ -1470,6 +1338,9 @@
   <data name="buttonLog2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="buttonLog2.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
   <data name="buttonLog2.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1503,6 +1374,9 @@
   <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
+  <data name="buttonHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
     <value>buttonHelp</value>
   </data>
@@ -1533,6 +1407,9 @@
   <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
+  <data name="buttonAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
     <value>buttonAbout</value>
   </data>
@@ -1560,6 +1437,9 @@
   <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="labelMultiTransFile.Text" xml:space="preserve">
+    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</value>
+  </data>
   <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
     <value>labelMultiTransFile</value>
   </data>
@@ -1586,6 +1466,9 @@
   </data>
   <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="buttonMultiTransFile.Text" xml:space="preserve">
+    <value>Input File(s) to transcode</value>
   </data>
   <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
     <value>buttonMultiTransFile</value>
@@ -1638,6 +1521,9 @@
   <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="labelOutTransFile.Text" xml:space="preserve">
+    <value>Destination file path</value>
+  </data>
   <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
     <value>labelOutTransFile</value>
   </data>
@@ -1661,6 +1547,9 @@
   </data>
   <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="labelInputTransFile.Text" xml:space="preserve">
+    <value>Source file path</value>
   </data>
   <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
     <value>labelInputTransFile</value>
@@ -1688,6 +1577,9 @@
   </data>
   <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="buttonOutTransFile.Text" xml:space="preserve">
+    <value>Output File(s) Path</value>
   </data>
   <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
     <value>buttonOutTransFile</value>
@@ -1719,6 +1611,9 @@
   <data name="checkBox90counterclockwise.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="checkBox90counterclockwise.Text" xml:space="preserve">
+    <value>-90⁰</value>
+  </data>
   <data name="&gt;&gt;checkBox90counterclockwise.Name" xml:space="preserve">
     <value>checkBox90counterclockwise</value>
   </data>
@@ -1748,6 +1643,9 @@
   </data>
   <data name="checkBox90clockwise.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="checkBox90clockwise.Text" xml:space="preserve">
+    <value>90⁰</value>
   </data>
   <data name="&gt;&gt;checkBox90clockwise.Name" xml:space="preserve">
     <value>checkBox90clockwise</value>
@@ -1779,6 +1677,9 @@
   <data name="checkBox180.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="checkBox180.Text" xml:space="preserve">
+    <value>180⁰</value>
+  </data>
   <data name="&gt;&gt;checkBox180.Name" xml:space="preserve">
     <value>checkBox180</value>
   </data>
@@ -1805,6 +1706,9 @@
   </data>
   <data name="checkBoxAudioOnly.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="checkBoxAudioOnly.Text" xml:space="preserve">
+    <value>Audio Only</value>
   </data>
   <data name="&gt;&gt;checkBoxAudioOnly.Name" xml:space="preserve">
     <value>checkBoxAudioOnly</value>
@@ -1833,6 +1737,9 @@
   <data name="checkBoxVideoOnly.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="checkBoxVideoOnly.Text" xml:space="preserve">
+    <value>Video Only</value>
+  </data>
   <data name="&gt;&gt;checkBoxVideoOnly.Name" xml:space="preserve">
     <value>checkBoxVideoOnly</value>
   </data>
@@ -1859,6 +1766,9 @@
   </data>
   <data name="labelPreset.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
+  </data>
+  <data name="labelPreset.Text" xml:space="preserve">
+    <value>Encoding preset</value>
   </data>
   <data name="&gt;&gt;labelPreset.Name" xml:space="preserve">
     <value>labelPreset</value>
@@ -1887,6 +1797,9 @@
   <data name="labelQuality.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
+  <data name="labelQuality.Text" xml:space="preserve">
+    <value>Quality factor</value>
+  </data>
   <data name="&gt;&gt;labelQuality.Name" xml:space="preserve">
     <value>labelQuality</value>
   </data>
@@ -1914,6 +1827,9 @@
   <data name="labelAudio.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
+  <data name="labelAudio.Text" xml:space="preserve">
+    <value>Audio bitrate</value>
+  </data>
   <data name="&gt;&gt;labelAudio.Name" xml:space="preserve">
     <value>labelAudio</value>
   </data>
@@ -1925,6 +1841,30 @@
   </data>
   <data name="&gt;&gt;labelAudio.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="comboBoxPreset.Items" xml:space="preserve">
+    <value>ultrafast</value>
+  </data>
+  <data name="comboBoxPreset.Items1" xml:space="preserve">
+    <value>superfast</value>
+  </data>
+  <data name="comboBoxPreset.Items2" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
+  <data name="comboBoxPreset.Items3" xml:space="preserve">
+    <value>faster</value>
+  </data>
+  <data name="comboBoxPreset.Items4" xml:space="preserve">
+    <value>fast</value>
+  </data>
+  <data name="comboBoxPreset.Items5" xml:space="preserve">
+    <value>medium</value>
+  </data>
+  <data name="comboBoxPreset.Items6" xml:space="preserve">
+    <value>slow</value>
+  </data>
+  <data name="comboBoxPreset.Items7" xml:space="preserve">
+    <value>slower</value>
   </data>
   <data name="comboBoxPreset.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 22</value>
@@ -1941,6 +1881,9 @@
   <data name="comboBoxPreset.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
+  <data name="comboBoxPreset.Text" xml:space="preserve">
+    <value>veryfast</value>
+  </data>
   <data name="&gt;&gt;comboBoxPreset.Name" xml:space="preserve">
     <value>comboBoxPreset</value>
   </data>
@@ -1952,6 +1895,30 @@
   </data>
   <data name="&gt;&gt;comboBoxPreset.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items" xml:space="preserve">
+    <value>64k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items1" xml:space="preserve">
+    <value>96k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items2" xml:space="preserve">
+    <value>128k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items3" xml:space="preserve">
+    <value>160k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items4" xml:space="preserve">
+    <value>192k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items5" xml:space="preserve">
+    <value>224k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items6" xml:space="preserve">
+    <value>256k</value>
+  </data>
+  <data name="comboBoxAudioBitRate.Items7" xml:space="preserve">
+    <value>320k</value>
   </data>
   <data name="comboBoxAudioBitRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 95</value>
@@ -1965,6 +1932,9 @@
   <data name="comboBoxAudioBitRate.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
+  <data name="comboBoxAudioBitRate.Text" xml:space="preserve">
+    <value>128k</value>
+  </data>
   <data name="&gt;&gt;comboBoxAudioBitRate.Name" xml:space="preserve">
     <value>comboBoxAudioBitRate</value>
   </data>
@@ -1976,6 +1946,33 @@
   </data>
   <data name="&gt;&gt;comboBoxAudioBitRate.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="comboBoxQuality.Items" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="comboBoxQuality.Items1" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="comboBoxQuality.Items2" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="comboBoxQuality.Items3" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="comboBoxQuality.Items4" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="comboBoxQuality.Items5" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="comboBoxQuality.Items6" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="comboBoxQuality.Items7" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="comboBoxQuality.Items8" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="comboBoxQuality.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 58</value>
@@ -1992,8 +1989,8 @@
   <data name="comboBoxQuality.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="checkBoxVideoOnly.Text" xml:space="preserve">
-    <value>Video Only</value>
+  <data name="comboBoxQuality.Text" xml:space="preserve">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;comboBoxQuality.Name" xml:space="preserve">
     <value>comboBoxQuality</value>
@@ -2025,6 +2022,9 @@
   <data name="radioButtonCopyAudio.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="radioButtonCopyAudio.Text" xml:space="preserve">
+    <value>copy</value>
+  </data>
   <data name="&gt;&gt;radioButtonCopyAudio.Name" xml:space="preserve">
     <value>radioButtonCopyAudio</value>
   </data>
@@ -2054,6 +2054,9 @@
   </data>
   <data name="radioButtonMP3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="radioButtonMP3.Text" xml:space="preserve">
+    <value>MP3</value>
   </data>
   <data name="&gt;&gt;radioButtonMP3.Name" xml:space="preserve">
     <value>radioButtonMP3</value>
@@ -2085,6 +2088,9 @@
   <data name="radioButtonAAC.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="radioButtonAAC.Text" xml:space="preserve">
+    <value>AAC</value>
+  </data>
   <data name="&gt;&gt;radioButtonAAC.Name" xml:space="preserve">
     <value>radioButtonAAC</value>
   </data>
@@ -2114,6 +2120,9 @@
   </data>
   <data name="radioButtonCopyVideo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="radioButtonCopyVideo.Text" xml:space="preserve">
+    <value>copy</value>
   </data>
   <data name="&gt;&gt;radioButtonCopyVideo.Name" xml:space="preserve">
     <value>radioButtonCopyVideo</value>
@@ -2145,6 +2154,9 @@
   <data name="radioButtonMP4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="radioButtonMP4.Text" xml:space="preserve">
+    <value>MP4</value>
+  </data>
   <data name="&gt;&gt;radioButtonMP4.Name" xml:space="preserve">
     <value>radioButtonMP4</value>
   </data>
@@ -2175,6 +2187,9 @@
   <data name="radioButtonMKV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="radioButtonMKV.Text" xml:space="preserve">
+    <value>MKV</value>
+  </data>
   <data name="&gt;&gt;radioButtonMKV.Name" xml:space="preserve">
     <value>radioButtonMKV</value>
   </data>
@@ -2204,6 +2219,9 @@
   </data>
   <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="richTextBoxConv.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;richTextBoxConv.Name" xml:space="preserve">
     <value>richTextBoxConv</value>
@@ -2327,6 +2345,9 @@
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Batch list</value>
   </data>
   <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
     <value>tabPage3</value>
@@ -2475,6 +2496,9 @@
   <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value />
+  </data>
   <data name="richTextBox3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2508,6 +2532,9 @@
   <data name="buttonUnselectAll.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="buttonUnselectAll.Text" xml:space="preserve">
+    <value>Unselect</value>
+  </data>
   <data name="&gt;&gt;buttonUnselectAll.Name" xml:space="preserve">
     <value>buttonUnselectAll</value>
   </data>
@@ -2538,6 +2565,9 @@
   <data name="buttonSellectAllQueue.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="buttonSellectAllQueue.Text" xml:space="preserve">
+    <value>Select all</value>
+  </data>
   <data name="&gt;&gt;buttonSellectAllQueue.Name" xml:space="preserve">
     <value>buttonSellectAllQueue</value>
   </data>
@@ -2556,6 +2586,9 @@
   <metadata name="check_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="check_cell.HeaderText" xml:space="preserve">
+    <value>Sel.</value>
+  </data>
   <data name="check_cell.MinimumWidth" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -2565,6 +2598,9 @@
   <metadata name="no_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="no_cell.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
   <data name="no_cell.MinimumWidth" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
@@ -2574,6 +2610,9 @@
   <metadata name="task_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="task_cell.HeaderText" xml:space="preserve">
+    <value>Task</value>
+  </data>
   <data name="task_cell.MinimumWidth" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
@@ -2619,6 +2658,9 @@
   <data name="buttonDeleteQueue.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="buttonDeleteQueue.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="&gt;&gt;buttonDeleteQueue.Name" xml:space="preserve">
     <value>buttonDeleteQueue</value>
   </data>
@@ -2649,6 +2691,9 @@
   <data name="buttonCancelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="buttonCancelBatch.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="&gt;&gt;buttonCancelBatch.Name" xml:space="preserve">
     <value>buttonCancelBatch</value>
   </data>
@@ -2678,6 +2723,9 @@
   </data>
   <data name="buttonStartQueue.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="buttonStartQueue.Text" xml:space="preserve">
+    <value>Start</value>
   </data>
   <data name="&gt;&gt;buttonStartQueue.Name" xml:space="preserve">
     <value>buttonStartQueue</value>

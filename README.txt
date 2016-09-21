@@ -1,5 +1,5 @@
-v1.5.4	unobtrusive log button
-		fixed progress bug
+v1.5.5	new ffmpeg version 3.1.2
+		added option to select more CPU threads to speed up encoding on some machines
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -84,6 +84,10 @@ Added git repository. It is now preferred method to get source code. To clone us
 git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
+
+Change log since v1.5.5:
+- new ffmpeg version 3.1.2
+- added option to select more CPU threads to speed up encoding on some machines
 
 Change log since v1.5.4:	
 - added unobtrusive toggle log button "<" that shows log frame instead of batch list
