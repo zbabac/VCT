@@ -1,4 +1,6 @@
-﻿namespace VTC
+﻿using System;
+
+namespace VTC
 {
     partial class Form1
     {
@@ -30,8 +32,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -50,6 +52,7 @@
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
+            this.checkBoxH265 = new System.Windows.Forms.CheckBox();
             this.checkBoxThreads = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
@@ -268,10 +271,18 @@
             // 
             // groupBoxCPU
             // 
+            this.groupBoxCPU.Controls.Add(this.checkBoxH265);
             this.groupBoxCPU.Controls.Add(this.checkBoxThreads);
             resources.ApplyResources(this.groupBoxCPU, "groupBoxCPU");
             this.groupBoxCPU.Name = "groupBoxCPU";
             this.groupBoxCPU.TabStop = false;
+            // 
+            // checkBoxH265
+            // 
+            resources.ApplyResources(this.checkBoxH265, "checkBoxH265");
+            this.checkBoxH265.Name = "checkBoxH265";
+            this.checkBoxH265.UseVisualStyleBackColor = true;
+            this.checkBoxH265.CheckedChanged += new System.EventHandler(this.checkBoxH265_CheckedChanged);
             // 
             // checkBoxThreads
             // 
@@ -474,7 +485,13 @@
             resources.GetString("comboBoxQuality.Items5"),
             resources.GetString("comboBoxQuality.Items6"),
             resources.GetString("comboBoxQuality.Items7"),
-            resources.GetString("comboBoxQuality.Items8")});
+            resources.GetString("comboBoxQuality.Items8"),
+            resources.GetString("comboBoxQuality.Items9"),
+            resources.GetString("comboBoxQuality.Items10"),
+            resources.GetString("comboBoxQuality.Items11"),
+            resources.GetString("comboBoxQuality.Items12"),
+            resources.GetString("comboBoxQuality.Items13"),
+            resources.GetString("comboBoxQuality.Items14")});
             resources.ApplyResources(this.comboBoxQuality, "comboBoxQuality");
             this.comboBoxQuality.Name = "comboBoxQuality";
             this.comboBoxQuality.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuality_SelectedIndexChanged);
@@ -665,11 +682,11 @@
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -684,9 +701,9 @@
             // 
             // check_cell
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -768,7 +785,7 @@
             this.PerformLayout();
 
         }
-
+        
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -842,6 +859,7 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.GroupBox groupBoxCPU;
         private System.Windows.Forms.CheckBox checkBoxThreads;
+        private System.Windows.Forms.CheckBox checkBoxH265;
     }
 }
 

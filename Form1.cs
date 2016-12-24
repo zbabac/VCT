@@ -43,6 +43,7 @@ namespace VTC
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
         static string cpu = "-threads 64 "; //set ffmpeg to auto detect number of CPUs
+        static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
@@ -147,7 +148,7 @@ namespace VTC
             string[] input_list = new string[16383];	//defines max number of files selected from the same folder
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C://";
-            openFileDialog.Filter = "H.264 files|*.mp4;*.mkv;*.m4v";	//sets filter of displayed files
+            openFileDialog.Filter = "H.264 or H.265 files|*.mp4;*.mkv;*.m4v";	//sets filter of displayed files
             openFileDialog.Multiselect = true;							//allows to select more files at once
             openFileDialog.Title = "Choose video files to transcode";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -195,7 +196,7 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy -c:s copy \"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -696,9 +697,17 @@ namespace VTC
                         audio_part = audio;				//otherwise complete audio part as excluded, maybe this is redundant?!
                 }
                 if (container != " copy" && container != " -vn")
-                {										//if video not excluded or copied
-                    ext = container;
-                    video = " -c:v libx264 -preset " + preset + " -crf " + crf;
+                {										//if video not excluded or copied set video codec
+                    if (h265)   //check first if H.265 selected
+                    {
+                        ext = container;
+                        video = " -c:v libx265 -preset " + preset + " -crf " + crf;
+                    }
+                    else        //otherwise use H.264
+                    {
+                        ext = container;
+                        video = " -c:v libx264 -preset " + preset + " -crf " + crf;
+                    }
                 }										//set it like defined on GUI
                 else
                 {
@@ -835,6 +844,8 @@ namespace VTC
         }
         private void buttonInputConvFile_Click(object sender, EventArgs e)
         {                   //user clicks to select 1 input file
+            //h265 = false;
+            //checkBoxH265.Checked = false;
 			time_position = "5";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
@@ -945,6 +956,16 @@ namespace VTC
                     Video_info.width = JSON_helper.streams[0].coded_width;
                     Video_info.height = JSON_helper.streams[0].coded_height;
                     Video_info.r_frame_rate = JSON_helper.streams[0].r_frame_rate;
+                    if (Video_info.codec_long_name.Contains("HEVC"))
+                    {
+                        h265 = true;
+                        checkBoxH265.Checked = true;
+                    }
+                    else
+                    {
+                        h265 = false;
+                        checkBoxH265.Checked = false;
+                    }
                     if (JSON_helper.streams[0].duration != null)
                     {
                         Video_info.duration = JSON_helper.streams[0].duration;
@@ -1024,7 +1045,7 @@ namespace VTC
                         }
                         else
                             Audio_info[i - 1].duration = duration.ToString();
-                        Audio_info[i - 1].bit_rate = JSON_helper.streams[i].bit_rate;
+                        Audio_info[i - 1].bit_rate = Convert.ToDouble(JSON_helper.streams[i].bit_rate);
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i - 1].duration + "\nLanguage: \t";
@@ -1062,6 +1083,8 @@ namespace VTC
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
+                //h265 = false;
+                //checkBoxH265.Checked = false;
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 input_file = files[0];
                 int str_position = input_file.LastIndexOf('.') + 1;
@@ -1316,6 +1339,23 @@ namespace VTC
             if (checkBoxThreads.Checked)
                 cpu = "-threads 64 ";  // set more threads for ffmpeg
             else cpu = "-threads 0 "; // auto detect number of cpus
+            richTextBoxConv.Text = SetupConversionOptions();//now setup new options
+        }
+
+        private void checkBoxH265_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxH265.Checked)
+            {
+                h265 = true;  // use h.265 codec
+                crf = "28";   // set quality factor for h.265, equivalent to 23 for h.264
+                comboBoxQuality.SelectedItem = "28";
+            }
+            else
+            {
+                h265 = false; // use h.264
+                crf = "23";   // set quality factor for h.264, equivalent to 20 for SD
+                comboBoxQuality.SelectedItem = "23";
+            }
             richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
 

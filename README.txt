@@ -1,9 +1,10 @@
-v1.5.5	new ffmpeg version 3.1.2
-		added option to select more CPU threads to speed up encoding on some machines
+v1.6.0	support for H.265 (HEVC) - check box at Convert tab, already supported at Trascode tab
+		if single file opened, automatically detected H.265 codec
+		new Quality settings added for H.265 - 28 (h265) approx. corresponds to 23 (h264) or 20 for SD
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
-I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264. Handbrake can do it, but I have to click to every file, select path, etc.
+I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.
 
 I wanted to achieve 4 goals:
 1. to have ability to manually edit any command option of ffmpeg
@@ -85,8 +86,14 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
+Change log since v1.6.0	
+- support for H.265 (HEVC) - check box added at Convert tab next to the CPU check box 
+- H.265 already supported at Transcode tab
+- if single file opened, automatically detected H.265 codec
+- new Quality settings added for H.265 - 28 (h265) approx. corresponds to 23 (h264) or 20 for SD
+
 Change log since v1.5.5:
-- new ffmpeg version 3.1.2
+- new ffmpeg version 3.1.2 for Linux, Windows version still uses old build compatible with XP; if you want new 64-bit ffmpeg build, go to the ffmpeg download page and replace it in VCT installation folder, usualy c:\Program Files(x86)\VCT
 - added option to select more CPU threads to speed up encoding on some machines
 
 Change log since v1.5.4:	
@@ -158,10 +165,18 @@ Linux mono usage
 
 #You must have mono installed to run .NET application.
 #For Debian systems (Ubuntu, Mint, etc.) run:
-
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+sudo apt-get update
 sudo apt-get install mono-complete
 
 #For another distributions, just search: mono <distro_name> installation.
+#Example for Fedora (Red Hat derivative):
+yum install yum-utils
+rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
+yum-config-manager --add-repo http://download.mono-project.com/repo/centos/
+yum install mono-complete
+
 #After that, unpack VCT_Linux_mono_binary.zip to directory fo your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 #Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 
@@ -172,12 +187,12 @@ chmod 777 *			#allow all users permissions and exec rights to ffmpeg and ffprobe
 
 #add ffmpeg to path if you don't have it installed:
 
-PATH=$PATH:/$HOME/VCT_mono
+PATH=$PATH:$HOME/VCT_mono
 
-#or add that line permanently to your profile at $HOME/.profile - just put the above line at the end of the .profile file, usually $HOME/.profile
+#or add that line permanently to your profile at $HOME/.profile or $HOME/.bash_profile - just put the above line at the end of the .profile file, usually $HOME/.bash_profile
 #you can now run:
 
-mono VCT.exe
+mono $HOME/VCT_mono/VCT.exe
 
 #or create launcher at desktop or menu.
 - it should display MS Windows like Window
