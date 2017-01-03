@@ -42,7 +42,7 @@ namespace VTC
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
-        static string cpu = "-threads 64 "; //set ffmpeg to auto detect number of CPUs
+        static string cpu = "-threads 0 "; //set ffmpeg to auto detect number of CPUs
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
@@ -91,6 +91,7 @@ namespace VTC
         ToolTip toolTip35 = new ToolTip();
         ToolTip toolTip36 = new ToolTip();
         ToolTip toolTip37 = new ToolTip();
+        ToolTip toolTip38 = new ToolTip();
 
         public Form1()
         {
@@ -1585,6 +1586,10 @@ namespace VTC
             toolTip37.InitialDelay = 500;
             toolTip37.ReshowDelay = 500;
             toolTip37.ShowAlways = true;
+            toolTip38.AutoPopDelay = 5000;
+            toolTip38.InitialDelay = 500;
+            toolTip38.ReshowDelay = 500;
+            toolTip38.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -1622,6 +1627,7 @@ namespace VTC
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                    toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -1657,6 +1663,7 @@ namespace VTC
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                    toolTip38.SetToolTip(this.checkBoxH265, "H.265 !!! Видео ће бити кодован у новом кодеку који даје 2 пута мањи фајл и исти или бољи квалитет.");
                     break;
                 case "nb":
                     toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
@@ -1692,6 +1699,7 @@ namespace VTC
                     toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                    toolTip38.SetToolTip(this.checkBoxH265, "H265 er den besten!!! Filen skal vaere kodert som H265 HEVC.");
                     break;
 
             }

@@ -127,11 +127,12 @@ namespace VTC
             // 
             // statusStrip1
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
+            this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -154,6 +155,7 @@ namespace VTC
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Name = "panel1";
             // 
@@ -168,7 +170,7 @@ namespace VTC
             // tabPage1
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.buttonLog2);
             this.tabPage1.Controls.Add(this.buttonHelp);
             this.tabPage1.Controls.Add(this.buttonAbout);
@@ -179,7 +181,6 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // buttonLog2
             // 
@@ -267,7 +268,6 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBoxCPU
             // 
@@ -286,8 +286,6 @@ namespace VTC
             // 
             // checkBoxThreads
             // 
-            this.checkBoxThreads.Checked = true;
-            this.checkBoxThreads.CheckState = System.Windows.Forms.CheckState.Checked;
             resources.ApplyResources(this.checkBoxThreads, "checkBoxThreads");
             this.checkBoxThreads.Name = "checkBoxThreads";
             this.checkBoxThreads.UseVisualStyleBackColor = true;
@@ -307,7 +305,6 @@ namespace VTC
             // buttonInfo
             // 
             resources.ApplyResources(this.buttonInfo, "buttonInfo");
-            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
             this.buttonInfo.FlatAppearance.BorderSize = 0;
             this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -644,7 +641,6 @@ namespace VTC
             // 
             resources.ApplyResources(this.panelBatch, "panelBatch");
             this.panelBatch.BackColor = System.Drawing.SystemColors.Control;
-            this.panelBatch.BackgroundImage = global::VTC.Properties.Resources.drop_here;
             this.panelBatch.Controls.Add(this.richTextBox3);
             this.panelBatch.Controls.Add(this.buttonUnselectAll);
             this.panelBatch.Controls.Add(this.buttonSellectAllQueue);
@@ -752,6 +748,7 @@ namespace VTC
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
