@@ -120,3 +120,7 @@ format.size = 66339827
 
 H.265 HEVC
 ffmpeg -threads 64 -y -i "C:\downloads\ff\h265.mkv" -map 0:0 -map 0:1? -c:v copy -c:a copy "C:\downloads\ff\h265.1.mp4"
+
+C:\Programi\ffmpeg>ffmpeg -threads 3 -y -i "C:\downloads\ff\Seven Samurai (1954).mp4" -map 0:0 -map
+0:1? -map 0:2 -c:v hevc_qsv -load_plugin hevc_hw -preset fast -crf 28 -c:a copy -c:s copy "C:\downlo
+ads\ff\Seven Samurai (1954).h265.mp4"

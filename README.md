@@ -1,6 +1,5 @@
-v1.6.0	support for H.265 (HEVC) - check box at Convert tab, already supported at Trascode tab
-		if single file opened, automatically detected H.265 codec
-		new Quality settings added for H.265 - 28 (h265) approx. corresponds to 23 (h264) or 20 for SD
+v1.6.1	-support for new AAC codec, 
+		-strict experimental option added for compatibility with XP
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -53,7 +52,6 @@ Content:
  - Visual Studio usage
  - Monodevelop Linux usage
  - Linux usage
- 
 
 Features:
 - 2 tabs: Transcode and Convert
@@ -86,7 +84,11 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-Change log since v1.6.0	
+Change log since v1.6.1
+-support for new AAC codec, 
+-strict experimental option added for compatibility with XP
+
+Change log since v1.6.0.1	
 - support for H.265 (HEVC) - check box added at Convert tab next to the CPU check box 
 - H.265 already supported at Transcode tab
 - if single file opened, automatically detected H.265 codec
@@ -163,6 +165,8 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 
 Linux mono usage
 
+Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
+Prerequisities:
 #You must have mono installed to run .NET application.
 #For Debian systems (Ubuntu, Mint, etc.) run:
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
@@ -195,6 +199,5 @@ PATH=$PATH:$HOME/VCT_mono
 mono $HOME/VCT_mono/VCT.exe
 
 #or create launcher at desktop or menu.
-- it should display MS Windows like Window
-- there are some encoding progress issues under Linux (it is problem with ffmpeg and some codecs), but don't worry, it is working just fine!
+- it should display MS Windows-like window
 

@@ -492,7 +492,7 @@ namespace VTC
         }
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (statustekst.Contains("kb/s") || statustekst.Contains("mux") || statustekst.Contains("global headers:"))
+            if (statustekst.Contains("kb/s") || statustekst.Contains("mux") || statustekst.Contains("global headers:") || statustekst.Contains("Qavg:"))
             {
                 statustekst = "Encoding finished!   " + statustekst;    //message when thread finishes with all jobs
                 canceled = true;
@@ -632,7 +632,7 @@ namespace VTC
                 }
                 else if (radioButtonAAC.Checked)
                 {
-                    audio = "libvo_aacenc";
+                    audio = "aac";
                     audio_ext = "aac";
                 }
                 else audio = " copy";
@@ -689,7 +689,7 @@ namespace VTC
                 if (video_only)
                     audio = " -an";		//set audio option to exclude audio stream
                 if (audio != " copy" && audio != " -an")					//if audio not excluded or copied
-                    audio_part = " -c:a " + audio + " -b:a " + audiobitrate;	//define audio options as read from GUI
+                    audio_part = " -strict experimental -c:a " + audio + " -b:a " + audiobitrate;	//define audio options as read from GUI
                 else
                 {
                     if (audio == " copy")
