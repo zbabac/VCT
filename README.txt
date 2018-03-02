@@ -1,5 +1,5 @@
-v1.6.1	-support for new AAC codec, 
-		-strict experimental option added for compatibility with XP
+v1.7.0	-feature to set output FPS rate and to create slow motion video from high FPS source, 
+		-corrected minor bug "Info" button not visible
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -39,7 +39,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.5.0	ADDED INFO BUTTON THAT SHOWS CODEC INFO FOR SINGLE INPUT FILE
+Latest version 1.7.0	Set FPS rate and/or create slow motion video from high FPS source
 
 
 
@@ -83,6 +83,10 @@ Added git repository. It is now preferred method to get source code. To clone us
 git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
+
+Change log since v1.7.0	
+-feature to set output FPS rate and to create slow motion video from high FPS source, 
+-corrected minor bug "Info" button not visible
 
 Change log since v1.6.1
 -support for new AAC codec, 
