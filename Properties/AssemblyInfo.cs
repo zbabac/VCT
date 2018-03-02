@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Zlatko Babić")]
 [assembly: AssemblyProduct("VCT")]
-[assembly: AssemblyCopyright("© 2014-2017 Zlatko Babić")]
+[assembly: AssemblyCopyright("© 2014-2018 Zlatko Babić")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
