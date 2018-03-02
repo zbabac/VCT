@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Data;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace VTC
 {
@@ -673,6 +674,8 @@ namespace VTC
         {
             try
             {				//the most important part of preparing values passed as ffmpeg arguments
+                NumberFormatInfo nfi = new NumberFormatInfo();
+                nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
                 string ext = "";		//initial file extension
                 string input_srt = "";
                 string srt_options = "";
@@ -749,7 +752,7 @@ namespace VTC
                 // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
                 if (slow_motion)
                 {
-                    input_fps = " -r " + textBoxSlowFPS.Text;
+                    input_fps = " -r " + (Convert.ToDouble(textBoxFPSout.Text) / Convert.ToDouble(textBoxSlowFPS.Text)).ToString(nfi);
                 }
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
@@ -1006,7 +1009,6 @@ namespace VTC
                         fr + " fps";
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
-                    textBoxSlowFPS.Text = fr; // Read input FPS and fill text box
                     
                     if (JSON_helper.streams[0].codec_tag_string != null)
                         pass_labelFormat2 = JSON_helper.streams[0].codec_tag_string;
@@ -1699,7 +1701,7 @@ namespace VTC
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
-                    toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter FPS of your source video to your best knowledge (e.g. for GoPro it can be 120 or 240). If you used \"Input File\" button, it will be automatically populated. After that set Output FPS box to desired value. Ratio of Input FPS and Output FPS will dictate the slowness of playback.");
+                    toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");

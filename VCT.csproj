@@ -26,8 +26,8 @@
     <ProductName>VCT</ProductName>
     <PublisherName>Zlatko Babic</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.7.0.0</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.7.0.1</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>

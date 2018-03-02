@@ -82,3 +82,26 @@ C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.exe.manifest
 C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.application
 C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.exe
 C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.pdb
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\ffprobe.exe
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\ffmpeg.exe
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT_help.pdf
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Hadezign-Hobbies-Movies.ico
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\copying.txt
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe.config
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe.manifest
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.application
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.pdb
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csprojResolveAssemblyReference.cache
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.AboutBoxZ.resources
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form1.resources
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form2.resources
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Properties.Resources.resources
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.GenerateResource.Cache
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.CoreCompileInputs.cache
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.TrustInfo.xml
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe.manifest
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.application
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.pdb
