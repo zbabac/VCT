@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -51,6 +51,13 @@ namespace VTC
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxSlow = new System.Windows.Forms.GroupBox();
+            this.checkBoxSlowFPS = new System.Windows.Forms.CheckBox();
+            this.checkBoxSetFPS = new System.Windows.Forms.CheckBox();
+            this.labelSlowFPS = new System.Windows.Forms.Label();
+            this.textBoxSlowFPS = new System.Windows.Forms.TextBox();
+            this.labelFPSout = new System.Windows.Forms.Label();
+            this.textBoxFPSout = new System.Windows.Forms.TextBox();
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
             this.checkBoxH265 = new System.Windows.Forms.CheckBox();
             this.checkBoxThreads = new System.Windows.Forms.CheckBox();
@@ -111,6 +118,7 @@ namespace VTC
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBoxSlow.SuspendLayout();
             this.groupBoxCPU.SuspendLayout();
             this.groupBoxRotate.SuspendLayout();
             this.groupBoxVideoOrAudio.SuspendLayout();
@@ -246,6 +254,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.groupBoxSlow);
             this.tabPage2.Controls.Add(this.groupBoxCPU);
             this.tabPage2.Controls.Add(this.buttonLog);
             this.tabPage2.Controls.Add(this.buttonInfo);
@@ -268,6 +277,54 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
+            // 
+            // groupBoxSlow
+            // 
+            this.groupBoxSlow.Controls.Add(this.checkBoxSlowFPS);
+            this.groupBoxSlow.Controls.Add(this.checkBoxSetFPS);
+            this.groupBoxSlow.Controls.Add(this.labelSlowFPS);
+            this.groupBoxSlow.Controls.Add(this.textBoxSlowFPS);
+            this.groupBoxSlow.Controls.Add(this.labelFPSout);
+            this.groupBoxSlow.Controls.Add(this.textBoxFPSout);
+            resources.ApplyResources(this.groupBoxSlow, "groupBoxSlow");
+            this.groupBoxSlow.Name = "groupBoxSlow";
+            this.groupBoxSlow.TabStop = false;
+            // 
+            // checkBoxSlowFPS
+            // 
+            resources.ApplyResources(this.checkBoxSlowFPS, "checkBoxSlowFPS");
+            this.checkBoxSlowFPS.Name = "checkBoxSlowFPS";
+            this.checkBoxSlowFPS.UseVisualStyleBackColor = true;
+            this.checkBoxSlowFPS.CheckedChanged += new System.EventHandler(this.checkBoxSlowFPS_CheckedChanged);
+            // 
+            // checkBoxSetFPS
+            // 
+            resources.ApplyResources(this.checkBoxSetFPS, "checkBoxSetFPS");
+            this.checkBoxSetFPS.Name = "checkBoxSetFPS";
+            this.checkBoxSetFPS.UseVisualStyleBackColor = true;
+            this.checkBoxSetFPS.CheckedChanged += new System.EventHandler(this.checkBoxSetFPS_CheckedChanged);
+            // 
+            // labelSlowFPS
+            // 
+            resources.ApplyResources(this.labelSlowFPS, "labelSlowFPS");
+            this.labelSlowFPS.Name = "labelSlowFPS";
+            // 
+            // textBoxSlowFPS
+            // 
+            resources.ApplyResources(this.textBoxSlowFPS, "textBoxSlowFPS");
+            this.textBoxSlowFPS.Name = "textBoxSlowFPS";
+            this.textBoxSlowFPS.TextChanged += new System.EventHandler(this.textBoxSlowFPS_TextChanged);
+            // 
+            // labelFPSout
+            // 
+            resources.ApplyResources(this.labelFPSout, "labelFPSout");
+            this.labelFPSout.Name = "labelFPSout";
+            // 
+            // textBoxFPSout
+            // 
+            resources.ApplyResources(this.textBoxFPSout, "textBoxFPSout");
+            this.textBoxFPSout.Name = "textBoxFPSout";
+            this.textBoxFPSout.TextChanged += new System.EventHandler(this.textBoxFPSout_TextChanged);
             // 
             // groupBoxCPU
             // 
@@ -305,6 +362,7 @@ namespace VTC
             // buttonInfo
             // 
             resources.ApplyResources(this.buttonInfo, "buttonInfo");
+            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
             this.buttonInfo.FlatAppearance.BorderSize = 0;
             this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -678,11 +736,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -697,9 +755,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -762,6 +820,8 @@ namespace VTC
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxSlow.ResumeLayout(false);
+            this.groupBoxSlow.PerformLayout();
             this.groupBoxCPU.ResumeLayout(false);
             this.groupBoxRotate.ResumeLayout(false);
             this.groupBoxRotate.PerformLayout();
@@ -857,6 +917,13 @@ namespace VTC
         private System.Windows.Forms.GroupBox groupBoxCPU;
         private System.Windows.Forms.CheckBox checkBoxThreads;
         private System.Windows.Forms.CheckBox checkBoxH265;
+        private System.Windows.Forms.GroupBox groupBoxSlow;
+        private System.Windows.Forms.Label labelSlowFPS;
+        private System.Windows.Forms.TextBox textBoxSlowFPS;
+        private System.Windows.Forms.Label labelFPSout;
+        private System.Windows.Forms.TextBox textBoxFPSout;
+        private System.Windows.Forms.CheckBox checkBoxSlowFPS;
+        private System.Windows.Forms.CheckBox checkBoxSetFPS;
     }
 }
 

@@ -59,3 +59,26 @@ C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ba100065\Documents\Visual Studio 2015\Projects\VTC\bin\Debug\ffprobe.exe
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\ffprobe.exe
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\ffmpeg.exe
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT_help.pdf
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\Hadezign-Hobbies-Movies.ico
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\copying.txt
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT.exe.config
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT.exe.manifest
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT.application
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT.exe
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\VCT.pdb
+C:\Users\zlatko.r.babic\Source\Repos\VCT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.csprojResolveAssemblyReference.cache
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VTC.AboutBoxZ.resources
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VTC.Form1.resources
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VTC.Form2.resources
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VTC.Properties.Resources.resources
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.csproj.GenerateResource.Cache
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.csproj.CoreCompileInputs.cache
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.TrustInfo.xml
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.exe.manifest
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.application
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.exe
+C:\Users\zlatko.r.babic\Source\Repos\VCT\obj\Debug\VCT.pdb

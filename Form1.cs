@@ -44,6 +44,8 @@ namespace VTC
         static string vf = ""; //video filter part, used currently to rotate video
         static string cpu = "-threads 0 "; //set ffmpeg to auto detect number of CPUs
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
+        static bool set_fps = false; //set if different target FPS is to be used
+        static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
@@ -92,6 +94,8 @@ namespace VTC
         ToolTip toolTip36 = new ToolTip();
         ToolTip toolTip37 = new ToolTip();
         ToolTip toolTip38 = new ToolTip();
+        ToolTip toolTip39 = new ToolTip();
+        ToolTip toolTip40 = new ToolTip();
 
         public Form1()
         {
@@ -674,6 +678,8 @@ namespace VTC
                 string srt_options = "";
                 string stream_option = " -map 0:0 -map 0:" + audio_stream + "?"; //used when user selects audio stream and/or subtitle stream
                 vf = "";
+                string input_fps = ""; //if option to set input FPS is used
+                string out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
                 ReadParametersFromGUI();//read options set by user on GUI
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
                 {
@@ -735,10 +741,20 @@ namespace VTC
                     else if (ext == "mkv")
                         srt_options = " -c:s srt";
                 }
+                // Test if target FPS is to be set differently from source
+                if (set_fps)
+                {
+                    out_fps = " -r " + textBoxFPSout.Text;
+                }
+                // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
+                if (slow_motion)
+                {
+                    input_fps = " -r " + textBoxSlowFPS.Text;
+                }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ cpu + "-y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
-                        + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //windows
-                //ff = " "+ cpu + "-y -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + " \"" + out_file + "1." + ext + "\""; //Linux
+                ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
+                        + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //windows
+                //ff = " "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -990,6 +1006,8 @@ namespace VTC
                         fr + " fps";
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
+                    textBoxSlowFPS.Text = fr; // Read input FPS and fill text box
+                    
                     if (JSON_helper.streams[0].codec_tag_string != null)
                         pass_labelFormat2 = JSON_helper.streams[0].codec_tag_string;
                     else
@@ -1072,7 +1090,7 @@ namespace VTC
                             Subtitle_info[i - 1].language + "\nCodec: \t" + Subtitle_info[i - 1].codec_long_name + "\n\n";
                     }
                 }
-
+                buttonInfo.Visible = true;
             }
             catch (Exception x)
             {
@@ -1360,6 +1378,50 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
 
+        private void checkBoxSetFPS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSetFPS.Checked)
+            {
+                textBoxFPSout.Enabled = true;
+                labelFPSout.Enabled = true;
+                set_fps = true;
+            }
+            else
+            {
+                textBoxFPSout.Enabled = false;
+                labelFPSout.Enabled = false;
+                set_fps = false;
+            }
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void checkBoxSlowFPS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSlowFPS.Checked)
+            {
+                textBoxSlowFPS.Enabled = true;
+                labelSlowFPS.Enabled = true;
+                slow_motion = true;
+            }
+            else
+            {
+                textBoxSlowFPS.Enabled = false;
+                labelSlowFPS.Enabled = false;
+                slow_motion = false;
+            }
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void textBoxFPSout_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void textBoxSlowFPS_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions();
+        }
+
         private void checkBoxVideoOnly_CheckedChanged(object sender, EventArgs e)
         {               //select to encode file with video stream only
             if (checkBoxVideoOnly.Checked)
@@ -1586,10 +1648,18 @@ namespace VTC
             toolTip37.InitialDelay = 500;
             toolTip37.ReshowDelay = 500;
             toolTip37.ShowAlways = true;
-            toolTip38.AutoPopDelay = 5000;
+            toolTip38.AutoPopDelay = 7000;
             toolTip38.InitialDelay = 500;
             toolTip38.ReshowDelay = 500;
             toolTip38.ShowAlways = true;
+            toolTip39.AutoPopDelay = 7000;
+            toolTip39.InitialDelay = 100;
+            toolTip39.ReshowDelay = 500;
+            toolTip39.ShowAlways = true;
+            toolTip40.AutoPopDelay = 7000;
+            toolTip40.InitialDelay = 100;
+            toolTip40.ReshowDelay = 500;
+            toolTip40.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -1628,6 +1698,8 @@ namespace VTC
                     toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                     toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
+                    toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
+                    toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter FPS of your source video to your best knowledge (e.g. for GoPro it can be 120 or 240). If you used \"Input File\" button, it will be automatically populated. After that set Output FPS box to desired value. Ratio of Input FPS and Output FPS will dictate the slowness of playback.");
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
