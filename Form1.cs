@@ -47,6 +47,7 @@ namespace VTC
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         static bool set_fps = false; //set if different target FPS is to be used
         static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
+        static double fps = 0.00; //initial value for video file fps
         string[] task_list = new string[100]; //all tasks put in a batch list
         string json = ""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
@@ -752,7 +753,7 @@ namespace VTC
                 // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
                 if (slow_motion)
                 {
-                    input_fps = " -r " + (Convert.ToDouble(textBoxFPSout.Text) / Convert.ToDouble(textBoxSlowFPS.Text)).ToString(nfi);
+                    out_fps = "-vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
                 }
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
@@ -905,6 +906,7 @@ namespace VTC
             try
             {
                 json = "";
+                fps = 0.00;
                 BackgroundWorker ff = new BackgroundWorker();					 //new instance of Background worker
                 ff.WorkerReportsProgress = true;
                 ff.DoWork += ff_DoWork;											 //handler for starting thread
@@ -1007,6 +1009,8 @@ namespace VTC
                     pass_video_info = "Stream: 0\nCodec: \t" + Video_info.codec_long_name + "\nProfile: \t" + Video_info.profile +
                         "\nWxH: \t" + Video_info.width + "x" + Video_info.height + " \t" +
                         fr + " fps";
+                    if (fr != "")
+                        fps = Convert.ToDouble(fr);
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
                     
@@ -1385,6 +1389,17 @@ namespace VTC
             if (checkBoxSetFPS.Checked)
             {
                 textBoxFPSout.Enabled = true;
+
+                if (fps == 0.00)
+                {
+                    textBoxFPSout.BackColor = System.Drawing.Color.Red;
+                    textBoxFPSout.Text = "0";
+                }
+                else
+                {
+                    textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
+                    textBoxFPSout.Text = fps.ToString();
+                }
                 labelFPSout.Enabled = true;
                 set_fps = true;
             }
@@ -1416,6 +1431,14 @@ namespace VTC
 
         private void textBoxFPSout_TextChanged(object sender, EventArgs e)
         {
+            if (textBoxFPSout.Text == "0")
+            {
+                textBoxFPSout.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
+            }
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
