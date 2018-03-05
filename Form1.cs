@@ -685,6 +685,16 @@ namespace VTC
                 string input_fps = ""; //if option to set input FPS is used
                 string out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
                 ReadParametersFromGUI();//read options set by user on GUI
+                // Test if target FPS is to be set differently from source video
+                if (set_fps)
+                {
+                    out_fps = " -r " + textBoxFPSout.Text;
+                }
+                // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
+                if (slow_motion)
+                {
+                    out_fps = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
+                }
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
                 {
                     audio_only = true;
@@ -695,6 +705,8 @@ namespace VTC
                 if (audio_only)			//audio only file is produced
                 {
                     container = " -vn";//put option to exclude video stream
+                    input_fps = "";
+                    out_fps = "";
                 }
                 if (video_only)
                     audio = " -an";		//set audio option to exclude audio stream
@@ -745,16 +757,7 @@ namespace VTC
                     else if (ext == "mkv")
                         srt_options = " -c:s srt";
                 }
-                // Test if target FPS is to be set differently from source
-                if (set_fps)
-                {
-                    out_fps = " -r " + textBoxFPSout.Text;
-                }
-                // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
-                if (slow_motion)
-                {
-                    out_fps = "-vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
-                }
+                
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
                         + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //windows
@@ -867,7 +870,9 @@ namespace VTC
         {                   //user clicks to select 1 input file
             //h265 = false;
             //checkBoxH265.Checked = false;
-			time_position = "5";
+            checkBoxSlowFPS.Enabled = false;
+            checkBoxSetFPS.Enabled = false;
+            time_position = "5";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
             openFileDialog.Title = "Choose video or audio file to convert";
@@ -1110,6 +1115,8 @@ namespace VTC
             {
                 //h265 = false;
                 //checkBoxH265.Checked = false;
+                checkBoxSlowFPS.Enabled = false;
+                checkBoxSetFPS.Enabled = false;
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 input_file = files[0];
                 int str_position = input_file.LastIndexOf('.') + 1;
@@ -1820,6 +1827,8 @@ namespace VTC
             groupBoxVideoOrAudio.Enabled = false;
             buttonAddSubtitle.Enabled = false;
             buttonInfo.Enabled = false;
+            checkBoxSetFPS.Enabled = false;
+            checkBoxSlowFPS.Enabled = false;
         }
         private void EnableConvButtons()
         {               //enable buttons on Convert tab
