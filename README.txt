@@ -1,8 +1,15 @@
 v1.7.0	-feature to set output FPS rate and to create slow motion video from high FPS source, 
 		-corrected minor bug "Info" button not visible
 
+		IMPORTANT NOTE about new FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
+		In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
+		But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
+		In that case, both check boxes can be used, but, BE CAREFUL, or the result may not be satisfactory!
+		If you load audio file (mp3, aac, etc.), those 2 check boxes are ignored, but they can be set as preparations for the next bunch
+		of files loaded via "Multiple Input Files".
+
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
-It is also command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
+It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
 I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.
 
 I wanted to achieve 4 goals:
