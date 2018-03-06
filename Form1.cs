@@ -870,14 +870,14 @@ namespace VTC
         {                   //user clicks to select 1 input file
             //h265 = false;
             //checkBoxH265.Checked = false;
-            checkBoxSlowFPS.Enabled = false;
-            checkBoxSetFPS.Enabled = false;
             time_position = "5";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
             openFileDialog.Title = "Choose video or audio file to convert";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                fps = 0.00;
+                toolStripStatusLabel1.Text = "Please wait, loading file info!";
                 input_file = openFileDialog.FileName;				//code here is more or less repeated from other button click
                 int str_position = input_file.LastIndexOf('.') + 1;
                 str_extension = input_file.Substring(str_position);
@@ -897,12 +897,15 @@ namespace VTC
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
                 FileProperties(); //async run of ffprobe to get file info
-				Thread.Sleep(500);//wait for file info
+				Thread.Sleep(1000);//wait for file info
 				extract_jpeg();
 				Thread.Sleep(100);
                 EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
+                checkBoxSlowFPS.Checked = false;
+                checkBoxSetFPS.Checked = false;
+                toolStripStatusLabel1.Text = "Done. File info loaded.";
             }
 
         }
@@ -1015,7 +1018,15 @@ namespace VTC
                         "\nWxH: \t" + Video_info.width + "x" + Video_info.height + " \t" +
                         fr + " fps";
                     if (fr != "")
+                    {
                         fps = Convert.ToDouble(fr);
+                        textBoxFPSout.Text = fr;
+                    }
+                    else
+                    {
+                        fps = 0.00;
+                        textBoxFPSout.Text = "0";
+                    }
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
                     
@@ -1056,6 +1067,8 @@ namespace VTC
                     pass_labelvideobitrate = String.Format("{0:0.00}", Audio_info[0].bit_rate / 1024) + " kb/s";
                     pass_labelFormat2 = Audio_info[0].codec_long_name;
                     pass_labelDuration2 = Audio_info[0].duration;
+                    fps = 0.00;
+                    textBoxFPSout.Text = "0";
                 }
 
                 if (count_aud_streams > 0 && video_exists)
@@ -1115,8 +1128,7 @@ namespace VTC
             {
                 //h265 = false;
                 //checkBoxH265.Checked = false;
-                checkBoxSlowFPS.Enabled = false;
-                checkBoxSetFPS.Enabled = false;
+                toolStripStatusLabel1.Text = "Please wait, loading file info!";
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 input_file = files[0];
                 int str_position = input_file.LastIndexOf('.') + 1;
@@ -1137,12 +1149,14 @@ namespace VTC
                 richTextBoxConv.Text = SetupConversionOptions();
                 labelInputConvFile.Text = input_file;
                 time_position = "5";
+                fps = 0.00;
                 FileProperties();
-                Thread.Sleep(500);//wait for file info
+                Thread.Sleep(1000);//wait for file info
                 extract_jpeg();
 				EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
+                toolStripStatusLabel1.Text = "Done. File info loaded.";
             }
         }
         private void buttonOutConvFile_Click(object sender, EventArgs e)
@@ -1397,15 +1411,16 @@ namespace VTC
             {
                 textBoxFPSout.Enabled = true;
 
-                if (fps == 0.00)
+                if (fps == 0.00)        // FPS is NOT read from file, so warn the user with red color
                 {
                     textBoxFPSout.BackColor = System.Drawing.Color.Red;
                     textBoxFPSout.Text = "0";
                 }
-                else
+                else                    // FPS is read from file, so use either slow motion or custom FPS
                 {
                     textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
                     textBoxFPSout.Text = fps.ToString();
+                    checkBoxSlowFPS.Checked = false;  // slow motion dowsn't make sense when custom FPS used
                 }
                 labelFPSout.Enabled = true;
                 set_fps = true;
@@ -1414,24 +1429,37 @@ namespace VTC
             {
                 textBoxFPSout.Enabled = false;
                 labelFPSout.Enabled = false;
+                textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
                 set_fps = false;
+                if (fps != 0.00 && !checkBoxSlowFPS.Checked) // no slow motion used - use FPS from file
+                    textBoxFPSout.Text = fps.ToString();
             }
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
         private void checkBoxSlowFPS_CheckedChanged(object sender, EventArgs e)
         {
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
             if (checkBoxSlowFPS.Checked)
             {
                 textBoxSlowFPS.Enabled = true;
                 labelSlowFPS.Enabled = true;
                 slow_motion = true;
+                
+                if (fps != 0.00)
+                {
+                    textBoxFPSout.Text = (fps / Convert.ToDouble(textBoxSlowFPS.Text)).ToString(nfi);
+                    checkBoxSetFPS.Checked = false;    // FPS known from file, only usage of slow motion divider makes sense
+                }
             }
             else
             {
                 textBoxSlowFPS.Enabled = false;
                 labelSlowFPS.Enabled = false;
                 slow_motion = false;
+                if (fps != 0.00)
+                    textBoxFPSout.Text = fps.ToString(nfi); // return original FPS value
             }
             richTextBoxConv.Text = SetupConversionOptions();
         }
@@ -1445,12 +1473,18 @@ namespace VTC
             else
             {
                 textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
+                //set_fps = true;
             }
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
         private void textBoxSlowFPS_TextChanged(object sender, EventArgs e)
         {
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
+            if (fps != 0.00)
+                textBoxFPSout.Text = (fps / Convert.ToDouble(textBoxSlowFPS.Text)).ToString(nfi);
+            
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
@@ -1843,6 +1877,8 @@ namespace VTC
             groupBoxContainer.Enabled = true;
             groupBoxVideoOrAudio.Enabled = true;
             buttonAddSubtitle.Enabled = true;
+            checkBoxSetFPS.Enabled = true;
+            checkBoxSlowFPS.Enabled = true;
         }
         private void DisableTransButtons()
         {               //disable buttons on Transcode tab
