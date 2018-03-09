@@ -7,6 +7,12 @@ v1.7.0	-feature to set output FPS rate and to create slow motion video from high
 		In that case, both check boxes can be used, but, BE CAREFUL, or the result may not be satisfactory!
 		If you load audio file (mp3, aac, etc.), those 2 check boxes are ignored, but they can be set as preparations for the next bunch
 		of files loaded via "Multiple Input Files".
+		
+		In any case, if using "Multiple Input Files" option to load bunch of files to be encoded with same options,
+		you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
+		
+		NOTE FOR LINUX: Please go to the bottom of this readme to see how to install.
+		Source code for Linux is the same, but check file Form1.cs and commented lines marked with "Linux".
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -211,4 +217,8 @@ mono $HOME/VCT_mono/VCT.exe
 
 #or create launcher at desktop or menu.
 - it should display MS Windows-like window
+
+Compiling from source code on Linux
+
+Due to different path naming in Windows and Linux, if you are compiling on Linux with Monodevelop, you need first to go through Form1.cs and comment all lines marked in comment as "Windows" and uncomment lines marked as "Linux". Use common sense to do that, it's not hard.
 
