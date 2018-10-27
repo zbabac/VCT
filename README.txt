@@ -1,9 +1,6 @@
 v1.8.0	-compiled also as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
 		-removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 
-		NOTE: this app works only on 64-bit windows, like Windows 10 or Windows 7 64-bit.
-		For 32-bit Windows, please use file named "VCT_setup_windows_xp_32bit.exe".
-
 		IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
 		In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
 		But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
