@@ -93,7 +93,6 @@ C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.application
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.pdb
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Newtonsoft.Json.dll
-C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csprojResolveAssemblyReference.cache
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.AboutBoxZ.resources
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form1.resources
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form2.resources
@@ -105,3 +104,5 @@ C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe.manifest
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.application
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.pdb
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.CopyComplete
+C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csprojAssemblyReference.cache

@@ -711,7 +711,7 @@ namespace VTC
                 if (video_only)
                     audio = " -an";		//set audio option to exclude audio stream
                 if (audio != " copy" && audio != " -an")					//if audio not excluded or copied
-                    audio_part = " -strict experimental -c:a " + audio + " -b:a " + audiobitrate;	//define audio options as read from GUI
+                    audio_part = " -c:a " + audio + " -b:a " + audiobitrate;	//define audio options as read from GUI
                 else
                 {
                     if (audio == " copy")

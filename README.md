@@ -1,7 +1,10 @@
-v1.7.0	-feature to set output FPS rate and to create slow motion video from high FPS source, 
-		-corrected minor bug "Info" button not visible
+v1.8.0	-option to download compiled 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
+		-removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 
-		IMPORTANT NOTE about new FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
+		NOTE: this app works only on 64-bit windows, like Windows 10 or Windows 7 64-bit.
+		For 32-bit Windows, please use file named "VCT_setup_windows_xp_32bit.exe".
+
+		IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
 		In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
 		But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
 		In that case, both check boxes can be used, but, BE CAREFUL, or the result may not be satisfactory!
@@ -96,6 +99,10 @@ Added git repository. It is now preferred method to get source code. To clone us
 git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
+
+Change log since v1.8.0	
+--option to download compiled 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
+-removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 
 Change log since v1.7.0	
 -feature to set output FPS rate and to create slow motion video from high FPS source, 
