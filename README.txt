@@ -1,4 +1,4 @@
-v1.8.0	-compiled also as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
+v1.8.0.2	-compiled also as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
 		-removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 
 		IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 

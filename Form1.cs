@@ -948,6 +948,11 @@ namespace VTC
                 pass_video_info = "";
                 pass_audio_info = "";
                 pass_subtitle_info = "";
+                pass_labelvideobitrate = "";
+                pass_labelDuration2 = "";
+                pass_labelFileName2 = "";
+                pass_labelSize2 = "";
+                pass_labelFormat2 = "";
                 count_aud_streams = Regex.Matches(json, "\"audio\"").Count;
                 count_sub_streams = Regex.Matches(json, "\"subtitle\"").Count;
                 Dictionary<int, string> comboSource = new Dictionary<int, string>(); //create new collection for combo

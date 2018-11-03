@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.8.0.0"
+!define PRODUCT_VERSION "1.8.0.2"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
@@ -63,7 +63,7 @@ ShowUnInstDetails show
 
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
-  SetOverwrite ifnewer
+  SetOverwrite on
   File "bin\Release\VCT.exe"
   CreateDirectory "$SMPROGRAMS\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\VCT.lnk" "$INSTDIR\VCT.exe"
