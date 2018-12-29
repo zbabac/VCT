@@ -40,6 +40,7 @@
             this.labelSize2 = new System.Windows.Forms.Label();
             this.labelDuration2 = new System.Windows.Forms.Label();
             this.labelSize = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelVidStreams = new System.Windows.Forms.Label();
             this.labelAudStreams = new System.Windows.Forms.Label();
@@ -47,11 +48,10 @@
             this.richTextBoxVideoStr = new System.Windows.Forms.RichTextBox();
             this.richTextBoxAudioStr = new System.Windows.Forms.RichTextBox();
             this.richTextBoxSubsStr = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelInfo.SuspendLayout();
             this.groupBoxFileInfo.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInfo
@@ -163,6 +163,18 @@
             this.labelSize.TabIndex = 7;
             this.labelSize.Text = "File size";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::VTC.Properties.Resources.test1;
+            this.pictureBox1.InitialImage = global::VTC.Properties.Resources.test1;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 226);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
@@ -255,18 +267,6 @@
             this.richTextBoxSubsStr.TabIndex = 5;
             this.richTextBoxSubsStr.Text = "";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::VTC.Properties.Resources.test1;
-            this.pictureBox1.InitialImage = global::VTC.Properties.Resources.test1;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 226);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,9 +283,9 @@
             this.panelInfo.ResumeLayout(false);
             this.groupBoxFileInfo.ResumeLayout(false);
             this.groupBoxFileInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

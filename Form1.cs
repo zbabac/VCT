@@ -98,6 +98,7 @@ namespace VTC
         ToolTip toolTip38 = new ToolTip();
         ToolTip toolTip39 = new ToolTip();
         ToolTip toolTip40 = new ToolTip();
+        ToolTip toolTip41 = new ToolTip();
 
         public Form1()
         {
@@ -203,7 +204,10 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy -c:s copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                string _subs = "-c:s copy ";
+                if (checkBoxTransRemoveSubtitle.Checked)
+                    _subs = "";
+                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -757,7 +761,8 @@ namespace VTC
                     else if (ext == "mkv")
                         srt_options = " -c:s srt";
                 }
-                
+                if (checkBoxTransRemoveSubtitle.Checked || checkBoxConvRemoveSubtitle.Checked)
+                    srt_options = "";
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
                         + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //windows
@@ -937,6 +942,21 @@ namespace VTC
                 statustekst = x.Message;
             }
         }
+        private string checkNull(dynamic stringForCheck)
+        {
+            try
+            {
+                if (stringForCheck == null)
+                    return "";
+                else
+                    return stringForCheck;
+            }
+            catch (Exception x)
+            {
+                string msg = x.Message;
+                return "";
+            }
+        }
         private void ff_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {   //it sorts out file info data after ffprobe parses it and fills in variables to pass to infoForm
             try
@@ -948,11 +968,10 @@ namespace VTC
                 pass_video_info = "";
                 pass_audio_info = "";
                 pass_subtitle_info = "";
-                pass_labelvideobitrate = "";
-                pass_labelDuration2 = "";
-                pass_labelFileName2 = "";
-                pass_labelSize2 = "";
                 pass_labelFormat2 = "";
+                pass_labelSize2 = "";
+                pass_labelFileName2 = "";
+                pass_labelDuration2 = "";
                 count_aud_streams = Regex.Matches(json, "\"audio\"").Count;
                 count_sub_streams = Regex.Matches(json, "\"subtitle\"").Count;
                 Dictionary<int, string> comboSource = new Dictionary<int, string>(); //create new collection for combo
@@ -974,9 +993,11 @@ namespace VTC
                 double duration = 0.0;
                 video_exists = (Regex.Matches(json, "\"video\"").Count > 0);
                 JSON_helper = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
-                if (JSON_helper.format.duration != null)
+                string j_duration;
+                j_duration = checkNull(JSON_helper.format.duration);
+                if (j_duration != "")
                 {
-                    duration = Convert.ToDouble(JSON_helper.format.duration);
+                    duration = Convert.ToDouble(j_duration);
                     time_position = String.Format("{0:0}", duration / 8);
                 }
                 File_info.filename = JSON_helper.format.filename;
@@ -1001,7 +1022,8 @@ namespace VTC
                         h265 = false;
                         checkBoxH265.Checked = false;
                     }
-                    if (JSON_helper.streams[0].duration != null)
+                    j_duration = checkNull(JSON_helper.streams[0].duration);
+                    if (j_duration != "")
                     {
                         Video_info.duration = JSON_helper.streams[0].duration;
                         duration = Video_info.duration;
@@ -1010,7 +1032,8 @@ namespace VTC
                     else
                         Video_info.duration = duration;
                     TimeSpan dur = TimeSpan.FromSeconds(Video_info.duration);
-                    if (JSON_helper.streams[0].bit_rate != null)
+                    string j_bitrate = checkNull(JSON_helper.streams[0].bit_rate);
+                    if (j_bitrate != "")
                         Video_info.bit_rate = JSON_helper.streams[0].bit_rate;
                     else
                         Video_info.bit_rate = 0.0;
@@ -1034,9 +1057,9 @@ namespace VTC
                     }
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
-                    
-                    if (JSON_helper.streams[0].codec_tag_string != null)
-                        pass_labelFormat2 = JSON_helper.streams[0].codec_tag_string;
+                    string j_passLabelFormat = checkNull(JSON_helper.streams[0].codec_tag_string);
+                    if (j_passLabelFormat != "")
+                        pass_labelFormat2 = j_passLabelFormat;
                     else
                         pass_labelFormat2 = Video_info.codec_long_name.Substring(0, 10);
                     //time_position = String.Format("{0:0}", Video_info.duration / 8);
@@ -1046,11 +1069,12 @@ namespace VTC
                     for (int i = 0; i <= count_aud_streams - 1; i++)
                     {
                         Audio_info[i] = new audio_info();   //Initialize new object
-                        Audio_info[i].codec_long_name = JSON_helper.streams[i].codec_long_name;
-                        Audio_info[i].channel_layout = JSON_helper.streams[i].channel_layout;
-                        if (JSON_helper.streams[i].duration != null)
+                        Audio_info[i].codec_long_name = checkNull(JSON_helper.streams[i].codec_long_name);
+                        Audio_info[i].channel_layout = checkNull(JSON_helper.streams[i].channel_layout);
+                        string j_audioDuration = checkNull(JSON_helper.streams[i].duration);
+                        if (j_audioDuration != "")
                         {
-                            Audio_info[i].duration = JSON_helper.streams[i].duration;
+                            Audio_info[i].duration = j_audioDuration;
                             Audio_info[i].duration = Audio_info[i].duration.Substring(0, Audio_info[i].duration.IndexOf('.'));
                             double sec = Convert.ToDouble(Audio_info[i].duration);
                             TimeSpan ts = TimeSpan.FromSeconds(sec);
@@ -1058,16 +1082,11 @@ namespace VTC
                         }
                         else
                             Audio_info[i].duration = duration.ToString();
-                        Audio_info[i].bit_rate = JSON_helper.streams[i].bit_rate;
+                        Audio_info[i].bit_rate = Convert.ToDouble(checkNull(JSON_helper.streams[i].bit_rate));
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i].bit_rate / 1000) + " kb/s\nDuration: \t" +
-                            Audio_info[i].duration + "\nLanguage: \t";
-                        if (JSON_helper.streams[i].tags.language != null)
-                            Audio_info[i].language = JSON_helper.streams[i].tags.language;
-                        else
-                            Audio_info[i].language = "";
-                        pass_audio_info += Audio_info[i].language +
-                            "\t Channels: " + Audio_info[i].channel_layout + "\n\n";
+                            Audio_info[i].duration + "\t Channels: " + Audio_info[i].channel_layout + "\n\n";
+                        
                     }
                     pass_labelvideobitrate = String.Format("{0:0.00}", Audio_info[0].bit_rate / 1024) + " kb/s";
                     pass_labelFormat2 = Audio_info[0].codec_long_name;
@@ -1081,11 +1100,12 @@ namespace VTC
                     for (int i = 1; i <= count_aud_streams; i++)
                     {
                         Audio_info[i - 1] = new audio_info();   //Initialize new object
-                        Audio_info[i - 1].codec_long_name = JSON_helper.streams[i].codec_long_name;
-                        Audio_info[i - 1].channel_layout = JSON_helper.streams[i].channel_layout;
-                        if (JSON_helper.streams[i].duration != null)
+                        Audio_info[i - 1].codec_long_name = checkNull(JSON_helper.streams[i].codec_long_name);
+                        Audio_info[i - 1].channel_layout = checkNull(JSON_helper.streams[i].channel_layout);
+                        j_duration = checkNull(JSON_helper.streams[i].duration);
+                        if (j_duration != "")
                         {
-                            Audio_info[i - 1].duration = JSON_helper.streams[i].duration;
+                            Audio_info[i - 1].duration = j_duration;
                             Audio_info[i - 1].duration = Audio_info[i - 1].duration.Substring(0, Audio_info[i - 1].duration.IndexOf('.'));
                             double sec = Convert.ToDouble(Audio_info[i - 1].duration);
                             TimeSpan ts = TimeSpan.FromSeconds(sec);
@@ -1093,14 +1113,13 @@ namespace VTC
                         }
                         else
                             Audio_info[i - 1].duration = duration.ToString();
-                        Audio_info[i - 1].bit_rate = Convert.ToDouble(JSON_helper.streams[i].bit_rate);
+                        string j_bitrate = checkNull(JSON_helper.streams[i].bit_rate);
+                        Audio_info[i - 1].bit_rate = Convert.ToDouble(j_bitrate);
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i - 1].duration + "\nLanguage: \t";
-                        if (JSON_helper.streams[i].tags.language != null)
-                            Audio_info[i - 1].language = JSON_helper.streams[i].tags.language;
-                        else
-                            Audio_info[i - 1].language = "";
+                        Audio_info[i - 1].language = checkNull(JSON_helper.streams[i].tags.language);
+
                         pass_audio_info += Audio_info[i - 1].language +
                             "\t Channels: " + Audio_info[i - 1].channel_layout + "\n\n";
                     }
@@ -1110,11 +1129,9 @@ namespace VTC
                     for (int i = 1; i <= count_sub_streams; i++)
                     {
                         Subtitle_info[i - 1] = new subtitle_info(); //Initialize new object
-                        Subtitle_info[i - 1].codec_long_name = JSON_helper.streams[i + count_aud_streams].codec_name;
-                        if (JSON_helper.streams[i + count_aud_streams].tags.language != null)
-                            Subtitle_info[i - 1].language = JSON_helper.streams[i + count_aud_streams].tags.language;
-                        else
-                            Subtitle_info[i - 1].language = "";
+                        Subtitle_info[i - 1].codec_long_name = checkNull(JSON_helper.streams[i + count_aud_streams].codec_name);
+                        Subtitle_info[i - 1].language = checkNull(JSON_helper.streams[i + count_aud_streams].tags.language);
+
                         pass_subtitle_info += "Stream: " + i + "\nLanguage: \t" +
                             Subtitle_info[i - 1].language + "\nCodec: \t" + Subtitle_info[i - 1].codec_long_name + "\n\n";
                     }
@@ -1127,6 +1144,12 @@ namespace VTC
                 //buttonInfo.Visible = true;
             }
         }
+
+        private string ToString(dynamic format)
+        {
+            throw new NotImplementedException();
+        }
+
         private void buttonInputConvFile_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -1731,6 +1754,10 @@ namespace VTC
             toolTip40.InitialDelay = 100;
             toolTip40.ReshowDelay = 500;
             toolTip40.ShowAlways = true;
+            toolTip41.AutoPopDelay = 7000;
+            toolTip41.InitialDelay = 100;
+            toolTip41.ReshowDelay = 500;
+            toolTip41.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -1771,6 +1798,7 @@ namespace VTC
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
+                    toolTip41.SetToolTip(this.checkBoxConvRemoveSubtitle, "If subtitle exists in the input file,\nthen you can remove it from output file with this option.");
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");

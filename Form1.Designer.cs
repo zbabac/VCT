@@ -41,6 +41,7 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBoxTransRemoveSubtitle = new System.Windows.Forms.CheckBox();
             this.buttonLog2 = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonAbout = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@ namespace VTC
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxConvRemoveSubtitle = new System.Windows.Forms.CheckBox();
             this.groupBoxSlow = new System.Windows.Forms.GroupBox();
             this.checkBoxSlowFPS = new System.Windows.Forms.CheckBox();
             this.checkBoxSetFPS = new System.Windows.Forms.CheckBox();
@@ -179,6 +181,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.checkBoxTransRemoveSubtitle);
             this.tabPage1.Controls.Add(this.buttonLog2);
             this.tabPage1.Controls.Add(this.buttonHelp);
             this.tabPage1.Controls.Add(this.buttonAbout);
@@ -189,6 +192,12 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
+            // 
+            // checkBoxTransRemoveSubtitle
+            // 
+            resources.ApplyResources(this.checkBoxTransRemoveSubtitle, "checkBoxTransRemoveSubtitle");
+            this.checkBoxTransRemoveSubtitle.Name = "checkBoxTransRemoveSubtitle";
+            this.checkBoxTransRemoveSubtitle.UseVisualStyleBackColor = true;
             // 
             // buttonLog2
             // 
@@ -254,6 +263,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.checkBoxConvRemoveSubtitle);
             this.tabPage2.Controls.Add(this.groupBoxSlow);
             this.tabPage2.Controls.Add(this.groupBoxCPU);
             this.tabPage2.Controls.Add(this.buttonLog);
@@ -277,6 +287,12 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
+            // 
+            // checkBoxConvRemoveSubtitle
+            // 
+            resources.ApplyResources(this.checkBoxConvRemoveSubtitle, "checkBoxConvRemoveSubtitle");
+            this.checkBoxConvRemoveSubtitle.Name = "checkBoxConvRemoveSubtitle";
+            this.checkBoxConvRemoveSubtitle.UseVisualStyleBackColor = true;
             // 
             // groupBoxSlow
             // 
@@ -818,6 +834,7 @@ namespace VTC
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBoxSlow.ResumeLayout(false);
@@ -924,6 +941,8 @@ namespace VTC
         private System.Windows.Forms.TextBox textBoxFPSout;
         private System.Windows.Forms.CheckBox checkBoxSlowFPS;
         private System.Windows.Forms.CheckBox checkBoxSetFPS;
+        private System.Windows.Forms.CheckBox checkBoxTransRemoveSubtitle;
+        private System.Windows.Forms.CheckBox checkBoxConvRemoveSubtitle;
     }
 }
 
