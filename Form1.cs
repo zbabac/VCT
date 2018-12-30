@@ -128,9 +128,15 @@ namespace VTC
                 if (savePath.ShowDialog() == DialogResult.OK)
                 {
                     out_path = savePath.SelectedPath + "\\"; //adds it so correct folder is chosen later when file name is appended to the string
+                    
                     labelOutTransFile.Text = out_path; 		 //displays selected path so user is aware of the change
                     labelOutConvFile.Text = out_path;
                     buttonMultiTransFile.Enabled = true;	  //now, it is safe to allow user to click this button to select input files
+                    buttonRemoveTransPath.Enabled = true;
+                    buttonRemoveTransPath.Visible = true;
+                    buttonRemoveOutPath.Enabled = true;
+                    buttonRemoveOutPath.Visible = true;
+                    use_out_path = true;
                     EnableConvButtons();
                 }
             }
@@ -198,9 +204,11 @@ namespace VTC
                 if (!use_out_path)           //if out path not set, use the same as input file
                 {
                     out_path = input_file.Substring(0, str_position);
-                    labelOutConvFile.Text = out_path;
-                    labelOutTransFile.Text = out_path;
+                    //labelOutConvFile.Text = out_path;
+                    //labelOutTransFile.Text = out_path;
                 }
+                else
+                    out_path = labelOutTransFile.Text;
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
@@ -761,8 +769,6 @@ namespace VTC
                     else if (ext == "mkv")
                         srt_options = " -c:s srt";
                 }
-                if (checkBoxTransRemoveSubtitle.Checked || checkBoxConvRemoveSubtitle.Checked)
-                    srt_options = "";
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
                         + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //windows
@@ -844,9 +850,11 @@ namespace VTC
                 if (!use_out_path)           //if no out path set by user, use the same path as input file
                 {
                     out_path = input_file.Substring(0, str_position);
-                    labelOutConvFile.Text = out_path;
-                    labelOutTransFile.Text = out_path;
+                    //labelOutConvFile.Text = out_path;
+                    //labelOutTransFile.Text = out_path;
                 }
+                else
+                    out_path = labelOutConvFile.Text;
                 string in_file = input_file.Substring(str_position);//input file name
                 str_position = in_file.LastIndexOf('.') + 1;		//get where extension starts
                 in_file = in_file.Substring(0, str_position);       //get just file name without extension
@@ -891,8 +899,8 @@ namespace VTC
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
-                    labelOutConvFile.Text = out_path;
-                    labelOutTransFile.Text = out_path;
+                    //labelOutConvFile.Text = out_path;
+                    //labelOutTransFile.Text = out_path;
                 }
                 string in_file = input_file.Substring(str_position);
                 str_position = in_file.LastIndexOf('.') + 1;
@@ -1114,7 +1122,8 @@ namespace VTC
                         else
                             Audio_info[i - 1].duration = duration.ToString();
                         string j_bitrate = checkNull(JSON_helper.streams[i].bit_rate);
-                        Audio_info[i - 1].bit_rate = Convert.ToDouble(j_bitrate);
+                        if (j_bitrate != "")
+                            Audio_info[i - 1].bit_rate = Convert.ToDouble(j_bitrate);
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i - 1].duration + "\nLanguage: \t";
@@ -1166,8 +1175,8 @@ namespace VTC
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
-                    labelOutConvFile.Text = out_path;
-                    labelOutTransFile.Text = out_path;
+                    //labelOutConvFile.Text = out_path;
+                    //labelOutTransFile.Text = out_path;
                 }
                 string in_file = input_file.Substring(str_position);
                 str_position = in_file.LastIndexOf('.') + 1;
@@ -1201,6 +1210,10 @@ namespace VTC
                                                                 ////allow user interaction - to select multiple input files
                 EnableConvButtons();
                 buttonMultiTransFile.Enabled = true;
+                buttonRemoveOutPath.Enabled = true;
+                buttonRemoveOutPath.Visible = true;
+                buttonRemoveTransPath.Enabled = true;
+                buttonRemoveTransPath.Visible = true;
                 if (input_file == "" || input_file == null)
                     buttonAddBatchConv.Enabled = false;         //but not allow to add task to the list if input file is empty
 
@@ -1224,7 +1237,7 @@ namespace VTC
                 tempRow.Cells.Add(No_cell);
                 tempRow.Cells.Add(task_cell);
                 dataGridViewBatch.Rows.Add(tempRow);		//new row added to batch list
-                labelOutConvFile.Text = out_path;
+                //labelOutConvFile.Text = out_path;
                 labelInputConvFile.Text = "";
                 EnableButtonsAfterEncoding();				//allow user to use buttons to start, edit tasks
             }
@@ -1516,6 +1529,31 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void buttonRemoveOutPath_Click(object sender, EventArgs e)
+        {
+            out_path = "";
+            use_out_path = false;
+            buttonRemoveOutPath.Enabled = false;
+            buttonRemoveOutPath.Visible = false;
+            buttonRemoveTransPath.Enabled = false;
+            buttonRemoveTransPath.Visible = false;
+            labelOutConvFile.Text = "";
+            labelOutTransFile.Text = "";
+            //richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void buttonRemoveTransPath_Click(object sender, EventArgs e)
+        {
+            out_path = "";
+            use_out_path = false;
+            buttonRemoveOutPath.Enabled = false;
+            buttonRemoveOutPath.Visible = false;
+            buttonRemoveTransPath.Enabled = false;
+            buttonRemoveTransPath.Visible = false;
+            labelOutConvFile.Text = "";
+            labelOutTransFile.Text = "";
+        }
+
         private void checkBoxVideoOnly_CheckedChanged(object sender, EventArgs e)
         {               //select to encode file with video stream only
             if (checkBoxVideoOnly.Checked)
@@ -1798,7 +1836,7 @@ namespace VTC
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
-                    toolTip41.SetToolTip(this.checkBoxConvRemoveSubtitle, "If subtitle exists in the input file,\nthen you can remove it from output file with this option.");
+                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");

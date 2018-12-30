@@ -63,7 +63,7 @@ ShowUnInstDetails show
 
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
-  SetOverwrite on
+  SetOverwrite ifnewer
   File "bin\Release\VCT.exe"
   CreateDirectory "$SMPROGRAMS\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\VCT.lnk" "$INSTDIR\VCT.exe"
