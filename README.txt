@@ -1,18 +1,17 @@
 v1.8.0.5	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
+		- added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 		- fixed null reference errors that caused file info not to display some audio or video info
 
-		IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
-		In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
-		But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
-		In that case, both check boxes can be used, but, BE CAREFUL, or the result may not be satisfactory!
-		If you load audio file (mp3, aac, etc.), those 2 check boxes are ignored, but they can be set as preparations for the next bunch
-		of files loaded via "Multiple Input Files".
-		
-		In any case, if using "Multiple Input Files" option to load bunch of files to be encoded with same options,
-		you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
-		
-		NOTE FOR LINUX: Please go to the bottom of this readme to see how to install.
-		Source code for Linux is the same, but check file Form1.cs and commented lines marked with "Linux".
+IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
+In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
+But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
+In that case, both check boxes can be used, but, BE CAREFUL, or the result may not be satisfactory!
+If you load audio file (mp3, aac, etc.), those 2 check boxes are ignored, but they can be set as preparations for the next bunch of files loaded via "Multiple Input Files".
+In any case, if using "Multiple Input Files" option to load bunch of files to be encoded with same options,
+you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
+
+NOTE FOR LINUX: Please go to the bottom of this readme to see how to install.
+Source code for Linux is the same, but check file Form1.cs and commented lines marked with "Linux".
 
 VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
 It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -99,6 +98,7 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 Change log since v1.8.0.5
 v1.8.0.5	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
+- added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed null reference errors that caused file info not to display some audio or video info	
 -compiled as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
 -removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
