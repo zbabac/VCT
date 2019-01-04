@@ -1,6 +1,6 @@
-v1.8.0.5	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
+v1.8.1.0	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
 		- added "Remove Output Path" button; before, it was neccessary to close the app to change output path
-		- fixed null reference errors that caused file info not to display some audio or video info
+		- fixed all errors that caused file info not to display some audio or video info
 
 IMPORTANT NOTE about FPS options: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
 In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
@@ -51,7 +51,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use drag&drop instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.8.0
+Latest version 1.8.1
 
 
 
@@ -96,10 +96,10 @@ git clone https://github.com/zbabac/VCT.git
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-Change log since v1.8.0.5
-v1.8.0.5	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
+Change log since v1.8.1.0
+v1.8.1.0	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
-- fixed null reference errors that caused file info not to display some audio or video info	
+- fixed all errors that caused file info not to display some audio or video info
 -compiled as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
 -removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 

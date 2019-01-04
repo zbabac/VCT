@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Collections.Generic;
 using System.Globalization;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace VTC
 {
@@ -1001,9 +1002,14 @@ namespace VTC
                 double duration = 0.0;
                 video_exists = (Regex.Matches(json, "\"video\"").Count > 0);
                 JSON_helper = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
-                string j_duration;
-                j_duration = checkNull(JSON_helper.format.duration);
-                if (j_duration != "")
+                string j_duration="";
+                try
+                {
+                    j_duration = JSON_helper.format.duration;
+                }
+                catch (RuntimeBinderException)
+                {}
+                if (j_duration != "" && j_duration != null)
                 {
                     duration = Convert.ToDouble(j_duration);
                     time_position = String.Format("{0:0}", duration / 8);
@@ -1015,11 +1021,32 @@ namespace VTC
                 
                 if (video_exists)
                 {
-                    Video_info.codec_long_name = JSON_helper.streams[0].codec_long_name;
-                    Video_info.profile = JSON_helper.streams[0].profile;
-                    Video_info.width = JSON_helper.streams[0].coded_width;
-                    Video_info.height = JSON_helper.streams[0].coded_height;
-                    Video_info.r_frame_rate = JSON_helper.streams[0].r_frame_rate;
+                    try
+                    {
+                        Video_info.codec_long_name = JSON_helper.streams[0].codec_long_name;
+                    }
+                    catch (RuntimeBinderException)
+                    { Video_info.codec_long_name = ""; }
+                    try
+                    {
+                        Video_info.profile = JSON_helper.streams[0].profile;
+                    }
+                    catch (RuntimeBinderException) { Video_info.profile = ""; }
+                    try
+                    {
+                        Video_info.width = JSON_helper.streams[0].coded_width;
+                    }
+                    catch (RuntimeBinderException) { Video_info.width = 0; }
+                    try
+                    {
+                        Video_info.height = JSON_helper.streams[0].coded_height;
+                    }
+                    catch (RuntimeBinderException) { Video_info.height = 0; }
+                    try
+                    {
+                        Video_info.r_frame_rate = JSON_helper.streams[0].r_frame_rate;
+                    }
+                    catch (RuntimeBinderException) { Video_info.r_frame_rate = ""; }
                     if (Video_info.codec_long_name.Contains("HEVC"))
                     {
                         h265 = true;
@@ -1030,19 +1057,31 @@ namespace VTC
                         h265 = false;
                         checkBoxH265.Checked = false;
                     }
-                    j_duration = checkNull(JSON_helper.streams[0].duration);
-                    if (j_duration != "")
+                    double v_duration = 0.0;
+                    try
                     {
-                        Video_info.duration = JSON_helper.streams[0].duration;
+                        v_duration = Convert.ToDouble(JSON_helper.streams[0].duration);
+                    }
+                    catch (RuntimeBinderException)
+                    { v_duration = 0.0; }
+                    if (v_duration != 0.0)
+                    {
+                        Video_info.duration = v_duration;
                         duration = Video_info.duration;
                         time_position = String.Format("{0:0}", duration / 8);
                     }
                     else
                         Video_info.duration = duration;
                     TimeSpan dur = TimeSpan.FromSeconds(Video_info.duration);
-                    string j_bitrate = checkNull(JSON_helper.streams[0].bit_rate);
-                    if (j_bitrate != "")
-                        Video_info.bit_rate = JSON_helper.streams[0].bit_rate;
+                    string j_bitrate = "";
+                    try
+                    {
+                        j_bitrate = JSON_helper.streams[0].bit_rate;
+                    }
+                    catch (RuntimeBinderException)
+                    { }
+                    if (j_bitrate != "" && j_duration != null)
+                        Video_info.bit_rate = Convert.ToDouble(j_bitrate);
                     else
                         Video_info.bit_rate = 0.0;
                     //double framerate;
@@ -1065,8 +1104,14 @@ namespace VTC
                     }
                     pass_labelDuration2 = dur.ToString(@"h\:mm\:ss");
                     pass_labelvideobitrate = String.Format("{0:0}", Video_info.bit_rate / 1000) + " kb/s";
-                    string j_passLabelFormat = checkNull(JSON_helper.streams[0].codec_tag_string);
-                    if (j_passLabelFormat != "")
+                    string j_passLabelFormat = "";
+                    try
+                    {
+                        j_passLabelFormat = JSON_helper.streams[0].codec_tag_string;
+                    }
+                    catch (RuntimeBinderException)
+                    { }
+                    if (j_passLabelFormat != "" && j_passLabelFormat !=null)
                         pass_labelFormat2 = j_passLabelFormat;
                     else
                         pass_labelFormat2 = Video_info.codec_long_name.Substring(0, 10);
@@ -1077,10 +1122,26 @@ namespace VTC
                     for (int i = 0; i <= count_aud_streams - 1; i++)
                     {
                         Audio_info[i] = new audio_info();   //Initialize new object
-                        Audio_info[i].codec_long_name = checkNull(JSON_helper.streams[i].codec_long_name);
-                        Audio_info[i].channel_layout = checkNull(JSON_helper.streams[i].channel_layout);
-                        string j_audioDuration = checkNull(JSON_helper.streams[i].duration);
-                        if (j_audioDuration != "")
+                        try
+                        {
+                            Audio_info[i].codec_long_name = JSON_helper.streams[i].codec_long_name;
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i].codec_long_name = ""; }
+                        try
+                        {
+                            Audio_info[i].channel_layout = JSON_helper.streams[i].channel_layout;
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i].channel_layout = ""; }
+                        string j_audioDuration = "";
+                        try
+                        {
+                            j_audioDuration = JSON_helper.streams[i].duration;
+                        }
+                        catch (RuntimeBinderException)
+                        { }
+                        if (j_audioDuration != "" && j_audioDuration!=null)
                         {
                             Audio_info[i].duration = j_audioDuration;
                             Audio_info[i].duration = Audio_info[i].duration.Substring(0, Audio_info[i].duration.IndexOf('.'));
@@ -1090,7 +1151,12 @@ namespace VTC
                         }
                         else
                             Audio_info[i].duration = duration.ToString();
-                        Audio_info[i].bit_rate = Convert.ToDouble(checkNull(JSON_helper.streams[i].bit_rate));
+                        try
+                        {
+                            Audio_info[i].bit_rate = Convert.ToDouble(JSON_helper.streams[i].bit_rate);
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i].bit_rate = 0.0; }
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i].duration + "\t Channels: " + Audio_info[i].channel_layout + "\n\n";
@@ -1108,10 +1174,25 @@ namespace VTC
                     for (int i = 1; i <= count_aud_streams; i++)
                     {
                         Audio_info[i - 1] = new audio_info();   //Initialize new object
-                        Audio_info[i - 1].codec_long_name = checkNull(JSON_helper.streams[i].codec_long_name);
-                        Audio_info[i - 1].channel_layout = checkNull(JSON_helper.streams[i].channel_layout);
-                        j_duration = checkNull(JSON_helper.streams[i].duration);
-                        if (j_duration != "")
+                        try
+                        {
+                            Audio_info[i - 1].codec_long_name = JSON_helper.streams[i].codec_long_name;
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i - 1].codec_long_name = ""; }
+                        try
+                        {
+                            Audio_info[i - 1].channel_layout = JSON_helper.streams[i].channel_layout;
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i - 1].channel_layout = ""; }
+                        try
+                        {
+                            j_duration = JSON_helper.streams[i].duration;
+                        }
+                        catch (RuntimeBinderException)
+                        { j_duration = ""; }
+                        if (j_duration != "" && j_duration != null)
                         {
                             Audio_info[i - 1].duration = j_duration;
                             Audio_info[i - 1].duration = Audio_info[i - 1].duration.Substring(0, Audio_info[i - 1].duration.IndexOf('.'));
@@ -1121,14 +1202,24 @@ namespace VTC
                         }
                         else
                             Audio_info[i - 1].duration = duration.ToString();
-                        string j_bitrate = checkNull(JSON_helper.streams[i].bit_rate);
-                        if (j_bitrate != "")
+                        string j_bitrate = "";
+                        try
+                        {
+                            j_bitrate = JSON_helper.streams[i].bit_rate;
+                        }
+                        catch (RuntimeBinderException)
+                        { }
+                        if (j_bitrate != "" && j_bitrate !=null )
                             Audio_info[i - 1].bit_rate = Convert.ToDouble(j_bitrate);
                         pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i - 1].duration + "\nLanguage: \t";
-                        Audio_info[i - 1].language = checkNull(JSON_helper.streams[i].tags.language);
-
+                        try
+                        {
+                            Audio_info[i - 1].language = JSON_helper.streams[i].tags.language;
+                        }
+                        catch (RuntimeBinderException)
+                        { Audio_info[i - 1].language = ""; }
                         pass_audio_info += Audio_info[i - 1].language +
                             "\t Channels: " + Audio_info[i - 1].channel_layout + "\n\n";
                     }
@@ -1138,9 +1229,18 @@ namespace VTC
                     for (int i = 1; i <= count_sub_streams; i++)
                     {
                         Subtitle_info[i - 1] = new subtitle_info(); //Initialize new object
-                        Subtitle_info[i - 1].codec_long_name = checkNull(JSON_helper.streams[i + count_aud_streams].codec_name);
-                        Subtitle_info[i - 1].language = checkNull(JSON_helper.streams[i + count_aud_streams].tags.language);
-
+                        try
+                        {
+                            Subtitle_info[i - 1].codec_long_name = JSON_helper.streams[i + count_aud_streams].codec_name;
+                        }
+                        catch (RuntimeBinderException)
+                        { Subtitle_info[i - 1].codec_long_name = ""; }
+                        try
+                        {
+                            Subtitle_info[i - 1].language = JSON_helper.streams[i + count_aud_streams].tags.language;
+                        }
+                        catch (RuntimeBinderException)
+                        { Subtitle_info[i - 1].language = ""; }
                         pass_subtitle_info += "Stream: " + i + "\nLanguage: \t" +
                             Subtitle_info[i - 1].language + "\nCodec: \t" + Subtitle_info[i - 1].codec_long_name + "\n\n";
                     }
