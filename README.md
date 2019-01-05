@@ -3,6 +3,9 @@
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed all errors that caused file info not to display some audio or video info
 
+## You can download binaries from Sourceforge:
+https://sourceforge.net/projects/videoconvertertranscoder/files/
+
 **VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation
 It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
 I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.**
