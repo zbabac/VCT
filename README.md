@@ -19,25 +19,24 @@ It is command line tool, so it may be inconvenient for those users that can only
 I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.
 
 ## I wanted to achieve 4 goals:
-__
-1. to have ability to manually edit any command option of ffmpeg
+
+_1. to have ability to manually edit any command option of ffmpeg
 2. ability to transcode MP4 to MKV and vice versa (thus full length movie transcoding take 2 minutes compared to 2 hours of full conversion)
 3. ability to set conversion options and then drag many files onto the VCT to encode them all with same options
-4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)
-__
+4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)_
 
 Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
 
 If you find a bug, or you have an issue, please use discussion board to contact me. If you use GitHub, you can open issue there.
 If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
 
-##VCT has its limitations: 
+## VCT has its limitations: 
 - when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
 - you can only encode file with single audio stream;
 - if there is subtitle stream inside input file, it will not be copied to output (planned in next release);
 - if selecting audio stream when dropping multiple files, you must know how many streams there are and which one is the one you need (if selecting files one by one, you can use Info button to check codec data).
 
-That's why I left option to __manually edit ffmpeg command__, for all of you that know, or are willing to learn this tool. __You can also manually edit commands in batch list.__
+That's why I left option to _manually edit ffmpeg command_, for all of you that know, or are willing to learn this tool. _You can also manually edit commands in batch list._
 
 ffprobe is included in 1.5.0 so when you click `Input File`, it is parsed and `Info` button apears. You can click it so see codec details and thumbnail from video. This could have been acieved with ffmpeg, but ffprobe produces JSON output and I wanted to play with it; and it was fun!
 
@@ -128,7 +127,8 @@ http://www.getavast.net/support/stop-blocking-a-program/
 You basically need to add scanning exclusion to the installation path, default is: "C:\Program Files (x86)\VCT" or "C:\Program Files\VCT".
 
 **Update**: new Avast version uses Deep scan at first run, so everything is ok.
-**Update 2**: Windows 8 and 10 will try to prevent installation. After you scan setup file, click Advanced, then click "install anyway".
+
+**Update 2**: Windows 8 and 10 will try to prevent installation. After you scan setup file, click Advanced, then click `install anyway`.
 
 
 ## Prerequisities:
@@ -147,8 +147,8 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
 
 ### Prerequisities:
--You must have mono installed to run .NET application.
--**For Debian systems (Ubuntu, Mint, etc.) run**:
+- You must have mono installed to run .NET application.
+- **For Debian systems (Ubuntu, Mint, etc.) run**:
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
@@ -156,8 +156,8 @@ sudo apt-get update
 sudo apt-get install mono-complete
 ```
 
--**For another distributions, just search: mono <distro_name> installation.**
--Example for Fedora (Red Hat derivative):
+- **For another distributions, just search: mono <distro_name> installation.**
+- Example for Fedora or CentOS (Red Hat derivative):
 ```
 yum install yum-utils
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
@@ -166,7 +166,8 @@ yum install mono-complete
 ```
 
 After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
--Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
+
+- Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 ```
 cd $HOME/Downloads
 unzip VCT_Linux_mono_binary.zip -d $HOME
