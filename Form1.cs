@@ -237,8 +237,7 @@ namespace VTC
         {
             try
             {
-                System.Diagnostics.ProcessStartInfo procffprobe =
-                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");//define Process Info to assing to the process
+                System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
                 //new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams " +  input_file); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
@@ -287,9 +286,8 @@ namespace VTC
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
             try
             {
-				System.Diagnostics.ProcessStartInfo procff =
-					new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);//define Process Info to assing to the process
-					//new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i " + input_file + " -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
+				System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
+				//new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i " + input_file + " -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
 				// The following commands are needed to redirect the standard output and standard error.
 				// This means that it will be redirected to the Process.StandardOutput StreamReader.
 				procff.RedirectStandardError = false;
@@ -369,8 +367,7 @@ namespace VTC
         {			//called when starting each ffmpeg encoding task, passed task string as parameter
             try
             {
-                System.Diagnostics.ProcessStartInfo procStartffmpeg =
-                new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);//define Process Info to assing to the process
+                System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
                 //new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
@@ -771,8 +768,7 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf
-                        + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //windows
+                ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 //ff = " "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
