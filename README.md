@@ -3,6 +3,22 @@
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed all errors that caused file info not to display some audio or video info
 
+**VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation
+It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
+I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.**
+
+## I wanted to achieve 4 goals:
+
+_1. to have ability to manually edit any command option of ffmpeg_
+_2. ability to transcode MP4 to MKV and vice versa (thus full length movie transcoding take 2 minutes compared to 2 hours of full conversion)_
+_3. ability to set conversion options and then drag many files onto the VCT to encode them all with same options_
+_4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)_
+
+Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
+
+If you find a bug, or you have an issue, _please use discussion board_ to contact me. If you use GitHub, you can open issue there.
+If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
+
 **IMPORTANT NOTE about FPS options**: if input video file is loaded via "Input File" button, then exact FPS is loaded from file. 
 In that case, either "Slow Motion" or "Set FPS" can make sense, not both.
 But, if you first set options, and then load bunch of files via "Multiple Input Files", then you must know files FPS and how much to slow down.
@@ -13,22 +29,6 @@ you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
 
 **NOTE FOR LINUX**: Please go to the bottom of this readme to see how to install.
 Source code for Linux is the same, but check file **Form1.cs** and commented lines marked with __"Linux"__.
-
-VCT is frontend for ffmpeg tool which I believe, is the greatest tool for video/audio files manipulation
-It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
-I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.
-
-## I wanted to achieve 4 goals:
-
-_1. to have ability to manually edit any command option of ffmpeg
-2. ability to transcode MP4 to MKV and vice versa (thus full length movie transcoding take 2 minutes compared to 2 hours of full conversion)
-3. ability to set conversion options and then drag many files onto the VCT to encode them all with same options
-4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)_
-
-Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
-
-If you find a bug, or you have an issue, please use discussion board to contact me. If you use GitHub, you can open issue there.
-If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
 
 ## VCT has its limitations: 
 - when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
