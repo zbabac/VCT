@@ -10,8 +10,11 @@ I've created this tool because I needed some app that can help me convert my ent
 ## I wanted to achieve 4 goals:
 
 _1. to have ability to manually edit any command option of ffmpeg_
+
 _2. ability to transcode MP4 to MKV and vice versa (thus full length movie transcoding take 2 minutes compared to 2 hours of full conversion)_
+
 _3. ability to set conversion options and then drag many files onto the VCT to encode them all with same options_
+
 _4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)_
 
 Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
