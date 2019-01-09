@@ -30,9 +30,14 @@ namespace VTC
         //2. encoding task list - each task in the list starts
         //3. process that is command which executes ffmpeg with options
         // https://stackoverflow.com/questions/10407769/directly-sending-keystrokes-to-another-process-via-hooking/12652365#12652365
+        //how to send keystroke to external application - ffmpeg, to pause and resume encoding
+        [DllImport("user32.dll")]
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+        [DllImport("user32.dll")]
+        public static extern IntPtr PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
         //define variables
-        [DllImport("User32.dll")]
-        static extern int SetForegroundWindow(IntPtr point);
         Stopwatch stopwatch = new Stopwatch(); //measure execution time for each job
         static string statustekst = "", std_out = ""; //text to be displayed as info; store part from ffmpeg standard output
         bool duration_found = false; //check if duration of the video or audio is found in ffmpeg output - measures percentage of executed job
@@ -120,7 +125,18 @@ namespace VTC
             Process[] processlist = Process.GetProcesses();
             return processlist.FirstOrDefault(pr => pr.Id == id);
         }
+        public static void sendKeystroke(char k)
+        {
+            //const uint WM_KEYDOWN = 0x100;
+            //const uint WM_SYSCOMMAND = 0x018;
+            //const uint SC_CLOSE = 0x053;
+            Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
+            p.StandardInput.Write(k);
+            //IntPtr WindowToFind = FindWindow(null, "ffmpeg");
 
+            //IntPtr result3 = SendMessage(handle, WM_KEYDOWN, ((IntPtr)k), (IntPtr)0);
+            //IntPtr result3 = SendMessage(WindowToFind, WM_KEYUP, ((IntPtr)c), (IntPtr)0);
+        }
         private void buttonOutTransFile_Click(object sender, EventArgs e)
         {		//raised when user clicks to select output path for transcoding tasks
             try
@@ -476,19 +492,16 @@ namespace VTC
                 else if (started && !paused)
                 {
                     paused = true;
-                    buttonStartQueue.Text = "Resume";
-                    Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
-                    if (p != null)
-                    {
-                        IntPtr handle = p.MainWindowHandle;
-                        SetForegroundWindow(handle);
-                        SendKeys.SendWait("{BREAK}");
-                    }
+                    buttonStartQueue.Text = "Resume >";
+                    proc.StandardInput.Write((char) 13);
+                    Thread.Sleep(300);
                 }
                 else
                 {
                     paused = false;
-                    buttonStartQueue.Text = "Pause";
+                    buttonStartQueue.Text = "Pause ||";
+                    proc.StandardInput.Write((char) 19);
+                    Thread.Sleep(300);
                 }
 
             }
@@ -555,7 +568,7 @@ namespace VTC
             {
                 stopwatch.Stop();
                 timerBatch.Enabled = false;
-
+                buttonStartQueue.Text = "Start";
                 EnableButtonsAfterEncoding();//enable buttons so user can edit tasks
                 //buttonLog.Enabled = true;
                 //buttonLog.Visible = true;
@@ -580,12 +593,15 @@ namespace VTC
                 if (result == DialogResult.OK)
                 {
                     canceled = true;
-                    afterCancelOrFinish();					//if confirms calncel call method to stop all jobs
+                    afterCancelOrFinish();					//if confirms cancel call method to stop all jobs
                     toolStripStatusLabel1.Text = "Encoding canceled after " + stopwatch.Elapsed.ToString(@"hh\:mm\:ss") + "s ";
                     proc.StandardInput.Write('q');  //sending 'q' to ffmpeg gracefully stops encoding and closes parent cmd window (hidden)
-                    Thread.Sleep(300);
+                    Thread.Sleep(900);
                     proc.CancelErrorRead();         //stop reading std out
                     proc.CancelOutputRead();        //stop reading std error
+                    Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
+                    p.Kill();
+                    Thread.Sleep(900);
                 }
                 //buttonLog.Enabled = true;
                 //buttonLog.Visible = true;
@@ -1437,6 +1453,8 @@ namespace VTC
                         number_of_rows--;                       //now we have 1 row less than before
                     }
                 }
+                if (dataGridViewBatch.Rows.Count == 0)
+                    buttonStartQueue.Enabled = false;
                 toolStripStatusLabel1.Text = "Row(s) deleted";
             }
 			catch (Exception x)

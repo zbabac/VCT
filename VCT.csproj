@@ -27,7 +27,7 @@
     <PublisherName>Zlatko Babic</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.8.1.0</ApplicationVersion>
+    <ApplicationVersion>1.9.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -159,6 +159,7 @@
     <Content Include="images\button_over.png" />
     <None Include="images\drop_here.png" />
     <Content Include="images\test.jpg" />
+    <None Include="Resources\player-icon-28622.png" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

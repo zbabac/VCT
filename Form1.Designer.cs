@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -64,7 +64,6 @@ namespace VTC
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
             this.checkBoxH265 = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
             this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
             this.labelAudioStream = new System.Windows.Forms.Label();
             this.groupBoxRotate = new System.Windows.Forms.GroupBox();
@@ -115,6 +114,7 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -379,21 +379,6 @@ namespace VTC
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.UseVisualStyleBackColor = false;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
-            // 
-            // buttonInfo
-            // 
-            resources.ApplyResources(this.buttonInfo, "buttonInfo");
-            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
-            this.buttonInfo.FlatAppearance.BorderSize = 0;
-            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.UseVisualStyleBackColor = false;
-            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
-            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
-            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
-            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
             // 
             // comboBoxAudioStreamNo
             // 
@@ -757,11 +742,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -776,9 +761,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -822,6 +807,21 @@ namespace VTC
             this.buttonStartQueue.Name = "buttonStartQueue";
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
+            // 
+            // buttonInfo
+            // 
+            resources.ApplyResources(this.buttonInfo, "buttonInfo");
+            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
+            this.buttonInfo.FlatAppearance.BorderSize = 0;
+            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.UseVisualStyleBackColor = false;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
+            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
+            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
+            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
             // 
             // Form1
             // 
