@@ -11,6 +11,7 @@ using System.Data;
 using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.CSharp.RuntimeBinder;
+using System.Runtime.InteropServices;
 
 namespace VTC
 {
@@ -28,8 +29,10 @@ namespace VTC
         //1. Main thread is GUI control, it starts Background worker to start 
         //2. encoding task list - each task in the list starts
         //3. process that is command which executes ffmpeg with options
-
+        // https://stackoverflow.com/questions/10407769/directly-sending-keystrokes-to-another-process-via-hooking/12652365#12652365
         //define variables
+        [DllImport("User32.dll")]
+        static extern int SetForegroundWindow(IntPtr point);
         Stopwatch stopwatch = new Stopwatch(); //measure execution time for each job
         static string statustekst = "", std_out = ""; //text to be displayed as info; store part from ffmpeg standard output
         bool duration_found = false; //check if duration of the video or audio is found in ffmpeg output - measures percentage of executed job
@@ -38,13 +41,12 @@ namespace VTC
         static string input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext; //stores names of input, output files, output path and temp. varr
         static string subtitle_stream, audio_stream = "1";
         static int number_of_rows = 0; //stores number of rows for batch list
-        static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels
+        static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels or pauses
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
-        static bool add_sub_stream = false, error_in_file = false, use_out_path = false;
+        static bool add_sub_stream = false, error_in_file = false, use_out_path = false, paused = false, started = false; // paused or started encoding
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
         static string vf = ""; //video filter part, used currently to rotate video
-        static string cpu = "-threads 0 "; //set ffmpeg to auto detect number of CPUs
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         static bool set_fps = false; //set if different target FPS is to be used
         static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
@@ -440,33 +442,54 @@ namespace VTC
         {									//handler for user clicking to start encoding of batch list
             try
             {
-                //log = "";
-                richTextBox3.Text = "";
-                output_log = "";
-                buttonLog.Visible = true;
-                buttonLog.Enabled = true;
-                buttonLog2.Visible = true;
-                buttonLog2.Enabled = true;
-                DataGridViewCell check_cell = new DataGridViewCheckBoxCell(true);//new instance of check cell
-                DataGridViewRow row = new DataGridViewRow();					 //new temp row
-                BackgroundWorker bg = new BackgroundWorker();					 //new instance of Background worker
-                bg.WorkerReportsProgress = true;
-                bg.DoWork += bg_DoWork;											 //handler for starting thread
-                bg.RunWorkerCompleted += bg_RunWorkerCompleted;					 //handler for finishing thread
-                canceled = false;												 //our new job is not yet canceled
-                statustekst = "Job started";
-                toolStripProgressBar1.Value = 0;								 //initial progress
-                toolStripProgressBar1.Maximum = 100;							 //max progress possible - 100%
-                stopwatch.Reset();												 //reset measured time
-                stopwatch.Start();												 //start measuring time
-                timerBatch.Interval = 1000;										 //display progress every second
-                timerBatch.Enabled = true;										 //start displaying progress
-                DisableButtonsWhenEncoding();									 //prevent user to add, delete, etc. while encoding is running
-                for (int i = 0; i < number_of_rows; i++)
-                {			//for each task in the list, read command string value
-                    task_list[i] = dataGridViewBatch.Rows[i].Cells[2].Value.ToString();
+                if (!started && !paused)
+                {
+                    started = true;
+                    buttonStartQueue.Text = "Pause";
+                    richTextBox3.Text = "";
+                    output_log = "";
+                    buttonLog.Visible = true;
+                    buttonLog.Enabled = true;
+                    buttonLog2.Visible = true;
+                    buttonLog2.Enabled = true;
+                    DataGridViewCell check_cell = new DataGridViewCheckBoxCell(true);//new instance of check cell
+                    DataGridViewRow row = new DataGridViewRow();                     //new temp row
+                    BackgroundWorker bg = new BackgroundWorker();                    //new instance of Background worker
+                    bg.WorkerReportsProgress = true;
+                    bg.DoWork += bg_DoWork;                                          //handler for starting thread
+                    bg.RunWorkerCompleted += bg_RunWorkerCompleted;                  //handler for finishing thread
+                    canceled = false;                                                //our new job is not yet canceled
+                    statustekst = "Job started";
+                    toolStripProgressBar1.Value = 0;                                 //initial progress
+                    toolStripProgressBar1.Maximum = 100;                             //max progress possible - 100%
+                    stopwatch.Reset();                                               //reset measured time
+                    stopwatch.Start();                                               //start measuring time
+                    timerBatch.Interval = 1000;                                      //display progress every second
+                    timerBatch.Enabled = true;                                       //start displaying progress
+                    DisableButtonsWhenEncoding();                                    //prevent user to add, delete, etc. while encoding is running
+                    for (int i = 0; i < number_of_rows; i++)
+                    {           //for each task in the list, read command string value
+                        task_list[i] = dataGridViewBatch.Rows[i].Cells[2].Value.ToString();
+                    }
+                    bg.RunWorkerAsync();    //start job as separate thread
                 }
-                bg.RunWorkerAsync();    //start job as separate thread
+                else if (started && !paused)
+                {
+                    paused = true;
+                    buttonStartQueue.Text = "Resume";
+                    Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
+                    if (p != null)
+                    {
+                        IntPtr handle = p.MainWindowHandle;
+                        SetForegroundWindow(handle);
+                        SendKeys.SendWait("{BREAK}");
+                    }
+                }
+                else
+                {
+                    paused = false;
+                    buttonStartQueue.Text = "Pause";
+                }
 
             }
             catch (Exception ex)
@@ -539,10 +562,14 @@ namespace VTC
                 toolStripProgressBar1.Value = 0;
                 toolStripStatusLabel1.Text = statustekst;
                 canceled = false;
+                paused = false;
+                started = false;
             }
             catch (Exception x)
             {
                 statustekst = x.Message;
+                paused = false;
+                started = false;
             }
         }
         private void buttonCancelBatch_Click(object sender, EventArgs e)
@@ -575,7 +602,7 @@ namespace VTC
             panelTranscode.Enabled = false;
             groupBoxOptions.Enabled = false;
             buttonCancelBatch.Enabled = true;
-            buttonStartQueue.Enabled = false;
+            //buttonStartQueue.Enabled = false;
             buttonDeleteQueue.Enabled = false;
             buttonAddBatchConv.Enabled = false;
             buttonInputConvFile.Enabled = false;
@@ -700,7 +727,7 @@ namespace VTC
                 {
                     out_fps = " -r " + textBoxFPSout.Text;
                 }
-                // Test if input FPS rate is high speed and needs to be normalizad, used in conjunction with target FPS
+                // Test if input FPS rate is high speed and needs to be normalized, used in conjunction with target FPS
                 if (slow_motion)
                 {
                     out_fps = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
@@ -768,8 +795,8 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
-                //ff = " "+ cpu + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
+                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1434,19 +1461,6 @@ namespace VTC
 
         private void buttonLog_Click(object sender, EventArgs e)
         {
-            /*
-            if (logForm.Visible)
-            {
-                logForm.Close();
-                logForm = new Form3(log);
-                logForm.Show();
-            }
-            else
-            {
-                logForm = new Form3(log);
-                logForm.Show();
-            }
-            */
             if (!log)
             {
                 richTextBox3.Height = dataGridViewBatch.Height +5;
@@ -1471,18 +1485,6 @@ namespace VTC
 
         private void buttonLog2_Click(object sender, EventArgs e)
         {
-            /*
-            if (logForm.Visible)
-            {
-                logForm.Close();
-                logForm = new Form3(log);
-                logForm.Show();
-            }
-            else
-            {
-                logForm = new Form3(log);
-                logForm.Show();
-            } */
             if (!log)
             {
                 richTextBox3.Height = dataGridViewBatch.Height +5;
@@ -1515,14 +1517,6 @@ namespace VTC
                 }
             }
             catch { Exception x; }
-        }
-
-        private void checkBoxThreads_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxThreads.Checked)
-                cpu = "-threads 64 ";  // set more threads for ffmpeg
-            else cpu = "-threads 0 "; // auto detect number of cpus
-            richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
 
         private void checkBoxH265_CheckedChanged(object sender, EventArgs e)

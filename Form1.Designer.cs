@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -41,6 +41,7 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonRemoveTransPath = new System.Windows.Forms.Button();
             this.checkBoxTransRemoveSubtitle = new System.Windows.Forms.CheckBox();
             this.buttonLog2 = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace VTC
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonRemoveOutPath = new System.Windows.Forms.Button();
             this.groupBoxSlow = new System.Windows.Forms.GroupBox();
             this.checkBoxSlowFPS = new System.Windows.Forms.CheckBox();
             this.checkBoxSetFPS = new System.Windows.Forms.CheckBox();
@@ -61,7 +63,6 @@ namespace VTC
             this.textBoxFPSout = new System.Windows.Forms.TextBox();
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
             this.checkBoxH265 = new System.Windows.Forms.CheckBox();
-            this.checkBoxThreads = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
@@ -114,8 +115,6 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.buttonRemoveOutPath = new System.Windows.Forms.Button();
-            this.buttonRemoveTransPath = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -194,6 +193,15 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
+            // 
+            // buttonRemoveTransPath
+            // 
+            resources.ApplyResources(this.buttonRemoveTransPath, "buttonRemoveTransPath");
+            this.buttonRemoveTransPath.FlatAppearance.BorderSize = 0;
+            this.buttonRemoveTransPath.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonRemoveTransPath.Name = "buttonRemoveTransPath";
+            this.buttonRemoveTransPath.UseVisualStyleBackColor = true;
+            this.buttonRemoveTransPath.Click += new System.EventHandler(this.buttonRemoveTransPath_Click);
             // 
             // checkBoxTransRemoveSubtitle
             // 
@@ -290,6 +298,15 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
             // 
+            // buttonRemoveOutPath
+            // 
+            resources.ApplyResources(this.buttonRemoveOutPath, "buttonRemoveOutPath");
+            this.buttonRemoveOutPath.FlatAppearance.BorderSize = 0;
+            this.buttonRemoveOutPath.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonRemoveOutPath.Name = "buttonRemoveOutPath";
+            this.buttonRemoveOutPath.UseVisualStyleBackColor = true;
+            this.buttonRemoveOutPath.Click += new System.EventHandler(this.buttonRemoveOutPath_Click);
+            // 
             // groupBoxSlow
             // 
             this.groupBoxSlow.Controls.Add(this.checkBoxSlowFPS);
@@ -341,7 +358,6 @@ namespace VTC
             // groupBoxCPU
             // 
             this.groupBoxCPU.Controls.Add(this.checkBoxH265);
-            this.groupBoxCPU.Controls.Add(this.checkBoxThreads);
             resources.ApplyResources(this.groupBoxCPU, "groupBoxCPU");
             this.groupBoxCPU.Name = "groupBoxCPU";
             this.groupBoxCPU.TabStop = false;
@@ -352,13 +368,6 @@ namespace VTC
             this.checkBoxH265.Name = "checkBoxH265";
             this.checkBoxH265.UseVisualStyleBackColor = true;
             this.checkBoxH265.CheckedChanged += new System.EventHandler(this.checkBoxH265_CheckedChanged);
-            // 
-            // checkBoxThreads
-            // 
-            resources.ApplyResources(this.checkBoxThreads, "checkBoxThreads");
-            this.checkBoxThreads.Name = "checkBoxThreads";
-            this.checkBoxThreads.UseVisualStyleBackColor = true;
-            this.checkBoxThreads.CheckedChanged += new System.EventHandler(this.checkBoxThreads_CheckedChanged);
             // 
             // buttonLog
             // 
@@ -748,11 +757,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -767,9 +776,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -813,24 +822,6 @@ namespace VTC
             this.buttonStartQueue.Name = "buttonStartQueue";
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
-            // 
-            // buttonRemoveOutPath
-            // 
-            resources.ApplyResources(this.buttonRemoveOutPath, "buttonRemoveOutPath");
-            this.buttonRemoveOutPath.FlatAppearance.BorderSize = 0;
-            this.buttonRemoveOutPath.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonRemoveOutPath.Name = "buttonRemoveOutPath";
-            this.buttonRemoveOutPath.UseVisualStyleBackColor = true;
-            this.buttonRemoveOutPath.Click += new System.EventHandler(this.buttonRemoveOutPath_Click);
-            // 
-            // buttonRemoveTransPath
-            // 
-            resources.ApplyResources(this.buttonRemoveTransPath, "buttonRemoveTransPath");
-            this.buttonRemoveTransPath.FlatAppearance.BorderSize = 0;
-            this.buttonRemoveTransPath.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonRemoveTransPath.Name = "buttonRemoveTransPath";
-            this.buttonRemoveTransPath.UseVisualStyleBackColor = true;
-            this.buttonRemoveTransPath.Click += new System.EventHandler(this.buttonRemoveTransPath_Click);
             // 
             // Form1
             // 
@@ -946,7 +937,6 @@ namespace VTC
         private System.Windows.Forms.Button buttonLog2;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.GroupBox groupBoxCPU;
-        private System.Windows.Forms.CheckBox checkBoxThreads;
         private System.Windows.Forms.CheckBox checkBoxH265;
         private System.Windows.Forms.GroupBox groupBoxSlow;
         private System.Windows.Forms.Label labelSlowFPS;
