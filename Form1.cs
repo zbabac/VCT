@@ -29,14 +29,6 @@ namespace VTC
         //1. Main thread is GUI control, it starts Background worker to start 
         //2. encoding task list - each task in the list starts
         //3. process that is command which executes ffmpeg with options
-        // https://stackoverflow.com/questions/10407769/directly-sending-keystrokes-to-another-process-via-hooking/12652365#12652365
-        //how to send keystroke to external application - ffmpeg, to pause and resume encoding
-        [DllImport("user32.dll")]
-        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-        [DllImport("user32.dll")]
-        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
-        [DllImport("user32.dll")]
-        public static extern IntPtr PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
         //define variables
         Stopwatch stopwatch = new Stopwatch(); //measure execution time for each job
         static string statustekst = "", std_out = ""; //text to be displayed as info; store part from ffmpeg standard output
@@ -124,18 +116,6 @@ namespace VTC
         {       //handy way to get process without raising exception
             Process[] processlist = Process.GetProcesses();
             return processlist.FirstOrDefault(pr => pr.Id == id);
-        }
-        public static void sendKeystroke(char k)
-        {
-            //const uint WM_KEYDOWN = 0x100;
-            //const uint WM_SYSCOMMAND = 0x018;
-            //const uint SC_CLOSE = 0x053;
-            Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
-            p.StandardInput.Write(k);
-            //IntPtr WindowToFind = FindWindow(null, "ffmpeg");
-
-            //IntPtr result3 = SendMessage(handle, WM_KEYDOWN, ((IntPtr)k), (IntPtr)0);
-            //IntPtr result3 = SendMessage(WindowToFind, WM_KEYUP, ((IntPtr)c), (IntPtr)0);
         }
         private void buttonOutTransFile_Click(object sender, EventArgs e)
         {		//raised when user clicks to select output path for transcoding tasks
@@ -458,10 +438,12 @@ namespace VTC
         {									//handler for user clicking to start encoding of batch list
             try
             {
+                // first start of task list (not before started or paused)
+                // populate task list from Grid and start execution
                 if (!started && !paused)
                 {
                     started = true;
-                    buttonStartQueue.Text = "Pause";
+                    buttonStartQueue.Text = "Pause ||";
                     richTextBox3.Text = "";
                     output_log = "";
                     buttonLog.Visible = true;
@@ -489,17 +471,19 @@ namespace VTC
                     }
                     bg.RunWorkerAsync();    //start job as separate thread
                 }
-                else if (started && !paused)
+                else if (started && !paused)  // task list is started but not paused, set it to paused, change button caption and send Pause to ffmpeg proces
                 {
                     paused = true;
                     buttonStartQueue.Text = "Resume >";
+                    buttonStartQueue.BackColor = System.Drawing.Color.SteelBlue;
                     proc.StandardInput.Write((char) 13);
                     Thread.Sleep(300);
                 }
-                else
+                else // task list is started and paused, set it to resumed, change button caption and send Resume code to ffmpeg proces
                 {
                     paused = false;
                     buttonStartQueue.Text = "Pause ||";
+                    buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
                     proc.StandardInput.Write((char) 19);
                     Thread.Sleep(300);
                 }
@@ -570,8 +554,6 @@ namespace VTC
                 timerBatch.Enabled = false;
                 buttonStartQueue.Text = "Start";
                 EnableButtonsAfterEncoding();//enable buttons so user can edit tasks
-                //buttonLog.Enabled = true;
-                //buttonLog.Visible = true;
                 toolStripProgressBar1.Value = 0;
                 toolStripStatusLabel1.Text = statustekst;
                 canceled = false;
@@ -599,12 +581,10 @@ namespace VTC
                     Thread.Sleep(900);
                     proc.CancelErrorRead();         //stop reading std out
                     proc.CancelOutputRead();        //stop reading std error
-                    Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault();
-                    p.Kill();
+                    Process p = Process.GetProcessesByName("ffmpeg").FirstOrDefault(); // find current ffmpeg process
+                    p.Kill(); // and kill it
                     Thread.Sleep(900);
                 }
-                //buttonLog.Enabled = true;
-                //buttonLog.Visible = true;
             }
             catch (Exception ex)
             {
@@ -650,6 +630,7 @@ namespace VTC
             groupBoxContainer.Enabled = true;
             groupBoxVideoOrAudio.Enabled = true;
             buttonAddSubtitle.Enabled = true;
+            buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
         }
         private void ReadParametersFromGUI()
         {

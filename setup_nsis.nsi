@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.8.1.0"
+!define PRODUCT_VERSION "1.9.0.1"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
@@ -75,7 +75,7 @@ Section "MainSection" SEC01
   CreateDirectory "$PROGRAMFILES\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\Help.lnk" "$INSTDIR\VCT_help.pdf"
   File "bin\Release\copying.txt"
-  File "README.txt"
+  File "README.md"
   SectionEnd
 
 Section -AdditionalIcons
@@ -106,7 +106,7 @@ FunctionEnd
 
 Section Uninstall
   Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\README.txt"
+  Delete "$INSTDIR\README.md"
   Delete "$INSTDIR\copying.txt"
   Delete "$INSTDIR\VCT_help.pdf"
   Delete "$INSTDIR\ffmpeg.exe"

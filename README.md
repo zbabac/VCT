@@ -1,4 +1,6 @@
-# v1.8.1.0	
+# v1.9.0.1
+- **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
+- removed _CPU_ option since it is obsolete with new ffmpeg version	
 - added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed all errors that caused file info not to display some audio or video info
@@ -61,7 +63,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.8.1**
+**Latest version 1.9.0**
 
 
 
@@ -92,7 +94,7 @@ You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag
 - only after you populate your list completely, by clicking "Start" all tasks will be executed,
 - conversion can be canceled,
 - encoding progress displayed in status bar
-- help included with installtion and with source code
+- Pause/Resume encoding tasks
 
 Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
 
@@ -108,6 +110,11 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log 
+
+Changelog since v1.9.0
+
+- **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
+- removed _CPU_ option since it is obsolete with new ffmpeg version	
 
 Changelog since v1.8.1.0
 
