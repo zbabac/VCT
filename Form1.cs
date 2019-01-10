@@ -476,7 +476,7 @@ namespace VTC
                     paused = true;
                     buttonStartQueue.Text = "Resume >";
                     buttonStartQueue.BackColor = System.Drawing.Color.SteelBlue;
-                    proc.StandardInput.Write((char) 13);
+                    proc.StandardInput.Write('d');
                     Thread.Sleep(300);
                 }
                 else // task list is started and paused, set it to resumed, change button caption and send Resume code to ffmpeg proces
@@ -484,7 +484,7 @@ namespace VTC
                     paused = false;
                     buttonStartQueue.Text = "Pause ||";
                     buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
-                    proc.StandardInput.Write((char) 19);
+                    proc.StandardInput.Write((char) 10);
                     Thread.Sleep(300);
                 }
 
