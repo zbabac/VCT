@@ -1,4 +1,4 @@
-# v1.9.0.2 (_Windows Vista and higher only, XP is at version 1.6.0.1, Linux is still at  v 1.7_)
+# v1.9.0.3 (_Windows Vista and higher only, XP is at version 1.6.0.1, Linux is still at  v 1.7_)
 - **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
 - removed _CPU_ option since it is obsolete with new ffmpeg version	
 - added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
