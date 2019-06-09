@@ -758,7 +758,7 @@ namespace VTC
                     if (h265)   //check first if H.265 selected
                     {
                         ext = container;
-                        video = " -c:v libx265 -preset " + preset + " -crf " + crf;
+                        video = " -c:v libx265 -pix_fmt yuv420p -preset " + preset + " -crf " + crf;
                     }
                     else        //otherwise use H.264
                     {

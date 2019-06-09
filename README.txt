@@ -1,7 +1,16 @@
-# v1.8.1.0	
+# v1.9.0.4 small change: H.265 is by default encoded as 8-bit so that can played with modest HW
+# v1.9.0.3 (_Windows Vista and higher only, XP UPGRADE ALSO to 1.9 as separate download, Linux is still at  v 1.7 unless you use Windows version run via Wine, see Linux notes at the end of README_)
+- **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
+- removed _CPU_ option since it is obsolete with new ffmpeg version	
 - added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed all errors that caused file info not to display some audio or video info
+
+### You can download binaries from Sourceforge:
+https://sourceforge.net/projects/videoconvertertranscoder/files/
+
+### and source code from GITHUB:
+https://github.com/zbabac/VCT
 
 **VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation
 It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
@@ -47,19 +56,20 @@ ffprobe is included in 1.5.0 so when you click `Input File`, it is parsed and `I
 
 **I use this tool regularly for 2 tasks**
 	
-- 1 to full convert bunch of HD files from smartphone (they are too big, 1 minute - 200 MB). At "Convert" Tab use preset "slower", quality "25" and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality "21" - then select multiple files and drag them to the list of button "Multiple Input Files"
+- _1 to full convert bunch of HD files from smartphone_ (they are too big, 1 minute - 200 MB). At `Convert` Tab use preset `slower`, quality `25` and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality `21` - then select multiple files and drag them to the list of button `Multiple Input Files`
 	
-- 2 to transcode MKV movies to MP4 quickly without changing quality. Just select all of them in Windows Explorer and drag them to the button "Input File(s) to Transcode" on "Transcode" tab. Then just click "Start". It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
+- _2 to transcode MKV movies to MP4 quickly without changing quality_. Just select all of them in Windows Explorer and drag them to the button `Input File(s) to Transcode` on `Transcode` tab. Then just click `Start`. It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
 	
 If you want files to be stored in different folder than input files, then select first `Output path` where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode (`Input files` or `Multiple files`).
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-Latest version 1.8.1
+**Latest version 1.9.0**
 
 
 
-Content:
+## Content:
+
  - Features
  - GIT source code location
  - Change logs
@@ -69,7 +79,7 @@ Content:
  - Monodevelop Linux usage
  - Linux usage
 
-## Features:
+### Features:
 - 2 tabs: Transcode and Convert
 
 - Transcode tab: select multiple files (mkv, m4v or mp4) and add them to batch list for automatic conversion to other video container (mp4/m4v --> mkv, mkv --> mp4)
@@ -81,16 +91,16 @@ Content:
 - advanced options: it is possible to manually edit ffmpeg command in the text box, or directly in the batch tasks list
 - conversion tasks are stored in a list which can be edited (command edit, select, delete task):
 - you don't have to start encoding immediately after adding from "Transcode" or "Convert" tabs
-	- you can add one or more files with different options several times by choosing 1 input file each time or/and selecting multiple files at once,
-	- only after you populate your list completely, by clicking "Start" all tasks will be executed,
+- you can add one or more files with different options several times by choosing 1 input file each time or/and selecting multiple files at once,
+- only after you populate your list completely, by clicking "Start" all tasks will be executed,
 - conversion can be canceled,
 - encoding progress displayed in status bar
-- help included with installtion and with source code
+- Pause/Resume encoding tasks
 
 Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
 
 
-## GIT:
+### GIT:
 To get latest source, please use GIT either on GITHUB or SF!
 https://sourceforge.net/projects/videoconvertertranscoder/
 
@@ -100,28 +110,39 @@ Added git repository. It is now preferred method to get source code. To clone us
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-## Change log since v1.8.1.0
-v1.8.1.0	- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
+### Change log 
+
+Changelog since v1.9.0
+
+- **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
+- removed _CPU_ option since it is obsolete with new ffmpeg version	
+
+Changelog since v1.8.1.0
+
+- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
 - added "Remove Output Path" button; before, it was neccessary to close the app to change output path
 - fixed all errors that caused file info not to display some audio or video info
--compiled as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
--removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
+- compiled as 64-bit application and included ffmpeg and ffprobe v4.0.2 64-bit binaries from zeranoe
+- removed "strict experimental" for audio encoding, since it is obsolete with new ffmpeg
 
-Change log since v1.7.0	
--feature to set output FPS rate and to create slow motion video from high FPS source, 
--corrected minor bug "Info" button not visible
+Changelog since v1.7.0	
 
-Change log since v1.6.1
--support for new AAC codec, 
--strict experimental option added for compatibility with XP
+- feature to set output FPS rate and to create slow motion video from high FPS source, 
+- corrected minor bug "Info" button not visible
 
-Change log since v1.6.0.1	
+Changelog since v1.6.1
+
+- support for new AAC codec, 
+- strict experimental option added for compatibility with XP
+
+Changelog since v1.6.0.1
+	
 - support for H.265 (HEVC) - check box added at Convert tab next to the CPU check box 
 - H.265 already supported at Transcode tab
 - if single file opened, automatically detected H.265 codec
 - new Quality settings added for H.265 - 28 (h265) approx. corresponds to 23 (h264) or 20 for SD
 
-## Known issues:
+### Known issues:
 Avast on XP could block setup execution with strange messages like: "path could not be found...". Please scan VCT_setup.exe with AV program, then disable file shield and run setup again. It could be the case with other AV software.
 On Windows 7 and 8, there is DEP active and once you confirm that you want to run the setup, it will install without problems.
 
@@ -134,49 +155,46 @@ You basically need to add scanning exclusion to the installation path, default i
 **Update 2**: Windows 8 and 10 will try to prevent installation. After you scan setup file, click Advanced, then click `install anyway`.
 
 
-## Prerequisities:
-If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except .NET 4.0 client profile. Please download it from Microsoft.
+### Prerequisities:
+If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except **.NET 4.0 client profile. Please download it from Microsoft if VCT doesn't start.**
 Some antivirus programs (mine is Avast) will complain that "File reputation/prevalence is low". It will be sandboxed. This is due to the fact that application does not have commercial signature. If you are worried about it, please scan it first. There is no virus, full source code is available. After checking, you can instruct your antivirus to execute anyway, or in case of Avast on Windows XP, you need to disable shield (after scanning first, of course) in order to install program.
 
 
-## Visual Studio usage:
+### Visual Studio usage:
 Source code files created by VS 2017 Community Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
 Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
 
 
 
-## Linux mono usage
+### Linux mono usage
 
 Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
 
-### Prerequisities:
+#### Prerequisities:
 - You must have mono installed to run .NET application.
 - **For Debian systems (Ubuntu, Mint, etc.) run**:
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
-sudo apt-get update
-sudo apt-get install mono-complete
-```
+
+- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
+- `echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list`
+- `sudo apt-get update`
+- `sudo apt-get install mono-complete`
 
 - **For another distributions, just search: mono <distro_name> installation.**
 - Example for Fedora or CentOS (Red Hat derivative):
-```
-yum install yum-utils
-rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
-yum-config-manager --add-repo http://download.mono-project.com/repo/centos/
-yum install mono-complete
-```
+
+- `yum install yum-utils`
+- `rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"`
+- `yum-config-manager --add-repo http://download.mono-project.com/repo/centos/`
+- `yum install mono-complete`
 
 After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 
 - Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
-```
-cd $HOME/Downloads
-unzip VCT_Linux_mono_binary.zip -d $HOME
-cd $HOME/VCT_mono
-chmod 777 *
-```
+
+- `cd $HOME/Downloads`
+- `unzip VCT_Linux_mono_binary.zip -d $HOME`
+- `cd $HOME/VCT_mono`
+- `chmod 777 *`
 
 add ffmpeg to path if you don't have it installed:
 
@@ -189,9 +207,10 @@ you can now run:
 `mono $HOME/VCT_mono/VCT.exe`
 
 or create launcher at desktop or menu.
+
 - it should display MS Windows-like window
 
-## Compiling from source code on Linux
+### Compiling from source code on Linux
 
 Due to different path naming in Windows and Linux, if you are compiling on Linux with Monodevelop, you need first to go through `Form1.cs` and comment all lines marked in comment as `Windows` and uncomment lines marked as `Linux`. Use common sense to do that, it's not hard.
 

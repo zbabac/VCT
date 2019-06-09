@@ -1,4 +1,5 @@
-# v1.9.0.3 (_Windows Vista and higher only, XP is at version 1.6.0.1, Linux is still at  v 1.7_)
+# v1.9.0.4 small change: H.265 is by default encoded as 8-bit so that can played with modest HW
+# v1.9.0.3 (_Windows Vista and higher only, XP UPGRADED to 1.9 as separate download, Linux is still at  v 1.7 unless you use Windows version run via Wine, see Linux notes at the end of README_)
 - **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
 - removed _CPU_ option since it is obsolete with new ffmpeg version	
 - added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
