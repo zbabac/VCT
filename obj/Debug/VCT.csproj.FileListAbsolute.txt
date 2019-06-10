@@ -117,7 +117,6 @@ D:\docs\VS\VCT\bin\Debug\VCT.application
 D:\docs\VS\VCT\bin\Debug\VCT.exe
 D:\docs\VS\VCT\bin\Debug\VCT.pdb
 D:\docs\VS\VCT\bin\Debug\Newtonsoft.Json.dll
-D:\docs\VS\VCT\obj\Debug\VCT.csprojAssemblyReference.cache
 D:\docs\VS\VCT\obj\Debug\VTC.AboutBoxZ.resources
 D:\docs\VS\VCT\obj\Debug\VTC.Form1.resources
 D:\docs\VS\VCT\obj\Debug\VTC.Form2.resources
