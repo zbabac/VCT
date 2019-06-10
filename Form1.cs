@@ -711,11 +711,26 @@ namespace VTC
                 else container = " copy";
                 //
                 if (checkBox180.Checked)
-                    vf = " -vf \"vflip\" ";
+                {
+                    if (vf != "")
+                        vf += ",\"vflip\"";
+                    else
+                        vf = " -vf \"vflip\"";
+                }
                 if (checkBox90clockwise.Checked)
-                    vf = " -vf \"transpose=1\" ";
+                {
+                    if (vf != "")
+                        vf += "\"transpose=1\"";
+                    else
+                        vf = " -vf \"transpose=1\"";
+                }
                 if (checkBox90counterclockwise.Checked)
-                    vf = " -vf \"transpose=2\" ";
+                {
+                    if (vf != "")
+                        vf += "\"transpose=2\"";
+                    else
+                        vf = " -vf \"transpose=2\"";
+                }
                 //
                 preset = comboBoxPreset.SelectedItem.ToString();
                 //
@@ -725,15 +740,24 @@ namespace VTC
                 // check if user wants to resize video and apply VF filter value
                 if (radioButton_1080p.Checked)
                 {
-                    video_size = " -vf scale=1920:-2 "; //value -2 means if because some filters want to have multiplicator of 2 (some even 4)
+                    if (vf != "")
+                        vf += ",scale=1920:-2";//value -2 means if because some filters want to have multiplicator of 2 (some even 4)
+                    else
+                        vf = " -vf scale=1920:-2";
                 }
                 else if (radioButton_720p.Checked)
                 {
-                    video_size = " -vf scale=1280:-2 ";
+                    if (vf != "")
+                        vf += ",scale=1280:-2";
+                    else
+                        vf = " -vf scale=1280:-2";
                 }
                 else if (radioButton_480p.Checked)
                 {
-                    video_size = " -vf scale=720:-2 ";
+                    if (vf != "")
+                        vf += ",scale=720:-2";
+                    else
+                        vf = " -vf scale=720:-2";
                 }
                 else if (radioButton_No_Video_Resize.Checked)
                 {
@@ -769,7 +793,11 @@ namespace VTC
                 // Test if input FPS rate is high speed and needs to be normalized, used in conjunction with target FPS
                 if (slow_motion)
                 {
-                    out_fps = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
+                    out_fps = " -r " + textBoxFPSout.Text;
+                    if (vf != "")
+                        vf += ",setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS";
+                    else
+                        vf = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS";
                 }
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
                 {
@@ -783,6 +811,7 @@ namespace VTC
                     container = " -vn";//put option to exclude video stream
                     input_fps = "";
                     out_fps = "";
+                    vf = "";
                 }
                 if (video_only)
                     audio = " -an";		//set audio option to exclude audio stream
@@ -800,7 +829,7 @@ namespace VTC
                     if (h265)   //check first if H.265 selected
                     {
                         ext = container;
-                        video = " -c:v libx265 -preset " + preset + " -crf " + crf;
+                        video = " -c:v libx265 -pix_fmt yuv420p -preset " + preset + " -crf " + crf;
                     }
                     else        //otherwise use H.264
                     {
@@ -823,7 +852,7 @@ namespace VTC
                         video = " -c:v" + container;
                     }
                 }
-                if (container == " copy" && video_size != "")
+                if (container == " copy" && vf != "")
                 {
                     video = "";  //if user decides to resize video with copy option, this will prevent error message by encoder
                 }
@@ -838,7 +867,7 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + video_size + stream_option + video + vf + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
@@ -2098,9 +2127,7 @@ namespace VTC
             groupBoxVideoSize.Enabled = false;
             groupBoxSlow.Enabled = false;
             groupBoxRotate.Enabled = false;
-            checkBox180.Enabled = false;
-            checkBox90clockwise.Enabled = false;
-            checkBox90counterclockwise.Enabled = false; 
+            groupBoxCPU.Enabled = false;
             comboBoxAudioStreamNo.Enabled = false;
         }
         private void EnableConvButtons()
@@ -2121,9 +2148,7 @@ namespace VTC
             groupBoxVideoSize.Enabled = true;
             groupBoxSlow.Enabled = true;
             groupBoxRotate.Enabled = true;
-            checkBox180.Enabled = true;
-            checkBox90clockwise.Enabled = true;
-            checkBox90counterclockwise.Enabled = true;
+            groupBoxCPU.Enabled = true;
             comboBoxAudioStreamNo.Enabled = true;
         }
         private void DisableTransButtons()
