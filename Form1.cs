@@ -1996,7 +1996,7 @@ namespace VTC
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
                     toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
-                    toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2, but bear in mind that this is not always possible. If it fails, check the log messages.");
+                    toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
 
                     break;
                 case "sr":

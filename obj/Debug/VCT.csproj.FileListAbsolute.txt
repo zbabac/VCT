@@ -129,3 +129,4 @@ D:\docs\VS\VCT\obj\Debug\VCT.application
 D:\docs\VS\VCT\obj\Debug\VCT.csproj.CopyComplete
 D:\docs\VS\VCT\obj\Debug\VCT.exe
 D:\docs\VS\VCT\obj\Debug\VCT.pdb
+D:\docs\VS\VCT\obj\Debug\VCT.csprojAssemblyReference.cache
