@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.9.0.3"
+!define PRODUCT_VERSION "1.9.1.0"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
