@@ -1,16 +1,10 @@
-# v1.9.3.3    
-- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
-- **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
-- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
-- **Remove subtitle usage extended with 2 above options: in most of the cases, subtitle is not compatible in MKV and MP4 containers; it is by default set to remove subtitle stream, but you've left with option to keep it
-- **Windows XP users can download VCT_setup.exe and separately download older version of FFmpeg (ffmpeg version N-76123-g002b049, e.g. http://hp.vector.co.jp/authors/VA020429/ffmpeg/list.html) in order to be able to get new VCT features
-- **Linux finaly fixed file info bug if you use mono version; if you have Wine, you can download Windows VCT_setup.exe (or 64-bit binary)
+# v1.9.2.0 Added video resize option (1920, 1280 and 720 width preset), minor GUI changes, last XP UPGRADE to 1.9.2 as separate download
 
 
-### You can download binaries and source code from Sourceforge:
+### You can download binaries from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
 
-### and source code from GITHUB, plus releases with binaries:
+### and source code from GITHUB:
 https://github.com/zbabac/VCT
 
 **VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation
@@ -27,7 +21,7 @@ _3. ability to set conversion options and then drag many files onto the VCT to e
 
 _4. ability to encode each video (or audio) separately and to add them all to batch list  (kinda like Handbrake)_
 
-Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial. Just be kind and mention the source!
+Licensed under Apache v2.0, so you are free to use the source code for any purpose you like, open source or commercial.
 
 If you find a bug, or you have an issue, _please use discussion board_ to contact me. If you use GitHub, you can open issue there.
 If program is declared an open source, it doesn't mean that there is no support. On contrary, you can contact developer directly and get the most out of it!
@@ -43,13 +37,10 @@ you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
 **NOTE FOR LINUX**: Please go to the bottom of this readme to see how to install.
 Source code for Linux is the same, but check file **Form1.cs** and commented lines marked with __"Linux"__.
 
-**If you want to use precompiled binaries with Linux, you have 2 choices: use Linux mono binary, or use Windows Setup with Wine. 
-My experience in the 2019 is that Windows Setup installed with Wine works better. However, Mono may give you better performance, since native Linux FFmpeg binary is used.**
-
 ## VCT has its limitations: 
 - when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
-- you can only encode file with single audio stream, unless you edit the FFmpeg command manually;
-- if there is subtitle stream inside input file, it will not be copied to output, unless you edit command manually (planned for next major release);
+- you can only encode file with single audio stream;
+- if there is subtitle stream inside input file, it will not be copied to output (planned in next release);
 - if selecting audio stream when dropping multiple files, you must know how many streams there are and which one is the one you need (if selecting files one by one, you can use Info button to check codec data).
 
 That's why I left option to _manually edit ffmpeg command_, for all of you that know, or are willing to learn this tool. _You can also manually edit commands in batch list._
@@ -62,13 +53,13 @@ ffprobe is included in 1.5.0 so when you click `Input File`, it is parsed and `I
 	
 - _1 to full convert bunch of HD files from smartphone_ (they are too big, 1 minute - 200 MB). At `Convert` Tab use preset `slower`, quality `25` and get 5-10 times smaller files without loosing quality - you can experiment with values - for SD video, use quality `21` - then select multiple files and drag them to the list of button `Multiple Input Files`
 	
-- _2 to transcode MKV movies to MP4 quickly without changing quality_. Set few options first, like stream numbers, etc. and then just select all of them in Windows Explorer and drag them to the button `Input File(s) to Transcode` on `Transcode` tab. Then just click `Start`. It takes 1-3 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
+- _2 to transcode MKV movies to MP4 quickly without changing quality_. Just select all of them in Windows Explorer and drag them to the button `Input File(s) to Transcode` on `Transcode` tab. Then just click `Start`. It takes 2-5 minutes per movie (depending on the length of the movie, avg. movie is 90+ minutes long);
 	
 If you want files to be stored in different folder than input files, then select first `Output path` where you want to store the new video or audio files, then you will be able to select which files you want to convert/transcode (`Input files` or `Multiple files`).
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.3**
+**Latest version 1.9.0**
 
 
 
@@ -115,12 +106,6 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log 
-
-# v1.9.3   
-- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
-- **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
-- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
-- **Remove subtitle usage extended with 2 above options: in most of the cases, subtitle is not compatible in MKV and MP4 containers; it is by default set to remove subtitle stream, but you've left with option to keep it
 
 # v1.9.2.0 
 
@@ -231,6 +216,4 @@ or create launcher at desktop or menu.
 ### Compiling from source code on Linux
 
 Due to different path naming in Windows and Linux, if you are compiling on Linux with Monodevelop, you need first to go through `Form1.cs` and comment all lines marked in comment as `Windows` and uncomment lines marked as `Linux`. Use common sense to do that, it's not hard.
-
-**If you use Wine on Linux, then just download Windows installer: VCT_setup.exe and install it via Wine. The prerequisite is that you have .NET Framework 4 Client installed in Wine.**
 
