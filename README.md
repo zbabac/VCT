@@ -1,11 +1,5 @@
-# v1.9.1.0 Added video resize option in test branch, minor GUI glitches fixed
-# v1.9.0.4 small change: H.265 is by default encoded as 8-bit so that can played with modest HW
-# v1.9.0.3 (_Windows Vista and higher only, XP UPGRADED to 1.9 as separate download, Linux is still at  v 1.7 unless you use Windows version run via Wine, see Linux notes at the end of README_)
-- **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
-- removed _CPU_ option since it is obsolete with new ffmpeg version	
-- added option to remove embedded subtitle from source, since there were problems noticed with some files (e.g. subtitle stream positioned before audio stream)
-- added "Remove Output Path" button; before, it was neccessary to close the app to change output path
-- fixed all errors that caused file info not to display some audio or video info
+# v1.9.2.0 Added video resize option (1920, 1280 and 720 width preset), minor GUI changes, last XP UPGRADE to 1.9.2 as separate download
+
 
 ### You can download binaries from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -113,6 +107,14 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log 
 
+# v1.9.2.0 
+
+- **Added video resize option (1920, 1280 and 720 width preset)**, minor GUI changes, last XP UPGRADE to 1.9.2 as separate download
+- H.265 is by default encoded as 8-bit so it can be run on modest HW (Raspberry Pi)
+- Linux updated to 1.9.2
+- Windows XP as separate download (this is the last XP version)
+
+
 Changelog since v1.9.0
 
 - **Start/Pause/Resume** button allows to _pause_ encoding tasks in case you want to do something else on your PC and then _resume_ encoding
@@ -176,7 +178,7 @@ Application is built using Winforms so it has MS Windows looks, not the native L
 - **For Debian systems (Ubuntu, Mint, etc.) run**:
 
 - `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
-- `echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list`
+- `echo "deb http://download.mono-project.com/repo/debian stretch main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list`
 - `sudo apt-get update`
 - `sudo apt-get install mono-complete`
 
