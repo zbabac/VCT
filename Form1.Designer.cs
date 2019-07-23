@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -64,6 +64,7 @@ namespace VTC
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
             this.checkBoxH265 = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
             this.labelAudioStream = new System.Windows.Forms.Label();
             this.groupBoxRotate = new System.Windows.Forms.GroupBox();
@@ -114,7 +115,11 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
+            this.groupBoxVideoSize = new System.Windows.Forms.GroupBox();
+            this.radioButton_1080p = new System.Windows.Forms.RadioButton();
+            this.radioButton_720p = new System.Windows.Forms.RadioButton();
+            this.radioButton_480p = new System.Windows.Forms.RadioButton();
+            this.radioButton_No_Video_Resize = new System.Windows.Forms.RadioButton();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -133,6 +138,7 @@ namespace VTC
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
+            this.groupBoxVideoSize.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -273,6 +279,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.groupBoxVideoSize);
             this.tabPage2.Controls.Add(this.buttonRemoveOutPath);
             this.tabPage2.Controls.Add(this.groupBoxSlow);
             this.tabPage2.Controls.Add(this.groupBoxCPU);
@@ -379,6 +386,21 @@ namespace VTC
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.UseVisualStyleBackColor = false;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
+            // 
+            // buttonInfo
+            // 
+            resources.ApplyResources(this.buttonInfo, "buttonInfo");
+            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
+            this.buttonInfo.FlatAppearance.BorderSize = 0;
+            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.UseVisualStyleBackColor = false;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
+            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
+            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
+            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
             // 
             // comboBoxAudioStreamNo
             // 
@@ -662,6 +684,7 @@ namespace VTC
             // 
             // richTextBoxConv
             // 
+            this.richTextBoxConv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.richTextBoxConv, "richTextBoxConv");
             this.richTextBoxConv.Name = "richTextBoxConv";
             // 
@@ -742,11 +765,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -761,9 +784,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle22;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -808,20 +831,45 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // buttonInfo
+            // groupBoxVideoSize
             // 
-            resources.ApplyResources(this.buttonInfo, "buttonInfo");
-            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
-            this.buttonInfo.FlatAppearance.BorderSize = 0;
-            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.UseVisualStyleBackColor = false;
-            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
-            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
-            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
-            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_No_Video_Resize);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_480p);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_720p);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_1080p);
+            resources.ApplyResources(this.groupBoxVideoSize, "groupBoxVideoSize");
+            this.groupBoxVideoSize.Name = "groupBoxVideoSize";
+            this.groupBoxVideoSize.TabStop = false;
+            // 
+            // radioButton_1080p
+            // 
+            resources.ApplyResources(this.radioButton_1080p, "radioButton_1080p");
+            this.radioButton_1080p.Name = "radioButton_1080p";
+            this.radioButton_1080p.UseVisualStyleBackColor = true;
+            this.radioButton_1080p.CheckedChanged += new System.EventHandler(this.RadioButton_1080p_CheckedChanged);
+            // 
+            // radioButton_720p
+            // 
+            resources.ApplyResources(this.radioButton_720p, "radioButton_720p");
+            this.radioButton_720p.Name = "radioButton_720p";
+            this.radioButton_720p.UseVisualStyleBackColor = true;
+            this.radioButton_720p.CheckedChanged += new System.EventHandler(this.RadioButton_720p_CheckedChanged);
+            // 
+            // radioButton_480p
+            // 
+            resources.ApplyResources(this.radioButton_480p, "radioButton_480p");
+            this.radioButton_480p.Name = "radioButton_480p";
+            this.radioButton_480p.UseVisualStyleBackColor = true;
+            this.radioButton_480p.CheckedChanged += new System.EventHandler(this.RadioButton_480p_CheckedChanged);
+            // 
+            // radioButton_No_Video_Resize
+            // 
+            this.radioButton_No_Video_Resize.Checked = true;
+            resources.ApplyResources(this.radioButton_No_Video_Resize, "radioButton_No_Video_Resize");
+            this.radioButton_No_Video_Resize.Name = "radioButton_No_Video_Resize";
+            this.radioButton_No_Video_Resize.TabStop = true;
+            this.radioButton_No_Video_Resize.UseVisualStyleBackColor = true;
+            this.radioButton_No_Video_Resize.CheckedChanged += new System.EventHandler(this.RadioButton_No_Video_Resize_CheckedChanged);
             // 
             // Form1
             // 
@@ -846,7 +894,6 @@ namespace VTC
             this.groupBoxSlow.PerformLayout();
             this.groupBoxCPU.ResumeLayout(false);
             this.groupBoxRotate.ResumeLayout(false);
-            this.groupBoxRotate.PerformLayout();
             this.groupBoxVideoOrAudio.ResumeLayout(false);
             this.groupBoxOptions.ResumeLayout(false);
             this.groupBoxOptions.PerformLayout();
@@ -860,6 +907,7 @@ namespace VTC
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
+            this.groupBoxVideoSize.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -948,6 +996,11 @@ namespace VTC
         private System.Windows.Forms.CheckBox checkBoxTransRemoveSubtitle;
         private System.Windows.Forms.Button buttonRemoveOutPath;
         private System.Windows.Forms.Button buttonRemoveTransPath;
+        private System.Windows.Forms.GroupBox groupBoxVideoSize;
+        private System.Windows.Forms.RadioButton radioButton_480p;
+        private System.Windows.Forms.RadioButton radioButton_720p;
+        private System.Windows.Forms.RadioButton radioButton_1080p;
+        private System.Windows.Forms.RadioButton radioButton_No_Video_Resize;
     }
 }
 

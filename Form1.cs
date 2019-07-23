@@ -43,6 +43,7 @@ namespace VTC
         static bool add_sub_stream = false, error_in_file = false, use_out_path = false, paused = false, started = false; // paused or started encoding
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
+        static string video_size = ""; //used if user opts to resize video
         static string vf = ""; //video filter part, used currently to rotate video
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         static bool set_fps = false; //set if different target FPS is to be used
@@ -99,6 +100,7 @@ namespace VTC
         ToolTip toolTip39 = new ToolTip();
         ToolTip toolTip40 = new ToolTip();
         ToolTip toolTip41 = new ToolTip();
+        ToolTip toolTip42 = new ToolTip();
 
         public Form1()
         {
@@ -611,6 +613,11 @@ namespace VTC
             groupBoxVideoOrAudio.Enabled = false;
             buttonAddSubtitle.Enabled = false;
             buttonInfo.Visible = false;
+            groupBoxVideoSize.Enabled = false;
+            groupBoxSlow.Enabled = false;
+            groupBoxRotate.Enabled = false;
+            groupBoxCPU.Enabled = false;
+            comboBoxAudioStreamNo.Enabled = false;
         }
         private void EnableButtonsAfterEncoding()
         {									//enable user interaction
@@ -631,6 +638,11 @@ namespace VTC
             groupBoxVideoOrAudio.Enabled = true;
             buttonAddSubtitle.Enabled = true;
             buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
+            groupBoxVideoSize.Enabled = true;
+            groupBoxSlow.Enabled = true;
+            groupBoxRotate.Enabled = true;
+            groupBoxCPU.Enabled = false;
+            comboBoxAudioStreamNo.Enabled = false;
         }
         private void ReadParametersFromGUI()
         {
@@ -641,26 +653,37 @@ namespace VTC
                     video_only = true;
                     audio_only = false;
                     groupBoxAudio.Enabled = false;
+                    comboBoxAudioStreamNo.Enabled = false;
                     str_extension = orig_ext;
                 }
                 else
                 {
                     video_only = false;
                     groupBoxAudio.Enabled = true;
+                    comboBoxAudioStreamNo.Enabled = true;
                 }
+
                 if (checkBoxAudioOnly.Checked)
                 {
                     audio_only = true;
                     video_only = false;
                     groupBoxContainer.Enabled = false;
+                    groupBoxRotate.Enabled = false;
+                    groupBoxCPU.Enabled = false;
+                    groupBoxVideoSize.Enabled = false;
+                    groupBoxSlow.Enabled = false;
                 }
                 else
                 {
                     audio_only = false;
                     groupBoxContainer.Enabled = true;
+                    groupBoxRotate.Enabled = true;
+                    groupBoxCPU.Enabled = true;
+                    groupBoxVideoSize.Enabled = true;
+                    groupBoxSlow.Enabled = true;
                     str_extension = orig_ext;
                 }
-                if (checkBoxVideoOnly.Checked || checkBoxAudioOnly.Checked)
+                if (checkBoxAudioOnly.Checked)
                     buttonAddSubtitle.Enabled = false;
                 else
                     buttonAddSubtitle.Enabled = true;
@@ -688,17 +711,60 @@ namespace VTC
                 else container = " copy";
                 //
                 if (checkBox180.Checked)
-                    vf = " -vf \"vflip\" ";
+                {
+                    if (vf != "")
+                        vf += ",\"vflip\"";
+                    else
+                        vf = " -vf \"vflip\"";
+                }
                 if (checkBox90clockwise.Checked)
-                    vf = " -vf \"transpose=1\" ";
+                {
+                    if (vf != "")
+                        vf += "\"transpose=1\"";
+                    else
+                        vf = " -vf \"transpose=1\"";
+                }
                 if (checkBox90counterclockwise.Checked)
-                    vf = " -vf \"transpose=2\" ";
+                {
+                    if (vf != "")
+                        vf += "\"transpose=2\"";
+                    else
+                        vf = " -vf \"transpose=2\"";
+                }
                 //
                 preset = comboBoxPreset.SelectedItem.ToString();
                 //
                 crf = comboBoxQuality.SelectedItem.ToString();
                 //
                 audiobitrate = comboBoxAudioBitRate.SelectedItem.ToString();
+                // check if user wants to resize video and apply VF filter value
+                if (radioButton_1080p.Checked)
+                {
+                    if (vf != "")
+                        vf += ",scale=1920:-2";//value -2 means if because some filters want to have multiplicator of 2 (some even 4)
+                    else
+                        vf = " -vf scale=1920:-2";
+                }
+                else if (radioButton_720p.Checked)
+                {
+                    if (vf != "")
+                        vf += ",scale=1280:-2";
+                    else
+                        vf = " -vf scale=1280:-2";
+                }
+                else if (radioButton_480p.Checked)
+                {
+                    if (vf != "")
+                        vf += ",scale=720:-2";
+                    else
+                        vf = " -vf scale=720:-2";
+                }
+                else if (radioButton_No_Video_Resize.Checked)
+                {
+                    video_size = "";
+                }
+                else video_size = "";
+
             }
             catch (Exception x)
             {
@@ -727,7 +793,11 @@ namespace VTC
                 // Test if input FPS rate is high speed and needs to be normalized, used in conjunction with target FPS
                 if (slow_motion)
                 {
-                    out_fps = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS -r " + textBoxFPSout.Text;
+                    out_fps = " -r " + textBoxFPSout.Text;
+                    if (vf != "")
+                        vf += ",setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS";
+                    else
+                        vf = " -vf setpts=" + Convert.ToDouble(textBoxSlowFPS.Text).ToString(nfi) + "*PTS";
                 }
                 if (str_extension == "mp3" || str_extension == "aac" || str_extension == "ac3" || str_extension == "wma" || str_extension == "wav" || str_extension == "flac")		//if input file is audio file, then set options so the only audio ouput is produced
                 {
@@ -741,6 +811,7 @@ namespace VTC
                     container = " -vn";//put option to exclude video stream
                     input_fps = "";
                     out_fps = "";
+                    vf = "";
                 }
                 if (video_only)
                     audio = " -an";		//set audio option to exclude audio stream
@@ -781,8 +852,12 @@ namespace VTC
                         video = " -c:v" + container;
                     }
                 }
+                if (container == " copy" && vf != "")
+                {
+                    video = "";  //if user decides to resize video with copy option, this will prevent error message by encoder
+                }
                 // Test if there is an input srt to be added as a stream
-                if (add_sub_stream && !audio_only && !video_only)
+                if (add_sub_stream && !audio_only)
                 {
                     input_srt = " -f srt -i \"" + subtitle_stream + "\" ";
                     stream_option += " -map 1:0";
@@ -792,8 +867,8 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
-                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
+                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1419,6 +1494,26 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void RadioButton_1080p_CheckedChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //resize input video
+        }
+
+        private void RadioButton_720p_CheckedChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //resize input video
+        }
+
+        private void RadioButton_480p_CheckedChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //resize input video
+        }
+
+        private void RadioButton_No_Video_Resize_CheckedChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //resize input video
+        }
+
         private void buttonDeleteQueue_Click(object sender, EventArgs e)
         {           //delete all selected tasks in the list
             try
@@ -1885,6 +1980,10 @@ namespace VTC
             toolTip41.InitialDelay = 100;
             toolTip41.ReshowDelay = 500;
             toolTip41.ShowAlways = true;
+            toolTip42.AutoPopDelay = 7000;
+            toolTip42.InitialDelay = 100;
+            toolTip42.ReshowDelay = 500;
+            toolTip42.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -1926,6 +2025,8 @@ namespace VTC
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
                     toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
+                    toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
+
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -2023,6 +2124,11 @@ namespace VTC
             buttonInfo.Enabled = false;
             checkBoxSetFPS.Enabled = false;
             checkBoxSlowFPS.Enabled = false;
+            groupBoxVideoSize.Enabled = false;
+            groupBoxSlow.Enabled = false;
+            groupBoxRotate.Enabled = false;
+            groupBoxCPU.Enabled = false;
+            comboBoxAudioStreamNo.Enabled = false;
         }
         private void EnableConvButtons()
         {               //enable buttons on Convert tab
@@ -2039,6 +2145,11 @@ namespace VTC
             buttonAddSubtitle.Enabled = true;
             checkBoxSetFPS.Enabled = true;
             checkBoxSlowFPS.Enabled = true;
+            groupBoxVideoSize.Enabled = true;
+            groupBoxSlow.Enabled = true;
+            groupBoxRotate.Enabled = true;
+            groupBoxCPU.Enabled = true;
+            comboBoxAudioStreamNo.Enabled = true;
         }
         private void DisableTransButtons()
         {               //disable buttons on Transcode tab
