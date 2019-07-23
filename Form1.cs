@@ -641,8 +641,8 @@ namespace VTC
             groupBoxVideoSize.Enabled = true;
             groupBoxSlow.Enabled = true;
             groupBoxRotate.Enabled = true;
-            groupBoxCPU.Enabled = false;
-            comboBoxAudioStreamNo.Enabled = false;
+            groupBoxCPU.Enabled = true;
+            comboBoxAudioStreamNo.Enabled = true;
         }
         private void ReadParametersFromGUI()
         {
