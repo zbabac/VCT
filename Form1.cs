@@ -641,8 +641,8 @@ namespace VTC
             groupBoxVideoSize.Enabled = true;
             groupBoxSlow.Enabled = true;
             groupBoxRotate.Enabled = true;
-            groupBoxCPU.Enabled = false;
-            comboBoxAudioStreamNo.Enabled = false;
+            groupBoxCPU.Enabled = true;
+            comboBoxAudioStreamNo.Enabled = true;
         }
         private void ReadParametersFromGUI()
         {
@@ -868,7 +868,7 @@ namespace VTC
                 }
                 // complete string to be passed to process start
                 ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
-                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + audio_part + srt_options + out_fps +  " \"" + out_file + "1." + ext + "\""; //Linux
+                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }

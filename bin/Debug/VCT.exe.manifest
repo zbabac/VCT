@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Hadezign-Hobbies-Movies.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="VCT" version="1.9.2.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="VCT" version="1.9.2.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="VCT.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1014784">
-      <assemblyIdentity name="VCT" version="1.9.2.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT" version="1.9.2.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j+dr/4aC9LgOkHcOPQMuRQJz7DY=</dsig:DigestValue>
+        <dsig:DigestValue>0jF/CSaAOfAxNXO1+OAZJ0h/5aI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,13 +138,13 @@
       <dsig:DigestValue>+YdJMnPSKs3tBZl4DBeLA0rl1xw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VCT.exe.config" size="199">
+  <file name="VCT.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>GppnRcd+1cjh7BZx3bL16S8kPdA=</dsig:DigestValue>
+      <dsig:DigestValue>gjYVzB/6IDOBiuqUeB2kQGYpAr8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VCT_help.pdf" size="2108245">
