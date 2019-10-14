@@ -216,7 +216,7 @@ namespace VTC
                 string _subs = "-c:s copy ";
                 if (checkBoxTransRemoveSubtitle.Checked)
                     _subs = "";
-                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
+                string command = "ffmpeg -y -i \"" + input_file + "\" -map 0 -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
