@@ -1,3 +1,4 @@
+# v1.9.3   Transcode option "-map 0" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
 # v1.9.2.0 Added video resize option (1920, 1280 and 720 width preset), minor GUI changes, last XP UPGRADE to 1.9.2 as separate download
 
 
@@ -106,6 +107,9 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log 
+
+# v1.9.3   
+- **Transcode option "-map 0" to try to copy all streams** (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
 
 # v1.9.2.0 
 
