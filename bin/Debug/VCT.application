@@ -8,14 +8,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="VCT.exe.manifest" size="8883">
+    <dependentAssembly dependencyType="install" codebase="VCT.exe.manifest" size="8895">
       <assemblyIdentity name="VCT.exe" version="1.9.3.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>o2v3KUlklC0u1u5zCo4Rb6Rsk5Y=</dsig:DigestValue>
+        <dsig:DigestValue>EPwOW9hhuXxiXe0aYeBd8RO0QUQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
