@@ -121,7 +121,6 @@ D:\docs\VS\VCT\obj\Debug\VTC.Form1.resources
 D:\docs\VS\VCT\obj\Debug\VTC.Form2.resources
 D:\docs\VS\VCT\obj\Debug\VTC.Properties.Resources.resources
 D:\docs\VS\VCT\obj\Debug\VCT.csproj.GenerateResource.cache
-D:\docs\VS\VCT\obj\Debug\VCT.csproj.CoreCompileInputs.cache
 D:\docs\VS\VCT\obj\Debug\VCT.TrustInfo.xml
 D:\docs\VS\VCT\obj\Debug\VCT.exe.manifest
 D:\docs\VS\VCT\obj\Debug\VCT.application

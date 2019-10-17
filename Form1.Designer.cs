@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -53,6 +53,11 @@ namespace VTC
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxVideoSize = new System.Windows.Forms.GroupBox();
+            this.radioButton_No_Video_Resize = new System.Windows.Forms.RadioButton();
+            this.radioButton_480p = new System.Windows.Forms.RadioButton();
+            this.radioButton_720p = new System.Windows.Forms.RadioButton();
+            this.radioButton_1080p = new System.Windows.Forms.RadioButton();
             this.buttonRemoveOutPath = new System.Windows.Forms.Button();
             this.groupBoxSlow = new System.Windows.Forms.GroupBox();
             this.checkBoxSlowFPS = new System.Windows.Forms.CheckBox();
@@ -115,16 +120,13 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.groupBoxVideoSize = new System.Windows.Forms.GroupBox();
-            this.radioButton_1080p = new System.Windows.Forms.RadioButton();
-            this.radioButton_720p = new System.Windows.Forms.RadioButton();
-            this.radioButton_480p = new System.Windows.Forms.RadioButton();
-            this.radioButton_No_Video_Resize = new System.Windows.Forms.RadioButton();
+            this.checkBoxTranscodeAllStreams = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBoxVideoSize.SuspendLayout();
             this.groupBoxSlow.SuspendLayout();
             this.groupBoxCPU.SuspendLayout();
             this.groupBoxRotate.SuspendLayout();
@@ -138,7 +140,6 @@ namespace VTC
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
-            this.groupBoxVideoSize.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -187,6 +188,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.checkBoxTranscodeAllStreams);
             this.tabPage1.Controls.Add(this.buttonRemoveTransPath);
             this.tabPage1.Controls.Add(this.checkBoxTransRemoveSubtitle);
             this.tabPage1.Controls.Add(this.buttonLog2);
@@ -304,6 +306,46 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Name = "tabPage2";
+            // 
+            // groupBoxVideoSize
+            // 
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_No_Video_Resize);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_480p);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_720p);
+            this.groupBoxVideoSize.Controls.Add(this.radioButton_1080p);
+            resources.ApplyResources(this.groupBoxVideoSize, "groupBoxVideoSize");
+            this.groupBoxVideoSize.Name = "groupBoxVideoSize";
+            this.groupBoxVideoSize.TabStop = false;
+            // 
+            // radioButton_No_Video_Resize
+            // 
+            this.radioButton_No_Video_Resize.Checked = true;
+            resources.ApplyResources(this.radioButton_No_Video_Resize, "radioButton_No_Video_Resize");
+            this.radioButton_No_Video_Resize.Name = "radioButton_No_Video_Resize";
+            this.radioButton_No_Video_Resize.TabStop = true;
+            this.radioButton_No_Video_Resize.UseVisualStyleBackColor = true;
+            this.radioButton_No_Video_Resize.CheckedChanged += new System.EventHandler(this.RadioButton_No_Video_Resize_CheckedChanged);
+            // 
+            // radioButton_480p
+            // 
+            resources.ApplyResources(this.radioButton_480p, "radioButton_480p");
+            this.radioButton_480p.Name = "radioButton_480p";
+            this.radioButton_480p.UseVisualStyleBackColor = true;
+            this.radioButton_480p.CheckedChanged += new System.EventHandler(this.RadioButton_480p_CheckedChanged);
+            // 
+            // radioButton_720p
+            // 
+            resources.ApplyResources(this.radioButton_720p, "radioButton_720p");
+            this.radioButton_720p.Name = "radioButton_720p";
+            this.radioButton_720p.UseVisualStyleBackColor = true;
+            this.radioButton_720p.CheckedChanged += new System.EventHandler(this.RadioButton_720p_CheckedChanged);
+            // 
+            // radioButton_1080p
+            // 
+            resources.ApplyResources(this.radioButton_1080p, "radioButton_1080p");
+            this.radioButton_1080p.Name = "radioButton_1080p";
+            this.radioButton_1080p.UseVisualStyleBackColor = true;
+            this.radioButton_1080p.CheckedChanged += new System.EventHandler(this.RadioButton_1080p_CheckedChanged);
             // 
             // buttonRemoveOutPath
             // 
@@ -765,11 +807,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -784,9 +826,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -831,45 +873,11 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // groupBoxVideoSize
+            // checkBoxTranscodeAllStreams
             // 
-            this.groupBoxVideoSize.Controls.Add(this.radioButton_No_Video_Resize);
-            this.groupBoxVideoSize.Controls.Add(this.radioButton_480p);
-            this.groupBoxVideoSize.Controls.Add(this.radioButton_720p);
-            this.groupBoxVideoSize.Controls.Add(this.radioButton_1080p);
-            resources.ApplyResources(this.groupBoxVideoSize, "groupBoxVideoSize");
-            this.groupBoxVideoSize.Name = "groupBoxVideoSize";
-            this.groupBoxVideoSize.TabStop = false;
-            // 
-            // radioButton_1080p
-            // 
-            resources.ApplyResources(this.radioButton_1080p, "radioButton_1080p");
-            this.radioButton_1080p.Name = "radioButton_1080p";
-            this.radioButton_1080p.UseVisualStyleBackColor = true;
-            this.radioButton_1080p.CheckedChanged += new System.EventHandler(this.RadioButton_1080p_CheckedChanged);
-            // 
-            // radioButton_720p
-            // 
-            resources.ApplyResources(this.radioButton_720p, "radioButton_720p");
-            this.radioButton_720p.Name = "radioButton_720p";
-            this.radioButton_720p.UseVisualStyleBackColor = true;
-            this.radioButton_720p.CheckedChanged += new System.EventHandler(this.RadioButton_720p_CheckedChanged);
-            // 
-            // radioButton_480p
-            // 
-            resources.ApplyResources(this.radioButton_480p, "radioButton_480p");
-            this.radioButton_480p.Name = "radioButton_480p";
-            this.radioButton_480p.UseVisualStyleBackColor = true;
-            this.radioButton_480p.CheckedChanged += new System.EventHandler(this.RadioButton_480p_CheckedChanged);
-            // 
-            // radioButton_No_Video_Resize
-            // 
-            this.radioButton_No_Video_Resize.Checked = true;
-            resources.ApplyResources(this.radioButton_No_Video_Resize, "radioButton_No_Video_Resize");
-            this.radioButton_No_Video_Resize.Name = "radioButton_No_Video_Resize";
-            this.radioButton_No_Video_Resize.TabStop = true;
-            this.radioButton_No_Video_Resize.UseVisualStyleBackColor = true;
-            this.radioButton_No_Video_Resize.CheckedChanged += new System.EventHandler(this.RadioButton_No_Video_Resize_CheckedChanged);
+            resources.ApplyResources(this.checkBoxTranscodeAllStreams, "checkBoxTranscodeAllStreams");
+            this.checkBoxTranscodeAllStreams.Name = "checkBoxTranscodeAllStreams";
+            this.checkBoxTranscodeAllStreams.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -890,6 +898,7 @@ namespace VTC
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxVideoSize.ResumeLayout(false);
             this.groupBoxSlow.ResumeLayout(false);
             this.groupBoxSlow.PerformLayout();
             this.groupBoxCPU.ResumeLayout(false);
@@ -907,7 +916,6 @@ namespace VTC
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
-            this.groupBoxVideoSize.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1001,6 +1009,7 @@ namespace VTC
         private System.Windows.Forms.RadioButton radioButton_720p;
         private System.Windows.Forms.RadioButton radioButton_1080p;
         private System.Windows.Forms.RadioButton radioButton_No_Video_Resize;
+        private System.Windows.Forms.CheckBox checkBoxTranscodeAllStreams;
     }
 }
 

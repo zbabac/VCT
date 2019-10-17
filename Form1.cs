@@ -101,6 +101,7 @@ namespace VTC
         ToolTip toolTip40 = new ToolTip();
         ToolTip toolTip41 = new ToolTip();
         ToolTip toolTip42 = new ToolTip();
+        ToolTip toolTip43 = new ToolTip();
 
         public Form1()
         {
@@ -216,7 +217,10 @@ namespace VTC
                 string _subs = "-c:s copy ";
                 if (checkBoxTransRemoveSubtitle.Checked)
                     _subs = "";
-                string command = "ffmpeg -y -i \"" + input_file + "\" -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
+                string _copy_all_streams = "-map 0";
+                if (!checkBoxTranscodeAllStreams.Checked)
+                    _copy_all_streams = "";
+                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + " -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -1984,6 +1988,10 @@ namespace VTC
             toolTip42.InitialDelay = 100;
             toolTip42.ReshowDelay = 500;
             toolTip42.ShowAlways = true;
+            toolTip43.AutoPopDelay = 7000;
+            toolTip43.InitialDelay = 100;
+            toolTip43.ReshowDelay = 500;
+            toolTip43.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -2026,6 +2034,7 @@ namespace VTC
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
                     toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
+                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output ( option -map 0). If it FAILS, then remove from batch, and try without this option.\nEXPLANATION: some streams are not compatible in MKV and MP4.");
 
                     break;
                 case "sr":
