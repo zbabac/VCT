@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1014784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1016832">
       <assemblyIdentity name="VCT" version="1.9.3.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rGmKH9d4pkXBRiEmDTY03DvH43c=</dsig:DigestValue>
+        <dsig:DigestValue>4zxIxttq+IcX+LkutRjvaNDd/Kc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,13 +138,13 @@
       <dsig:DigestValue>+YdJMnPSKs3tBZl4DBeLA0rl1xw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VCT.exe.config" size="199">
+  <file name="VCT.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>GppnRcd+1cjh7BZx3bL16S8kPdA=</dsig:DigestValue>
+      <dsig:DigestValue>gjYVzB/6IDOBiuqUeB2kQGYpAr8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VCT_help.pdf" size="2108245">
