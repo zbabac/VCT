@@ -1,5 +1,7 @@
-# v1.9.3   Transcode option "-map 0" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
-# v1.9.2.0 Added video resize option (1920, 1280 and 720 width preset), minor GUI changes, last XP UPGRADE to 1.9.2 as separate download
+# v1.9.3   
+- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
+- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
+- **Remove subtitle usage extended with 2 above options: helps if FFmpeg throws an error, then remove subtitles
 
 
 ### You can download binaries from Sourceforge:
@@ -109,7 +111,9 @@ Please contact me via discussion board if you want to collaborate or send me an 
 ### Change log 
 
 # v1.9.3   
-- **Transcode option "-map 0" to try to copy all streams** (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
+- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
+- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
+- **Remove subtitle usage extended with 2 above options: helps if FFmpeg throws an error, then remove subtitles
 
 # v1.9.2.0 
 
