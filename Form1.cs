@@ -214,13 +214,13 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string _subs = "-c:s copy ";
+                string _subs = " -map 0:s ";
                 if (checkBoxTransRemoveSubtitle.Checked)
-                    _subs = "";
-                string _copy_all_streams = "-map 0";
+                    _subs = " -map -0:s ";
+                string _copy_all_streams = " -map 0:v -map 0:a ";
                 if (!checkBoxTranscodeAllStreams.Checked)
-                    _copy_all_streams = "";
-                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + " -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
+                    _copy_all_streams = " -map 0:v:0 -map 0:a:0 ";
+                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -2032,9 +2032,9 @@ namespace VTC
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
-                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
+                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nIt can help if FFmpeg throws an error.");
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
-                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output ( option -map 0). If it FAILS, then remove from batch, and try without this option.\nEXPLANATION: some streams are not compatible in MKV and MP4.");
+                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If unchecked, only first video and first audio are copied.\nEXPLANATION: some streams are not compatible in MKV and MP4.");
 
                     break;
                 case "sr":
