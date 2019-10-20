@@ -180,6 +180,33 @@
   <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBoxKeepExtension.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxKeepExtension.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 576</value>
+  </data>
+  <data name="checkBoxKeepExtension.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 23</value>
+  </data>
+  <data name="checkBoxKeepExtension.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="checkBoxKeepExtension.Text" xml:space="preserve">
+    <value>Keep file extension</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Name" xml:space="preserve">
+    <value>checkBoxKeepExtension</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="checkBoxTranscodeAllStreams.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -190,13 +217,13 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 23</value>
+    <value>234, 23</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.Text" xml:space="preserve">
-    <value>Try to transcode all video and audio streams</value>
+    <value>Copy all video and audio streams</value>
   </data>
   <data name="&gt;&gt;checkBoxTranscodeAllStreams.Name" xml:space="preserve">
     <value>checkBoxTranscodeAllStreams</value>
@@ -208,7 +235,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;checkBoxTranscodeAllStreams.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="buttonRemoveTransPath.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -253,7 +280,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonRemoveTransPath.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -268,13 +295,13 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 23</value>
+    <value>175, 23</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.Text" xml:space="preserve">
-    <value>Remove subtitle from input file</value>
+    <value>Remove subtitle stream</value>
   </data>
   <data name="&gt;&gt;checkBoxTransRemoveSubtitle.Name" xml:space="preserve">
     <value>checkBoxTransRemoveSubtitle</value>
@@ -286,7 +313,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;checkBoxTransRemoveSubtitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="buttonLog2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -322,7 +349,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonLog2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="buttonHelp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -355,7 +382,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -388,7 +415,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="labelMultiTransFile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -421,7 +448,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="buttonMultiTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -451,7 +478,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="panelTranscode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -478,7 +505,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="labelOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -508,7 +535,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="labelInputTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -538,7 +565,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="buttonOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -568,7 +595,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;buttonOutTransFile.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>

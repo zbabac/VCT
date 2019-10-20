@@ -102,6 +102,7 @@ namespace VTC
         ToolTip toolTip41 = new ToolTip();
         ToolTip toolTip42 = new ToolTip();
         ToolTip toolTip43 = new ToolTip();
+        ToolTip toolTip44 = new ToolTip();
 
         public Form1()
         {
@@ -186,21 +187,26 @@ namespace VTC
             {
                 int str_position = input_file.LastIndexOf('.') + 1;	//find position of '.' to determine file extension
                 str_extension = input_file.Substring(str_position);	//store found file extension
-                switch (str_extension)
-                {													//decide what to do for each extension
-                    case "mp4":			//if extension is MP4, output will be MKV
-                        str_extension = "1.mkv";
-                        break;
-                    case "m4v":			//if extension is MvV, output will be MKV
-                        str_extension = "1.mkv";
-                        break;
-                    case "mkv":			//if extension is MKV, output will be MP4
-                        str_extension = "1.mp4";
-                        break;
-                    default:			//default extension is MKV, altough more correct would be to skip!!!!
-                        str_extension = "1.mkv";
-                        break;
+                if (!checkBoxKeepExtension.Checked)    //Change extansion only if box unchecked
+                {
+                    switch (str_extension)
+                    {                                                   //decide what to do for each extension
+                        case "mp4":         //if extension is MP4, output will be MKV
+                            str_extension = "1.mkv";
+                            break;
+                        case "m4v":         //if extension is MvV, output will be MKV
+                            str_extension = "1.mkv";
+                            break;
+                        case "mkv":         //if extension is MKV, output will be MP4
+                            str_extension = "1.mp4";
+                            break;
+                        default:            //default extension is MKV, altough more correct would be to skip!!!!
+                            str_extension = "1.mkv";
+                            break;
+                    }
                 }
+                else
+                    str_extension = "2." + str_extension;
                 str_position = input_file.LastIndexOf("\\") + 1;	//find where is the last folder mark
                 string in_file = input_file.Substring(str_position);//after that there is a file name
                 if (!use_out_path)           //if out path not set, use the same as input file
@@ -214,12 +220,12 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string _subs = " -map 0:s ";
+                string _subs = " -map 0:s ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
-                    _subs = " -map -0:s ";
-                string _copy_all_streams = " -map 0:v -map 0:a ";
+                    _subs = " -map -0:s ";  //remove all subs streams
+                string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
-                    _copy_all_streams = " -map 0:v:0 -map 0:a:0 ";
+                    _copy_all_streams = " -map 0:v:0 -map 0:a:0 ";  //include only 1st v&a streams
                 string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
@@ -1992,6 +1998,10 @@ namespace VTC
             toolTip43.InitialDelay = 100;
             toolTip43.ReshowDelay = 500;
             toolTip43.ShowAlways = true;
+            toolTip44.AutoPopDelay = 7000;
+            toolTip44.InitialDelay = 100;
+            toolTip44.ReshowDelay = 500;
+            toolTip44.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -2032,9 +2042,10 @@ namespace VTC
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
-                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nIt can help if FFmpeg throws an error.");
+                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nUseful if FFmpeg THROWS an ERROR.");
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
-                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If unchecked, only first video and first audio are copied.\nEXPLANATION: some streams are not compatible in MKV and MP4.");
+                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ONLY FIRST VIDEO AND AUDIO are copied.\nuseful if you want to REMOVE ADDITIONAL AUDIO STREAMS\nEXPLANATION: some streams are not compatible in MKV and MP4.");
+                    toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
 
                     break;
                 case "sr":
