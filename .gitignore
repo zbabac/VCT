@@ -8,6 +8,7 @@
 /.vs
 VCT_setup*
 *mono*
+bin/
 
 # Build results
 [Dd]ebug/
