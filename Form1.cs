@@ -2046,7 +2046,7 @@ namespace VTC
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
                     toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ONLY FIRST VIDEO AND AUDIO are copied.\nuseful if you want to REMOVE ADDITIONAL AUDIO STREAMS\nEXPLANATION: some streams are not compatible in MKV and MP4.");
                     toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
-
+                    
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");

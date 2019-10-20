@@ -8,11 +8,6 @@
 /.vs
 VCT_setup*
 *mono*
-bin/*
-Debug/*
-Release/*
-.gitignore
-
 
 # Build results
 [Dd]ebug/
