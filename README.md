@@ -1,4 +1,4 @@
-# v1.9.3   
+# v1.9.3    
 - **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
 - **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
 - **Remove subtitle usage extended with 2 above options: helps if FFmpeg throws an error, then remove subtitles
