@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -41,6 +41,7 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBoxKeepExtension = new System.Windows.Forms.CheckBox();
             this.checkBoxTranscodeAllStreams = new System.Windows.Forms.CheckBox();
             this.buttonRemoveTransPath = new System.Windows.Forms.Button();
             this.checkBoxTransRemoveSubtitle = new System.Windows.Forms.CheckBox();
@@ -121,7 +122,11 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.checkBoxKeepExtension = new System.Windows.Forms.CheckBox();
+            this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
+            this.textBoxTraansVideoNr = new System.Windows.Forms.TextBox();
+            this.textBoxTransAudioNr = new System.Windows.Forms.TextBox();
+            this.labelTransVideoNr = new System.Windows.Forms.Label();
+            this.labelTransAudioNr = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -141,6 +146,7 @@ namespace VTC
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
+            this.groupBoxTransGroupStreams.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -189,6 +195,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBoxTransGroupStreams);
             this.tabPage1.Controls.Add(this.checkBoxKeepExtension);
             this.tabPage1.Controls.Add(this.checkBoxTranscodeAllStreams);
             this.tabPage1.Controls.Add(this.buttonRemoveTransPath);
@@ -204,11 +211,18 @@ namespace VTC
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
             // 
+            // checkBoxKeepExtension
+            // 
+            resources.ApplyResources(this.checkBoxKeepExtension, "checkBoxKeepExtension");
+            this.checkBoxKeepExtension.Name = "checkBoxKeepExtension";
+            this.checkBoxKeepExtension.UseVisualStyleBackColor = true;
+            // 
             // checkBoxTranscodeAllStreams
             // 
             resources.ApplyResources(this.checkBoxTranscodeAllStreams, "checkBoxTranscodeAllStreams");
             this.checkBoxTranscodeAllStreams.Name = "checkBoxTranscodeAllStreams";
             this.checkBoxTranscodeAllStreams.UseVisualStyleBackColor = true;
+            this.checkBoxTranscodeAllStreams.CheckedChanged += new System.EventHandler(this.checkBoxTranscodeAllStreams_CheckedChanged);
             // 
             // buttonRemoveTransPath
             // 
@@ -222,6 +236,8 @@ namespace VTC
             // checkBoxTransRemoveSubtitle
             // 
             resources.ApplyResources(this.checkBoxTransRemoveSubtitle, "checkBoxTransRemoveSubtitle");
+            this.checkBoxTransRemoveSubtitle.Checked = true;
+            this.checkBoxTransRemoveSubtitle.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTransRemoveSubtitle.Name = "checkBoxTransRemoveSubtitle";
             this.checkBoxTransRemoveSubtitle.UseVisualStyleBackColor = true;
             // 
@@ -815,11 +831,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -834,9 +850,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -881,11 +897,35 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // checkBoxKeepExtension
+            // groupBoxTransGroupStreams
             // 
-            resources.ApplyResources(this.checkBoxKeepExtension, "checkBoxKeepExtension");
-            this.checkBoxKeepExtension.Name = "checkBoxKeepExtension";
-            this.checkBoxKeepExtension.UseVisualStyleBackColor = true;
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransVideoNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.textBoxTransAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.textBoxTraansVideoNr);
+            resources.ApplyResources(this.groupBoxTransGroupStreams, "groupBoxTransGroupStreams");
+            this.groupBoxTransGroupStreams.Name = "groupBoxTransGroupStreams";
+            this.groupBoxTransGroupStreams.TabStop = false;
+            // 
+            // textBoxTraansVideoNr
+            // 
+            resources.ApplyResources(this.textBoxTraansVideoNr, "textBoxTraansVideoNr");
+            this.textBoxTraansVideoNr.Name = "textBoxTraansVideoNr";
+            // 
+            // textBoxTransAudioNr
+            // 
+            resources.ApplyResources(this.textBoxTransAudioNr, "textBoxTransAudioNr");
+            this.textBoxTransAudioNr.Name = "textBoxTransAudioNr";
+            // 
+            // labelTransVideoNr
+            // 
+            resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
+            this.labelTransVideoNr.Name = "labelTransVideoNr";
+            // 
+            // labelTransAudioNr
+            // 
+            resources.ApplyResources(this.labelTransAudioNr, "labelTransAudioNr");
+            this.labelTransAudioNr.Name = "labelTransAudioNr";
             // 
             // Form1
             // 
@@ -924,6 +964,8 @@ namespace VTC
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
+            this.groupBoxTransGroupStreams.ResumeLayout(false);
+            this.groupBoxTransGroupStreams.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1019,6 +1061,11 @@ namespace VTC
         private System.Windows.Forms.RadioButton radioButton_No_Video_Resize;
         private System.Windows.Forms.CheckBox checkBoxTranscodeAllStreams;
         private System.Windows.Forms.CheckBox checkBoxKeepExtension;
+        private System.Windows.Forms.GroupBox groupBoxTransGroupStreams;
+        private System.Windows.Forms.Label labelTransAudioNr;
+        private System.Windows.Forms.Label labelTransVideoNr;
+        private System.Windows.Forms.TextBox textBoxTransAudioNr;
+        private System.Windows.Forms.TextBox textBoxTraansVideoNr;
     }
 }
 

@@ -103,6 +103,7 @@ namespace VTC
         ToolTip toolTip42 = new ToolTip();
         ToolTip toolTip43 = new ToolTip();
         ToolTip toolTip44 = new ToolTip();
+        ToolTip toolTip45 = new ToolTip();
 
         public Form1()
         {
@@ -225,7 +226,10 @@ namespace VTC
                     _subs = " -map -0:s ";  //remove all subs streams
                 string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
-                    _copy_all_streams = " -map 0:v:0 -map 0:a:0 ";  //include only 1st v&a streams
+                {
+                    _copy_all_streams = " -map 0:v:" + textBoxTraansVideoNr.Text.Trim() + " -map 0:a:" + textBoxTransAudioNr.Text.Trim() + " ";  //include only 1st v&a streams
+
+                }
                 string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
@@ -1723,6 +1727,14 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void checkBoxTranscodeAllStreams_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxTranscodeAllStreams.Checked)
+                groupBoxTransGroupStreams.Enabled = false;
+            else
+                groupBoxTransGroupStreams.Enabled = true;
+        }
+
         private void buttonRemoveOutPath_Click(object sender, EventArgs e)
         {
             out_path = "";
@@ -2002,6 +2014,10 @@ namespace VTC
             toolTip44.InitialDelay = 100;
             toolTip44.ReshowDelay = 500;
             toolTip44.ShowAlways = true;
+            toolTip45.AutoPopDelay = 7000;
+            toolTip45.InitialDelay = 100;
+            toolTip45.ReshowDelay = 500;
+            toolTip45.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -2010,8 +2026,8 @@ namespace VTC
                     toolTip2.SetToolTip(this.tabPage2, "Select this tab if you want to convert different types of audio or video files to other formats.\nYou can chhose files individually (button on the left) or multiple (upper right button) and add them to batch job list.\nYou can edit list, change ffmpeg options manually.\nYou can choose to have video only or audio only (e.g. to extract mp3).\nYou can choose quality, conversion speed, etc.\nOr, just select defaults.");
                     toolTip3.SetToolTip(this.buttonHelp, "Opens PDF help document stored in VTC.exe installation folder.");
                     toolTip4.SetToolTip(this.buttonOutTransFile, "Select output path where you want to save transcoded file(s).\nThe file name will be given AUTOMATICALLY by adding\n'1.' to the INPUT file name(s) that you select afterwards.");
-                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.");
-                    toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.");
+                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.\nIMPORTANT HINT: SELECT OPTIONS BELOW FIRST, THEN SELECT FILES!!!");
+                    toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.\nPause if you need to perform some other task on the PC.");
                     toolTip10.SetToolTip(this.buttonCancelBatch, "Click to cancel execution of all jobs\nYour job list will remain if you want to manually edit it afterwards.");
                     toolTip11.SetToolTip(this.buttonSellectAllQueue, "Click to select all jobs for deletion.\n NOTE: This will not delete, button 'Delete' will delete selected jobs.");
                     toolTip12.SetToolTip(this.buttonUnselectAll, "Click to unselect all jobs in the list.");
@@ -2044,9 +2060,10 @@ namespace VTC
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
                     toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nUseful if FFmpeg THROWS an ERROR.");
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
-                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ONLY FIRST VIDEO AND AUDIO are copied.\nuseful if you want to REMOVE ADDITIONAL AUDIO STREAMS\nEXPLANATION: some streams are not compatible in MKV and MP4.");
+                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
                     toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
-                    
+                    toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
+
                     break;
                 case "sr":
                     toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
@@ -2180,6 +2197,8 @@ namespace VTC
             buttonStartQueue.Enabled = false;
             buttonUnselectAll.Enabled = false;
             buttonDeleteQueue.Enabled = false;
+            groupBoxTransGroupStreams.Enabled = false;
+
         }
         private void EnableTransButtons()
         {               //enable buttons on Transcode tab
@@ -2190,6 +2209,7 @@ namespace VTC
             buttonStartQueue.Enabled = true;
             buttonUnselectAll.Enabled = true;
             buttonDeleteQueue.Enabled = true;
+            groupBoxTransGroupStreams.Enabled = true;
         }
 
         private void buttonHelp_Click_1(object sender, EventArgs e)
