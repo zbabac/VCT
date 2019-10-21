@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1026048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1028096">
       <assemblyIdentity name="VCT" version="1.9.3.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4GUKsHjAXvBISI0xZjtyipkxG24=</dsig:DigestValue>
+        <dsig:DigestValue>KmNtXUi3RklJrk6kWU9j//HlGfs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
