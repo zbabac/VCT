@@ -227,7 +227,7 @@ namespace VTC
                 string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
                 {
-                    _copy_all_streams = " -map 0:v:" + textBoxTraansVideoNr.Text.Trim() + " -map 0:a:" + textBoxTransAudioNr.Text.Trim() + " ";  //include only 1st v&a streams
+                    _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + " -map 0:a:" + numericUpDownAudioNr.Value + " ";  //include only 1st v&a streams
 
                 }
                 string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
