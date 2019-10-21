@@ -221,7 +221,7 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string _subs = " -map 0:s ";     //include all subs streams
+                string _subs = " -map 0:s? ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
                     _subs = " -map -0:s ";  //remove all subs streams
                 string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
@@ -231,6 +231,7 @@ namespace VTC
 
                 }
                 string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                //string command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -252,7 +253,7 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams " +  input_file); // for Linux with mono
+                //System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams \"" +  input_file + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -300,8 +301,8 @@ namespace VTC
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
             try
             {
-				System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
-				//new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i " + input_file + " -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
+                System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
+                //System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
 				// The following commands are needed to redirect the standard output and standard error.
 				// This means that it will be redirected to the Process.StandardOutput StreamReader.
 				procff.RedirectStandardError = false;
@@ -382,7 +383,7 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
+                //System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procStartffmpeg.RedirectStandardOutput = true;
