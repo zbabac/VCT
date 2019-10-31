@@ -101,6 +101,9 @@ namespace VTC
         ToolTip toolTip40 = new ToolTip();
         ToolTip toolTip41 = new ToolTip();
         ToolTip toolTip42 = new ToolTip();
+        ToolTip toolTip43 = new ToolTip();
+        ToolTip toolTip44 = new ToolTip();
+        ToolTip toolTip45 = new ToolTip();
 
         public Form1()
         {
@@ -185,21 +188,26 @@ namespace VTC
             {
                 int str_position = input_file.LastIndexOf('.') + 1;	//find position of '.' to determine file extension
                 str_extension = input_file.Substring(str_position);	//store found file extension
-                switch (str_extension)
-                {													//decide what to do for each extension
-                    case "mp4":			//if extension is MP4, output will be MKV
-                        str_extension = "1.mkv";
-                        break;
-                    case "m4v":			//if extension is MvV, output will be MKV
-                        str_extension = "1.mkv";
-                        break;
-                    case "mkv":			//if extension is MKV, output will be MP4
-                        str_extension = "1.mp4";
-                        break;
-                    default:			//default extension is MKV, altough more correct would be to skip!!!!
-                        str_extension = "1.mkv";
-                        break;
+                if (!checkBoxKeepExtension.Checked)    //Change extansion only if box unchecked
+                {
+                    switch (str_extension)
+                    {                                                   //decide what to do for each extension
+                        case "mp4":         //if extension is MP4, output will be MKV
+                            str_extension = "1.mkv";
+                            break;
+                        case "m4v":         //if extension is MvV, output will be MKV
+                            str_extension = "1.mkv";
+                            break;
+                        case "mkv":         //if extension is MKV, output will be MP4
+                            str_extension = "1.mp4";
+                            break;
+                        default:            //default extension is MKV, altough more correct would be to skip!!!!
+                            str_extension = "1.mkv";
+                            break;
+                    }
                 }
+                else
+                    str_extension = "2." + str_extension;
                 str_position = input_file.LastIndexOf("\\") + 1;	//find where is the last folder mark
                 string in_file = input_file.Substring(str_position);//after that there is a file name
                 if (!use_out_path)           //if out path not set, use the same as input file
@@ -213,10 +221,17 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
-                string _subs = "-c:s copy ";
+                string _subs = " -map 0:s? ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
-                    _subs = "";
-                string command = "ffmpeg -y -i \"" + input_file + "\" -map 0 -c:v copy -c:a copy " + _subs + "\"" + out_file + str_extension + "\"";//define ffmpeg command
+                    _subs = " -map -0:s ";  //remove all subs streams
+                string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
+                if (!checkBoxTranscodeAllStreams.Checked)
+                {
+                    _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + " -map 0:a:" + numericUpDownAudioNr.Value + " ";  //include only 1st v&a streams
+
+                }
+                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                //string command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -238,7 +253,7 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams " +  input_file); // for Linux with mono
+                //System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams \"" +  input_file + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -286,8 +301,8 @@ namespace VTC
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
             try
             {
-				System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
-				//new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i " + input_file + " -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
+                System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
+                //System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
 				// The following commands are needed to redirect the standard output and standard error.
 				// This means that it will be redirected to the Process.StandardOutput StreamReader.
 				procff.RedirectStandardError = false;
@@ -368,7 +383,7 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
-                //new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
+                //System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procStartffmpeg.RedirectStandardOutput = true;
@@ -1713,6 +1728,14 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void checkBoxTranscodeAllStreams_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxTranscodeAllStreams.Checked)
+                groupBoxTransGroupStreams.Enabled = false;
+            else
+                groupBoxTransGroupStreams.Enabled = true;
+        }
+
         private void buttonRemoveOutPath_Click(object sender, EventArgs e)
         {
             out_path = "";
@@ -1984,6 +2007,18 @@ namespace VTC
             toolTip42.InitialDelay = 100;
             toolTip42.ReshowDelay = 500;
             toolTip42.ShowAlways = true;
+            toolTip43.AutoPopDelay = 7000;
+            toolTip43.InitialDelay = 100;
+            toolTip43.ReshowDelay = 500;
+            toolTip43.ShowAlways = true;
+            toolTip44.AutoPopDelay = 7000;
+            toolTip44.InitialDelay = 100;
+            toolTip44.ReshowDelay = 500;
+            toolTip44.ShowAlways = true;
+            toolTip45.AutoPopDelay = 7000;
+            toolTip45.InitialDelay = 100;
+            toolTip45.ReshowDelay = 500;
+            toolTip45.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -1992,8 +2027,8 @@ namespace VTC
                     toolTip2.SetToolTip(this.tabPage2, "Select this tab if you want to convert different types of audio or video files to other formats.\nYou can chhose files individually (button on the left) or multiple (upper right button) and add them to batch job list.\nYou can edit list, change ffmpeg options manually.\nYou can choose to have video only or audio only (e.g. to extract mp3).\nYou can choose quality, conversion speed, etc.\nOr, just select defaults.");
                     toolTip3.SetToolTip(this.buttonHelp, "Opens PDF help document stored in VTC.exe installation folder.");
                     toolTip4.SetToolTip(this.buttonOutTransFile, "Select output path where you want to save transcoded file(s).\nThe file name will be given AUTOMATICALLY by adding\n'1.' to the INPUT file name(s) that you select afterwards.");
-                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.");
-                    toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.");
+                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.\nIMPORTANT HINT: SELECT OPTIONS BELOW FIRST, THEN SELECT FILES!!!");
+                    toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.\nPause if you need to perform some other task on the PC.");
                     toolTip10.SetToolTip(this.buttonCancelBatch, "Click to cancel execution of all jobs\nYour job list will remain if you want to manually edit it afterwards.");
                     toolTip11.SetToolTip(this.buttonSellectAllQueue, "Click to select all jobs for deletion.\n NOTE: This will not delete, button 'Delete' will delete selected jobs.");
                     toolTip12.SetToolTip(this.buttonUnselectAll, "Click to unselect all jobs in the list.");
@@ -2024,8 +2059,11 @@ namespace VTC
                     toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
                     toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
                     toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
-                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.");
+                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nUseful if FFmpeg THROWS an ERROR.");
                     toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
+                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
+                    toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
+                    toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
 
                     break;
                 case "sr":
@@ -2160,6 +2198,8 @@ namespace VTC
             buttonStartQueue.Enabled = false;
             buttonUnselectAll.Enabled = false;
             buttonDeleteQueue.Enabled = false;
+            groupBoxTransGroupStreams.Enabled = false;
+
         }
         private void EnableTransButtons()
         {               //enable buttons on Transcode tab
@@ -2170,6 +2210,7 @@ namespace VTC
             buttonStartQueue.Enabled = true;
             buttonUnselectAll.Enabled = true;
             buttonDeleteQueue.Enabled = true;
+            groupBoxTransGroupStreams.Enabled = true;
         }
 
         private void buttonHelp_Click_1(object sender, EventArgs e)

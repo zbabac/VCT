@@ -6,6 +6,9 @@
 *.user
 *.sln.docstates
 /.vs
+VCT_setup*
+*mono*
+bin/
 
 # Build results
 [Dd]ebug/
@@ -32,6 +35,7 @@ TestResult.xml
 [Dd]ebugPS/
 [Rr]eleasePS/
 dlldata.c
+VCT_setup.exe
 
 *_i.c
 *_p.c
