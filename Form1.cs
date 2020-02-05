@@ -223,11 +223,11 @@ namespace VTC
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
                 string _subs = " -map 0:s? ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
-                    _subs = " -map -0:s ";  //remove all subs streams
-                string _copy_all_streams = " -map 0:v -map 0:a ";  //include all v&a streams
+                    _subs = " -map -0:s? ";  //remove all subs streams
+                string _copy_all_streams = " -map 0:v? -map 0:a? ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
                 {
-                    _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + " -map 0:a:" + numericUpDownAudioNr.Value + " ";  //include only 1st v&a streams
+                    _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + "? -map 0:a:" + numericUpDownAudioNr.Value + "? ";  //include only 1st v&a streams
 
                 }
                 string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
@@ -728,23 +728,23 @@ namespace VTC
                 if (checkBox180.Checked)
                 {
                     if (vf != "")
-                        vf += ",\"vflip\"";
+                        vf += ",\"rotate=PI\"";
                     else
-                        vf = " -vf \"vflip\"";
+                        vf = " -vf \"rotate=PI\"";
                 }
                 if (checkBox90clockwise.Checked)
                 {
                     if (vf != "")
-                        vf += "\"transpose=1\"";
+                        vf += "\"rotate=PI/2\"";
                     else
-                        vf = " -vf \"transpose=1\"";
+                        vf = " -vf \"rotate=PI/2\"";
                 }
                 if (checkBox90counterclockwise.Checked)
                 {
                     if (vf != "")
-                        vf += "\"transpose=2\"";
+                        vf += "\"rotate=-PI/2\"";
                     else
-                        vf = " -vf \"transpose=2\"";
+                        vf = " -vf \"rotate=-PI/2\"";
                 }
                 //
                 preset = comboBoxPreset.SelectedItem.ToString();
@@ -1418,6 +1418,7 @@ namespace VTC
                 labelOutConvFile.Text = out_path;				//let the user knows by writing it to GUI
                 labelOutTransFile.Text = out_path;              //the same var is also for transcoding jobs
                                                                 ////allow user interaction - to select multiple input files
+                richTextBoxConv.Text = SetupConversionOptions();
                 EnableConvButtons();
                 buttonMultiTransFile.Enabled = true;
                 buttonRemoveOutPath.Enabled = true;
@@ -2033,9 +2034,9 @@ namespace VTC
                     toolTip11.SetToolTip(this.buttonSellectAllQueue, "Click to select all jobs for deletion.\n NOTE: This will not delete, button 'Delete' will delete selected jobs.");
                     toolTip12.SetToolTip(this.buttonUnselectAll, "Click to unselect all jobs in the list.");
                     toolTip13.SetToolTip(this.buttonDeleteQueue, "Click to delete all selected jobs.\nBefore that, use check boxes to select those that you want to delete.");
-                    toolTip14.SetToolTip(this.buttonInputConvFile, "Select input file of various formats of audio or video files.\nPay attention to filters in dialog window.\nThat file will be converted depending on options selected after selecting a file.\nYou can also drop your file onto the button.");
+                    toolTip14.SetToolTip(this.buttonInputConvFile, "Select input file of various formats of audio or video files.\nPay attention to filters in dialog window.\nThat file will be converted depending on options selected after selecting a file.\nYou can also drop your file onto the button.\nIF YOU WANT TO OUTPUT TO DIFFERENT FOLDER, SELECT OUTPUT PATH FIRST!");
                     toolTip15.SetToolTip(this.buttonOutConvFile, "Select output path where converted files will be saved.\nBUT AFTER THAT YOU MUST SELECT INPUT FILE OR DROP FILE THERE!\nFile name will be generated from input file by adding\n    '1.' to the end of file.\nIf you want to change file name, use the TEXT BOX BELOW TO MANUALLY enter name after you selected options.");
-                    toolTip16.SetToolTip(this.buttonMultiConvFiles, "Select more files to be converted\nWITH SAME OPTIONS DEFINED ON THIS TAB BEFORE CLICKING THIS BUTTON.\nBatch job list will be populated automatically.\nYou can also drop files onto this button.");
+                    toolTip16.SetToolTip(this.buttonMultiConvFiles, "Select more files to be converted\nWITH SAME OPTIONS DEFINED ON THIS TAB BEFORE CLICKING THIS BUTTON.\nBatch job list will be populated automatically.\nYou can also drop files onto this button.\nSELECT OPTIONS FIRST, THEN ADD FILES VIA THIS BUTTON!!!");
                     toolTip18.SetToolTip(this.richTextBoxConv, "When changing options, ffmpeg command is generated in this box.\nYou can tweak ffmpeg options manually if you are advanced user.\nWhen you are happy with command, you can click 'Add To Batch File List'.");
                     toolTip19.SetToolTip(this.buttonAddBatchConv, "When you select all options, click here to add job to the job list.\nAfterwards, you can select new options or keep the same for new job,\nor just click 'Start' to start encoding jobs in the list.");
                     toolTip20.SetToolTip(this.panelBatch, "The jobs that you added are displayed here.\nYou can drag and drop multiple files here (same effect as dropping files on Multiple Files button).\nIf you changed your mind regarding some options,\nyou can edit ffmpeg command directly in this table.\nWhen you are done building list, click 'Start' to process the queue.");
