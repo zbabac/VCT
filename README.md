@@ -1,4 +1,5 @@
-# v1.9.3.4    
+# v1.9.3.4 
+- **fixed issue with rotate video; used new ffmpeg video filter -vf "rotate="   
 - **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
 - **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
 - **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
