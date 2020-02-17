@@ -105,6 +105,7 @@ namespace VTC
         ToolTip toolTip43 = new ToolTip();
         ToolTip toolTip44 = new ToolTip();
         ToolTip toolTip45 = new ToolTip();
+        ToolTip toolTip46 = new ToolTip();
 
         public Form1()
         {
@@ -2062,6 +2063,10 @@ namespace VTC
             toolTip45.InitialDelay = 100;
             toolTip45.ReshowDelay = 500;
             toolTip45.ShowAlways = true;
+            toolTip46.AutoPopDelay = 7000;
+            toolTip46.InitialDelay = 100;
+            toolTip46.ReshowDelay = 500;
+            toolTip46.ShowAlways = true;
 
             switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
             {
@@ -2107,6 +2112,7 @@ namespace VTC
                     toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
                     toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
                     toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
+                    toolTip46.SetToolTip(this.groupBoxTimeSelect, "Select time span to encode or copy.\nIMPORTANT: IT IS ALSO USED FOR CONVERT TAB!");
 
                     break;
                 case "sr":
