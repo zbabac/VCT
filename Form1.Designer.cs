@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -41,6 +41,17 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBoxTimeSelect = new System.Windows.Forms.GroupBox();
+            this.checkBoxSelectTime = new System.Windows.Forms.CheckBox();
+            this.maskedTextBoxToTime = new System.Windows.Forms.MaskedTextBox();
+            this.labelFromTime = new System.Windows.Forms.Label();
+            this.labelToTime = new System.Windows.Forms.Label();
+            this.maskedTextBoxFromTime = new System.Windows.Forms.MaskedTextBox();
+            this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
+            this.numericUpDownAudioNr = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVideoNr = new System.Windows.Forms.NumericUpDown();
+            this.labelTransAudioNr = new System.Windows.Forms.Label();
+            this.labelTransVideoNr = new System.Windows.Forms.Label();
             this.checkBoxKeepExtension = new System.Windows.Forms.CheckBox();
             this.checkBoxTranscodeAllStreams = new System.Windows.Forms.CheckBox();
             this.buttonRemoveTransPath = new System.Windows.Forms.Button();
@@ -122,15 +133,14 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
-            this.labelTransVideoNr = new System.Windows.Forms.Label();
-            this.labelTransAudioNr = new System.Windows.Forms.Label();
-            this.numericUpDownVideoNr = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownAudioNr = new System.Windows.Forms.NumericUpDown();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBoxTimeSelect.SuspendLayout();
+            this.groupBoxTransGroupStreams.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBoxVideoSize.SuspendLayout();
             this.groupBoxSlow.SuspendLayout();
@@ -146,9 +156,6 @@ namespace VTC
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
-            this.groupBoxTransGroupStreams.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -197,6 +204,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBoxTimeSelect);
             this.tabPage1.Controls.Add(this.groupBoxTransGroupStreams);
             this.tabPage1.Controls.Add(this.checkBoxKeepExtension);
             this.tabPage1.Controls.Add(this.checkBoxTranscodeAllStreams);
@@ -212,6 +220,86 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
+            // 
+            // groupBoxTimeSelect
+            // 
+            this.groupBoxTimeSelect.Controls.Add(this.checkBoxSelectTime);
+            this.groupBoxTimeSelect.Controls.Add(this.maskedTextBoxToTime);
+            this.groupBoxTimeSelect.Controls.Add(this.labelFromTime);
+            this.groupBoxTimeSelect.Controls.Add(this.labelToTime);
+            this.groupBoxTimeSelect.Controls.Add(this.maskedTextBoxFromTime);
+            resources.ApplyResources(this.groupBoxTimeSelect, "groupBoxTimeSelect");
+            this.groupBoxTimeSelect.Name = "groupBoxTimeSelect";
+            this.groupBoxTimeSelect.TabStop = false;
+            // 
+            // checkBoxSelectTime
+            // 
+            resources.ApplyResources(this.checkBoxSelectTime, "checkBoxSelectTime");
+            this.checkBoxSelectTime.Name = "checkBoxSelectTime";
+            this.checkBoxSelectTime.UseVisualStyleBackColor = true;
+            this.checkBoxSelectTime.CheckedChanged += new System.EventHandler(this.checkBoxSelectTime_CheckedChanged);
+            // 
+            // maskedTextBoxToTime
+            // 
+            resources.ApplyResources(this.maskedTextBoxToTime, "maskedTextBoxToTime");
+            this.maskedTextBoxToTime.Name = "maskedTextBoxToTime";
+            this.maskedTextBoxToTime.TextChanged += new System.EventHandler(this.maskedTextBoxToTime_TextChanged);
+            // 
+            // labelFromTime
+            // 
+            resources.ApplyResources(this.labelFromTime, "labelFromTime");
+            this.labelFromTime.Name = "labelFromTime";
+            // 
+            // labelToTime
+            // 
+            resources.ApplyResources(this.labelToTime, "labelToTime");
+            this.labelToTime.Name = "labelToTime";
+            // 
+            // maskedTextBoxFromTime
+            // 
+            resources.ApplyResources(this.maskedTextBoxFromTime, "maskedTextBoxFromTime");
+            this.maskedTextBoxFromTime.Name = "maskedTextBoxFromTime";
+            this.maskedTextBoxFromTime.TextChanged += new System.EventHandler(this.maskedTextBoxFromTime_TextChanged);
+            // 
+            // groupBoxTransGroupStreams
+            // 
+            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownVideoNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransVideoNr);
+            resources.ApplyResources(this.groupBoxTransGroupStreams, "groupBoxTransGroupStreams");
+            this.groupBoxTransGroupStreams.Name = "groupBoxTransGroupStreams";
+            this.groupBoxTransGroupStreams.TabStop = false;
+            // 
+            // numericUpDownAudioNr
+            // 
+            resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
+            this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownAudioNr.Name = "numericUpDownAudioNr";
+            // 
+            // numericUpDownVideoNr
+            // 
+            resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
+            this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownVideoNr.Name = "numericUpDownVideoNr";
+            // 
+            // labelTransAudioNr
+            // 
+            resources.ApplyResources(this.labelTransAudioNr, "labelTransAudioNr");
+            this.labelTransAudioNr.Name = "labelTransAudioNr";
+            // 
+            // labelTransVideoNr
+            // 
+            resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
+            this.labelTransVideoNr.Name = "labelTransVideoNr";
             // 
             // checkBoxKeepExtension
             // 
@@ -833,11 +921,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -852,9 +940,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -899,46 +987,6 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // groupBoxTransGroupStreams
-            // 
-            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownAudioNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownVideoNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransAudioNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransVideoNr);
-            resources.ApplyResources(this.groupBoxTransGroupStreams, "groupBoxTransGroupStreams");
-            this.groupBoxTransGroupStreams.Name = "groupBoxTransGroupStreams";
-            this.groupBoxTransGroupStreams.TabStop = false;
-            // 
-            // labelTransVideoNr
-            // 
-            resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
-            this.labelTransVideoNr.Name = "labelTransVideoNr";
-            // 
-            // labelTransAudioNr
-            // 
-            resources.ApplyResources(this.labelTransAudioNr, "labelTransAudioNr");
-            this.labelTransAudioNr.Name = "labelTransAudioNr";
-            // 
-            // numericUpDownVideoNr
-            // 
-            resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
-            this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownVideoNr.Name = "numericUpDownVideoNr";
-            // 
-            // numericUpDownAudioNr
-            // 
-            resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
-            this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownAudioNr.Name = "numericUpDownAudioNr";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -956,6 +1004,11 @@ namespace VTC
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBoxTimeSelect.ResumeLayout(false);
+            this.groupBoxTimeSelect.PerformLayout();
+            this.groupBoxTransGroupStreams.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBoxVideoSize.ResumeLayout(false);
@@ -976,9 +1029,6 @@ namespace VTC
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
-            this.groupBoxTransGroupStreams.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1079,6 +1129,12 @@ namespace VTC
         private System.Windows.Forms.Label labelTransVideoNr;
         private System.Windows.Forms.NumericUpDown numericUpDownAudioNr;
         private System.Windows.Forms.NumericUpDown numericUpDownVideoNr;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxToTime;
+        private System.Windows.Forms.Label labelToTime;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxFromTime;
+        private System.Windows.Forms.Label labelFromTime;
+        private System.Windows.Forms.CheckBox checkBoxSelectTime;
+        private System.Windows.Forms.GroupBox groupBoxTimeSelect;
     }
 }
 

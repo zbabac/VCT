@@ -1,12 +1,8 @@
-# v1.9.3.4 
-- **fixed issue with rotate video; used new ffmpeg video filter -vf "rotate="   
-- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
-- **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
-- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
-- **Remove subtitle usage extended with 2 above options: in most of the cases, subtitle is not compatible in MKV and MP4 containers; it is by default set to remove subtitle stream, but you've left with option to keep it
-- **Windows XP users can download VCT_setup.exe and separately download older version of FFmpeg (ffmpeg version N-76123-g002b049, e.g. http://hp.vector.co.jp/authors/VA020429/ffmpeg/list.html) in order to be able to get new VCT features
-- **Linux finaly fixed file info bug if you use mono version; if you have Wine, you can download Windows VCT_setup.exe (or 64-bit binary)
-- **Fixed issue when video rotated 180 degrees is also mirrored - used new filter option, e.g. `-vf "rotate=PI"`
+# v1.9.4 
+- **option to select time span `from time --> to time` to copy to output file**
+- **bear in mind that window is crowded now, so THIS OPTION IS VALID FOR BOTH Convert and Transcode**
+- **If you set it in Transcode tab, it will affect the Convert as well**
+- **Also, IT WILL BE USED IF MULTIPLE FILES ARE SELECTED, so use check box to control it**
 
 
 ### You can download binaries and source code from Sourceforge:
@@ -118,11 +114,21 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log 
 
-# v1.9.3   
+# v1.9.4 
+- **option to select time span (from time --> to time) to copy to output file**
+- **bear in mind that window is crowded now, so THIS OPTION IS VALID FOR BOTH Convert and Transcode**
+- **If you set it in Transcode tab, it will affect the Convert as well**
+- **Also, IT WILL BE USED IF MULTIPLE FILES ARE SELECTED, so use check box to control it**
+
+# v1.9.3.4
+- **fixed issue with rotate video; used new ffmpeg video filter -vf "rotate="   
 - **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
 - **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
 - **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
 - **Remove subtitle usage extended with 2 above options: in most of the cases, subtitle is not compatible in MKV and MP4 containers; it is by default set to remove subtitle stream, but you've left with option to keep it
+- **Windows XP users can download VCT_setup.exe and separately download older version of FFmpeg (ffmpeg version N-76123-g002b049, e.g. http://hp.vector.co.jp/authors/VA020429/ffmpeg/list.html) in order to be able to get new VCT features
+- **Linux finaly fixed file info bug if you use mono version; if you have Wine, you can download Windows VCT_setup.exe (or 64-bit binary)
+- **Fixed issue when video rotated 180 degrees is also mirrored - used new filter option, e.g. `-vf "rotate=PI"`
 
 # v1.9.2.0 
 

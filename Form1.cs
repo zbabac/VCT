@@ -57,6 +57,7 @@ namespace VTC
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate; 
         static bool log = false; //output from ffmpeg visible or not
         static string output_log = "";
+        static string from_time = "", to_time = ""; //if option to extract specific part of file used, define from time and to time
         Form logForm = new Form();
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
@@ -183,7 +184,7 @@ namespace VTC
             }
         }
         private void MultiTransRow()
-        {
+        {  // When files selected or dragged, each file is defined in input_file and ffmpeg command is here defined
             try
             {
                 int str_position = input_file.LastIndexOf('.') + 1;	//find position of '.' to determine file extension
@@ -230,8 +231,8 @@ namespace VTC
                     _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + "? -map 0:a:" + numericUpDownAudioNr.Value + "? ";  //include only 1st v&a streams
 
                 }
-                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
-                //string command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
+                string command = "ffmpeg -y " + from_time + " -i \"" + input_file + "\" " + to_time + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                //string command = " -y " + from_time + " -i \"" + input_file + "\" " + to_time + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -780,6 +781,22 @@ namespace VTC
                 }
                 else video_size = "";
 
+                if (checkBoxSelectTime.Checked)
+                {
+                    maskedTextBoxToTime.Enabled = true;
+                    maskedTextBoxFromTime.Enabled = true;
+                    from_time = " -ss " + maskedTextBoxFromTime.Text;
+                    to_time = " -t " + maskedTextBoxToTime.Text;
+                    //richTextBoxConv.Text = SetupConversionOptions();
+                }
+                else
+                {
+                    maskedTextBoxToTime.Enabled = false;
+                    maskedTextBoxFromTime.Enabled = false;
+                    from_time = "";
+                    to_time = "";
+                    //richTextBoxConv.Text = SetupConversionOptions();
+                }
             }
             catch (Exception x)
             {
@@ -882,8 +899,8 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
-                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                ff = "ffmpeg "+ "-y" + from_time + input_fps + " -i \"" + input_file + "\"" + input_srt + to_time + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                //ff = " " + "-y" + from_time + input_fps + " -i \"" + input_file + "\"" + input_srt + to_time + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1727,6 +1744,31 @@ namespace VTC
                 textBoxFPSout.Text = (fps / Convert.ToDouble(textBoxSlowFPS.Text)).ToString(nfi);
             
             richTextBoxConv.Text = SetupConversionOptions();
+        }
+
+        private void checkBoxSelectTime_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSelectTime.Checked)  //copy only time entered in 2 MaskedText boxes to the output
+            {
+                maskedTextBoxToTime.Enabled = true;
+                maskedTextBoxFromTime.Enabled = true;
+                richTextBoxConv.Text = SetupConversionOptions();
+            }
+            else
+            {
+                maskedTextBoxToTime.Enabled = false;
+                maskedTextBoxFromTime.Enabled = false;
+                richTextBoxConv.Text = SetupConversionOptions();
+            }
+        }
+
+        private void maskedTextBoxFromTime_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //ReadParametersFromGUI will setup values
+        }
+        private void maskedTextBoxToTime_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions(); //ReadParametersFromGUI will setup values
         }
 
         private void checkBoxTranscodeAllStreams_CheckedChanged(object sender, EventArgs e)
