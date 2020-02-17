@@ -1,6 +1,6 @@
 # v1.9.4 
-- **option to select time span `from time --> to time` to copy to output file**
-- **bear in mind that window is crowded now, so THIS OPTION IS VALID FOR BOTH Convert and Transcode**
+- **Added 2 fields to enter start and end time to copy (or convert) to output. Use Checkbox to control if it is used or not.**
+- **Bear in mind that window is crowded now, so THIS OPTION WORKS FOR BOTH Convert and Transcode**
 - **If you set it in Transcode tab, it will affect the Convert as well**
 - **Also, IT WILL BE USED IF MULTIPLE FILES ARE SELECTED, so use check box to control it**
 

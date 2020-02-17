@@ -168,7 +168,7 @@ namespace VTC
             string[] input_list = new string[16383];	//defines max number of files selected from the same folder
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C://";
-            openFileDialog.Filter = "H.264 or H.265 files|*.mp4;*.mkv;*.m4v";	//sets filter of displayed files
+            openFileDialog.Filter = "H.264 or H.265 files|*.mp4;*.mkv;*.m4v;*.avi";	//sets filter of displayed files
             openFileDialog.Multiselect = true;							//allows to select more files at once
             openFileDialog.Title = "Choose video files to transcode";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -204,7 +204,7 @@ namespace VTC
                             str_extension = "1.mp4";
                             break;
                         default:            //default extension is MKV, altough more correct would be to skip!!!!
-                            str_extension = "1.mkv";
+                            str_extension = "1.mp4";
                             break;
                     }
                 }
