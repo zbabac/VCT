@@ -203,7 +203,7 @@ namespace VTC
                         case "mkv":         //if extension is MKV, output will be MP4
                             str_extension = "1.mp4";
                             break;
-                        default:            //default extension is MKV, altough more correct would be to skip!!!!
+                        default:            //default extension is MP4
                             str_extension = "1.mp4";
                             break;
                     }

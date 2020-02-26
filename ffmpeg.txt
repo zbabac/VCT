@@ -124,3 +124,9 @@ ffmpeg -threads 64 -y -i "C:\downloads\ff\h265.mkv" -map 0:0 -map 0:1? -c:v copy
 C:\Programi\ffmpeg>ffmpeg -threads 3 -y -i "C:\downloads\ff\Seven Samurai (1954).mp4" -map 0:0 -map
 0:1? -map 0:2 -c:v hevc_qsv -load_plugin hevc_hw -preset fast -crf 28 -c:a copy -c:s copy "C:\downlo
 ads\ff\Seven Samurai (1954).h265.mp4"
+
+# copy first 30 seconds to output
+ffmpeg -ss 00:00:00 -i input.mp4 -t 00:00:30 ouput.mp4
+
+# downmix 5.1 or 7.1 audio to stereo
+ffmpeg -i "input.mp4" -map 0:0 -map 0:1? -c:v libx264 -preset veryfast -crf 23 -ac 2 -c:a aac -b:a 128k "output.mp4"
