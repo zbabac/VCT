@@ -144,14 +144,14 @@
     <value>160, 27</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 611</value>
+    <value>0, 623</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 15, 0</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>910, 33</value>
+    <value>934, 33</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,13 +211,13 @@
     <value>False</value>
   </data>
   <data name="maskedTextBoxToTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 37</value>
+    <value>203, 37</value>
   </data>
   <data name="maskedTextBoxToTime.Mask" xml:space="preserve">
     <value>00:00:00</value>
   </data>
   <data name="maskedTextBoxToTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 22</value>
+    <value>64, 22</value>
   </data>
   <data name="maskedTextBoxToTime.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -262,16 +262,16 @@
     <value>2</value>
   </data>
   <data name="labelToTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 40</value>
+    <value>146, 40</value>
   </data>
   <data name="labelToTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="labelToTime.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
   <data name="labelToTime.Text" xml:space="preserve">
-    <value>to time:</value>
+    <value>duration:</value>
   </data>
   <data name="&gt;&gt;labelToTime.Name" xml:space="preserve">
     <value>labelToTime</value>
@@ -295,7 +295,7 @@
     <value>00:00:00</value>
   </data>
   <data name="maskedTextBoxFromTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 22</value>
+    <value>66, 22</value>
   </data>
   <data name="maskedTextBoxFromTime.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -761,7 +761,7 @@
     <value>2, 3, 2, 3</value>
   </data>
   <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 26</value>
+    <value>409, 28</value>
   </data>
   <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -875,7 +875,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 577</value>
+    <value>459, 591</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -998,7 +998,7 @@
     <value>3</value>
   </data>
   <data name="groupBoxVideoSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 359</value>
+    <value>5, 349</value>
   </data>
   <data name="groupBoxVideoSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 55</value>
@@ -1247,7 +1247,7 @@
     <value>5</value>
   </data>
   <data name="groupBoxSlow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 420</value>
+    <value>6, 410</value>
   </data>
   <data name="groupBoxSlow.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 68</value>
@@ -1448,7 +1448,7 @@
     <value>9</value>
   </data>
   <data name="comboBoxAudioStreamNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 316</value>
+    <value>138, 306</value>
   </data>
   <data name="comboBoxAudioStreamNo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -1478,7 +1478,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelAudioStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 316</value>
+    <value>6, 306</value>
   </data>
   <data name="labelAudioStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -2390,7 +2390,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 491</value>
+    <value>1, 479</value>
   </data>
   <data name="labelTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -2483,7 +2483,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddBatchConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 323</value>
+    <value>337, 304</value>
   </data>
   <data name="buttonAddBatchConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -2542,23 +2542,23 @@
   <data name="panelConvert.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
+  <data name="panelConvert.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
   <data name="richTextBoxConv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="richTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>2, 2</value>
   </data>
   <data name="richTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="richTextBoxConv.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>384, 68</value>
-  </data>
-  <data name="richTextBoxConv.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>ForcedVertical</value>
+    <value>420, 90</value>
   </data>
   <data name="richTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 87</value>
+    <value>420, 90</value>
   </data>
   <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2579,16 +2579,19 @@
     <value>0</value>
   </data>
   <data name="panelConvert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 507</value>
+    <value>2, 495</value>
   </data>
   <data name="panelConvert.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="panelConvert.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>390, 70</value>
+    <value>423, 98</value>
+  </data>
+  <data name="panelConvert.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 14</value>
   </data>
   <data name="panelConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 87</value>
+    <value>423, 98</value>
   </data>
   <data name="panelConvert.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2675,7 +2678,7 @@
     <value>2, 3, 2, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 577</value>
+    <value>459, 591</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2705,10 +2708,10 @@
     <value>6, 6</value>
   </data>
   <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 603</value>
+    <value>467, 617</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2732,7 +2735,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 611</value>
+    <value>474, 617</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2774,7 +2777,7 @@
     <value>Consolas, 9pt</value>
   </data>
   <data name="richTextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
+    <value>4, 2</value>
   </data>
   <data name="richTextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -2783,7 +2786,7 @@
     <value>Vertical</value>
   </data>
   <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 110</value>
+    <value>25, 118</value>
   </data>
   <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2813,7 +2816,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 544</value>
+    <value>214, 554</value>
   </data>
   <data name="buttonUnselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -2846,7 +2849,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 544</value>
+    <value>291, 554</value>
   </data>
   <data name="buttonSellectAllQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -2909,13 +2912,13 @@
     <value>100</value>
   </data>
   <data name="dataGridViewBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, -2</value>
+    <value>0, 0</value>
   </data>
   <data name="dataGridViewBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
   </data>
   <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 540</value>
+    <value>473, 548</value>
   </data>
   <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2939,7 +2942,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 544</value>
+    <value>411, 554</value>
   </data>
   <data name="buttonDeleteQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -2972,7 +2975,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 544</value>
+    <value>88, 554</value>
   </data>
   <data name="buttonCancelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -3005,7 +3008,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 544</value>
+    <value>4, 554</value>
   </data>
   <data name="buttonStartQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -3037,8 +3040,11 @@
   <data name="panelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
   </data>
+  <data name="panelBatch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 576</value>
+    <value>477, 588</value>
   </data>
   <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3065,7 +3071,7 @@
     <value>2, 3, 2, 3</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 582</value>
+    <value>474, 594</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3089,7 +3095,7 @@
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 1</value>
+    <value>6, 1</value>
   </data>
   <data name="tabControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
@@ -3098,7 +3104,7 @@
     <value>3, 3</value>
   </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 608</value>
+    <value>482, 620</value>
   </data>
   <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3122,7 +3128,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 611</value>
+    <value>491, 623</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3149,7 +3155,7 @@
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>910, 644</value>
+    <value>934, 656</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -6630,11 +6636,14 @@
         AAAAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 3, 2, 3</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>922, 673</value>
+    <value>942, 693</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
