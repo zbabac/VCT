@@ -1,9 +1,10 @@
-# v1.9.4.1 
+# v1.9.4.2 
 - **Added 2 fields to enter start and end time to copy (or convert) to output. Use Checkbox to control if it is used or not.**
 - **Bear in mind that window is crowded now, so THIS OPTION WORKS FOR BOTH Convert and Transcode**
 - **If you set it in Transcode tab, it will affect the Convert as well**
 - **Also, IT WILL BE USED IF MULTIPLE FILES ARE SELECTED, so use check box to control it**
 - **It is now possible to select avi files in Transcode tab - default output is mp4**
+- **UI scale fix for Linux/Mac mono
 
 
 ### You can download binaries and source code from Sourceforge:
@@ -115,12 +116,13 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log 
 
-# v1.9.4.1 
+# v1.9.4.2 
 - **Added 2 fields to enter start and end time to copy (or convert) to output. Use Checkbox to control if it is used or not.**
 - **Bear in mind that window is crowded now, so THIS OPTION WORKS FOR BOTH Convert and Transcode**
 - **If you set it in Transcode tab, it will affect the Convert as well**
 - **Also, IT WILL BE USED IF MULTIPLE FILES ARE SELECTED, so use check box to control it**
 - **It is now possible to select avi files in Transcode tab - default output is mp4**
+- **UI scale fix for Linux/Mac mono
 
 # v1.9.3.4
 - **fixed issue with rotate video; used new ffmpeg video filter -vf "rotate="   
