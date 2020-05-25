@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.CSharp.RuntimeBinder;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace VTC
 {
@@ -35,7 +36,7 @@ namespace VTC
         bool duration_found = false; //check if duration of the video or audio is found in ffmpeg output - measures percentage of executed job
         static string percent = ""; //shows perventage of executed task - used for progress bar
         static float total_sec, encoded_sec; //stores total length of video or audio; currently number of encoded seconds
-        static string input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext; //stores names of input, output files, output path and temp. varr
+        static string input_stream, input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext; //stores names of input, output files, output path and temp. varr
         static string subtitle_stream, audio_stream = "1";
         static int number_of_rows = 0; //stores number of rows for batch list
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels or pauses
@@ -50,13 +51,13 @@ namespace VTC
         static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
         static double fps = 0.00; //initial value for video file fps
         string[] task_list = new string[100]; //all tasks put in a batch list
-        string json = ""; //ffprobe shows JSON style info about file properties
+        string json = "", ffplay_output=""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
         static string pass_video_info, pass_audio_info, pass_subtitle_info, temp_path; //vars to pass to other infoForm
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate; 
         static bool log = false; //output from ffmpeg visible or not
-        static string output_log = "";
+        static string output_log, out_fps = "";
         Form logForm = new Form();
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
@@ -117,6 +118,16 @@ namespace VTC
             proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
             proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data
         }
+
+        public static bool IsLinux
+        {       // check if OS is Linux (4, 128) or Mac (6)
+            get
+            {
+                int p = (int)Environment.OSVersion.Platform;
+                return (p == 4) || (p == 6) || (p == 128);
+            }
+        }
+
         public Process GetProcByID(int id)
         {       //handy way to get process without raising exception
             Process[] processlist = Process.GetProcesses();
@@ -230,8 +241,11 @@ namespace VTC
                     _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + "? -map 0:a:" + numericUpDownAudioNr.Value + "? ";  //include only 1st v&a streams
 
                 }
-                string command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
-                //string command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
+                string command = "";
+                if (!IsLinux)
+                    command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                else
+                    command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -248,12 +262,66 @@ namespace VTC
             catch (Exception x)
             { }
         }
+        private int ffplay_test(string input)
+        {           //start ffplay to test stream
+            try
+            {
+                System.Diagnostics.ProcessStartInfo procffplay;
+                if (!IsLinux)
+                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffplay -stimeout 500000 \"" + input + "\""); // Windows: define Process Info to assing to the process
+                else
+                    procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " -stimeout 500000 \"" + input + "\""); // for Linux with mono
+                                                                                                                             // The following commands are needed to redirect the standard output and standard error.
+                ffplay_output = "";                                                                                                                                                       // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                procffplay.RedirectStandardError = true;
+                procffplay.RedirectStandardOutput = true;
+                procffplay.RedirectStandardInput = false; ;
+                procffplay.UseShellExecute = false;
+                procffplay.CreateNoWindow = false;  
+                //procffplay.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
+
+                Process ffproc = new Process();
+                ffproc.StartInfo = procffplay;
+                ffproc.ErrorDataReceived += (sender, args) => ffplayOutput(args.Data);
+                //ffproc.OutputDataReceived += (sender, args) => ffplayOutput(args.Data);
+                ffproc.Start();				//start the ffplay
+                //ffproc.BeginOutputReadLine();
+                ffproc.BeginErrorReadLine();
+                //MessageBox.Show("Please wait few seconds for a stream!", "Wait 10 secs");
+                ffproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
+                //ffproc.CancelOutputRead();
+                ffproc.CancelErrorRead();
+                if (ffplay_output.Contains("Invalid") || ffplay_output.Contains("error"))
+                    return -1;
+                else
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                statustekst = ex.Message;
+                return -1;
+            }
+        }
+        void ffplayOutput(string output)
+        {       //read output sent from ffplay
+            try
+            {
+                ffplay_output += output; //put it in string to be parsed to get stream info
+            }
+            catch (Exception x)
+            {
+                //statustekst = "ERROR:" + x.Message;
+            }
+        }
         private int ffprobe(string input)
         {
             try
             {
-                System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
-                //System.Diagnostics.ProcessStartInfo procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams \"" +  input_file + "\""); // for Linux with mono
+                System.Diagnostics.ProcessStartInfo procffprobe;
+                if (!IsLinux)
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
+                else
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams \"" +  input_file + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -301,8 +369,11 @@ namespace VTC
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
             try
             {
-                System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
-                //System.Diagnostics.ProcessStartInfo procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
+                System.Diagnostics.ProcessStartInfo procff;
+                if (!IsLinux)
+                    procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
+                else
+                    procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
 				// The following commands are needed to redirect the standard output and standard error.
 				// This means that it will be redirected to the Process.StandardOutput StreamReader.
 				procff.RedirectStandardError = false;
@@ -354,6 +425,7 @@ namespace VTC
         {
 
         }
+
         private void timerBatch_Tick(object sender, EventArgs e)
         {						//timer ticks every 1 sec to display progress, messages, etc. when encoding
             try
@@ -382,8 +454,11 @@ namespace VTC
         {			//called when starting each ffmpeg encoding task, passed task string as parameter
             try
             {
-                System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
-                //System.Diagnostics.ProcessStartInfo procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
+                System.Diagnostics.ProcessStartInfo procStartffmpeg;
+                if (!IsLinux)
+                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
+                else
+                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procStartffmpeg.RedirectStandardOutput = true;
@@ -798,7 +873,7 @@ namespace VTC
                 string stream_option = " -map 0:0 -map 0:" + audio_stream + "?"; //used when user selects audio stream and/or subtitle stream
                 vf = "";
                 string input_fps = ""; //if option to set input FPS is used
-                string out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
+                out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
                 ReadParametersFromGUI();//read options set by user on GUI
                 // Test if target FPS is to be set differently from source video
                 if (set_fps)
@@ -882,8 +957,10 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
-                //ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                if (!IsLinux)
+                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                else
+                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1705,6 +1782,11 @@ namespace VTC
             richTextBoxConv.Text = SetupConversionOptions();
         }
 
+        private void buttonTestStream_Click(object sender, EventArgs e)
+        {
+            ffplay_test(textBoxStream.Text);
+        }
+
         private void textBoxFPSout_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFPSout.Text == "0")
@@ -1736,6 +1818,7 @@ namespace VTC
             else
                 groupBoxTransGroupStreams.Enabled = true;
         }
+
 
         private void buttonRemoveOutPath_Click(object sender, EventArgs e)
         {

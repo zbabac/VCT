@@ -124,3 +124,27 @@ ffmpeg -threads 64 -y -i "C:\downloads\ff\h265.mkv" -map 0:0 -map 0:1? -c:v copy
 C:\Programi\ffmpeg>ffmpeg -threads 3 -y -i "C:\downloads\ff\Seven Samurai (1954).mp4" -map 0:0 -map
 0:1? -map 0:2 -c:v hevc_qsv -load_plugin hevc_hw -preset fast -crf 28 -c:a copy -c:s copy "C:\downlo
 ads\ff\Seven Samurai (1954).h265.mp4"
+
+RTSP stream record:
+konverzija:
+ffmpeg -y -rtsp_transport tcp -i "rtsp://192.168.0.100:8080/video/h264" -c:v libx264 -preset superfast -crf 28  -an -r 10 "d:\Download\ipcam.mp4"
+bez konverzije:
+ffmpeg -y -rtsp_transport tcp -i "rtsp://192.168.0.100:8080/video/h264" -c copy -map 0 "d:\Download\ipcam.mp4"
+snimanje segmenata po 60 sekundi FPS=10:
+ffmpeg -y -rtsp_transport tcp -i "rtsp://192.168.0.101:8080/video/h264" -f segment -segment_time 60 -segment_format mp4  -reset_timestamps 1 -strftime 1 -c copy -map 0 -r 10 "d:\Download\ipcam--%Y%m%d-%H%M.mp4"
+
+./ffmpeg -y -rtsp_transport tcp -i "rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen03.stream" -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -st rftime 1 -c copy -map 0 -an -r 10 "/var/media/USB_500G/z/recordings/frejacam--%Y%m%d-%H%M.mp4"
+
+NVIDIA:
+ffmpeg -y -hwaccel cuvid -c:v h264_cuvid -vsync 0 -i <input.mp4> -vf scale_npp=1920:1072 -vcodec h264_nvenc <output0.264> -vf scale_npp=1280:720 -vcodec h264_nvenc <output1.264>
+
+DirectX:
+ffmpeg -y -hwaccel dxva2 -i "C:\Users\z\Videos\IMG_3595.1.mp4" -map 0:0 -map 0:1? -c:v libx264 -preset medium -crf 32 -vf scale=360:-2  -c:a copy "C:\Users\z\Videos\IMG_3595.2.mp4"
+
+Test stream:
+ffprobe -v quiet -print_format json -show_streams -stimeout 2000000 -i "rtsp://192.168.0.101:8080/video/h264"
+
+ffplay -stimeout 1000000 "rtsp://192.168.0.101:8080/video/h264"
+
+
+ff = "ffmpeg "+ "-y -rtsp_transport tcp -i \"" + input_stream + "\"" + video + vf + " " + audio_part + out_fps + " \"" + out_file + ".mp4" + "\"";

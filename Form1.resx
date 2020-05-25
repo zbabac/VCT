@@ -122,14 +122,14 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 611</value>
+    <value>0, 765</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 0, 15, 0</value>
+    <value>1, 0, 19, 0</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>910, 33</value>
+    <value>1138, 40</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -166,7 +166,7 @@
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 27</value>
+    <value>200, 34</value>
   </data>
   <metadata name="timerBatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>248, 17</value>
@@ -180,108 +180,6 @@
   <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDownAudioNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 50</value>
-  </data>
-  <data name="numericUpDownAudioNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
-  </data>
-  <data name="numericUpDownAudioNr.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownAudioNr.Name" xml:space="preserve">
-    <value>numericUpDownAudioNr</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownAudioNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownAudioNr.Parent" xml:space="preserve">
-    <value>groupBoxTransGroupStreams</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownAudioNr.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="numericUpDownVideoNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 20</value>
-  </data>
-  <data name="numericUpDownVideoNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
-  </data>
-  <data name="numericUpDownVideoNr.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVideoNr.Name" xml:space="preserve">
-    <value>numericUpDownVideoNr</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVideoNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVideoNr.Parent" xml:space="preserve">
-    <value>groupBoxTransGroupStreams</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVideoNr.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelTransAudioNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 53</value>
-  </data>
-  <data name="labelTransAudioNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
-  </data>
-  <data name="labelTransAudioNr.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelTransAudioNr.Text" xml:space="preserve">
-    <value>Audio stream</value>
-  </data>
-  <data name="&gt;&gt;labelTransAudioNr.Name" xml:space="preserve">
-    <value>labelTransAudioNr</value>
-  </data>
-  <data name="&gt;&gt;labelTransAudioNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTransAudioNr.Parent" xml:space="preserve">
-    <value>groupBoxTransGroupStreams</value>
-  </data>
-  <data name="&gt;&gt;labelTransAudioNr.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelTransVideoNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 25</value>
-  </data>
-  <data name="labelTransVideoNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 17</value>
-  </data>
-  <data name="labelTransVideoNr.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelTransVideoNr.Text" xml:space="preserve">
-    <value>Video stream</value>
-  </data>
-  <data name="&gt;&gt;labelTransVideoNr.Name" xml:space="preserve">
-    <value>labelTransVideoNr</value>
-  </data>
-  <data name="&gt;&gt;labelTransVideoNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTransVideoNr.Parent" xml:space="preserve">
-    <value>groupBoxTransGroupStreams</value>
-  </data>
-  <data name="&gt;&gt;labelTransVideoNr.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 396</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 94</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.Text" xml:space="preserve">
-    <value>Enter stream number</value>
-  </data>
   <data name="&gt;&gt;groupBoxTransGroupStreams.Name" xml:space="preserve">
     <value>groupBoxTransGroupStreams</value>
   </data>
@@ -293,24 +191,6 @@
   </data>
   <data name="&gt;&gt;groupBoxTransGroupStreams.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="checkBoxKeepExtension.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxKeepExtension.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 461</value>
-  </data>
-  <data name="checkBoxKeepExtension.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="checkBoxKeepExtension.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 17</value>
-  </data>
-  <data name="checkBoxKeepExtension.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="checkBoxKeepExtension.Text" xml:space="preserve">
-    <value>Keep file extension</value>
   </data>
   <data name="&gt;&gt;checkBoxKeepExtension.Name" xml:space="preserve">
     <value>checkBoxKeepExtension</value>
@@ -324,21 +204,6 @@
   <data name="&gt;&gt;checkBoxKeepExtension.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="checkBoxTranscodeAllStreams.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxTranscodeAllStreams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 418</value>
-  </data>
-  <data name="checkBoxTranscodeAllStreams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 17</value>
-  </data>
-  <data name="checkBoxTranscodeAllStreams.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="checkBoxTranscodeAllStreams.Text" xml:space="preserve">
-    <value>Copy all video and audio streams</value>
-  </data>
   <data name="&gt;&gt;checkBoxTranscodeAllStreams.Name" xml:space="preserve">
     <value>checkBoxTranscodeAllStreams</value>
   </data>
@@ -350,39 +215,6 @@
   </data>
   <data name="&gt;&gt;checkBoxTranscodeAllStreams.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="buttonRemoveTransPath.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonRemoveTransPath.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonRemoveTransPath.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="buttonRemoveTransPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonRemoveTransPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 348</value>
-  </data>
-  <data name="buttonRemoveTransPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="buttonRemoveTransPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
-  </data>
-  <data name="buttonRemoveTransPath.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="buttonRemoveTransPath.Text" xml:space="preserve">
-    <value>Remove Output Path</value>
-  </data>
-  <data name="buttonRemoveTransPath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="buttonRemoveTransPath.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;buttonRemoveTransPath.Name" xml:space="preserve">
     <value>buttonRemoveTransPath</value>
@@ -396,24 +228,6 @@
   <data name="&gt;&gt;buttonRemoveTransPath.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="checkBoxTransRemoveSubtitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 380</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 17</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.Text" xml:space="preserve">
-    <value>Remove subtitle stream</value>
-  </data>
   <data name="&gt;&gt;checkBoxTransRemoveSubtitle.Name" xml:space="preserve">
     <value>checkBoxTransRemoveSubtitle</value>
   </data>
@@ -425,30 +239,6 @@
   </data>
   <data name="&gt;&gt;checkBoxTransRemoveSubtitle.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="buttonLog2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonLog2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonLog2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 310</value>
-  </data>
-  <data name="buttonLog2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="buttonLog2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 35</value>
-  </data>
-  <data name="buttonLog2.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="buttonLog2.Text" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="buttonLog2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;buttonLog2.Name" xml:space="preserve">
     <value>buttonLog2</value>
@@ -462,27 +252,6 @@
   <data name="&gt;&gt;buttonLog2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="buttonHelp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonHelp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 182</value>
-  </data>
-  <data name="buttonHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 34</value>
-  </data>
-  <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="buttonHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
   <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
     <value>buttonHelp</value>
   </data>
@@ -494,27 +263,6 @@
   </data>
   <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonAbout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 50</value>
-  </data>
-  <data name="buttonAbout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 35</value>
-  </data>
-  <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="buttonAbout.Text" xml:space="preserve">
-    <value>About</value>
   </data>
   <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
     <value>buttonAbout</value>
@@ -528,27 +276,6 @@
   <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="labelMultiTransFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="labelMultiTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 50</value>
-  </data>
-  <data name="labelMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 115</value>
-  </data>
-  <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="labelMultiTransFile.Text" xml:space="preserve">
-    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</value>
-  </data>
   <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
     <value>labelMultiTransFile</value>
   </data>
@@ -560,24 +287,6 @@
   </data>
   <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="buttonMultiTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 181</value>
-  </data>
-  <data name="buttonMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 62</value>
-  </data>
-  <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="buttonMultiTransFile.Text" xml:space="preserve">
-    <value>Input File(s) to transcode</value>
   </data>
   <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
     <value>buttonMultiTransFile</value>
@@ -591,21 +300,6 @@
   <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="panelTranscode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="panelTranscode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 545</value>
-  </data>
-  <data name="panelTranscode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 26</value>
-  </data>
-  <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <data name="&gt;&gt;panelTranscode.Name" xml:space="preserve">
     <value>panelTranscode</value>
   </data>
@@ -617,24 +311,6 @@
   </data>
   <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
     <value>10</value>
-  </data>
-  <data name="labelOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 283</value>
-  </data>
-  <data name="labelOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 62</value>
-  </data>
-  <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelOutTransFile.Text" xml:space="preserve">
-    <value>Destination file path</value>
   </data>
   <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
     <value>labelOutTransFile</value>
@@ -648,24 +324,6 @@
   <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="labelInputTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 181</value>
-  </data>
-  <data name="labelInputTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 74</value>
-  </data>
-  <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelInputTransFile.Text" xml:space="preserve">
-    <value>Source file path</value>
-  </data>
   <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
     <value>labelInputTransFile</value>
   </data>
@@ -677,24 +335,6 @@
   </data>
   <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="buttonOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 283</value>
-  </data>
-  <data name="buttonOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 62</value>
-  </data>
-  <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonOutTransFile.Text" xml:space="preserve">
-    <value>Output File(s) Path</value>
   </data>
   <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
     <value>buttonOutTransFile</value>
@@ -709,13 +349,13 @@
     <value>13</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 26</value>
   </data>
   <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 577</value>
+    <value>547, 724</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1033,16 +673,16 @@
     <value>23</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 26</value>
   </data>
   <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 577</value>
+    <value>547, 724</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1065,17 +705,149 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="tabPage4.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonStartRec.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonStartRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 69</value>
+  </data>
+  <data name="buttonStartRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
+  <data name="buttonStartRec.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonStartRec.Text" xml:space="preserve">
+    <value>StartRec</value>
+  </data>
+  <data name="buttonStartRec.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;buttonStartRec.Name" xml:space="preserve">
+    <value>buttonStartRec</value>
+  </data>
+  <data name="&gt;&gt;buttonStartRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStartRec.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;buttonStartRec.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonTestStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 69</value>
+  </data>
+  <data name="buttonTestStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 31</value>
+  </data>
+  <data name="buttonTestStream.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonTestStream.Text" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="&gt;&gt;buttonTestStream.Name" xml:space="preserve">
+    <value>buttonTestStream</value>
+  </data>
+  <data name="&gt;&gt;buttonTestStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonTestStream.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;buttonTestStream.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="textBoxStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>524, 25</value>
+  </data>
+  <data name="textBoxStream.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxStream.Name" xml:space="preserve">
+    <value>textBoxStream</value>
+  </data>
+  <data name="&gt;&gt;textBoxStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStream.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;textBoxStream.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelStream.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 15</value>
+  </data>
+  <data name="labelStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 19</value>
+  </data>
+  <data name="labelStream.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelStream.Text" xml:space="preserve">
+    <value>Enter the link to the IP camera stream, rtsp://&lt;ip_address_path&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelStream.Name" xml:space="preserve">
+    <value>labelStream</value>
+  </data>
+  <data name="&gt;&gt;labelStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStream.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelStream.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>547, 724</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="tabPage4.ToolTipText" xml:space="preserve">
+    <value>Record on-the-fly from the e.g. RTSP Internet camera stream into the file</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>8, 8</value>
   </data>
   <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 603</value>
+    <value>555, 754</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1099,7 +871,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 611</value>
+    <value>562, 764</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1115,6 +887,606 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Name" xml:space="preserve">
+    <value>numericUpDownAudioNr</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Name" xml:space="preserve">
+    <value>numericUpDownVideoNr</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Name" xml:space="preserve">
+    <value>labelTransAudioNr</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Name" xml:space="preserve">
+    <value>labelTransVideoNr</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 495</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 118</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="groupBoxTransGroupStreams.Text" xml:space="preserve">
+    <value>Enter stream number</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTransGroupStreams.Name" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTransGroupStreams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTransGroupStreams.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTransGroupStreams.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDownAudioNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 62</value>
+  </data>
+  <data name="numericUpDownAudioNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="numericUpDownAudioNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 25</value>
+  </data>
+  <data name="numericUpDownAudioNr.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Name" xml:space="preserve">
+    <value>numericUpDownAudioNr</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownAudioNr.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDownVideoNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 25</value>
+  </data>
+  <data name="numericUpDownVideoNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="numericUpDownVideoNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 25</value>
+  </data>
+  <data name="numericUpDownVideoNr.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Name" xml:space="preserve">
+    <value>numericUpDownVideoNr</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVideoNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelTransAudioNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 66</value>
+  </data>
+  <data name="labelTransAudioNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelTransAudioNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 24</value>
+  </data>
+  <data name="labelTransAudioNr.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelTransAudioNr.Text" xml:space="preserve">
+    <value>Audio stream</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Name" xml:space="preserve">
+    <value>labelTransAudioNr</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;labelTransAudioNr.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelTransVideoNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 31</value>
+  </data>
+  <data name="labelTransVideoNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelTransVideoNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 21</value>
+  </data>
+  <data name="labelTransVideoNr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelTransVideoNr.Text" xml:space="preserve">
+    <value>Video stream</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Name" xml:space="preserve">
+    <value>labelTransVideoNr</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.Parent" xml:space="preserve">
+    <value>groupBoxTransGroupStreams</value>
+  </data>
+  <data name="&gt;&gt;labelTransVideoNr.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxKeepExtension.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxKeepExtension.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 576</value>
+  </data>
+  <data name="checkBoxKeepExtension.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="checkBoxKeepExtension.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 23</value>
+  </data>
+  <data name="checkBoxKeepExtension.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="checkBoxKeepExtension.Text" xml:space="preserve">
+    <value>Keep file extension</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Name" xml:space="preserve">
+    <value>checkBoxKeepExtension</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxKeepExtension.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 522</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 23</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="checkBoxTranscodeAllStreams.Text" xml:space="preserve">
+    <value>Copy all video and audio streams</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTranscodeAllStreams.Name" xml:space="preserve">
+    <value>checkBoxTranscodeAllStreams</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTranscodeAllStreams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTranscodeAllStreams.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTranscodeAllStreams.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonRemoveTransPath.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonRemoveTransPath.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonRemoveTransPath.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="buttonRemoveTransPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonRemoveTransPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 435</value>
+  </data>
+  <data name="buttonRemoveTransPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="buttonRemoveTransPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 24</value>
+  </data>
+  <data name="buttonRemoveTransPath.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="buttonRemoveTransPath.Text" xml:space="preserve">
+    <value>Remove Output Path</value>
+  </data>
+  <data name="buttonRemoveTransPath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="buttonRemoveTransPath.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveTransPath.Name" xml:space="preserve">
+    <value>buttonRemoveTransPath</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveTransPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveTransPath.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveTransPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 475</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 23</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="checkBoxTransRemoveSubtitle.Text" xml:space="preserve">
+    <value>Remove subtitle stream</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransRemoveSubtitle.Name" xml:space="preserve">
+    <value>checkBoxTransRemoveSubtitle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransRemoveSubtitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransRemoveSubtitle.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTransRemoveSubtitle.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonLog2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonLog2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonLog2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 388</value>
+  </data>
+  <data name="buttonLog2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="buttonLog2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 44</value>
+  </data>
+  <data name="buttonLog2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="buttonLog2.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="buttonLog2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;buttonLog2.Name" xml:space="preserve">
+    <value>buttonLog2</value>
+  </data>
+  <data name="&gt;&gt;buttonLog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLog2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonLog2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonHelp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonHelp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 228</value>
+  </data>
+  <data name="buttonHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 42</value>
+  </data>
+  <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="buttonHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Name" xml:space="preserve">
+    <value>buttonHelp</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonHelp.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonAbout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 62</value>
+  </data>
+  <data name="buttonAbout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 44</value>
+  </data>
+  <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
+    <value>buttonAbout</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelMultiTransFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="labelMultiTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 62</value>
+  </data>
+  <data name="labelMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 144</value>
+  </data>
+  <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labelMultiTransFile.Text" xml:space="preserve">
+    <value>Select one or more files: First choose output path where new videos will be saved, then select more input files that you want to transcode (MP4--&gt;MKV, MKV--&gt;MP4).Or just Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Name" xml:space="preserve">
+    <value>labelMultiTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelMultiTransFile.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonMultiTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 226</value>
+  </data>
+  <data name="buttonMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 78</value>
+  </data>
+  <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonMultiTransFile.Text" xml:space="preserve">
+    <value>Input File(s) to transcode</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Name" xml:space="preserve">
+    <value>buttonMultiTransFile</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonMultiTransFile.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="panelTranscode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelTranscode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 681</value>
+  </data>
+  <data name="panelTranscode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 32</value>
+  </data>
+  <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Name" xml:space="preserve">
+    <value>panelTranscode</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panelTranscode.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 354</value>
+  </data>
+  <data name="labelOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 78</value>
+  </data>
+  <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelOutTransFile.Text" xml:space="preserve">
+    <value>Destination file path</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Name" xml:space="preserve">
+    <value>labelOutTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelOutTransFile.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelInputTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 226</value>
+  </data>
+  <data name="labelInputTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 92</value>
+  </data>
+  <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelInputTransFile.Text" xml:space="preserve">
+    <value>Source file path</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Name" xml:space="preserve">
+    <value>labelInputTransFile</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;labelInputTransFile.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonOutTransFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 354</value>
+  </data>
+  <data name="buttonOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 78</value>
+  </data>
+  <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonOutTransFile.Text" xml:space="preserve">
+    <value>Output File(s) Path</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Name" xml:space="preserve">
+    <value>buttonOutTransFile</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;buttonOutTransFile.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;radioButton_No_Video_Resize.Name" xml:space="preserve">
     <value>radioButton_No_Video_Resize</value>
@@ -1165,10 +1537,16 @@
     <value>3</value>
   </data>
   <data name="groupBoxVideoSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 359</value>
+    <value>8, 449</value>
+  </data>
+  <data name="groupBoxVideoSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxVideoSize.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxVideoSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 55</value>
+    <value>388, 69</value>
   </data>
   <data name="groupBoxVideoSize.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1189,10 +1567,13 @@
     <value>0</value>
   </data>
   <data name="radioButton_No_Video_Resize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 21</value>
+    <value>264, 26</value>
+  </data>
+  <data name="radioButton_No_Video_Resize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="radioButton_No_Video_Resize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>106, 21</value>
   </data>
   <data name="radioButton_No_Video_Resize.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1213,10 +1594,13 @@
     <value>0</value>
   </data>
   <data name="radioButton_480p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 21</value>
+    <value>195, 26</value>
+  </data>
+  <data name="radioButton_480p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="radioButton_480p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 17</value>
+    <value>51, 21</value>
   </data>
   <data name="radioButton_480p.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1237,10 +1621,13 @@
     <value>1</value>
   </data>
   <data name="radioButton_720p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 21</value>
+    <value>110, 26</value>
+  </data>
+  <data name="radioButton_720p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="radioButton_720p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>84, 21</value>
   </data>
   <data name="radioButton_720p.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1261,10 +1648,13 @@
     <value>2</value>
   </data>
   <data name="radioButton_1080p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 22</value>
+    <value>11, 28</value>
+  </data>
+  <data name="radioButton_1080p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="radioButton_1080p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>91, 21</value>
   </data>
   <data name="radioButton_1080p.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1297,13 +1687,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveOutPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 102</value>
+    <value>8, 128</value>
   </data>
   <data name="buttonRemoveOutPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonRemoveOutPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
+    <value>152, 24</value>
   </data>
   <data name="buttonRemoveOutPath.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -1402,10 +1792,16 @@
     <value>5</value>
   </data>
   <data name="groupBoxSlow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 420</value>
+    <value>8, 525</value>
+  </data>
+  <data name="groupBoxSlow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxSlow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxSlow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>404, 68</value>
+    <value>505, 85</value>
   </data>
   <data name="groupBoxSlow.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -1432,10 +1828,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 13</value>
+    <value>250, 16</value>
+  </data>
+  <data name="checkBoxSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 17</value>
+    <value>152, 23</value>
   </data>
   <data name="checkBoxSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1462,10 +1861,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxSetFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 13</value>
+    <value>11, 16</value>
+  </data>
+  <data name="checkBoxSetFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxSetFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 17</value>
+    <value>131, 23</value>
   </data>
   <data name="checkBoxSetFPS.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1495,10 +1897,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 39</value>
+    <value>312, 49</value>
+  </data>
+  <data name="labelSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
+    <value>85, 19</value>
   </data>
   <data name="labelSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1522,10 +1927,13 @@
     <value>False</value>
   </data>
   <data name="textBoxSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 37</value>
+    <value>250, 46</value>
+  </data>
+  <data name="textBoxSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 22</value>
+    <value>55, 25</value>
   </data>
   <data name="textBoxSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1555,10 +1963,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelFPSout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 39</value>
+    <value>69, 49</value>
+  </data>
+  <data name="labelFPSout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelFPSout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+    <value>80, 19</value>
   </data>
   <data name="labelFPSout.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1582,10 +1993,13 @@
     <value>False</value>
   </data>
   <data name="textBoxFPSout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 36</value>
+    <value>11, 45</value>
+  </data>
+  <data name="textBoxFPSout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxFPSout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 22</value>
+    <value>55, 25</value>
   </data>
   <data name="textBoxFPSout.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1618,7 +2032,7 @@
     <value>0</value>
   </data>
   <data name="groupBoxCPU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 274</value>
+    <value>286, 342</value>
   </data>
   <data name="groupBoxCPU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -1627,7 +2041,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="groupBoxCPU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 47</value>
+    <value>112, 59</value>
   </data>
   <data name="groupBoxCPU.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -1651,13 +2065,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxH265.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 19</value>
+    <value>5, 24</value>
   </data>
   <data name="checkBoxH265.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="checkBoxH265.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 22</value>
+    <value>90, 28</value>
   </data>
   <data name="checkBoxH265.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1693,13 +2107,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>416, 168</value>
+    <value>520, 210</value>
   </data>
   <data name="buttonLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 21</value>
+    <value>24, 26</value>
   </data>
   <data name="buttonLog.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -1741,13 +2155,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 8</value>
+    <value>261, 10</value>
   </data>
   <data name="buttonInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 44</value>
+    <value>56, 55</value>
   </data>
   <data name="buttonInfo.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -1795,13 +2209,13 @@
     <value>9</value>
   </data>
   <data name="comboBoxAudioStreamNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 316</value>
+    <value>174, 395</value>
   </data>
   <data name="comboBoxAudioStreamNo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="comboBoxAudioStreamNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>80, 25</value>
   </data>
   <data name="comboBoxAudioStreamNo.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -1825,13 +2239,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelAudioStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 316</value>
+    <value>8, 395</value>
   </data>
   <data name="labelAudioStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAudioStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 40</value>
+    <value>152, 50</value>
   </data>
   <data name="labelAudioStream.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1888,16 +2302,16 @@
     <value>2</value>
   </data>
   <data name="groupBoxRotate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 54</value>
+    <value>286, 68</value>
   </data>
   <data name="groupBoxRotate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxRotate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxRotate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 38</value>
+    <value>230, 48</value>
   </data>
   <data name="groupBoxRotate.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -1921,13 +2335,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox90counterclockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 13</value>
+    <value>164, 16</value>
   </data>
   <data name="checkBox90counterclockwise.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="checkBox90counterclockwise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>58, 21</value>
   </data>
   <data name="checkBox90counterclockwise.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1951,13 +2365,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox90clockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 13</value>
+    <value>82, 16</value>
   </data>
   <data name="checkBox90clockwise.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="checkBox90clockwise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 17</value>
+    <value>52, 21</value>
   </data>
   <data name="checkBox90clockwise.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1981,13 +2395,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox180.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 13</value>
+    <value>5, 16</value>
   </data>
   <data name="checkBox180.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="checkBox180.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+    <value>60, 21</value>
   </data>
   <data name="checkBox180.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2020,13 +2434,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 274</value>
+    <value>84, 342</value>
   </data>
   <data name="buttonRemoveSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 19</value>
+    <value>146, 24</value>
   </data>
   <data name="buttonRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2053,13 +2467,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 229</value>
+    <value>96, 286</value>
   </data>
   <data name="labelAddSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 42</value>
+    <value>159, 52</value>
   </data>
   <data name="labelAddSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -2083,13 +2497,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 229</value>
+    <value>8, 286</value>
   </data>
   <data name="buttonAddSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 49</value>
+    <value>71, 61</value>
   </data>
   <data name="buttonAddSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2134,16 +2548,16 @@
     <value>1</value>
   </data>
   <data name="groupBoxVideoOrAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 98</value>
+    <value>286, 122</value>
   </data>
   <data name="groupBoxVideoOrAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxVideoOrAudio.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxVideoOrAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 48</value>
+    <value>230, 60</value>
   </data>
   <data name="groupBoxVideoOrAudio.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -2167,13 +2581,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxAudioOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 14</value>
+    <value>139, 18</value>
   </data>
   <data name="checkBoxAudioOnly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="checkBoxAudioOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 34</value>
+    <value>82, 42</value>
   </data>
   <data name="checkBoxAudioOnly.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2197,13 +2611,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxVideoOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 14</value>
+    <value>8, 18</value>
   </data>
   <data name="checkBoxVideoOnly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="checkBoxVideoOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 36</value>
+    <value>82, 45</value>
   </data>
   <data name="checkBoxVideoOnly.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2296,16 +2710,16 @@
     <value>5</value>
   </data>
   <data name="groupBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 126</value>
+    <value>11, 158</value>
   </data>
   <data name="groupBoxOptions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxOptions.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 97</value>
+    <value>250, 121</value>
   </data>
   <data name="groupBoxOptions.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -2332,13 +2746,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
+    <value>8, 22</value>
   </data>
   <data name="labelPreset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 13</value>
+    <value>107, 19</value>
   </data>
   <data name="labelPreset.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2365,13 +2779,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 46</value>
+    <value>8, 58</value>
   </data>
   <data name="labelQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>92, 19</value>
   </data>
   <data name="labelQuality.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2398,13 +2812,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 76</value>
+    <value>5, 95</value>
   </data>
   <data name="labelAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
+    <value>89, 19</value>
   </data>
   <data name="labelAudio.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -2449,16 +2863,16 @@
     <value>slower</value>
   </data>
   <data name="comboBoxPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 18</value>
+    <value>138, 22</value>
   </data>
   <data name="comboBoxPreset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="comboBoxPreset.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="comboBoxPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 21</value>
+    <value>106, 25</value>
   </data>
   <data name="comboBoxPreset.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -2503,13 +2917,13 @@
     <value>320k</value>
   </data>
   <data name="comboBoxAudioBitRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 73</value>
+    <value>138, 91</value>
   </data>
   <data name="comboBoxAudioBitRate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="comboBoxAudioBitRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 21</value>
+    <value>108, 25</value>
   </data>
   <data name="comboBoxAudioBitRate.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -2575,16 +2989,16 @@
     <value>32</value>
   </data>
   <data name="comboBoxQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 46</value>
+    <value>136, 58</value>
   </data>
   <data name="comboBoxQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="comboBoxQuality.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="comboBoxQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 21</value>
+    <value>108, 25</value>
   </data>
   <data name="comboBoxQuality.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -2641,16 +3055,16 @@
     <value>2</value>
   </data>
   <data name="groupBoxAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 207</value>
+    <value>286, 259</value>
   </data>
   <data name="groupBoxAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxAudio.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 55</value>
+    <value>230, 69</value>
   </data>
   <data name="groupBoxAudio.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2677,13 +3091,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonCopyAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 23</value>
+    <value>162, 29</value>
   </data>
   <data name="radioButtonCopyAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonCopyAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>59, 23</value>
   </data>
   <data name="radioButtonCopyAudio.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2710,13 +3124,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonMP3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 23</value>
+    <value>18, 29</value>
   </data>
   <data name="radioButtonMP3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonMP3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>59, 23</value>
   </data>
   <data name="radioButtonMP3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2743,13 +3157,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonAAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 23</value>
+    <value>95, 29</value>
   </data>
   <data name="radioButtonAAC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonAAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>57, 23</value>
   </data>
   <data name="radioButtonAAC.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2806,16 +3220,16 @@
     <value>2</value>
   </data>
   <data name="groupBoxContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 154</value>
+    <value>286, 192</value>
   </data>
   <data name="groupBoxContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxContainer.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="groupBoxContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 47</value>
+    <value>230, 59</value>
   </data>
   <data name="groupBoxContainer.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -2842,13 +3256,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonCopyVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 24</value>
+    <value>162, 30</value>
   </data>
   <data name="radioButtonCopyVideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonCopyVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>59, 23</value>
   </data>
   <data name="radioButtonCopyVideo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2875,13 +3289,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonMP4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 24</value>
+    <value>95, 30</value>
   </data>
   <data name="radioButtonMP4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonMP4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>59, 23</value>
   </data>
   <data name="radioButtonMP4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2908,13 +3322,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonMKV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 24</value>
+    <value>18, 30</value>
   </data>
   <data name="radioButtonMKV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="radioButtonMKV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+    <value>60, 23</value>
   </data>
   <data name="radioButtonMKV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2941,13 +3355,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 491</value>
+    <value>4, 614</value>
   </data>
   <data name="labelTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 13</value>
+    <value>479, 19</value>
   </data>
   <data name="labelTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2971,13 +3385,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 60</value>
+    <value>99, 75</value>
   </data>
   <data name="labelOutConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 36</value>
+    <value>159, 45</value>
   </data>
   <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3001,13 +3415,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 8</value>
+    <value>105, 10</value>
   </data>
   <data name="labelInputConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 40</value>
+    <value>150, 50</value>
   </data>
   <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3034,13 +3448,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddBatchConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 323</value>
+    <value>421, 404</value>
   </data>
   <data name="buttonAddBatchConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonAddBatchConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 42</value>
+    <value>91, 52</value>
   </data>
   <data name="buttonAddBatchConv.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3064,13 +3478,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonMultiConvFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 8</value>
+    <value>425, 10</value>
   </data>
   <data name="buttonMultiConvFiles.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonMultiConvFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 40</value>
+    <value>91, 50</value>
   </data>
   <data name="buttonMultiConvFiles.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3106,16 +3520,16 @@
     <value>0</value>
   </data>
   <data name="panelConvert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 507</value>
+    <value>2, 634</value>
   </data>
   <data name="panelConvert.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="panelConvert.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>390, 70</value>
+    <value>488, 88</value>
   </data>
   <data name="panelConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 87</value>
+    <value>531, 109</value>
   </data>
   <data name="panelConvert.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3139,16 +3553,16 @@
     <value>0, 0</value>
   </data>
   <data name="richTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="richTextBoxConv.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>384, 68</value>
+    <value>480, 85</value>
   </data>
   <data name="richTextBoxConv.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
     <value>ForcedVertical</value>
   </data>
   <data name="richTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 87</value>
+    <value>531, 109</value>
   </data>
   <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3172,13 +3586,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
+    <value>8, 72</value>
   </data>
   <data name="buttonOutConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 41</value>
+    <value>90, 51</value>
   </data>
   <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3202,13 +3616,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
   </data>
   <data name="buttonInputConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 41</value>
+    <value>91, 51</value>
   </data>
   <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3244,13 +3658,13 @@
     <value>0</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 0</value>
+    <value>549, 0</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 611</value>
+    <value>584, 764</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3289,13 +3703,13 @@
     <value>2, 1</value>
   </data>
   <data name="tabControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabControl2.Padding" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 608</value>
+    <value>578, 760</value>
   </data>
   <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3328,16 +3742,16 @@
     <value>0</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 26</value>
   </data>
   <data name="tabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 582</value>
+    <value>570, 730</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3451,13 +3865,13 @@
     <value>6</value>
   </data>
   <data name="panelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 6</value>
+    <value>2, 8</value>
   </data>
   <data name="panelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 576</value>
+    <value>561, 720</value>
   </data>
   <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3490,7 +3904,7 @@
     <value>Vertical</value>
   </data>
   <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 110</value>
+    <value>1, 138</value>
   </data>
   <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3520,13 +3934,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 544</value>
+    <value>235, 680</value>
   </data>
   <data name="buttonUnselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 26</value>
+    <value>80, 32</value>
   </data>
   <data name="buttonUnselectAll.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3553,13 +3967,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 544</value>
+    <value>331, 680</value>
   </data>
   <data name="buttonSellectAllQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonSellectAllQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
+    <value>88, 32</value>
   </data>
   <data name="buttonSellectAllQueue.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3604,7 +4018,7 @@
     <value>40</value>
   </data>
   <data name="no_cell.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>59</value>
   </data>
   <metadata name="task_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3619,10 +4033,13 @@
     <value>-2, -2</value>
   </data>
   <data name="dataGridViewBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
+  </data>
+  <data name="dataGridViewBatch.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
   <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 540</value>
+    <value>569, 675</value>
   </data>
   <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3646,13 +4063,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 544</value>
+    <value>481, 680</value>
   </data>
   <data name="buttonDeleteQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonDeleteQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 26</value>
+    <value>64, 32</value>
   </data>
   <data name="buttonDeleteQueue.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3679,13 +4096,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 544</value>
+    <value>108, 680</value>
   </data>
   <data name="buttonCancelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonCancelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 26</value>
+    <value>68, 32</value>
   </data>
   <data name="buttonCancelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3712,13 +4129,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 544</value>
+    <value>2, 680</value>
   </data>
   <data name="buttonStartQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="buttonStartQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 26</value>
+    <value>90, 32</value>
   </data>
   <data name="buttonStartQueue.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3745,10 +4162,10 @@
     <value>47</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+    <value>120, 120</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>910, 644</value>
+    <value>1138, 805</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -7230,10 +7647,10 @@
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>2, 4, 2, 4</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>922, 673</value>
+    <value>1148, 830</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

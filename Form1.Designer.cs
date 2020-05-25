@@ -41,6 +41,11 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
+            this.numericUpDownAudioNr = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVideoNr = new System.Windows.Forms.NumericUpDown();
+            this.labelTransAudioNr = new System.Windows.Forms.Label();
+            this.labelTransVideoNr = new System.Windows.Forms.Label();
             this.checkBoxKeepExtension = new System.Windows.Forms.CheckBox();
             this.checkBoxTranscodeAllStreams = new System.Windows.Forms.CheckBox();
             this.buttonRemoveTransPath = new System.Windows.Forms.Button();
@@ -108,6 +113,7 @@ namespace VTC
             this.richTextBoxConv = new System.Windows.Forms.RichTextBox();
             this.buttonOutConvFile = new System.Windows.Forms.Button();
             this.buttonInputConvFile = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -122,15 +128,17 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
-            this.labelTransVideoNr = new System.Windows.Forms.Label();
-            this.labelTransAudioNr = new System.Windows.Forms.Label();
-            this.numericUpDownVideoNr = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownAudioNr = new System.Windows.Forms.NumericUpDown();
+            this.labelStream = new System.Windows.Forms.Label();
+            this.textBoxStream = new System.Windows.Forms.TextBox();
+            this.buttonTestStream = new System.Windows.Forms.Button();
+            this.buttonStartRec = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBoxTransGroupStreams.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBoxVideoSize.SuspendLayout();
             this.groupBoxSlow.SuspendLayout();
@@ -141,14 +149,12 @@ namespace VTC
             this.groupBoxAudio.SuspendLayout();
             this.groupBoxContainer.SuspendLayout();
             this.panelConvert.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
-            this.groupBoxTransGroupStreams.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -190,6 +196,7 @@ namespace VTC
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
@@ -212,6 +219,46 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
+            // 
+            // groupBoxTransGroupStreams
+            // 
+            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownVideoNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransAudioNr);
+            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransVideoNr);
+            resources.ApplyResources(this.groupBoxTransGroupStreams, "groupBoxTransGroupStreams");
+            this.groupBoxTransGroupStreams.Name = "groupBoxTransGroupStreams";
+            this.groupBoxTransGroupStreams.TabStop = false;
+            // 
+            // numericUpDownAudioNr
+            // 
+            resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
+            this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownAudioNr.Name = "numericUpDownAudioNr";
+            // 
+            // numericUpDownVideoNr
+            // 
+            resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
+            this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDownVideoNr.Name = "numericUpDownVideoNr";
+            // 
+            // labelTransAudioNr
+            // 
+            resources.ApplyResources(this.labelTransAudioNr, "labelTransAudioNr");
+            this.labelTransAudioNr.Name = "labelTransAudioNr";
+            // 
+            // labelTransVideoNr
+            // 
+            resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
+            this.labelTransVideoNr.Name = "labelTransVideoNr";
             // 
             // checkBoxKeepExtension
             // 
@@ -771,6 +818,16 @@ namespace VTC
             this.buttonInputConvFile.UseVisualStyleBackColor = true;
             this.buttonInputConvFile.Click += new System.EventHandler(this.buttonInputConvFile_Click);
             // 
+            // tabPage4
+            // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
+            this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.Controls.Add(this.buttonStartRec);
+            this.tabPage4.Controls.Add(this.buttonTestStream);
+            this.tabPage4.Controls.Add(this.textBoxStream);
+            this.tabPage4.Controls.Add(this.labelStream);
+            this.tabPage4.Name = "tabPage4";
+            // 
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
@@ -899,45 +956,29 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // groupBoxTransGroupStreams
+            // labelStream
             // 
-            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownAudioNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.numericUpDownVideoNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransAudioNr);
-            this.groupBoxTransGroupStreams.Controls.Add(this.labelTransVideoNr);
-            resources.ApplyResources(this.groupBoxTransGroupStreams, "groupBoxTransGroupStreams");
-            this.groupBoxTransGroupStreams.Name = "groupBoxTransGroupStreams";
-            this.groupBoxTransGroupStreams.TabStop = false;
+            resources.ApplyResources(this.labelStream, "labelStream");
+            this.labelStream.Name = "labelStream";
             // 
-            // labelTransVideoNr
+            // textBoxStream
             // 
-            resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
-            this.labelTransVideoNr.Name = "labelTransVideoNr";
+            this.textBoxStream.AllowDrop = true;
+            resources.ApplyResources(this.textBoxStream, "textBoxStream");
+            this.textBoxStream.Name = "textBoxStream";
             // 
-            // labelTransAudioNr
+            // buttonTestStream
             // 
-            resources.ApplyResources(this.labelTransAudioNr, "labelTransAudioNr");
-            this.labelTransAudioNr.Name = "labelTransAudioNr";
+            resources.ApplyResources(this.buttonTestStream, "buttonTestStream");
+            this.buttonTestStream.Name = "buttonTestStream";
+            this.buttonTestStream.UseVisualStyleBackColor = true;
+            this.buttonTestStream.Click += new System.EventHandler(this.buttonTestStream_Click);
             // 
-            // numericUpDownVideoNr
+            // buttonStartRec
             // 
-            resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
-            this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownVideoNr.Name = "numericUpDownVideoNr";
-            // 
-            // numericUpDownAudioNr
-            // 
-            resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
-            this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDownAudioNr.Name = "numericUpDownAudioNr";
+            resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
+            this.buttonStartRec.Name = "buttonStartRec";
+            this.buttonStartRec.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -956,6 +997,9 @@ namespace VTC
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBoxTransGroupStreams.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBoxVideoSize.ResumeLayout(false);
@@ -971,14 +1015,13 @@ namespace VTC
             this.groupBoxContainer.ResumeLayout(false);
             this.groupBoxContainer.PerformLayout();
             this.panelConvert.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
-            this.groupBoxTransGroupStreams.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1079,6 +1122,11 @@ namespace VTC
         private System.Windows.Forms.Label labelTransVideoNr;
         private System.Windows.Forms.NumericUpDown numericUpDownAudioNr;
         private System.Windows.Forms.NumericUpDown numericUpDownVideoNr;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button buttonTestStream;
+        private System.Windows.Forms.TextBox textBoxStream;
+        private System.Windows.Forms.Label labelStream;
+        private System.Windows.Forms.Button buttonStartRec;
     }
 }
 
