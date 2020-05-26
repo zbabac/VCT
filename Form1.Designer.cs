@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -113,6 +113,13 @@ namespace VTC
             this.buttonOutConvFile = new System.Windows.Forms.Button();
             this.buttonInputConvFile = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelSaveStreamPath = new System.Windows.Forms.Label();
+            this.buttonStreamSavePath = new System.Windows.Forms.Button();
+            this.buttonLogRec = new System.Windows.Forms.Button();
+            this.buttonStartRec = new System.Windows.Forms.Button();
+            this.buttonPlayStream = new System.Windows.Forms.Button();
+            this.textBoxStream = new System.Windows.Forms.TextBox();
+            this.labelStream = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -127,15 +134,8 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
-            this.labelStream = new System.Windows.Forms.Label();
-            this.textBoxStream = new System.Windows.Forms.TextBox();
-            this.buttonPlayStream = new System.Windows.Forms.Button();
-            this.buttonStartRec = new System.Windows.Forms.Button();
-            this.buttonLogRec = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonCheckStream = new System.Windows.Forms.Button();
-            this.buttonStreamSavePath = new System.Windows.Forms.Button();
-            this.labelSaveStreamPath = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -821,6 +821,48 @@ namespace VTC
             this.tabPage4.Controls.Add(this.labelStream);
             this.tabPage4.Name = "tabPage4";
             // 
+            // labelSaveStreamPath
+            // 
+            resources.ApplyResources(this.labelSaveStreamPath, "labelSaveStreamPath");
+            this.labelSaveStreamPath.Name = "labelSaveStreamPath";
+            // 
+            // buttonStreamSavePath
+            // 
+            resources.ApplyResources(this.buttonStreamSavePath, "buttonStreamSavePath");
+            this.buttonStreamSavePath.Name = "buttonStreamSavePath";
+            this.buttonStreamSavePath.UseVisualStyleBackColor = true;
+            // 
+            // buttonLogRec
+            // 
+            resources.ApplyResources(this.buttonLogRec, "buttonLogRec");
+            this.buttonLogRec.Name = "buttonLogRec";
+            this.buttonLogRec.UseVisualStyleBackColor = true;
+            this.buttonLogRec.Click += new System.EventHandler(this.buttonLogRec_Click);
+            // 
+            // buttonStartRec
+            // 
+            resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
+            this.buttonStartRec.Name = "buttonStartRec";
+            this.buttonStartRec.UseVisualStyleBackColor = true;
+            // 
+            // buttonPlayStream
+            // 
+            resources.ApplyResources(this.buttonPlayStream, "buttonPlayStream");
+            this.buttonPlayStream.Name = "buttonPlayStream";
+            this.buttonPlayStream.UseVisualStyleBackColor = true;
+            this.buttonPlayStream.Click += new System.EventHandler(this.buttonTestStream_Click);
+            // 
+            // textBoxStream
+            // 
+            this.textBoxStream.AllowDrop = true;
+            resources.ApplyResources(this.textBoxStream, "textBoxStream");
+            this.textBoxStream.Name = "textBoxStream";
+            // 
+            // labelStream
+            // 
+            resources.ApplyResources(this.labelStream, "labelStream");
+            this.labelStream.Name = "labelStream";
+            // 
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
@@ -883,11 +925,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -902,9 +944,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -949,37 +991,6 @@ namespace VTC
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // labelStream
-            // 
-            resources.ApplyResources(this.labelStream, "labelStream");
-            this.labelStream.Name = "labelStream";
-            // 
-            // textBoxStream
-            // 
-            this.textBoxStream.AllowDrop = true;
-            resources.ApplyResources(this.textBoxStream, "textBoxStream");
-            this.textBoxStream.Name = "textBoxStream";
-            // 
-            // buttonPlayStream
-            // 
-            resources.ApplyResources(this.buttonPlayStream, "buttonPlayStream");
-            this.buttonPlayStream.Name = "buttonPlayStream";
-            this.buttonPlayStream.UseVisualStyleBackColor = true;
-            this.buttonPlayStream.Click += new System.EventHandler(this.buttonTestStream_Click);
-            // 
-            // buttonStartRec
-            // 
-            resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
-            this.buttonStartRec.Name = "buttonStartRec";
-            this.buttonStartRec.UseVisualStyleBackColor = true;
-            // 
-            // buttonLogRec
-            // 
-            resources.ApplyResources(this.buttonLogRec, "buttonLogRec");
-            this.buttonLogRec.Name = "buttonLogRec";
-            this.buttonLogRec.UseVisualStyleBackColor = true;
-            this.buttonLogRec.Click += new System.EventHandler(this.buttonLogRec_Click);
-            // 
             // buttonInfo
             // 
             resources.ApplyResources(this.buttonInfo, "buttonInfo");
@@ -1001,17 +1012,6 @@ namespace VTC
             this.buttonCheckStream.Name = "buttonCheckStream";
             this.buttonCheckStream.UseVisualStyleBackColor = true;
             this.buttonCheckStream.Click += new System.EventHandler(this.buttonCheckStream_Click);
-            // 
-            // buttonStreamSavePath
-            // 
-            resources.ApplyResources(this.buttonStreamSavePath, "buttonStreamSavePath");
-            this.buttonStreamSavePath.Name = "buttonStreamSavePath";
-            this.buttonStreamSavePath.UseVisualStyleBackColor = true;
-            // 
-            // labelSaveStreamPath
-            // 
-            resources.ApplyResources(this.labelSaveStreamPath, "labelSaveStreamPath");
-            this.labelSaveStreamPath.Name = "labelSaveStreamPath";
             // 
             // Form1
             // 

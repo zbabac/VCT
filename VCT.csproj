@@ -160,6 +160,8 @@
     <Content Include="images\button_high.png" />
     <Content Include="images\button_over.png" />
     <None Include="images\drop_here.png" />
+    <None Include="images\load1.gif" />
+    <None Include="images\load2.gif" />
     <Content Include="images\test.jpg" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

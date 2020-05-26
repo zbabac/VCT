@@ -281,7 +281,10 @@ namespace VTC
                 procffplay.RedirectStandardInput = false; ;
                 procffplay.UseShellExecute = false;
                 procffplay.CreateNoWindow = false;  */
-                procffplay.UseShellExecute = true;
+                procffplay.RedirectStandardError = false;
+                procffplay.RedirectStandardOutput = false;
+                procffplay.RedirectStandardInput = false;
+                procffplay.UseShellExecute = false;
                 procffplay.CreateNoWindow = true;
                 Process ffproc = new Process();
                 ffproc.StartInfo = procffplay;
@@ -1866,6 +1869,19 @@ namespace VTC
                 richTextBox3.Text = json;
                 buttonCheckStream.Image = null;
                 buttonCheckStream.Text = "Check Stream";
+                if (json != "{}")
+                {
+                    buttonStreamSavePath.Enabled = true;
+                    buttonStartRec.Visible = true;
+                    buttonStartRec.Enabled = true;
+                }
+                else
+                {
+                    richTextBox3.Text += "\n Stream not found!";
+                    buttonStreamSavePath.Enabled = false;
+                    buttonStartRec.Visible = false;
+                    buttonStartRec.Enabled = false;
+                }
             }
             catch (Exception x)
             { }
