@@ -154,6 +154,8 @@
     <Content Include="ffprobe.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="images\25.gif" />
+    <None Include="images\15.gif" />
     <Content Include="images\button.png" />
     <Content Include="images\button_high.png" />
     <Content Include="images\button_over.png" />

@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -76,7 +76,6 @@ namespace VTC
             this.groupBoxCPU = new System.Windows.Forms.GroupBox();
             this.checkBoxH265 = new System.Windows.Forms.CheckBox();
             this.buttonLog = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
             this.comboBoxAudioStreamNo = new System.Windows.Forms.ComboBox();
             this.labelAudioStream = new System.Windows.Forms.Label();
             this.groupBoxRotate = new System.Windows.Forms.GroupBox();
@@ -130,8 +129,13 @@ namespace VTC
             this.buttonStartQueue = new System.Windows.Forms.Button();
             this.labelStream = new System.Windows.Forms.Label();
             this.textBoxStream = new System.Windows.Forms.TextBox();
-            this.buttonTestStream = new System.Windows.Forms.Button();
+            this.buttonPlayStream = new System.Windows.Forms.Button();
             this.buttonStartRec = new System.Windows.Forms.Button();
+            this.buttonLogRec = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonCheckStream = new System.Windows.Forms.Button();
+            this.buttonStreamSavePath = new System.Windows.Forms.Button();
+            this.labelSaveStreamPath = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -359,7 +363,6 @@ namespace VTC
             this.tabPage2.Controls.Add(this.groupBoxSlow);
             this.tabPage2.Controls.Add(this.groupBoxCPU);
             this.tabPage2.Controls.Add(this.buttonLog);
-            this.tabPage2.Controls.Add(this.buttonInfo);
             this.tabPage2.Controls.Add(this.comboBoxAudioStreamNo);
             this.tabPage2.Controls.Add(this.labelAudioStream);
             this.tabPage2.Controls.Add(this.groupBoxRotate);
@@ -378,6 +381,7 @@ namespace VTC
             this.tabPage2.Controls.Add(this.panelConvert);
             this.tabPage2.Controls.Add(this.buttonOutConvFile);
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
+            this.tabPage2.Controls.Add(this.buttonInfo);
             this.tabPage2.Name = "tabPage2";
             // 
             // groupBoxVideoSize
@@ -501,21 +505,6 @@ namespace VTC
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.UseVisualStyleBackColor = false;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
-            // 
-            // buttonInfo
-            // 
-            resources.ApplyResources(this.buttonInfo, "buttonInfo");
-            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
-            this.buttonInfo.FlatAppearance.BorderSize = 0;
-            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.UseVisualStyleBackColor = false;
-            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
-            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
-            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
-            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
             // 
             // comboBoxAudioStreamNo
             // 
@@ -822,8 +811,12 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.Controls.Add(this.labelSaveStreamPath);
+            this.tabPage4.Controls.Add(this.buttonStreamSavePath);
+            this.tabPage4.Controls.Add(this.buttonCheckStream);
+            this.tabPage4.Controls.Add(this.buttonLogRec);
             this.tabPage4.Controls.Add(this.buttonStartRec);
-            this.tabPage4.Controls.Add(this.buttonTestStream);
+            this.tabPage4.Controls.Add(this.buttonPlayStream);
             this.tabPage4.Controls.Add(this.textBoxStream);
             this.tabPage4.Controls.Add(this.labelStream);
             this.tabPage4.Name = "tabPage4";
@@ -890,11 +883,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -909,9 +902,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle6;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -967,18 +960,58 @@ namespace VTC
             resources.ApplyResources(this.textBoxStream, "textBoxStream");
             this.textBoxStream.Name = "textBoxStream";
             // 
-            // buttonTestStream
+            // buttonPlayStream
             // 
-            resources.ApplyResources(this.buttonTestStream, "buttonTestStream");
-            this.buttonTestStream.Name = "buttonTestStream";
-            this.buttonTestStream.UseVisualStyleBackColor = true;
-            this.buttonTestStream.Click += new System.EventHandler(this.buttonTestStream_Click);
+            resources.ApplyResources(this.buttonPlayStream, "buttonPlayStream");
+            this.buttonPlayStream.Name = "buttonPlayStream";
+            this.buttonPlayStream.UseVisualStyleBackColor = true;
+            this.buttonPlayStream.Click += new System.EventHandler(this.buttonTestStream_Click);
             // 
             // buttonStartRec
             // 
             resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
             this.buttonStartRec.Name = "buttonStartRec";
             this.buttonStartRec.UseVisualStyleBackColor = true;
+            // 
+            // buttonLogRec
+            // 
+            resources.ApplyResources(this.buttonLogRec, "buttonLogRec");
+            this.buttonLogRec.Name = "buttonLogRec";
+            this.buttonLogRec.UseVisualStyleBackColor = true;
+            this.buttonLogRec.Click += new System.EventHandler(this.buttonLogRec_Click);
+            // 
+            // buttonInfo
+            // 
+            resources.ApplyResources(this.buttonInfo, "buttonInfo");
+            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
+            this.buttonInfo.FlatAppearance.BorderSize = 0;
+            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.UseVisualStyleBackColor = false;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
+            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
+            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
+            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
+            // 
+            // buttonCheckStream
+            // 
+            resources.ApplyResources(this.buttonCheckStream, "buttonCheckStream");
+            this.buttonCheckStream.Name = "buttonCheckStream";
+            this.buttonCheckStream.UseVisualStyleBackColor = true;
+            this.buttonCheckStream.Click += new System.EventHandler(this.buttonCheckStream_Click);
+            // 
+            // buttonStreamSavePath
+            // 
+            resources.ApplyResources(this.buttonStreamSavePath, "buttonStreamSavePath");
+            this.buttonStreamSavePath.Name = "buttonStreamSavePath";
+            this.buttonStreamSavePath.UseVisualStyleBackColor = true;
+            // 
+            // labelSaveStreamPath
+            // 
+            resources.ApplyResources(this.labelSaveStreamPath, "labelSaveStreamPath");
+            this.labelSaveStreamPath.Name = "labelSaveStreamPath";
             // 
             // Form1
             // 
@@ -1123,10 +1156,14 @@ namespace VTC
         private System.Windows.Forms.NumericUpDown numericUpDownAudioNr;
         private System.Windows.Forms.NumericUpDown numericUpDownVideoNr;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button buttonTestStream;
+        private System.Windows.Forms.Button buttonPlayStream;
         private System.Windows.Forms.TextBox textBoxStream;
         private System.Windows.Forms.Label labelStream;
         private System.Windows.Forms.Button buttonStartRec;
+        private System.Windows.Forms.Button buttonLogRec;
+        private System.Windows.Forms.Button buttonCheckStream;
+        private System.Windows.Forms.Label labelSaveStreamPath;
+        private System.Windows.Forms.Button buttonStreamSavePath;
     }
 }
 

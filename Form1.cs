@@ -271,34 +271,44 @@ namespace VTC
                     procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffplay -stimeout 500000 \"" + input + "\""); // Windows: define Process Info to assing to the process
                 else
                     procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " -stimeout 500000 \"" + input + "\""); // for Linux with mono
-                                                                                                                             // The following commands are needed to redirect the standard output and standard error.
-                ffplay_output = "";                                                                                                                                                       // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                // The following commands are needed to redirect the standard output and standard error.
+                ffplay_output = "";  // reset ffplay log from cmd output
+                log = false;
+                buttonLogRec.PerformClick();
+                /*
                 procffplay.RedirectStandardError = true;
                 procffplay.RedirectStandardOutput = true;
                 procffplay.RedirectStandardInput = false; ;
                 procffplay.UseShellExecute = false;
-                procffplay.CreateNoWindow = false;  
-                //procffplay.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
-
+                procffplay.CreateNoWindow = false;  */
+                procffplay.UseShellExecute = true;
+                procffplay.CreateNoWindow = true;
                 Process ffproc = new Process();
                 ffproc.StartInfo = procffplay;
-                ffproc.ErrorDataReceived += (sender, args) => ffplayOutput(args.Data);
-                //ffproc.OutputDataReceived += (sender, args) => ffplayOutput(args.Data);
-                ffproc.Start();				//start the ffplay
-                //ffproc.BeginOutputReadLine();
-                ffproc.BeginErrorReadLine();
-                //MessageBox.Show("Please wait few seconds for a stream!", "Wait 10 secs");
-                ffproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
-                //ffproc.CancelOutputRead();
-                ffproc.CancelErrorRead();
-                if (ffplay_output.Contains("Invalid") || ffplay_output.Contains("error"))
+                //ffproc.ErrorDataReceived += (sender, args) => ffplayOutput(args.Data);
+                
+                ffproc.Start();             //start the ffplay
+
+                //ffproc.BeginErrorReadLine();
+
+                //ffproc.WaitForExit();          //since it is started as separate thread, GUI will continue separately, but we wait here before starting next task
+                //ffproc.CancelErrorRead();
+                /*if (ffplay_output.Contains("Invalid") || ffplay_output.Contains("error"))
+                {
+                    richTextBox3.Text = ffplay_output;
                     return -1;
+                }
                 else
+                {
+                    richTextBox3.Text = ffplay_output;
                     return 0;
+                }*/
+                return 0;
             }
             catch (Exception ex)
             {
                 statustekst = ex.Message;
+                richTextBox3.Text += statustekst;
                 return -1;
             }
         }
@@ -319,9 +329,9 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procffprobe;
                 if (!IsLinux)
-                    procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input_file +"\"");// Windows: define Process Info to assing to the process
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input +"\"");// Windows: define Process Info to assing to the process
                 else
-                    procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe"," -v quiet -print_format json -show_format -show_streams \"" +  input_file + "\""); // for Linux with mono
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe", " -v quiet -print_format json -show_format -show_streams \"" +  input + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -1116,6 +1126,7 @@ namespace VTC
             {
                 json = "";
                 fps = 0.00;
+                
                 BackgroundWorker ff = new BackgroundWorker();					 //new instance of Background worker
                 ff.WorkerReportsProgress = true;
                 ff.DoWork += ff_DoWork;											 //handler for starting thread
@@ -1656,7 +1667,9 @@ namespace VTC
                 log = true;
                 buttonLog.BackColor = System.Drawing.Color.SteelBlue;
                 buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLogRec.BackColor = System.Drawing.Color.SteelBlue;
                 buttonLog.Text = ">";
+                buttonLogRec.Text = ">";
             }
             else
             {
@@ -1666,7 +1679,9 @@ namespace VTC
                 log = false;
                 buttonLog.BackColor = System.Drawing.Color.Transparent;
                 buttonLog2.BackColor = System.Drawing.Color.Transparent;
+                buttonLogRec.BackColor = System.Drawing.Color.Transparent;
                 buttonLog.Text = "<";
+                buttonLogRec.Text = "<";
             }
         }
 
@@ -1680,6 +1695,7 @@ namespace VTC
                 log = true;
                 buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
                 buttonLog.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLogRec.BackColor = System.Drawing.Color.SteelBlue;
             }
             else
             {
@@ -1689,6 +1705,7 @@ namespace VTC
                 log = false;
                 buttonLog2.BackColor = System.Drawing.Color.Transparent;
                 buttonLog.BackColor = System.Drawing.Color.Transparent;
+                buttonLogRec.BackColor = System.Drawing.Color.Transparent;
             }
         }
 
@@ -1787,6 +1804,72 @@ namespace VTC
             ffplay_test(textBoxStream.Text);
         }
 
+        private void buttonLogRec_Click(object sender, EventArgs e)
+        {
+            if (!log)
+            {
+                richTextBox3.Height = dataGridViewBatch.Height + 5;
+                richTextBox3.Width = dataGridViewBatch.Width;
+                richTextBox3.Visible = true;
+                log = true;
+                buttonLog.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLog2.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLogRec.BackColor = System.Drawing.Color.SteelBlue;
+                buttonLog.Text = ">";
+                buttonLogRec.Text = ">";
+            }
+            else
+            {
+                richTextBox3.Height = 0;
+                richTextBox3.Width = 0;
+                richTextBox3.Visible = false;
+                log = false;
+                buttonLog.BackColor = System.Drawing.Color.Transparent;
+                buttonLog2.BackColor = System.Drawing.Color.Transparent;
+                buttonLogRec.BackColor = System.Drawing.Color.Transparent;
+                buttonLog.Text = "<";
+                buttonLogRec.Text = "<";
+            }
+        }
+
+        private void buttonCheckStream_Click(object sender, EventArgs e)
+        {
+            buttonCheckStream.Image = VTC.Properties.Resources._15;
+            buttonCheckStream.Text = "";
+            json = "";
+            //ffprobe(textBoxStream.Text);
+            BackgroundWorker ffp = new BackgroundWorker();                    //new instance of Background worker
+            ffp.WorkerReportsProgress = true;
+            ffp.DoWork += ff_DoFFprobeWork;                                          //handler for starting thread
+            ffp.RunWorkerCompleted += ffprobe_RunWorkerCompleted;                  //handler for finishing thread
+            ffp.RunWorkerAsync();    //start job as separate thread
+            log = false;
+            buttonLogRec.PerformClick();
+            
+        }
+
+        private void ff_DoFFprobeWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {					//new thread started, here we define process start, etc.
+                int ffprobe_id = ffprobe(textBoxStream.Text);	//start ffprobe in this func								
+            }
+            catch (Exception x)
+            {
+                statustekst = x.Message;
+            }
+        }
+        private void ffprobe_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {   //it gets ffprobe data after stream check
+            try
+            {
+                richTextBox3.Text = json;
+                buttonCheckStream.Image = null;
+                buttonCheckStream.Text = "Check Stream";
+            }
+            catch (Exception x)
+            { }
+        }
         private void textBoxFPSout_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFPSout.Text == "0")
