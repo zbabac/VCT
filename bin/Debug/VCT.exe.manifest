@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1175040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1174528">
       <assemblyIdentity name="VCT" version="1.9.4.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>19i0+52V+abfmwXZoyl/TVjb9tM=</dsig:DigestValue>
+        <dsig:DigestValue>mrl6Gk3QrFzFYpDU8qFC7bMH9Wo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -82,6 +82,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>9EOuuqvdqo+xTNH2fc9NhvFDjQ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ffplay.exe" size="64539648">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XkxurNEHoLaaO+Lx3cP677umpO8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ffprobe.exe" size="62866432">

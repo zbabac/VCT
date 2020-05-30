@@ -177,7 +177,7 @@ namespace VTC
             string[] input_list = new string[16383];	//defines max number of files selected from the same folder
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C://";
-            openFileDialog.Filter = "H.264 or H.265 files|*.mp4;*.mkv;*.m4v";	//sets filter of displayed files
+            openFileDialog.Filter = "H.264 or H.265 files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv";	//sets filter of displayed files
             openFileDialog.Multiselect = true;							//allows to select more files at once
             openFileDialog.Title = "Choose video files to transcode";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -268,9 +268,9 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procffplay;
                 if (!IsLinux)
-                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffplay -stimeout 500000 \"" + input + "\""); // Windows: define Process Info to assing to the process
+                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " \"" + input + "\""); // Windows: define Process Info to assing to the process
                 else
-                    procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " -stimeout 500000 \"" + input + "\""); // for Linux with mono
+                    procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " \"" + input + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
                 ffplay_output = "";  // reset ffplay log from cmd output
                 log = false;
@@ -284,8 +284,8 @@ namespace VTC
                 procffplay.RedirectStandardError = false;
                 procffplay.RedirectStandardOutput = false;
                 procffplay.RedirectStandardInput = false;
-                procffplay.UseShellExecute = false;
-                procffplay.CreateNoWindow = true;
+                procffplay.UseShellExecute = true;
+                procffplay.CreateNoWindow = false;
                 Process ffproc = new Process();
                 ffproc.StartInfo = procffplay;
                 //ffproc.ErrorDataReceived += (sender, args) => ffplayOutput(args.Data);
