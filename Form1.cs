@@ -36,7 +36,7 @@ namespace VTC
         bool duration_found = false; //check if duration of the video or audio is found in ffmpeg output - measures percentage of executed job
         static string percent = ""; //shows perventage of executed task - used for progress bar
         static float total_sec, encoded_sec; //stores total length of video or audio; currently number of encoded seconds
-        static string input_stream, input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext; //stores names of input, output files, output path and temp. varr
+        static string input_stream, input_file, out_file, out_path = "", str_extension, orig_ext, audio_ext, stream_file = ""; //stores names of input, output files, output path and temp. varr
         static string subtitle_stream, audio_stream = "1";
         static int number_of_rows = 0; //stores number of rows for batch list
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels or pauses
@@ -1873,7 +1873,7 @@ namespace VTC
                 {
                     buttonStreamSavePath.Enabled = true;
                     buttonStartRec.Visible = true;
-                    buttonStartRec.Enabled = true;
+                    buttonStartRec.Enabled = false;
                 }
                 else
                 {
@@ -1885,6 +1885,40 @@ namespace VTC
             }
             catch (Exception x)
             { }
+        }
+
+        private void buttonStreamSavePath_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
+            openFileDialog.Title = "Choose filename or enter a new file name where the stream will be saved";
+            openFileDialog.CheckFileExists = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string komanda = "";
+                input_stream = textBoxStream.Text;
+                stream_file = openFileDialog.FileName;
+                labelSaveStreamPath.Text = stream_file;
+                int str_position = stream_file.LastIndexOf('.') + 1;
+                string ext = stream_file.Substring(str_position);
+                if (ext == "mp3" || ext == "aac" || ext == "flac" || ext == "ogg" || ext == "ra" || ext == "wav")
+                {   // audio file
+                    if (!IsLinux)
+                        komanda = "ffmpeg -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
+                    else
+                        komanda = " -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
+                }
+                else
+                {   // video file
+                    if (!IsLinux)
+                        komanda = "ffmpeg -y -i \"" + input_stream + "\"  -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
+                    else
+                        komanda = " -y -i \"" + input_stream + "\"  -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
+                }
+                richTextBoxStreamCommand.Text = komanda;
+                buttonStartRec.Enabled = true;
+            }
+            
         }
         private void textBoxFPSout_TextChanged(object sender, EventArgs e)
         {

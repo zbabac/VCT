@@ -133,7 +133,12 @@ ffmpeg -y -rtsp_transport tcp -i "rtsp://192.168.0.100:8080/video/h264" -c copy 
 snimanje segmenata po 60 sekundi FPS=10:
 ffmpeg -y -rtsp_transport tcp -i "rtsp://192.168.0.101:8080/video/h264" -f segment -segment_time 60 -segment_format mp4  -reset_timestamps 1 -strftime 1 -c copy -map 0 -r 10 "d:\Download\ipcam--%Y%m%d-%H%M.mp4"
 
-./ffmpeg -y -rtsp_transport tcp -i "rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen03.stream" -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -st rftime 1 -c copy -map 0 -an -r 10 "/var/media/USB_500G/z/recordings/frejacam--%Y%m%d-%H%M.mp4"
+ffmpeg -y -i "rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen02.stream" -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 -r 10 "d:\\Download\\frejacam--%Y%m%d-%H%M.mp4"
+
+./ffmpeg -y -rtsp_transport tcp -i "rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen03.stream" -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 -an -r 10 "/var/media/USB_500G/z/recordings/frejacam--%Y%m%d-%H%M.mp4"
+
+HTTP stream record:
+ffmpeg -i "http://lyd.nrk.no:80/nrk_radio_klassisk_aac_h?_hdr=0" -map 0:0 -map 0:1? -vn  -c:a libmp3lame -b:a 192k "C:\Users\z\Music\nrk.mp3"
 
 NVIDIA:
 ffmpeg -y -hwaccel cuvid -c:v h264_cuvid -vsync 0 -i <input.mp4> -vf scale_npp=1920:1072 -vcodec h264_nvenc <output0.264> -vf scale_npp=1280:720 -vcodec h264_nvenc <output1.264>
@@ -145,6 +150,3 @@ Test stream:
 ffprobe -v quiet -print_format json -show_streams -stimeout 2000000 -i "rtsp://192.168.0.101:8080/video/h264"
 
 ffplay -stimeout 1000000 "rtsp://192.168.0.101:8080/video/h264"
-
-
-ff = "ffmpeg "+ "-y -rtsp_transport tcp -i \"" + input_stream + "\"" + video + vf + " " + audio_part + out_fps + " \"" + out_file + ".mp4" + "\"";
