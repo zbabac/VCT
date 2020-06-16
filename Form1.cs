@@ -268,7 +268,7 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procffplay;
                 if (!IsLinux)
-                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " \"" + input + "\""); // Windows: define Process Info to assing to the process
+                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "ffplay \"" + input + "\""); // Windows: define Process Info to assing to the process
                 else
                     procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " \"" + input + "\""); // for Linux with mono
                 // The following commands are needed to redirect the standard output and standard error.
@@ -284,8 +284,8 @@ namespace VTC
                 procffplay.RedirectStandardError = false;
                 procffplay.RedirectStandardOutput = false;
                 procffplay.RedirectStandardInput = false;
-                procffplay.UseShellExecute = true;
-                procffplay.CreateNoWindow = false;
+                procffplay.UseShellExecute = false;
+                procffplay.CreateNoWindow = true;
                 Process ffproc = new Process();
                 ffproc.StartInfo = procffplay;
                 //ffproc.ErrorDataReceived += (sender, args) => ffplayOutput(args.Data);

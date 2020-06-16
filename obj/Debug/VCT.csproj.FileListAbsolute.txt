@@ -129,3 +129,27 @@ D:\docs\VS\VCT\obj\Debug\VCT.pdb
 D:\docs\VS\VCT\obj\Debug\VCT.csprojAssemblyReference.cache
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Newtonsoft.Json.dll
 C:\Users\z\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.CoreCompileInputs.cache
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\ffprobe.exe
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\ffmpeg.exe
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT_help.pdf
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Hadezign-Hobbies-Movies.ico
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\copying.txt
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe.config
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe.manifest
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.application
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.exe
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\VCT.pdb
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\bin\Debug\Newtonsoft.Json.dll
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csprojAssemblyReference.cache
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.AboutBoxZ.resources
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form1.resources
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Form2.resources
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VTC.Properties.Resources.resources
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.GenerateResource.cache
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.CoreCompileInputs.cache
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.TrustInfo.xml
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe.manifest
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.application
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.csproj.CopyComplete
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.exe
+C:\z\podaci\Documents\Visual Studio 2017\Projects\VCT\obj\Debug\VCT.pdb
