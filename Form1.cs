@@ -1951,6 +1951,7 @@ namespace VTC
                 labelSaveStreamPath.Text = stream_file;
                 int str_position = stream_file.LastIndexOf('.') + 1;
                 string ext = stream_file.Substring(str_position);
+                stream_file = stream_file.Insert(str_position - 1, "--%Y%m%d-%H%M");
                 if (ext == "mp3" || ext == "aac" || ext == "flac" || ext == "ogg" || ext == "ra" || ext == "wav")
                 {   // audio file
                     if (!IsLinux)
@@ -1961,9 +1962,9 @@ namespace VTC
                 else
                 {   // video file
                     if (!IsLinux)
-                        komanda = "ffmpeg -y -i \"" + input_stream + "\"  -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
+                        komanda = "ffmpeg -y -i \"" + input_stream + "\"  -f segment -segment_time 600 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
                     else
-                        komanda = " -y -i \"" + input_stream + "\"  -f segment -segment_time 60 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
+                        komanda = " -y -i \"" + input_stream + "\"  -f segment -segment_time 600 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
                 }
                 richTextBoxStreamCommand.Text = komanda;
                 buttonStartRec.Enabled = true;

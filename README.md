@@ -3,7 +3,7 @@
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
 - **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
-- **if Video is selected to record streaming, then options are given to record video in 1 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
+- **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
 - **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
 - **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC
 
@@ -128,7 +128,7 @@ Please contact me via discussion board if you want to collaborate or send me an 
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
 - **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
-- **if Video is selected to record streaming, then options are given to record video in 1 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
+- **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
 - **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
 - **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC 
 
