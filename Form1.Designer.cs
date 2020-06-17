@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -112,7 +112,6 @@ namespace VTC
             this.richTextBoxConv = new System.Windows.Forms.RichTextBox();
             this.buttonOutConvFile = new System.Windows.Forms.Button();
             this.buttonInputConvFile = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.richTextBoxStreamCommand = new System.Windows.Forms.RichTextBox();
             this.labelSaveStreamPath = new System.Windows.Forms.Label();
@@ -137,6 +136,8 @@ namespace VTC
             this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -359,6 +360,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.buttonPlay);
             this.tabPage2.Controls.Add(this.groupBoxVideoSize);
             this.tabPage2.Controls.Add(this.buttonRemoveOutPath);
             this.tabPage2.Controls.Add(this.groupBoxSlow);
@@ -808,21 +810,6 @@ namespace VTC
             this.buttonInputConvFile.UseVisualStyleBackColor = true;
             this.buttonInputConvFile.Click += new System.EventHandler(this.buttonInputConvFile_Click);
             // 
-            // buttonInfo
-            // 
-            resources.ApplyResources(this.buttonInfo, "buttonInfo");
-            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
-            this.buttonInfo.FlatAppearance.BorderSize = 0;
-            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.UseVisualStyleBackColor = false;
-            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
-            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
-            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
-            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
-            // 
             // tabPage4
             // 
             resources.ApplyResources(this.tabPage4, "tabPage4");
@@ -957,11 +944,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -976,9 +963,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle8;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -1022,6 +1009,29 @@ namespace VTC
             this.buttonStartQueue.Name = "buttonStartQueue";
             this.buttonStartQueue.UseVisualStyleBackColor = true;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Image = global::VTC.Properties.Resources.play;
+            resources.ApplyResources(this.buttonPlay, "buttonPlay");
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            // 
+            // buttonInfo
+            // 
+            resources.ApplyResources(this.buttonInfo, "buttonInfo");
+            this.buttonInfo.BackgroundImage = global::VTC.Properties.Resources.button;
+            this.buttonInfo.FlatAppearance.BorderSize = 0;
+            this.buttonInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.UseVisualStyleBackColor = false;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            this.buttonInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseDown);
+            this.buttonInfo.MouseEnter += new System.EventHandler(this.buttonInfo_Enter);
+            this.buttonInfo.MouseLeave += new System.EventHandler(this.buttonInfo_Leave);
+            this.buttonInfo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonInfo_MouseUp);
             // 
             // Form1
             // 
@@ -1175,6 +1185,7 @@ namespace VTC
         private System.Windows.Forms.Label labelSaveStreamPath;
         private System.Windows.Forms.Button buttonStreamSavePath;
         private System.Windows.Forms.RichTextBox richTextBoxStreamCommand;
+        private System.Windows.Forms.Button buttonPlay;
     }
 }
 

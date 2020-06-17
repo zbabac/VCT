@@ -191,6 +191,7 @@ namespace VTC
                     input_file = "";
                 }
                 buttonInfo.Visible = false;
+                buttonPlay.Visible = false;
             }
         }
         private void MultiTransRow()
@@ -744,6 +745,7 @@ namespace VTC
             groupBoxVideoOrAudio.Enabled = false;
             buttonAddSubtitle.Enabled = false;
             buttonInfo.Visible = false;
+            buttonPlay.Visible = false;
             groupBoxVideoSize.Enabled = false;
             groupBoxSlow.Enabled = false;
             groupBoxRotate.Enabled = false;
@@ -1029,6 +1031,7 @@ namespace VTC
                     input_file = "";
                 }
                 buttonInfo.Visible = false;
+                buttonPlay.Visible = false;
             }
         }
         private void buttonMultiConvFiles_DragDrop(object sender, DragEventArgs e)
@@ -1046,6 +1049,7 @@ namespace VTC
                     input_file = "";
                 }
                 buttonInfo.Visible = false;
+                buttonPlay.Visible = false;
             }
         }
         private void dataGridViewBatch_DragDrop(object sender, DragEventArgs e)
@@ -1066,6 +1070,7 @@ namespace VTC
                     input_file = "";
                 }
                 buttonInfo.Visible = false;
+                buttonPlay.Visible = false;
             }
         }
         private void MultiConvRow()
@@ -1145,6 +1150,8 @@ namespace VTC
                 EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
+                buttonPlay.Visible = true;
+                buttonPlay.Enabled = true;
                 checkBoxSlowFPS.Checked = false;
                 checkBoxSetFPS.Checked = false;
                 toolStripStatusLabel1.Text = "Done. File info loaded.";
@@ -1475,6 +1482,7 @@ namespace VTC
                     }
                 }
                 buttonInfo.Visible = true;
+                buttonPlay.Visible = true;
             }
             catch (Exception x)
             {
@@ -1522,6 +1530,8 @@ namespace VTC
 				EnableConvButtons();
                 buttonInfo.Visible = true;
                 buttonInfo.Enabled = true;
+                buttonPlay.Visible = true;
+                buttonPlay.Enabled = true;
                 toolStripStatusLabel1.Text = "Done. File info loaded.";
             }
         }
@@ -1920,6 +1930,11 @@ namespace VTC
         {
             recStreamFFmpeg(richTextBoxStreamCommand.Text);
             buttonStartRec.Enabled = false;
+        }
+
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            ffplay_test(input_file);
         }
 
         private void buttonStreamSavePath_Click(object sender, EventArgs e)

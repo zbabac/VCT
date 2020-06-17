@@ -163,6 +163,7 @@
     <None Include="images\drop_here.png" />
     <None Include="images\load1.gif" />
     <None Include="images\load2.gif" />
+    <None Include="images\play.png" />
     <Content Include="images\test.jpg" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

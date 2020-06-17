@@ -22,7 +22,7 @@ namespace VTC
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.richTextBoxDescription.Text = "Copyright 2014-2019 Zlatko Babić"+
+            this.richTextBoxDescription.Text = "Copyright 2014-2020 Zlatko Babić"+
 
 				"\nLicensed under the Apache License, Version 2.0 (the 'License');"+
 				"\nyou may not use this file except in compliance with the License."+
@@ -42,6 +42,7 @@ namespace VTC
                 "\nIf you want to use newer version of FFmpeg, or the 64-bit one, or one that you compiled yourself, "+
                 "you must store that new   ffmpeg.exe    in the same folder as VCT.exe"+
                 "\n\nThis app uses icon from http://hadezign.com ."+
+                "\n\nPlay Icon made by Pixel perfect from www.flaticon.com ." +
                 "\n\nHelp is available in PDF document in the installation folder, or by clicking 'Help' button when on Transcode Tab.";
         }
 

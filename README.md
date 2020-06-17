@@ -1,11 +1,11 @@
-# v1.9.3.4    
-- **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
-- **If this option is unchecked, then you have option to choose which video and audio stream will be copied to output; by default, first video and audio stream is copied
-- **Keep file extension - useful with option above unchecked: only first video and first audio is copied and file extension (e.g. MP4) is preserved
-- **Remove subtitle usage extended with 2 above options: in most of the cases, subtitle is not compatible in MKV and MP4 containers; it is by default set to remove subtitle stream, but you've left with option to keep it
-- **Windows XP users can download VCT_setup.exe and separately download older version of FFmpeg (ffmpeg version N-76123-g002b049, e.g. http://hp.vector.co.jp/authors/VA020429/ffmpeg/list.html) in order to be able to get new VCT features
-- **Linux finaly fixed file info bug if you use mono version; if you have Wine, you can download Windows VCT_setup.exe (or 64-bit binary)
-- **Fixed issue when video rotated 180 degrees is also mirrored - used new filter option, e.g. `-vf "rotate=PI"`
+# v1.9.4.0 Beta release with new STREAMING FEATURES:    
+- **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
+- **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
+- **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
+- **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
+- **if Video is selected to record streaming, then options are given to record video in 1 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
+- **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
+- **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC
 
 
 ### You can download binaries and source code from Sourceforge:
@@ -69,7 +69,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.3**
+**Latest version 1.9.4**
 
 
 
@@ -85,7 +85,7 @@ You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag
  - Linux usage
 
 ### Features:
-- 2 tabs: Transcode and Convert
+- 3 tabs: Transcode, Convert and Record
 
 - Transcode tab: select multiple files (mkv, m4v or mp4) and add them to batch list for automatic conversion to other video container (mp4/m4v --> mkv, mkv --> mp4)
 
@@ -101,6 +101,12 @@ You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag
 - conversion can be canceled,
 - encoding progress displayed in status bar
 - Pause/Resume encoding tasks
+- File Info button to display attributes and Play button to open new window and play media file
+
+- Record tab: enter address (link) of the Internet or local stream
+- check stream and display stream attributes in JSON format (codec, streams, title, etc)
+- play live stream in separate window
+- each recording or playing process is run in separate window, user can perform other tasks like Transcode or Convert
 
 Help/walkthrough is available in both Binary installation and Source. When installed, Start menu folder is created with links to VCT.exe, help (pdf), license and uninstall option. 
 
@@ -115,7 +121,16 @@ Added git repository. It is now preferred method to get source code. To clone us
 
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
-### Change log 
+### Change log
+
+# v1.9.4.0 Beta release with new STREAMING FEATURES:    
+- **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
+- **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
+- **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
+- **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
+- **if Video is selected to record streaming, then options are given to record video in 1 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
+- **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
+- **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC 
 
 # v1.9.3   
 - **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
@@ -207,6 +222,7 @@ Application is built using Winforms so it has MS Windows looks, not the native L
 - `yum install mono-complete`
 
 After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+The same procedure applies to MacOS.
 
 - Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
 
@@ -231,7 +247,7 @@ or create launcher at desktop or menu.
 
 ### Compiling from source code on Linux
 
-Due to different path naming in Windows and Linux, if you are compiling on Linux with Monodevelop, you need first to go through `Form1.cs` and comment all lines marked in comment as `Windows` and uncomment lines marked as `Linux`. Use common sense to do that, it's not hard.
+In the latest beta 1.9.4, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
 
 **If you use Wine on Linux, then just download Windows installer: VCT_setup.exe and install it via Wine. The prerequisite is that you have .NET Framework 4 Client installed in Wine.**
 
