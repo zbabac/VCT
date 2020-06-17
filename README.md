@@ -1,4 +1,4 @@
-# v1.9.4.0 Beta release with new STREAMING FEATURES:    
+# v1.9.5.0 Beta release with new STREAMING FEATURES:    
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
@@ -123,7 +123,7 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log
 
-# v1.9.4.0 Beta release with new STREAMING FEATURES:    
+# v1.9.5 Beta release with new STREAMING FEATURES:    
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):

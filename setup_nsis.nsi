@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.9.3.3"
+!define PRODUCT_VERSION "1.9.5.0"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
@@ -70,6 +70,7 @@ Section "MainSection" SEC01
   CreateShortCut "$DESKTOP\VCT.lnk" "$INSTDIR\VCT.exe"
   File "bin\Release\ffmpeg.exe"
   File "bin\Release\ffprobe.exe"
+  File "ffplay.exe"
   File "bin\Release\Newtonsoft.Json.dll"
   File "bin\Release\VCT_help.pdf"
   CreateDirectory "$PROGRAMFILES\VCT"
@@ -111,6 +112,7 @@ Section Uninstall
   Delete "$INSTDIR\VCT_help.pdf"
   Delete "$INSTDIR\ffmpeg.exe"
   Delete "$INSTDIR\ffprobe.exe"
+  Delete "$INSTDIR\ffplay.exe"
   Delete "$INSTDIR\Newtonsoft.Json.dll"
   Delete "$INSTDIR\VCT.exe"
   
