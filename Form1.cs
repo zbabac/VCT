@@ -274,6 +274,8 @@ namespace VTC
                 // The following commands are needed to redirect the standard output and standard error.
                 ffplay_output = "";  // reset ffplay log from cmd output
                 log = false;
+                buttonLog.Enabled = true;
+                buttonLog2.Enabled = true;
                 buttonLogRec.PerformClick();
                 /*
                 procffplay.RedirectStandardError = true;
@@ -650,7 +652,33 @@ namespace VTC
             }
             afterCancelOrFinish(); 
         }
+        private void recStreamFFmpeg(string input)
+        {           //start ffplay to test stream
+            try
+            {
+                System.Diagnostics.ProcessStartInfo recffmpeg;
+                if (!IsLinux)
+                    recffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + input); // Windows: define Process Info to assing to the process
+                else
+                    recffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", input); // for Linux with mono
+                                                                                                           // The following commands are needed to redirect the standard output and standard error.
+                recffmpeg.RedirectStandardError = false;
+                recffmpeg.RedirectStandardOutput = false;
+                recffmpeg.RedirectStandardInput = false;
+                recffmpeg.UseShellExecute = false;
+                recffmpeg.CreateNoWindow = false;
+                Process recff = new Process();
+                recff.StartInfo = recffmpeg;
 
+                recff.Start();             //start the ffmpeg to record stream to file
+
+            }
+            catch (Exception ex)
+            {
+                statustekst = ex.Message;
+                richTextBox3.Text += statustekst;
+            }
+        }
         private void afterCancelOrFinish()
         {
             try
@@ -1840,13 +1868,14 @@ namespace VTC
             buttonCheckStream.Image = VTC.Properties.Resources._15;
             buttonCheckStream.Text = "";
             json = "";
-            //ffprobe(textBoxStream.Text);
             BackgroundWorker ffp = new BackgroundWorker();                    //new instance of Background worker
             ffp.WorkerReportsProgress = true;
             ffp.DoWork += ff_DoFFprobeWork;                                          //handler for starting thread
             ffp.RunWorkerCompleted += ffprobe_RunWorkerCompleted;                  //handler for finishing thread
             ffp.RunWorkerAsync();    //start job as separate thread
             log = false;
+            buttonLog.Enabled = true;
+            buttonLog2.Enabled = true;
             buttonLogRec.PerformClick();
             
         }
@@ -1868,7 +1897,7 @@ namespace VTC
             {
                 richTextBox3.Text = json;
                 buttonCheckStream.Image = null;
-                buttonCheckStream.Text = "Check Stream";
+                buttonCheckStream.Text = "1. Check Stream";
                 if (json != "{}")
                 {
                     buttonStreamSavePath.Enabled = true;
@@ -1885,6 +1914,12 @@ namespace VTC
             }
             catch (Exception x)
             { }
+        }
+
+        private void buttonStartRec_Click(object sender, EventArgs e)
+        {
+            recStreamFFmpeg(richTextBoxStreamCommand.Text);
+            buttonStartRec.Enabled = false;
         }
 
         private void buttonStreamSavePath_Click(object sender, EventArgs e)
