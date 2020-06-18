@@ -1967,16 +1967,17 @@ namespace VTC
                 labelSaveStreamPath.Text = stream_file;
                 int str_position = stream_file.LastIndexOf('.') + 1;
                 string ext = stream_file.Substring(str_position);
-                stream_file = stream_file.Insert(str_position - 1, "--%Y%m%d-%H%M");
+                
                 if (ext == "mp3" || ext == "aac" || ext == "flac" || ext == "ogg" || ext == "ra" || ext == "wav")
                 {   // audio file
-                    if (IsLinux==0)
+                    if (IsLinux == 0)
                         komanda = "ffmpeg -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
                     else
                         komanda = " -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
                 }
                 else
                 {   // video file
+                    stream_file = stream_file.Insert(str_position - 1, "--%Y%m%d-%H%M");
                     if (IsLinux==0)
                         komanda = "ffmpeg -y -i \"" + input_stream + "\"  -f segment -segment_time 600 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
                     else
