@@ -6,6 +6,10 @@
 - **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
 - **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
 - **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC
+- **Linux can't play stream or file because ffplay is not staticaly built and dependencies are not met. You may try to install ffmpeg package:
+`sudo apt-get install ffmpeg`
+`cp /usr/bin/ffplay $HOME/Downloads/VCT_mono/`
+or wherever you have extracted VCT_mono binaries
 
 
 ### You can download binaries and source code from Sourceforge:

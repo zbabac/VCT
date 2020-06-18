@@ -119,12 +119,18 @@ namespace VTC
             proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data
         }
 
-        public static bool IsLinux
+        public static int IsLinux
         {       // check if OS is Linux (4, 128) or Mac (6)
             get
             {
                 int p = (int)Environment.OSVersion.Platform;
-                return (p == 4) || (p == 6) || (p == 128);
+                //return (p == 4) || (p == 6) || (p == 128); // 4 or 128 = Linux, 6 = MacOS
+                if (p == 4 || p == 128)
+                    return 1;  // 1 for Linux
+                else if (p == 6)
+                    return 2; // 2 for MacOS
+                else
+                    return 0;  // 0 for Windows
             }
         }
 
@@ -243,10 +249,10 @@ namespace VTC
 
                 }
                 string command = "";
-                if (!IsLinux)
-                    command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command
+                if (IsLinux == 0)
+                    command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command Windows
                 else
-                    command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux mono
+                    command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux or Mac mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -268,10 +274,12 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procffplay;
-                if (!IsLinux)
-                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "ffplay \"" + input + "\""); // Windows: define Process Info to assing to the process
+                if (IsLinux==1)
+                    procffplay = new System.Diagnostics.ProcessStartInfo("ffplay", " \"" + input + "\""); // Linux with mono
+                else if (IsLinux==2)
+                    procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " \"" + input + "\""); // for MacOS with mono
                 else
-                    procffplay = new System.Diagnostics.ProcessStartInfo("./ffplay", " \"" + input + "\""); // for Linux with mono
+                    procffplay = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "ffplay \"" + input + "\""); // Windows: define Process Info to assing to the process
                 // The following commands are needed to redirect the standard output and standard error.
                 ffplay_output = "";  // reset ffplay log from cmd output
                 log = false;
@@ -334,10 +342,12 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procffprobe;
-                if (!IsLinux)
-                    procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" +  input +"\"");// Windows: define Process Info to assing to the process
+                if (IsLinux==1)
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("ffprobe", " -v quiet -print_format json -show_format -show_streams \"" + input + "\"");// Linux with mono
+                else if (IsLinux==2)
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe", " -v quiet -print_format json -show_format -show_streams \"" +  input + "\""); // MacOS with mono
                 else
-                    procffprobe = new System.Diagnostics.ProcessStartInfo("./ffprobe", " -v quiet -print_format json -show_format -show_streams \"" +  input + "\""); // for Linux with mono
+                    procffprobe = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffprobe -v quiet -print_format json -show_format -show_streams \"" + input + "\"");// Windows: define Process Info to assing to the process
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procffprobe.RedirectStandardOutput = true;
@@ -386,13 +396,15 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procff;
-                if (!IsLinux)
-                    procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" +temp_path);// Windows: define Process Info to assing to the process
+                if (IsLinux==1)
+                    procff = new System.Diagnostics.ProcessStartInfo("ffmpeg", " - ss " + tstamp + " - i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " + temp_path);// Linux with mono
+                else if (IsLinux==2)
+                    procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // MacOS with mono
                 else
-                    procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // for Linux with mono
-				// The following commands are needed to redirect the standard output and standard error.
-				// This means that it will be redirected to the Process.StandardOutput StreamReader.
-				procff.RedirectStandardError = false;
+                    procff = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + " ffmpeg -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 \"" + temp_path);// Windows: define Process Info to assing to the process
+                // The following commands are needed to redirect the standard output and standard error.
+                // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                procff.RedirectStandardError = false;
 				procff.RedirectStandardOutput = false;
 				procff.RedirectStandardInput = false; ;
 				procff.UseShellExecute = false;
@@ -471,10 +483,12 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo procStartffmpeg;
-                if (!IsLinux)
-                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
+                if (IsLinux==1)
+                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("ffmpeg", current_task);// Linux with mono
+                else if (IsLinux==2)
+                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // MacOS with mono
                 else
-                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", current_task); // for Linux with mono
+                    procStartffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + current_task);// Windows: define Process Info to assing to the process
                 // The following commands are needed to redirect the standard output and standard error.
                 // This means that it will be redirected to the Process.StandardOutput StreamReader.
                 procStartffmpeg.RedirectStandardOutput = true;
@@ -658,11 +672,13 @@ namespace VTC
             try
             {
                 System.Diagnostics.ProcessStartInfo recffmpeg;
-                if (!IsLinux)
-                    recffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + input); // Windows: define Process Info to assing to the process
+                if (IsLinux==1)
+                    recffmpeg = new System.Diagnostics.ProcessStartInfo("ffmpeg", input); // Linux with mono
+                else if (IsLinux==2)
+                    recffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", input); // MacOS with mono
                 else
-                    recffmpeg = new System.Diagnostics.ProcessStartInfo("./ffmpeg", input); // for Linux with mono
-                                                                                                           // The following commands are needed to redirect the standard output and standard error.
+                    recffmpeg = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + input); // Windows: define Process Info to assing to the process
+                // The following commands are needed to redirect the standard output and standard error.
                 recffmpeg.RedirectStandardError = false;
                 recffmpeg.RedirectStandardOutput = false;
                 recffmpeg.RedirectStandardInput = false;
@@ -1000,7 +1016,7 @@ namespace VTC
                         srt_options = " -c:s srt";
                 }
                 // complete string to be passed to process start
-                if (!IsLinux)
+                if (IsLinux==0)
                     ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 else
                     ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
@@ -1954,14 +1970,14 @@ namespace VTC
                 stream_file = stream_file.Insert(str_position - 1, "--%Y%m%d-%H%M");
                 if (ext == "mp3" || ext == "aac" || ext == "flac" || ext == "ogg" || ext == "ra" || ext == "wav")
                 {   // audio file
-                    if (!IsLinux)
+                    if (IsLinux==0)
                         komanda = "ffmpeg -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
                     else
                         komanda = " -y -i \"" + input_stream + "\" -c copy -map 0 \"" + stream_file + "\"";
                 }
                 else
                 {   // video file
-                    if (!IsLinux)
+                    if (IsLinux==0)
                         komanda = "ffmpeg -y -i \"" + input_stream + "\"  -f segment -segment_time 600 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
                     else
                         komanda = " -y -i \"" + input_stream + "\"  -f segment -segment_time 600 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c copy -map 0 \"" + stream_file + "\"";
