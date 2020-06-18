@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Hadezign-Hobbies-Movies.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="VCT" version="1.9.5.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="VCT" version="1.9.5.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="VCT.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1179136">
-      <assemblyIdentity name="VCT" version="1.9.5.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1179648">
+      <assemblyIdentity name="VCT" version="1.9.5.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XOtyxHxYqYQNjc8Xk3obKyrGWkE=</dsig:DigestValue>
+        <dsig:DigestValue>ElnlZmGvllvqqaUvLbycclGL7h0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

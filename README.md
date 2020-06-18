@@ -1,3 +1,7 @@
+#Sticky info for Linux:
+**Since new version needs ffplay and it can't be found as a static build for Linux, I decided not to include ffmpeg, ffprobe and ffplay binaries for Linux. You can download only VCT binaries (these are the same as for Windows), and install ffmpeg separately via package manager (the same way you install mono on Linux).
+Please scroll to the end of this file to see how, or read INSTALL_README.txt included with binaries.
+
 # v1.9.5.0 Beta release with new STREAMING FEATURES:    
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
@@ -210,20 +214,21 @@ Application is built using Winforms so it has MS Windows looks, not the native L
 
 #### Prerequisities:
 - You must have mono installed to run .NET application.
+- You must have ffmpeg packages installed.
 - **For Debian systems (Ubuntu, Mint, etc.) run**:
 
-- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
-- `echo "deb http://download.mono-project.com/repo/debian stretch main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list`
 - `sudo apt-get update`
 - `sudo apt-get install mono-complete`
+- `sudo apt-get install ffmpeg`
 
 - **For another distributions, just search: mono <distro_name> installation.**
 - Example for Fedora or CentOS (Red Hat derivative):
 
-- `yum install yum-utils`
-- `rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"`
-- `yum-config-manager --add-repo http://download.mono-project.com/repo/centos/`
-- `yum install mono-complete`
+- `sudo yum-config-manager --add-repo http://download.mono-project.com/repo/centos/`
+- `sudo yum install mono-complete`
+- `sudo yum install epel-release`
+- `sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm`
+- `sudo yum install ffmpeg`
 
 After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 The same procedure applies to MacOS.
@@ -235,9 +240,6 @@ The same procedure applies to MacOS.
 - `cd $HOME/VCT_mono`
 - `chmod 777 *`
 
-add ffmpeg to path if you don't have it installed:
-
-`PATH=$PATH:$HOME/VCT_mono`
 
 or add that line permanently to your profile at `$HOME/.profile` or `$HOME/.bash_profile` - just put the above line at the end of the .profile file, usually `$HOME/.bash_profile`
 
@@ -251,7 +253,7 @@ or create launcher at desktop or menu.
 
 ### Compiling from source code on Linux
 
-In the latest beta 1.9.4, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
+In the latest beta 1.9.5, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
 
 **If you use Wine on Linux, then just download Windows installer: VCT_setup.exe and install it via Wine. The prerequisite is that you have .NET Framework 4 Client installed in Wine.**
 
