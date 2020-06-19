@@ -668,7 +668,7 @@ namespace VTC
             afterCancelOrFinish(); 
         }
         private void recStreamFFmpeg(string input)
-        {           //start ffplay to test stream
+        {           //start ffmpeg to test stream
             try
             {
                 System.Diagnostics.ProcessStartInfo recffmpeg;
@@ -688,7 +688,7 @@ namespace VTC
                 recff.StartInfo = recffmpeg;
 
                 recff.Start();             //start the ffmpeg to record stream to file
-
+                Thread.Sleep(500);
             }
             catch (Exception ex)
             {

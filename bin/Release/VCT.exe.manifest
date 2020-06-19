@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7V+5SlVghMGkB2tgyOlmGadsHkI=</dsig:DigestValue>
+        <dsig:DigestValue>uESkFtXD8AQmBVsSiMYXasBUbxM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,31 +75,31 @@
       <dsig:DigestValue>Y1w8vaXpXAnswngdqr7P7o0VEag=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffmpeg.exe" size="65372160">
+  <file name="ffmpeg.exe" size="49946112">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2jBRLqAjla2OfoQAq7mnSucCzN0=</dsig:DigestValue>
+      <dsig:DigestValue>0zgWl6xGj6b/nxVHjyobe04gNX0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffplay.exe" size="65255424">
+  <file name="ffplay.exe" size="49823232">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>BjqeiZMNuz5GM5vQr3/iaSVBFvY=</dsig:DigestValue>
+      <dsig:DigestValue>PskSR7Rq1XASvPdJ+Q4QFn2kGn0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffprobe.exe" size="65282560">
+  <file name="ffprobe.exe" size="49847296">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kdEyUTLAEoJXZ12/ebr/4CyH/ZA=</dsig:DigestValue>
+      <dsig:DigestValue>nJZ4WzYWq5KtwOqWMgxk/hzTtNM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Hadezign-Hobbies-Movies.ico" size="208320">

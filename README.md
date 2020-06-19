@@ -1,8 +1,10 @@
 #Sticky info for Linux:
-**Since new version needs ffplay and it can't be found as a static build for Linux, I decided not to include ffmpeg, ffprobe and ffplay binaries for Linux. You can download only VCT binaries (these are the same as for Windows), and install ffmpeg separately via package manager (the same way you install mono on Linux).
-Please scroll to the end of this file to see how, or read INSTALL_README.txt included with binaries.
+**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/.
+Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
 
-# v1.9.5.0 Beta release with new STREAMING FEATURES:    
+** Mac users should just unpack be download and run: `mono VCT.exe` in the installation VCT_mono dir. The prerequisite is to install mono for Mac. Please find the tutorial on the net how to do it. This version should work with MacOS 10.10 and above. I use old Mac 10.7 and use specialized builds, so I don't know if Mac version works, so you tell me if it does!
+
+# v1.9.5.2 Release Candidate with new STREAMING FEATURES:    
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
@@ -10,10 +12,8 @@ Please scroll to the end of this file to see how, or read INSTALL_README.txt inc
 - **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
 - **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
 - **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC
-- **Linux can't play stream or file because ffplay is not staticaly built and dependencies are not met. You may try to install ffmpeg package:
-`sudo apt-get install ffmpeg`
-`cp /usr/bin/ffplay $HOME/Downloads/VCT_mono/`
-or wherever you have extracted VCT_mono binaries
+- **Linux can't play stream or file because ffplay is not staticaly built and dependencies are not met. You have to install ffmpeg package:
+`sudo apt-get install ffmpeg` and copy included ffmpeg and ffprobe to the /usr/bin/
 
 
 ### You can download binaries and source code from Sourceforge:
@@ -131,14 +131,16 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log
 
-# v1.9.5 Beta release with new STREAMING FEATURES:    
+# v1.9.5.2 Release Candidate with new STREAMING FEATURES:    
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
 - **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
 - **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
 - **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
-- **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC 
+- **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, You can of course use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC 
+- **Linux can't play stream or file because ffplay is not staticaly built and dependencies are not met. You have to install ffmpeg package:
+`sudo apt-get install ffmpeg` and copy included ffmpeg and ffprobe to the /usr/bin/
 
 # v1.9.3   
 - **Transcode all streams option "-map 0:v -map 0:a" to try to copy all streams (including multiple audio streams, thanks to user McCoy for suggestion). If it fails, then simply delete the batch task and remove check box for that option on Transcode tab
@@ -240,8 +242,10 @@ The same procedure applies to MacOS.
 - `cd $HOME/VCT_mono`
 - `chmod 777 *`
 
+- Now, copy supplied binaries to the /usr/bin/ so they will overwrite installed old versions of ffmpeg:
 
-or add that line permanently to your profile at `$HOME/.profile` or `$HOME/.bash_profile` - just put the above line at the end of the .profile file, usually `$HOME/.bash_profile`
+- `sudo cp ff* /usr/bin/`
+
 
 you can now run:
 
