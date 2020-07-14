@@ -50,7 +50,7 @@ namespace VTC
         static bool set_fps = false; //set if different target FPS is to be used
         static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
         static double fps = 0.00; //initial value for video file fps
-        string[] task_list = new string[100]; //all tasks put in a batch list
+        List<String> task_list = new List<String>(); //all tasks put in a batch list
         string json = "", ffplay_output=""; //ffprobe shows JSON style info about file properties
         string time_position = "2"; //position from which to extract image from video
         Process proc = new System.Diagnostics.Process(); //process that call cmd.exe to execute ffmpeg task
@@ -589,7 +589,7 @@ namespace VTC
                     DisableButtonsWhenEncoding();                                    //prevent user to add, delete, etc. while encoding is running
                     for (int i = 0; i < number_of_rows; i++)
                     {           //for each task in the list, read command string value
-                        task_list[i] = dataGridViewBatch.Rows[i].Cells[2].Value.ToString();
+                        task_list.Add(dataGridViewBatch.Rows[i].Cells[2].Value.ToString());
                     }
                     bg.RunWorkerAsync();    //start job as separate thread
                 }

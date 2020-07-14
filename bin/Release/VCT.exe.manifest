@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Hadezign-Hobbies-Movies.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="VCT" version="1.9.5.2" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="VCT" version="1.9.5.5" language="neutral" processorArchitecture="msil" />
     <commandLine file="VCT.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VCT.exe" size="1179648">
-      <assemblyIdentity name="VCT" version="1.9.5.2" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="VCT" version="1.9.5.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>uESkFtXD8AQmBVsSiMYXasBUbxM=</dsig:DigestValue>
+        <dsig:DigestValue>IkTKozM/fgMQNnNeG+dGV6zrPyI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,31 +75,31 @@
       <dsig:DigestValue>Y1w8vaXpXAnswngdqr7P7o0VEag=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffmpeg.exe" size="49946112">
+  <file name="ffmpeg.exe" size="65372160">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>0zgWl6xGj6b/nxVHjyobe04gNX0=</dsig:DigestValue>
+      <dsig:DigestValue>2jBRLqAjla2OfoQAq7mnSucCzN0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffplay.exe" size="49823232">
+  <file name="ffplay.exe" size="65255424">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>PskSR7Rq1XASvPdJ+Q4QFn2kGn0=</dsig:DigestValue>
+      <dsig:DigestValue>BjqeiZMNuz5GM5vQr3/iaSVBFvY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ffprobe.exe" size="49847296">
+  <file name="ffprobe.exe" size="65282560">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nJZ4WzYWq5KtwOqWMgxk/hzTtNM=</dsig:DigestValue>
+      <dsig:DigestValue>kdEyUTLAEoJXZ12/ebr/4CyH/ZA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Hadezign-Hobbies-Movies.ico" size="208320">

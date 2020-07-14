@@ -2,9 +2,10 @@
 **Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/.
 Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
 
-** Mac users should just unpack be download and run: `mono VCT.exe` in the installation VCT_mono dir. The prerequisite is to install mono for Mac. Please find the tutorial on the net how to do it. This version should work with MacOS 10.10 and above. I use old Mac 10.7 and use specialized builds, so I don't know if Mac version works, so you tell me if it does!
+** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
-# v1.9.5.2 Release Candidate with new STREAMING FEATURES:    
+# v1.9.5.5 Streaming feature in Record tab:  
+- **Unlimited number of encoding tasks allowed (in the list on the right side)  
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
@@ -77,7 +78,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.4**
+**Latest version 1.9.5.5**
 
 
 
@@ -131,7 +132,8 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log
 
-# v1.9.5.2 Release Candidate with new STREAMING FEATURES:    
+# v1.9.5.5 Release Candidate with new STREAMING FEATURES: 
+- **Unlimited number of encoding tasks allowed (in the list on the right side)   
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
 - **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
@@ -210,7 +212,7 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 
 
 
-### Linux mono usage
+### LINUX MONO USAGE
 
 Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
 
