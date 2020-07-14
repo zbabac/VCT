@@ -8,7 +8,8 @@
 /.vs
 VCT_setup*
 *mono*
-bin/
+bin
+obj
 
 # Build results
 [Dd]ebug/
@@ -36,7 +37,9 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 VCT_setup.exe
-
+ffmpeg.exe
+ffplay.exe
+ffprobe.exe
 *_i.c
 *_p.c
 *_i.h
