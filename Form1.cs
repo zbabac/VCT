@@ -204,6 +204,7 @@ namespace VTC
         {
             try
             {
+                string from_duration = "";
                 int str_position = input_file.LastIndexOf('.') + 1;	//find position of '.' to determine file extension
                 str_extension = input_file.Substring(str_position);	//store found file extension
                 if (!checkBoxKeepExtension.Checked)    //Change extansion only if box unchecked
@@ -248,11 +249,13 @@ namespace VTC
                     _copy_all_streams = " -map 0:v:" + numericUpDownVideoNr.Value + "? -map 0:a:" + numericUpDownAudioNr.Value + "? ";  //include only 1st v&a streams
 
                 }
+                if (checkBoxCopyDuration.Checked)
+                    from_duration = " -ss " + textBoxFromTime.Text + " -t " + textBoxCopyDuration.Text + " ";
                 string command = "";
                 if (IsLinux == 0)
-                    command = "ffmpeg -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command Windows
+                    command = "ffmpeg -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command Windows
                 else
-                    command = " -y -i \"" + input_file + "\" " + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux or Mac mono
+                    command = " -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux or Mac mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell
@@ -1951,6 +1954,20 @@ namespace VTC
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             ffplay_test(input_file);
+        }
+
+        private void checkBoxCopyDuration_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCopyDuration.Checked)
+            {
+                textBoxFromTime.Enabled = true;
+                textBoxCopyDuration.Enabled = true;
+            }
+            else
+            {
+                textBoxFromTime.Enabled = false;
+                textBoxCopyDuration.Enabled = false;
+            }
         }
 
         private void buttonStreamSavePath_Click(object sender, EventArgs e)

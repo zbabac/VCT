@@ -4,7 +4,8 @@ Please scroll to the end of this file to see how, and read INSTALL_README.txt in
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
-# v1.9.5.5 Streaming feature in Record tab:  
+# v1.9.5.6 Streaming feature in Record tab: 
+- **Comeback of copy from specific time to output in Transcode tab 
 - **Unlimited number of encoding tasks allowed (in the list on the right side)  
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
@@ -132,7 +133,8 @@ Please contact me via discussion board if you want to collaborate or send me an 
 
 ### Change log
 
-# v1.9.5.5 Release Candidate with new STREAMING FEATURES: 
+# v1.9.5.6 Streaming feature in Record tab: 
+- **Comeback of copy from specific time to output in Transcode tab 
 - **Unlimited number of encoding tasks allowed (in the list on the right side)   
 - **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
 - **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window

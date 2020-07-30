@@ -32,8 +32,8 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -41,6 +41,12 @@ namespace VTC
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBoxCopyTimePeriod = new System.Windows.Forms.GroupBox();
+            this.textBoxCopyDuration = new System.Windows.Forms.TextBox();
+            this.labelCopyDuration = new System.Windows.Forms.Label();
+            this.checkBoxCopyDuration = new System.Windows.Forms.CheckBox();
+            this.textBoxFromTime = new System.Windows.Forms.TextBox();
+            this.labelFromTime = new System.Windows.Forms.Label();
             this.groupBoxTransGroupStreams = new System.Windows.Forms.GroupBox();
             this.numericUpDownAudioNr = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownVideoNr = new System.Windows.Forms.NumericUpDown();
@@ -142,6 +148,7 @@ namespace VTC
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBoxCopyTimePeriod.SuspendLayout();
             this.groupBoxTransGroupStreams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
@@ -210,6 +217,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBoxCopyTimePeriod);
             this.tabPage1.Controls.Add(this.groupBoxTransGroupStreams);
             this.tabPage1.Controls.Add(this.checkBoxKeepExtension);
             this.tabPage1.Controls.Add(this.checkBoxTranscodeAllStreams);
@@ -225,6 +233,44 @@ namespace VTC
             this.tabPage1.Controls.Add(this.labelInputTransFile);
             this.tabPage1.Controls.Add(this.buttonOutTransFile);
             this.tabPage1.Name = "tabPage1";
+            // 
+            // groupBoxCopyTimePeriod
+            // 
+            this.groupBoxCopyTimePeriod.Controls.Add(this.textBoxCopyDuration);
+            this.groupBoxCopyTimePeriod.Controls.Add(this.labelCopyDuration);
+            this.groupBoxCopyTimePeriod.Controls.Add(this.checkBoxCopyDuration);
+            this.groupBoxCopyTimePeriod.Controls.Add(this.textBoxFromTime);
+            this.groupBoxCopyTimePeriod.Controls.Add(this.labelFromTime);
+            resources.ApplyResources(this.groupBoxCopyTimePeriod, "groupBoxCopyTimePeriod");
+            this.groupBoxCopyTimePeriod.Name = "groupBoxCopyTimePeriod";
+            this.groupBoxCopyTimePeriod.TabStop = false;
+            // 
+            // textBoxCopyDuration
+            // 
+            resources.ApplyResources(this.textBoxCopyDuration, "textBoxCopyDuration");
+            this.textBoxCopyDuration.Name = "textBoxCopyDuration";
+            // 
+            // labelCopyDuration
+            // 
+            resources.ApplyResources(this.labelCopyDuration, "labelCopyDuration");
+            this.labelCopyDuration.Name = "labelCopyDuration";
+            // 
+            // checkBoxCopyDuration
+            // 
+            resources.ApplyResources(this.checkBoxCopyDuration, "checkBoxCopyDuration");
+            this.checkBoxCopyDuration.Name = "checkBoxCopyDuration";
+            this.checkBoxCopyDuration.UseVisualStyleBackColor = true;
+            this.checkBoxCopyDuration.CheckedChanged += new System.EventHandler(this.checkBoxCopyDuration_CheckedChanged);
+            // 
+            // textBoxFromTime
+            // 
+            resources.ApplyResources(this.textBoxFromTime, "textBoxFromTime");
+            this.textBoxFromTime.Name = "textBoxFromTime";
+            // 
+            // labelFromTime
+            // 
+            resources.ApplyResources(this.labelFromTime, "labelFromTime");
+            this.labelFromTime.Name = "labelFromTime";
             // 
             // groupBoxTransGroupStreams
             // 
@@ -967,11 +1013,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -986,9 +1032,9 @@ namespace VTC
             // 
             // check_cell
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle8;
             this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
@@ -1050,6 +1096,8 @@ namespace VTC
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBoxCopyTimePeriod.ResumeLayout(false);
+            this.groupBoxCopyTimePeriod.PerformLayout();
             this.groupBoxTransGroupStreams.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
@@ -1186,6 +1234,12 @@ namespace VTC
         private System.Windows.Forms.Button buttonStreamSavePath;
         private System.Windows.Forms.RichTextBox richTextBoxStreamCommand;
         private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.GroupBox groupBoxCopyTimePeriod;
+        private System.Windows.Forms.TextBox textBoxCopyDuration;
+        private System.Windows.Forms.Label labelCopyDuration;
+        private System.Windows.Forms.CheckBox checkBoxCopyDuration;
+        private System.Windows.Forms.TextBox textBoxFromTime;
+        private System.Windows.Forms.Label labelFromTime;
     }
 }
 

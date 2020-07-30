@@ -150,3 +150,6 @@ Test stream:
 ffprobe -v quiet -print_format json -show_streams -stimeout 2000000 -i "rtsp://192.168.0.101:8080/video/h264"
 
 ffplay -stimeout 1000000 "rtsp://192.168.0.101:8080/video/h264"
+
+from time copy specific duration (60 seconds) to output:
+ffmpeg -i input.mp3 -ss 00:02:15 -t 1:00 output.mp3
