@@ -148,8 +148,10 @@ namespace VTC
                 savePath.Description = "Choose output file path";
                 if (savePath.ShowDialog() == DialogResult.OK)
                 {
-                    out_path = savePath.SelectedPath + "\\"; //adds it so correct folder is chosen later when file name is appended to the string
-                    
+                    if (IsLinux == 0)
+                        out_path = savePath.SelectedPath + "\\"; //adds it so correct folder is chosen later when file name is appended to the string
+                    else
+                        out_path = savePath.SelectedPath + "/";
                     labelOutTransFile.Text = out_path; 		 //displays selected path so user is aware of the change
                     labelOutConvFile.Text = out_path;
                     buttonMultiTransFile.Enabled = true;	  //now, it is safe to allow user to click this button to select input files
@@ -227,7 +229,10 @@ namespace VTC
                 }
                 else
                     str_extension = "2." + str_extension;
-                str_position = input_file.LastIndexOf("\\") + 1;	//find where is the last folder mark
+                if (IsLinux == 0)
+                    str_position = input_file.LastIndexOf("\\") + 1;	//find where is the last folder mark
+                else
+                    str_position = input_file.LastIndexOf("/") + 1;
                 string in_file = input_file.Substring(str_position);//after that there is a file name
                 if (!use_out_path)           //if out path not set, use the same as input file
                 {
@@ -1099,7 +1104,10 @@ namespace VTC
                 int str_position = input_file.LastIndexOf('.') + 1;	//find where extension starts
                 str_extension = input_file.Substring(str_position);	//define file extension
                 orig_ext = str_extension;							//store it so it is not lost in later manipulation
-                str_position = input_file.LastIndexOf("\\") + 1;	//find where file name begins
+                if (IsLinux == 0)
+                    str_position = input_file.LastIndexOf("\\") + 1;	//find where file name begins
+                else
+                    str_position = input_file.LastIndexOf("/") + 1;    // for Linux folder separation
                 if (!use_out_path)           //if no out path set by user, use the same path as input file
                 {
                     out_path = input_file.Substring(0, str_position);
@@ -1148,7 +1156,10 @@ namespace VTC
                 int str_position = input_file.LastIndexOf('.') + 1;
                 str_extension = input_file.Substring(str_position);
                 orig_ext = str_extension;
-                str_position = input_file.LastIndexOf("\\") + 1;
+                if (IsLinux == 0)
+                    str_position = input_file.LastIndexOf("\\") + 1;
+                else
+                    str_position = input_file.LastIndexOf("/") + 1;
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
@@ -1527,7 +1538,10 @@ namespace VTC
                 int str_position = input_file.LastIndexOf('.') + 1;
                 str_extension = input_file.Substring(str_position);
                 orig_ext = str_extension;
-                str_position = input_file.LastIndexOf("\\") + 1;
+                if (IsLinux == 0)
+                    str_position = input_file.LastIndexOf("\\") + 1;
+                else
+                    str_position = input_file.LastIndexOf("/") + 1;
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
@@ -1562,7 +1576,10 @@ namespace VTC
             if (savePath.ShowDialog() == DialogResult.OK)
             {
                 use_out_path = true;
-                out_path = savePath.SelectedPath + "\\";		//store selected path to var
+                if (IsLinux == 0)
+                    out_path = savePath.SelectedPath + "\\";		//store selected path to var
+                else
+                    out_path = savePath.SelectedPath + "/";
                 labelOutConvFile.Text = out_path;				//let the user knows by writing it to GUI
                 labelOutTransFile.Text = out_path;              //the same var is also for transcoding jobs
                                                                 ////allow user interaction - to select multiple input files
