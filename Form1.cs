@@ -405,7 +405,7 @@ namespace VTC
             {
                 System.Diagnostics.ProcessStartInfo procff;
                 if (IsLinux==1)
-                    procff = new System.Diagnostics.ProcessStartInfo("ffmpeg", " - ss " + tstamp + " - i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " + temp_path);// Linux with mono
+                    procff = new System.Diagnostics.ProcessStartInfo("ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " + temp_path);// Linux with mono
                 else if (IsLinux==2)
                     procff = new System.Diagnostics.ProcessStartInfo("./ffmpeg", " -ss " + tstamp + " -i \"" + input_file + "\" -y -qscale:v 2 -vframes 1 " +temp_path); // MacOS with mono
                 else
