@@ -1,6 +1,7 @@
 #Sticky info for Linux:
-**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc.
-Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
+**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc. 
+**Just download it, run and it will download all prerequisites and install VCT in your home dir and create desktop shell file to run the app.**
+For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
@@ -218,39 +219,23 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 
 Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
 
-UPDATE: I added small scripts to automate installations.
+UPDATE: **I added small scripts to automate installations.**
 
-For **Debian, Ubuntu**, etc. with APT package manager download **VCT_Linux_mono_binary.zip** and **install_vct_apt.sh**, download to $HOME/Downloads and execute (provide sudo credentials):
+For **Debian, Ubuntu**, etc. with APT package manager download  **install_vct_apt.sh**, and run it(provide sudo credentials):
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
 
-`./install_vct_apt.sh`  or just double click it - execute in terminal!
+For **Fedora, Centos**, etc. with YUM package manager download **install_vct_apt.sh**, and run it(provide sudo credentials):
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
 
-For **Fedora, Centos**, etc. with YUM package manager download **VCT_Linux_mono_binary.zip** and **install_vct_yum.sh**, download to $HOME/Downloads and execute (provide sudo credentials):
-
-`./install_vct_yum.sh`  or just double click it - execute in terminal!
-
-After that, in `$HOME/VCT_mono/` there will be start script: **vct.sh** just copy it to the Desktop and double click, it will execute the program!
+Program will be installed in $HOME/VCT_mono/.
 
 For other distros that use other package managers, please read INSTALL_README.txt and install manually, like in the example below:
 
 #### Prerequisities:
 - You must have mono installed to run .NET application.
 - You must have ffmpeg packages installed.
-- **For Debian systems (Ubuntu, Mint, etc.) run**:
 
-- `sudo apt-get update`
-- `sudo apt-get install mono-complete`
-- `sudo apt-get install ffmpeg`
-
-- **For another distributions, just search: mono <distro_name> installation.**
-- Example for Fedora or CentOS (Red Hat derivative):
-
-- `sudo yum-config-manager --add-repo http://download.mono-project.com/repo/centos/`
-- `sudo yum install mono-complete`
-- `sudo yum install epel-release`
-- `sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm`
-- `sudo yum install ffmpeg`
-
-After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+After you install ffmpeg and mono, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 The same procedure applies to MacOS.
 
 - Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
