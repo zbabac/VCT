@@ -1,22 +1,13 @@
 #Sticky info for Linux:
-**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc.
-Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
+**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc. 
+**Just download it, run and it will download all prerequisites and install VCT in your home dir and create desktop shell file to run the app.**
+For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
-# v1.9.5.6 Streaming feature in Record tab: 
+# v1.9.6.0 Copy specific time range to output in Transcode Tab
 - **Comeback of copy from specific time to output in Transcode tab 
-- **Unlimited number of encoding tasks allowed (in the list on the right side)  
-- **New Tab `Record` is introduced for vieweing and recording audio and/or video streams (from Internet or local network)
-- **Experimental use introduced FFPlay for playing streams, Play button added to `Convert` tab as well - separate window is opened for playing asynchronously - you can continue working in the main window
-- **Since it is still experimental, only basic selection is possible (user can still manually edit ffmpeg command before recording):
-- **if Audio file is selected to record streaming, then simple copy from stream to the file is given, if you want full conversion on-the-fly, then you must enter options manually for the ffmpeg command
-- **if Video is selected to record streaming, then options are given to record video in 5 minute segments - if you want to record in a single, large file, then modify the command before clicking Start Recording
-- **Check Stream button will display stream information in the log panel at the right side - format is JSON, so you can see what codec is used and thus choose appropriate file format
-- **Source code for Linux mono and Windows forms has finaly converged and it is now the same. Difference is in file naming conventions (slash and backslash, and ffmpeg calls). Runtime check is used to decide if the Linux (or Mac) or Windows is the running platform. For performace reasons, I suggest to use Linux (or Mac) Mono, instead of Wine. I use it now predominantly on Linux Debian 9 in the cloud, so that I don't occupy my own PC
-- **Linux can't play stream or file because ffplay is not staticaly built and dependencies are not met. You have to install ffmpeg package:
-`sudo apt-get install ffmpeg` and copy included ffmpeg and ffprobe to the /usr/bin/
-
+- **Works also for Convert Tab - I don't have space there, so I put it on Transcode tab
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -79,7 +70,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.5.5**
+**Latest version 1.9.6.0**
 
 
 
@@ -132,6 +123,9 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
+# v1.9.6.0 Copy specific time range to output in Transcode Tab
+- **Comeback of copy from specific time to output in Transcode tab 
+- **Works also for Convert Tab - I don't have space there, so I put it on Transcode tab
 
 # v1.9.5.6 Streaming feature in Record tab: 
 - **Comeback of copy from specific time to output in Transcode tab 
@@ -218,39 +212,23 @@ Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static bu
 
 Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
 
-UPDATE: I added small scripts to automate installations.
+UPDATE: **I added small scripts to automate installations.**
 
-For **Debian, Ubuntu**, etc. with APT package manager download **VCT_Linux_mono_binary.zip** and **install_vct_apt.sh**, download to $HOME/Downloads and execute (provide sudo credentials):
+For **Debian, Ubuntu**, etc. with APT package manager download  **install_vct_apt.sh**, and run it(provide sudo credentials):
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
 
-`./install_vct_apt.sh`  or just double click it - execute in terminal!
+For **Fedora, Centos**, etc. with YUM package manager download **install_vct_apt.sh**, and run it(provide sudo credentials):
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
 
-For **Fedora, Centos**, etc. with YUM package manager download **VCT_Linux_mono_binary.zip** and **install_vct_yum.sh**, download to $HOME/Downloads and execute (provide sudo credentials):
-
-`./install_vct_yum.sh`  or just double click it - execute in terminal!
-
-After that, in `$HOME/VCT_mono/` there will be start script: **vct.sh** just copy it to the Desktop and double click, it will execute the program!
+Program will be installed in $HOME/VCT_mono/.
 
 For other distros that use other package managers, please read INSTALL_README.txt and install manually, like in the example below:
 
 #### Prerequisities:
 - You must have mono installed to run .NET application.
 - You must have ffmpeg packages installed.
-- **For Debian systems (Ubuntu, Mint, etc.) run**:
 
-- `sudo apt-get update`
-- `sudo apt-get install mono-complete`
-- `sudo apt-get install ffmpeg`
-
-- **For another distributions, just search: mono <distro_name> installation.**
-- Example for Fedora or CentOS (Red Hat derivative):
-
-- `sudo yum-config-manager --add-repo http://download.mono-project.com/repo/centos/`
-- `sudo yum install mono-complete`
-- `sudo yum install epel-release`
-- `sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm`
-- `sudo yum install ffmpeg`
-
-After that, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
+After you install ffmpeg and mono, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 The same procedure applies to MacOS.
 
 - Open terminal and go to dir. where VCT_Linux_mono_binary.zip is saved, usually Downloads:
@@ -275,7 +253,7 @@ or create launcher at desktop or menu.
 
 ### Compiling from source code on Linux
 
-In the latest beta 1.9.5, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
+Since beta v1.9.5, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
 
 **If you use Wine on Linux, then just download Windows installer: VCT_setup.exe and install it via Wine. The prerequisite is that you have .NET Framework 4 Client installed in Wine.**
 

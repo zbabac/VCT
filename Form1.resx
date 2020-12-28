@@ -180,6 +180,21 @@
   <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="textBoxCopyDuration.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 23</value>
+  </data>
+  <data name="textBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="textBoxCopyDuration.Text" xml:space="preserve">
+    <value>01:00</value>
+  </data>
   <data name="&gt;&gt;textBoxCopyDuration.Name" xml:space="preserve">
     <value>textBoxCopyDuration</value>
   </data>
@@ -191,6 +206,21 @@
   </data>
   <data name="&gt;&gt;textBoxCopyDuration.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="labelCopyDuration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 27</value>
+  </data>
+  <data name="labelCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 19</value>
+  </data>
+  <data name="labelCopyDuration.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelCopyDuration.Text" xml:space="preserve">
+    <value>duration:</value>
   </data>
   <data name="&gt;&gt;labelCopyDuration.Name" xml:space="preserve">
     <value>labelCopyDuration</value>
@@ -204,6 +234,21 @@
   <data name="&gt;&gt;labelCopyDuration.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="checkBoxCopyDuration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 25</value>
+  </data>
+  <data name="checkBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
+  </data>
+  <data name="checkBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBoxCopyDuration.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
   <data name="&gt;&gt;checkBoxCopyDuration.Name" xml:space="preserve">
     <value>checkBoxCopyDuration</value>
   </data>
@@ -216,6 +261,21 @@
   <data name="&gt;&gt;checkBoxCopyDuration.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="textBoxFromTime.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxFromTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 24</value>
+  </data>
+  <data name="textBoxFromTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBoxFromTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="textBoxFromTime.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
   <data name="&gt;&gt;textBoxFromTime.Name" xml:space="preserve">
     <value>textBoxFromTime</value>
   </data>
@@ -227,6 +287,21 @@
   </data>
   <data name="&gt;&gt;textBoxFromTime.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="labelFromTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFromTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 27</value>
+  </data>
+  <data name="labelFromTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="labelFromTime.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelFromTime.Text" xml:space="preserve">
+    <value>From:</value>
   </data>
   <data name="&gt;&gt;labelFromTime.Name" xml:space="preserve">
     <value>labelFromTime</value>
@@ -250,7 +325,7 @@
     <value>50</value>
   </data>
   <data name="groupBoxCopyTimePeriod.Text" xml:space="preserve">
-    <value>Copy only specific time to output</value>
+    <value>Copy only specific time range (works for Convert Tab too)</value>
   </data>
   <data name="&gt;&gt;groupBoxCopyTimePeriod.Name" xml:space="preserve">
     <value>groupBoxCopyTimePeriod</value>
@@ -1329,141 +1404,6 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="textBoxCopyDuration.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>331, 23</value>
-  </data>
-  <data name="textBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="textBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="textBoxCopyDuration.Text" xml:space="preserve">
-    <value>01:00</value>
-  </data>
-  <data name="&gt;&gt;textBoxCopyDuration.Name" xml:space="preserve">
-    <value>textBoxCopyDuration</value>
-  </data>
-  <data name="&gt;&gt;textBoxCopyDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCopyDuration.Parent" xml:space="preserve">
-    <value>groupBoxCopyTimePeriod</value>
-  </data>
-  <data name="&gt;&gt;textBoxCopyDuration.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelCopyDuration.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 27</value>
-  </data>
-  <data name="labelCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 19</value>
-  </data>
-  <data name="labelCopyDuration.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelCopyDuration.Text" xml:space="preserve">
-    <value>duration:</value>
-  </data>
-  <data name="&gt;&gt;labelCopyDuration.Name" xml:space="preserve">
-    <value>labelCopyDuration</value>
-  </data>
-  <data name="&gt;&gt;labelCopyDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelCopyDuration.Parent" xml:space="preserve">
-    <value>groupBoxCopyTimePeriod</value>
-  </data>
-  <data name="&gt;&gt;labelCopyDuration.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkBoxCopyDuration.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 25</value>
-  </data>
-  <data name="checkBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 23</value>
-  </data>
-  <data name="checkBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="checkBoxCopyDuration.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="&gt;&gt;checkBoxCopyDuration.Name" xml:space="preserve">
-    <value>checkBoxCopyDuration</value>
-  </data>
-  <data name="&gt;&gt;checkBoxCopyDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxCopyDuration.Parent" xml:space="preserve">
-    <value>groupBoxCopyTimePeriod</value>
-  </data>
-  <data name="&gt;&gt;checkBoxCopyDuration.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBoxFromTime.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textBoxFromTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 24</value>
-  </data>
-  <data name="textBoxFromTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="textBoxFromTime.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="textBoxFromTime.Text" xml:space="preserve">
-    <value>00:00:00</value>
-  </data>
-  <data name="&gt;&gt;textBoxFromTime.Name" xml:space="preserve">
-    <value>textBoxFromTime</value>
-  </data>
-  <data name="&gt;&gt;textBoxFromTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxFromTime.Parent" xml:space="preserve">
-    <value>groupBoxCopyTimePeriod</value>
-  </data>
-  <data name="&gt;&gt;textBoxFromTime.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labelFromTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelFromTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 27</value>
-  </data>
-  <data name="labelFromTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 19</value>
-  </data>
-  <data name="labelFromTime.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelFromTime.Text" xml:space="preserve">
-    <value>From:</value>
-  </data>
-  <data name="&gt;&gt;labelFromTime.Name" xml:space="preserve">
-    <value>labelFromTime</value>
-  </data>
-  <data name="&gt;&gt;labelFromTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFromTime.Parent" xml:space="preserve">
-    <value>groupBoxCopyTimePeriod</value>
-  </data>
-  <data name="&gt;&gt;labelFromTime.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="numericUpDownAudioNr.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 62</value>

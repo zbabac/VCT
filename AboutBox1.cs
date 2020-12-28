@@ -22,7 +22,7 @@ namespace VTC
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.richTextBoxDescription.Text = "Copyright 2014-2020 Zlatko Babić"+
+            this.richTextBoxDescription.Text = "Copyright 2014-2021 Zlatko Babić"+
 
 				"\nLicensed under the Apache License, Version 2.0 (the 'License');"+
 				"\nyou may not use this file except in compliance with the License."+

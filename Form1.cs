@@ -43,8 +43,8 @@ namespace VTC
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
         static bool add_sub_stream = false, error_in_file = false, use_out_path = false, paused = false, started = false; // paused or started encoding
         static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
-        static string video = "", audio_part = "", task = ""; //video;audio part of parameters string; ffmpeg command string
-        static string video_size = ""; //used if user opts to resize video
+        static string video = "", audio_part = "", task = "", video_size=""; //video;audio part of parameters string; ffmpeg command string
+        static string time_duration = ""; //used if only specific part of file is needed
         static string vf = ""; //video filter part, used currently to rotate video
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         static bool set_fps = false; //set if different target FPS is to be used
@@ -185,7 +185,7 @@ namespace VTC
             string[] input_list = new string[16383];	//defines max number of files selected from the same folder
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C://";
-            openFileDialog.Filter = "H.264 or H.265 files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv";	//sets filter of displayed files
+            openFileDialog.Filter = "H.264 or H.265 files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|All files|*.*";	//sets filter of displayed files
             openFileDialog.Multiselect = true;							//allows to select more files at once
             openFileDialog.Title = "Choose video files to transcode";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -805,6 +805,9 @@ namespace VTC
         {
             try
             {					//called whenever user clicks options controls to store new values in variables
+                if (checkBoxCopyDuration.Checked)
+                    time_duration = " -ss " + textBoxFromTime.Text + " -t " + textBoxCopyDuration.Text;
+                else time_duration = "";
                 if (checkBoxVideoOnly.Checked)
                 {
                     video_only = true;
@@ -1025,9 +1028,9 @@ namespace VTC
                 }
                 // complete string to be passed to process start
                 if (IsLinux==0)
-                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 else
-                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1985,6 +1988,17 @@ namespace VTC
                 textBoxFromTime.Enabled = false;
                 textBoxCopyDuration.Enabled = false;
             }
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+        }
+
+        private void textBoxFromTime_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+        }
+
+        private void textBoxCopyDuration_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
         }
 
         private void buttonStreamSavePath_Click(object sender, EventArgs e)
