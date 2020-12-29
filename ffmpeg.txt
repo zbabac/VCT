@@ -153,3 +153,20 @@ ffplay -stimeout 1000000 "rtsp://192.168.0.101:8080/video/h264"
 
 from time copy specific duration (60 seconds) to output:
 ffmpeg -i input.mp3 -ss 00:02:15 -t 1:00 output.mp3
+
+//add this in your initialisation
+
+this.Window.AllowUserResizing = true;
+this.Window.ClientSizeChanged += new EventHandler<EventArgs>(Window_ClientSizeChanged);
+
+
+private bool WindowSizeIsBeingChanged = false;
+void Window_ClientSizeChanged(object sender, EventArgs e)
+{
+    WindowSizeIsBeingChanged = !WindowSizeIsBeingChanged
+    if(WindowSizeIsBeingChanged){
+        graphics.PreferredBackBufferWidth = Window.ClientBounds.Width;
+        graphics.PreferredBackBufferHeight = Window.ClientBounds.Height;
+        graphics.ApplyChanges();
+    }
+}

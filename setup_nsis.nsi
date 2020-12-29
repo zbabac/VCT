@@ -73,6 +73,7 @@ Section "MainSection" SEC01
   File "ffplay.exe"
   File "Newtonsoft.Json.dll"
   File "VCT_help.pdf"
+  File "segoeui.ttf"
   CreateDirectory "$PROGRAMFILES\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\Help.lnk" "$INSTDIR\VCT_help.pdf"
   File "copying.txt"
