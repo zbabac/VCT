@@ -112,8 +112,20 @@ namespace VTC
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
             InitializeComponent();
+            DateTime datum = DateTime.Now;
+            if (datum.Month == 1 || datum.Month == 12)
+            {
+                this.buttonAbout.BackgroundImage = VTC.Properties.Resources.santahead_512;
+                this.buttonAbout.BackgroundImageLayout = ImageLayout.Stretch;
+                this.buttonAbout.Text = "";
+                this.buttonAbout.FlatAppearance.BorderSize = 0;
+            }
+            else
+            {
+                this.buttonAbout.BackgroundImage = null;
+                this.buttonAbout.Text = "About";
+            }
             // Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.
-            //statustekst = "Bruk 'Omkode' til å konvertere raskt MKV til MP4, eller 'Konvertere' for hele spekteret av H.264-alternativer.";
             // Handler for capturing output data from external process ffmpeg
             proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
             proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data

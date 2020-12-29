@@ -164,6 +164,7 @@
     <None Include="images\load1.gif" />
     <None Include="images\load2.gif" />
     <None Include="images\play.png" />
+    <Content Include="images\santahead-512.png" />
     <Content Include="images\test.jpg" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
