@@ -818,9 +818,9 @@ namespace VTC
         {
             try
             {					//called whenever user clicks options controls to store new values in variables
-                /*if (checkBoxCopyDuration.Checked)
+                if (checkBoxCopyDuration.Checked)
                     time_duration = " -ss " + textBoxFromTime.Text + " -t " + textBoxCopyDuration.Text;
-                else time_duration = "";*/
+                else time_duration = "";
                 if (checkBoxVideoOnly.Checked)
                 {
                     video_only = true;
@@ -1041,9 +1041,9 @@ namespace VTC
                 }
                 // complete string to be passed to process start
                 if (IsLinux==0)
-                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 else
-                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -2001,17 +2001,17 @@ namespace VTC
                 textBoxFromTime.Enabled = false;
                 textBoxCopyDuration.Enabled = false;
             }
-            //richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
         }
 
         private void textBoxFromTime_TextChanged(object sender, EventArgs e)
         {
-            //richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
         }
 
         private void textBoxCopyDuration_TextChanged(object sender, EventArgs e)
         {
-            //richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+            richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
         }
 
         private void buttonStreamSavePath_Click(object sender, EventArgs e)

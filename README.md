@@ -5,7 +5,11 @@ For other distros you need to do it manually. Please scroll to the end of this f
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
-# v1.9.5.7 Copy specific time range to output in Transcode Tab
+# v1.9.5.7 Copy specific time range to output in Transcode Tab, works also in Convert tab
+- **When copying only certain time range in Convert tab, pay attention that it is possible only for some scenarios:   
+	-**e.g. copy streams with resize option
+	-**copy video stream and encoding audio stream
+	-**it DOES NOT WORK with some full video encodings
 - **Fix of copy from specific time to output in Transcode tab 
 - **Bug fix for task list when some task is deleted
 
@@ -123,7 +127,11 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
-# v1.9.5.7 Copy specific time range to output in Transcode Tab
+# v1.9.5.7 Copy specific time range to output in Transcode Tab, works also in Convert tab
+- **When copying only certain time range in Convert tab, pay attention that it is possible only for some scenarios:   
+	-**e.g. copy streams with resize option
+	-**copy video stream and encoding audio stream
+	-**it DOES NOT WORK with some full video encodings
 - **Fix of copy from specific time to output in Transcode tab 
 - **Bug fix for task list when some task is deleted
 
