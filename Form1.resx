@@ -141,17 +141,17 @@
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 34</value>
+    <value>160, 27</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 765</value>
+    <value>0, 650</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 0, 19, 0</value>
+    <value>1, 0, 15, 0</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 40</value>
+    <value>944, 33</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -184,10 +184,13 @@
     <value>False</value>
   </data>
   <data name="textBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>331, 23</value>
+    <value>265, 18</value>
+  </data>
+  <data name="textBoxCopyDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="textBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
+    <value>81, 22</value>
   </data>
   <data name="textBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -214,10 +217,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 27</value>
+    <value>209, 22</value>
+  </data>
+  <data name="labelCopyDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="labelCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 19</value>
+    <value>55, 13</value>
   </data>
   <data name="labelCopyDuration.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -244,10 +250,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxCopyDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 25</value>
+    <value>6, 20</value>
+  </data>
+  <data name="checkBoxCopyDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="checkBoxCopyDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 23</value>
+    <value>52, 17</value>
   </data>
   <data name="checkBoxCopyDuration.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -271,10 +280,13 @@
     <value>False</value>
   </data>
   <data name="textBoxFromTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 24</value>
+    <value>107, 19</value>
+  </data>
+  <data name="textBoxFromTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="textBoxFromTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
+    <value>81, 22</value>
   </data>
   <data name="textBoxFromTime.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -301,10 +313,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelFromTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 27</value>
+    <value>67, 22</value>
+  </data>
+  <data name="labelFromTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="labelFromTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 19</value>
+    <value>36, 13</value>
   </data>
   <data name="labelFromTime.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -325,10 +340,16 @@
     <value>4</value>
   </data>
   <data name="groupBoxCopyTimePeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 618</value>
+    <value>22, 494</value>
+  </data>
+  <data name="groupBoxCopyTimePeriod.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="groupBoxCopyTimePeriod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="groupBoxCopyTimePeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 56</value>
+    <value>380, 45</value>
   </data>
   <data name="groupBoxCopyTimePeriod.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -349,13 +370,10 @@
     <value>0</value>
   </data>
   <data name="numericUpDownAudioNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 62</value>
-  </data>
-  <data name="numericUpDownAudioNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>106, 50</value>
   </data>
   <data name="numericUpDownAudioNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 25</value>
+    <value>35, 22</value>
   </data>
   <data name="numericUpDownAudioNr.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -373,13 +391,10 @@
     <value>0</value>
   </data>
   <data name="numericUpDownVideoNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 25</value>
-  </data>
-  <data name="numericUpDownVideoNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>106, 20</value>
   </data>
   <data name="numericUpDownVideoNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 25</value>
+    <value>35, 22</value>
   </data>
   <data name="numericUpDownVideoNr.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -400,13 +415,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelTransAudioNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 66</value>
-  </data>
-  <data name="labelTransAudioNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>25, 53</value>
   </data>
   <data name="labelTransAudioNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 24</value>
+    <value>75, 19</value>
   </data>
   <data name="labelTransAudioNr.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -430,13 +442,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelTransVideoNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 31</value>
-  </data>
-  <data name="labelTransVideoNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>22, 25</value>
   </data>
   <data name="labelTransVideoNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 21</value>
+    <value>78, 17</value>
   </data>
   <data name="labelTransVideoNr.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -457,16 +466,10 @@
     <value>3</value>
   </data>
   <data name="groupBoxTransGroupStreams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 495</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="groupBoxTransGroupStreams.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>229, 396</value>
   </data>
   <data name="groupBoxTransGroupStreams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 104</value>
+    <value>173, 83</value>
   </data>
   <data name="groupBoxTransGroupStreams.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -493,13 +496,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxKeepExtension.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 576</value>
+    <value>27, 461</value>
   </data>
   <data name="checkBoxKeepExtension.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="checkBoxKeepExtension.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 23</value>
+    <value>123, 17</value>
   </data>
   <data name="checkBoxKeepExtension.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -526,13 +529,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 522</value>
-  </data>
-  <data name="checkBoxTranscodeAllStreams.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>27, 418</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 23</value>
+    <value>196, 17</value>
   </data>
   <data name="checkBoxTranscodeAllStreams.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -565,13 +565,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveTransPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 435</value>
+    <value>27, 348</value>
   </data>
   <data name="buttonRemoveTransPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonRemoveTransPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 24</value>
+    <value>122, 19</value>
   </data>
   <data name="buttonRemoveTransPath.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -604,13 +604,10 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 475</value>
-  </data>
-  <data name="checkBoxTransRemoveSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>27, 380</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 23</value>
+    <value>145, 17</value>
   </data>
   <data name="checkBoxTransRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -637,13 +634,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonLog2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 388</value>
+    <value>342, 310</value>
   </data>
   <data name="buttonLog2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonLog2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 44</value>
+    <value>60, 35</value>
   </data>
   <data name="buttonLog2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -670,13 +667,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 228</value>
+    <value>342, 182</value>
   </data>
   <data name="buttonHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 42</value>
+    <value>62, 34</value>
   </data>
   <data name="buttonHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1694,13 +1691,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 62</value>
+    <value>342, 50</value>
   </data>
   <data name="buttonAbout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 77</value>
+    <value>62, 62</value>
   </data>
   <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1727,13 +1724,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 24</value>
+    <value>26, 19</value>
   </data>
   <data name="labelMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 182</value>
+    <value>253, 146</value>
   </data>
   <data name="labelMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1761,13 +1758,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonMultiTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 226</value>
+    <value>27, 181</value>
   </data>
   <data name="buttonMultiTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonMultiTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 78</value>
+    <value>74, 62</value>
   </data>
   <data name="buttonMultiTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1791,13 +1788,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="panelTranscode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 681</value>
+    <value>2, 545</value>
   </data>
   <data name="panelTranscode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="panelTranscode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>512, 32</value>
+    <value>402, 33</value>
   </data>
   <data name="panelTranscode.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1818,13 +1815,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 354</value>
+    <value>106, 283</value>
   </data>
   <data name="labelOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 78</value>
+    <value>214, 62</value>
   </data>
   <data name="labelOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1848,13 +1845,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelInputTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 226</value>
+    <value>106, 181</value>
   </data>
   <data name="labelInputTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelInputTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 92</value>
+    <value>194, 74</value>
   </data>
   <data name="labelInputTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1878,13 +1875,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonOutTransFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 354</value>
+    <value>27, 283</value>
   </data>
   <data name="buttonOutTransFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonOutTransFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 78</value>
+    <value>74, 62</value>
   </data>
   <data name="buttonOutTransFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1905,13 +1902,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>14</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 724</value>
+    <value>439, 618</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1941,10 +1938,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 10</value>
+    <value>259, 8</value>
+  </data>
+  <data name="buttonPlay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 50</value>
+    <value>42, 40</value>
   </data>
   <data name="buttonPlay.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1968,13 +1968,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButton_No_Video_Resize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 26</value>
-  </data>
-  <data name="radioButton_No_Video_Resize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>211, 21</value>
   </data>
   <data name="radioButton_No_Video_Resize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 21</value>
+    <value>85, 17</value>
   </data>
   <data name="radioButton_No_Video_Resize.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1998,13 +1995,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButton_480p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 26</value>
-  </data>
-  <data name="radioButton_480p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>156, 21</value>
   </data>
   <data name="radioButton_480p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 21</value>
+    <value>41, 17</value>
   </data>
   <data name="radioButton_480p.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2028,13 +2022,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButton_720p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 26</value>
-  </data>
-  <data name="radioButton_720p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>88, 21</value>
   </data>
   <data name="radioButton_720p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
+    <value>67, 17</value>
   </data>
   <data name="radioButton_720p.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2058,13 +2049,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButton_1080p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 28</value>
-  </data>
-  <data name="radioButton_1080p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 22</value>
   </data>
   <data name="radioButton_1080p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 21</value>
+    <value>73, 17</value>
   </data>
   <data name="radioButton_1080p.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2085,16 +2073,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>3</value>
   </data>
   <data name="groupBoxVideoSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 449</value>
-  </data>
-  <data name="groupBoxVideoSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="groupBoxVideoSize.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 359</value>
   </data>
   <data name="groupBoxVideoSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 69</value>
+    <value>310, 55</value>
   </data>
   <data name="groupBoxVideoSize.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -2127,13 +2109,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveOutPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 128</value>
+    <value>6, 102</value>
   </data>
   <data name="buttonRemoveOutPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonRemoveOutPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 24</value>
+    <value>122, 19</value>
   </data>
   <data name="buttonRemoveOutPath.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2166,13 +2148,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBoxSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 16</value>
-  </data>
-  <data name="checkBoxSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>200, 13</value>
   </data>
   <data name="checkBoxSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 23</value>
+    <value>128, 17</value>
   </data>
   <data name="checkBoxSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2199,13 +2178,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBoxSetFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 16</value>
-  </data>
-  <data name="checkBoxSetFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 13</value>
   </data>
   <data name="checkBoxSetFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 23</value>
+    <value>111, 17</value>
   </data>
   <data name="checkBoxSetFPS.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2235,13 +2211,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 49</value>
-  </data>
-  <data name="labelSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>250, 39</value>
   </data>
   <data name="labelSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 19</value>
+    <value>71, 13</value>
   </data>
   <data name="labelSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2265,13 +2238,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>False</value>
   </data>
   <data name="textBoxSlowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 46</value>
-  </data>
-  <data name="textBoxSlowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>200, 37</value>
   </data>
   <data name="textBoxSlowFPS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 25</value>
+    <value>45, 22</value>
   </data>
   <data name="textBoxSlowFPS.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2301,13 +2271,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelFPSout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 49</value>
-  </data>
-  <data name="labelFPSout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>55, 39</value>
   </data>
   <data name="labelFPSout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 19</value>
+    <value>66, 13</value>
   </data>
   <data name="labelFPSout.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2331,13 +2298,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>False</value>
   </data>
   <data name="textBoxFPSout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 45</value>
-  </data>
-  <data name="textBoxFPSout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 36</value>
   </data>
   <data name="textBoxFPSout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 25</value>
+    <value>45, 22</value>
   </data>
   <data name="textBoxFPSout.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2358,16 +2322,10 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>5</value>
   </data>
   <data name="groupBoxSlow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 525</value>
-  </data>
-  <data name="groupBoxSlow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="groupBoxSlow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 420</value>
   </data>
   <data name="groupBoxSlow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>505, 85</value>
+    <value>404, 68</value>
   </data>
   <data name="groupBoxSlow.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -2391,13 +2349,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBoxH265.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 24</value>
+    <value>4, 19</value>
   </data>
   <data name="checkBoxH265.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="checkBoxH265.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 28</value>
+    <value>72, 22</value>
   </data>
   <data name="checkBoxH265.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2418,7 +2376,7 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>0</value>
   </data>
   <data name="groupBoxCPU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 342</value>
+    <value>229, 274</value>
   </data>
   <data name="groupBoxCPU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -2427,7 +2385,7 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>2, 2, 2, 2</value>
   </data>
   <data name="groupBoxCPU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 59</value>
+    <value>90, 47</value>
   </data>
   <data name="groupBoxCPU.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -2463,13 +2421,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 210</value>
+    <value>416, 168</value>
   </data>
   <data name="buttonLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 26</value>
+    <value>19, 21</value>
   </data>
   <data name="buttonLog.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2520,13 +2478,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>9</value>
   </data>
   <data name="comboBoxAudioStreamNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 395</value>
+    <value>139, 316</value>
   </data>
   <data name="comboBoxAudioStreamNo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="comboBoxAudioStreamNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 25</value>
+    <value>65, 21</value>
   </data>
   <data name="comboBoxAudioStreamNo.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2550,13 +2508,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelAudioStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 395</value>
+    <value>6, 316</value>
   </data>
   <data name="labelAudioStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAudioStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 50</value>
+    <value>122, 40</value>
   </data>
   <data name="labelAudioStream.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -2580,13 +2538,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBox90counterclockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 16</value>
+    <value>131, 13</value>
   </data>
   <data name="checkBox90counterclockwise.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="checkBox90counterclockwise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>46, 17</value>
   </data>
   <data name="checkBox90counterclockwise.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2610,13 +2568,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBox90clockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 16</value>
+    <value>66, 13</value>
   </data>
   <data name="checkBox90clockwise.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="checkBox90clockwise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 21</value>
+    <value>42, 17</value>
   </data>
   <data name="checkBox90clockwise.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2640,13 +2598,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBox180.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 16</value>
+    <value>4, 13</value>
   </data>
   <data name="checkBox180.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="checkBox180.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+    <value>48, 17</value>
   </data>
   <data name="checkBox180.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2667,16 +2625,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>2</value>
   </data>
   <data name="groupBoxRotate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 68</value>
+    <value>229, 54</value>
   </data>
   <data name="groupBoxRotate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxRotate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxRotate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 48</value>
+    <value>184, 38</value>
   </data>
   <data name="groupBoxRotate.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -2709,13 +2667,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 342</value>
+    <value>67, 274</value>
   </data>
   <data name="buttonRemoveSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonRemoveSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 24</value>
+    <value>117, 19</value>
   </data>
   <data name="buttonRemoveSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2742,13 +2700,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 286</value>
+    <value>77, 229</value>
   </data>
   <data name="labelAddSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 52</value>
+    <value>127, 42</value>
   </data>
   <data name="labelAddSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -2772,13 +2730,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonAddSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 286</value>
+    <value>6, 229</value>
   </data>
   <data name="buttonAddSubtitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonAddSubtitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 61</value>
+    <value>57, 49</value>
   </data>
   <data name="buttonAddSubtitle.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2802,13 +2760,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBoxAudioOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 18</value>
+    <value>111, 14</value>
   </data>
   <data name="checkBoxAudioOnly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="checkBoxAudioOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 42</value>
+    <value>66, 34</value>
   </data>
   <data name="checkBoxAudioOnly.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2832,13 +2790,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="checkBoxVideoOnly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 18</value>
+    <value>6, 14</value>
   </data>
   <data name="checkBoxVideoOnly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="checkBoxVideoOnly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 45</value>
+    <value>66, 36</value>
   </data>
   <data name="checkBoxVideoOnly.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2859,16 +2817,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>1</value>
   </data>
   <data name="groupBoxVideoOrAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 122</value>
+    <value>229, 98</value>
   </data>
   <data name="groupBoxVideoOrAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxVideoOrAudio.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxVideoOrAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 60</value>
+    <value>184, 48</value>
   </data>
   <data name="groupBoxVideoOrAudio.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -2895,13 +2853,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 22</value>
+    <value>6, 18</value>
   </data>
   <data name="labelPreset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 19</value>
+    <value>91, 13</value>
   </data>
   <data name="labelPreset.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2928,13 +2886,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 58</value>
+    <value>6, 46</value>
   </data>
   <data name="labelQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 19</value>
+    <value>76, 13</value>
   </data>
   <data name="labelQuality.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2961,13 +2919,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 95</value>
+    <value>4, 76</value>
   </data>
   <data name="labelAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 19</value>
+    <value>75, 13</value>
   </data>
   <data name="labelAudio.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -3012,16 +2970,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>slower</value>
   </data>
   <data name="comboBoxPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 22</value>
+    <value>110, 18</value>
   </data>
   <data name="comboBoxPreset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="comboBoxPreset.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="comboBoxPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 25</value>
+    <value>86, 21</value>
   </data>
   <data name="comboBoxPreset.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -3066,13 +3024,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>320k</value>
   </data>
   <data name="comboBoxAudioBitRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 91</value>
+    <value>110, 73</value>
   </data>
   <data name="comboBoxAudioBitRate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="comboBoxAudioBitRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 25</value>
+    <value>87, 21</value>
   </data>
   <data name="comboBoxAudioBitRate.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -3138,16 +3096,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>32</value>
   </data>
   <data name="comboBoxQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 58</value>
+    <value>109, 46</value>
   </data>
   <data name="comboBoxQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="comboBoxQuality.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="comboBoxQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 25</value>
+    <value>87, 21</value>
   </data>
   <data name="comboBoxQuality.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -3168,16 +3126,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>5</value>
   </data>
   <data name="groupBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 158</value>
+    <value>9, 126</value>
   </data>
   <data name="groupBoxOptions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxOptions.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 121</value>
+    <value>200, 97</value>
   </data>
   <data name="groupBoxOptions.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3204,13 +3162,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonCopyAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 29</value>
+    <value>130, 23</value>
   </data>
   <data name="radioButtonCopyAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonCopyAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 23</value>
+    <value>49, 17</value>
   </data>
   <data name="radioButtonCopyAudio.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3237,13 +3195,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonMP3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 29</value>
+    <value>14, 23</value>
   </data>
   <data name="radioButtonMP3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonMP3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 23</value>
+    <value>47, 17</value>
   </data>
   <data name="radioButtonMP3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3270,13 +3228,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonAAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 29</value>
+    <value>76, 23</value>
   </data>
   <data name="radioButtonAAC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonAAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 23</value>
+    <value>46, 17</value>
   </data>
   <data name="radioButtonAAC.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3297,16 +3255,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>2</value>
   </data>
   <data name="groupBoxAudio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 259</value>
+    <value>229, 207</value>
   </data>
   <data name="groupBoxAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxAudio.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxAudio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 69</value>
+    <value>184, 55</value>
   </data>
   <data name="groupBoxAudio.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -3333,13 +3291,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonCopyVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 30</value>
+    <value>130, 24</value>
   </data>
   <data name="radioButtonCopyVideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonCopyVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 23</value>
+    <value>49, 17</value>
   </data>
   <data name="radioButtonCopyVideo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3366,13 +3324,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonMP4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 30</value>
+    <value>76, 24</value>
   </data>
   <data name="radioButtonMP4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonMP4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 23</value>
+    <value>47, 17</value>
   </data>
   <data name="radioButtonMP4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3399,13 +3357,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="radioButtonMKV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 30</value>
+    <value>14, 24</value>
   </data>
   <data name="radioButtonMKV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="radioButtonMKV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>48, 17</value>
   </data>
   <data name="radioButtonMKV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3426,16 +3384,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>2</value>
   </data>
   <data name="groupBoxContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 192</value>
+    <value>229, 154</value>
   </data>
   <data name="groupBoxContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxContainer.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="groupBoxContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 59</value>
+    <value>184, 47</value>
   </data>
   <data name="groupBoxContainer.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -3462,13 +3420,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelTextBoxConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 610</value>
+    <value>2, 488</value>
   </data>
   <data name="labelTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 19</value>
+    <value>403, 13</value>
   </data>
   <data name="labelTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -3492,13 +3450,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 75</value>
+    <value>79, 60</value>
   </data>
   <data name="labelOutConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 45</value>
+    <value>127, 36</value>
   </data>
   <data name="labelOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3522,13 +3480,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="labelInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 10</value>
+    <value>84, 8</value>
   </data>
   <data name="labelInputConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
+    <value>120, 40</value>
   </data>
   <data name="labelInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3555,13 +3513,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonAddBatchConv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 404</value>
+    <value>337, 323</value>
   </data>
   <data name="buttonAddBatchConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonAddBatchConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 52</value>
+    <value>73, 42</value>
   </data>
   <data name="buttonAddBatchConv.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3585,13 +3543,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonMultiConvFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 10</value>
+    <value>340, 8</value>
   </data>
   <data name="buttonMultiConvFiles.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonMultiConvFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 50</value>
+    <value>73, 40</value>
   </data>
   <data name="buttonMultiConvFiles.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3621,13 +3579,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>0, 0</value>
   </data>
   <data name="richTextBoxConv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 2</value>
+    <value>2, 3, 12, 8</value>
   </data>
   <data name="richTextBoxConv.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>531, 85</value>
+    <value>425, 107</value>
   </data>
   <data name="richTextBoxConv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 85</value>
+    <value>434, 108</value>
   </data>
   <data name="richTextBoxConv.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3648,16 +3606,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>0</value>
   </data>
   <data name="panelConvert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 630</value>
+    <value>0, 504</value>
   </data>
   <data name="panelConvert.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="panelConvert.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>488, 88</value>
+    <value>434, 110</value>
   </data>
   <data name="panelConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 117</value>
+    <value>434, 110</value>
   </data>
   <data name="panelConvert.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3678,13 +3636,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonOutConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 72</value>
+    <value>6, 58</value>
   </data>
   <data name="buttonOutConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonOutConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 51</value>
+    <value>72, 41</value>
   </data>
   <data name="buttonOutConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3708,13 +3666,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonInputConvFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
+    <value>5, 8</value>
   </data>
   <data name="buttonInputConvFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonInputConvFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 51</value>
+    <value>73, 41</value>
   </data>
   <data name="buttonInputConvFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3750,13 +3708,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>NoControl</value>
   </data>
   <data name="buttonInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 6</value>
+    <value>207, 5</value>
   </data>
   <data name="buttonInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 55</value>
+    <value>45, 44</value>
   </data>
   <data name="buttonInfo.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -3777,13 +3735,13 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>24</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 724</value>
+    <value>439, 618</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3810,13 +3768,16 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>True</value>
   </data>
   <data name="richTextBoxStreamCommand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 199</value>
+    <value>10, 159</value>
+  </data>
+  <data name="richTextBoxStreamCommand.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="richTextBoxStreamCommand.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="richTextBoxStreamCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 444</value>
+    <value>410, 355</value>
   </data>
   <data name="richTextBoxStreamCommand.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -3864,13 +3825,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="labelSaveStreamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 139</value>
+    <value>6, 111</value>
   </data>
   <data name="labelSaveStreamPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelSaveStreamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 19</value>
+    <value>116, 13</value>
   </data>
   <data name="labelSaveStreamPath.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -3897,13 +3858,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonStreamSavePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 69</value>
+    <value>222, 55</value>
   </data>
   <data name="buttonStreamSavePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonStreamSavePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 46</value>
+    <value>73, 37</value>
   </data>
   <data name="buttonStreamSavePath.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3927,13 +3888,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonCheckStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 69</value>
+    <value>22, 55</value>
   </data>
   <data name="buttonCheckStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonCheckStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 46</value>
+    <value>77, 37</value>
   </data>
   <data name="buttonCheckStream.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3957,13 +3918,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonLogRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>512, 164</value>
+    <value>410, 131</value>
   </data>
   <data name="buttonLogRec.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonLogRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 30</value>
+    <value>16, 24</value>
   </data>
   <data name="buttonLogRec.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3990,13 +3951,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonStartRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 69</value>
+    <value>318, 55</value>
   </data>
   <data name="buttonStartRec.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonStartRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 46</value>
+    <value>80, 37</value>
   </data>
   <data name="buttonStartRec.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4023,13 +3984,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonPlayStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 69</value>
+    <value>123, 55</value>
   </data>
   <data name="buttonPlayStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="buttonPlayStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 46</value>
+    <value>74, 37</value>
   </data>
   <data name="buttonPlayStream.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4050,13 +4011,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>6</value>
   </data>
   <data name="textBoxStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 38</value>
+    <value>6, 30</value>
   </data>
   <data name="textBoxStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="textBoxStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>524, 25</value>
+    <value>420, 22</value>
   </data>
   <data name="textBoxStream.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4080,13 +4041,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="labelStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 15</value>
+    <value>3, 12</value>
   </data>
   <data name="labelStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 19</value>
+    <value>351, 13</value>
   </data>
   <data name="labelStream.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4107,13 +4068,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>8</value>
   </data>
   <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 724</value>
+    <value>439, 618</value>
   </data>
   <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4140,16 +4101,16 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>6, 6</value>
   </data>
   <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="tabControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>559, 754</value>
+    <value>447, 644</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 754</value>
+    <value>447, 644</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4170,10 +4131,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>0, 0</value>
   </data>
   <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>2, 2, 6, 6</value>
+  </data>
+  <data name="panel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>448, 646</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 764</value>
+    <value>448, 646</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4189,9 +4153,6 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="tabControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -4224,7 +4185,7 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>Vertical</value>
   </data>
   <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 138</value>
+    <value>31, 131</value>
   </data>
   <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4254,13 +4215,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 680</value>
+    <value>208, 593</value>
   </data>
   <data name="buttonUnselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 32</value>
+    <value>64, 26</value>
   </data>
   <data name="buttonUnselectAll.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4287,13 +4248,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonSellectAllQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 680</value>
+    <value>292, 593</value>
   </data>
   <data name="buttonSellectAllQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonSellectAllQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 32</value>
+    <value>70, 26</value>
   </data>
   <data name="buttonSellectAllQueue.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4326,7 +4287,7 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>25</value>
   </data>
   <data name="check_cell.Width" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>31</value>
   </data>
   <metadata name="no_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4338,7 +4299,7 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>40</value>
   </data>
   <data name="no_cell.Width" type="System.Int32, mscorlib">
-    <value>59</value>
+    <value>50</value>
   </data>
   <metadata name="task_cell.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4347,19 +4308,22 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>Task</value>
   </data>
   <data name="task_cell.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>200</value>
   </data>
   <data name="dataGridViewBatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="dataGridViewBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 4</value>
+    <value>2, 2, 40, 40</value>
+  </data>
+  <data name="dataGridViewBatch.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>479, 581</value>
   </data>
   <data name="dataGridViewBatch.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>20</value>
   </data>
   <data name="dataGridViewBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 672</value>
+    <value>479, 581</value>
   </data>
   <data name="dataGridViewBatch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4383,13 +4347,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonDeleteQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>476, 680</value>
+    <value>411, 593</value>
   </data>
   <data name="buttonDeleteQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonDeleteQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 32</value>
+    <value>51, 26</value>
   </data>
   <data name="buttonDeleteQueue.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4416,13 +4380,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonCancelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 680</value>
+    <value>101, 593</value>
   </data>
   <data name="buttonCancelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonCancelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 32</value>
+    <value>54, 26</value>
   </data>
   <data name="buttonCancelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4449,13 +4413,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>NoControl</value>
   </data>
   <data name="buttonStartQueue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 680</value>
+    <value>11, 593</value>
   </data>
   <data name="buttonStartQueue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="buttonStartQueue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 32</value>
+    <value>72, 26</value>
   </data>
   <data name="buttonStartQueue.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4476,16 +4440,16 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>6</value>
   </data>
   <data name="panelBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
+    <value>0, 0</value>
   </data>
   <data name="panelBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="panelBatch.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>556, 720</value>
+    <value>484, 623</value>
   </data>
   <data name="panelBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 720</value>
+    <value>484, 623</value>
   </data>
   <data name="panelBatch.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4503,16 +4467,13 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>0</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
-  </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>567, 730</value>
+    <value>482, 626</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4536,16 +4497,19 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>Segoe UI, 8pt</value>
   </data>
   <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 1</value>
+    <value>7, 1</value>
   </data>
   <data name="tabControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="tabControl2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>490, 648</value>
   </data>
   <data name="tabControl2.Padding" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>575, 760</value>
+    <value>490, 652</value>
   </data>
   <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4562,14 +4526,20 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
   <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>558, 0</value>
+    <value>446, 0</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panel2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>493, 648</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>588, 764</value>
+    <value>493, 648</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4593,10 +4563,10 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
     <value>32</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 805</value>
+    <value>944, 683</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -8078,10 +8048,10 @@ BEFORE CLICKING "Start Recording", COMMAND MAY BE EDITED MANUALLY.</value>
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 4, 2, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1169, 844</value>
+    <value>960, 722</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

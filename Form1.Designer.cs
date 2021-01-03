@@ -33,6 +33,7 @@ namespace VTC
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -130,20 +131,20 @@ namespace VTC
             this.buttonPlayStream = new System.Windows.Forms.Button();
             this.textBoxStream = new System.Windows.Forms.TextBox();
             this.labelStream = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelBatch = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.buttonUnselectAll = new System.Windows.Forms.Button();
-            this.buttonSellectAllQueue = new System.Windows.Forms.Button();
+            this.buttonStartQueue = new System.Windows.Forms.Button();
+            this.buttonCancelBatch = new System.Windows.Forms.Button();
+            this.buttonDeleteQueue = new System.Windows.Forms.Button();
             this.dataGridViewBatch = new System.Windows.Forms.DataGridView();
+            this.buttonSellectAllQueue = new System.Windows.Forms.Button();
+            this.buttonUnselectAll = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.check_cell = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.no_cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.task_cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonDeleteQueue = new System.Windows.Forms.Button();
-            this.buttonCancelBatch = new System.Windows.Forms.Button();
-            this.buttonStartQueue = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -163,11 +164,11 @@ namespace VTC
             this.groupBoxContainer.SuspendLayout();
             this.panelConvert.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -953,19 +954,12 @@ namespace VTC
             resources.ApplyResources(this.labelStream, "labelStream");
             this.labelStream.Name = "labelStream";
             // 
-            // panel2
-            // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Controls.Add(this.tabControl2);
-            this.panel2.Name = "panel2";
-            // 
             // tabControl2
             // 
             resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             // 
             // tabPage3
             // 
@@ -987,28 +981,26 @@ namespace VTC
             this.panelBatch.Controls.Add(this.buttonStartQueue);
             this.panelBatch.Name = "panelBatch";
             // 
-            // richTextBox3
+            // buttonStartQueue
             // 
-            resources.ApplyResources(this.richTextBox3, "richTextBox3");
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
+            resources.ApplyResources(this.buttonStartQueue, "buttonStartQueue");
+            this.buttonStartQueue.Name = "buttonStartQueue";
+            this.buttonStartQueue.UseVisualStyleBackColor = true;
+            this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
-            // buttonUnselectAll
+            // buttonCancelBatch
             // 
-            resources.ApplyResources(this.buttonUnselectAll, "buttonUnselectAll");
-            this.buttonUnselectAll.Name = "buttonUnselectAll";
-            this.buttonUnselectAll.UseVisualStyleBackColor = true;
-            this.buttonUnselectAll.Click += new System.EventHandler(this.buttonUnselectAll_Click);
+            resources.ApplyResources(this.buttonCancelBatch, "buttonCancelBatch");
+            this.buttonCancelBatch.Name = "buttonCancelBatch";
+            this.buttonCancelBatch.UseVisualStyleBackColor = true;
+            this.buttonCancelBatch.Click += new System.EventHandler(this.buttonCancelBatch_Click);
             // 
-            // buttonSellectAllQueue
+            // buttonDeleteQueue
             // 
-            resources.ApplyResources(this.buttonSellectAllQueue, "buttonSellectAllQueue");
-            this.buttonSellectAllQueue.Name = "buttonSellectAllQueue";
-            this.buttonSellectAllQueue.UseVisualStyleBackColor = true;
-            this.buttonSellectAllQueue.Click += new System.EventHandler(this.buttonSellectAllQueue_Click);
+            resources.ApplyResources(this.buttonDeleteQueue, "buttonDeleteQueue");
+            this.buttonDeleteQueue.Name = "buttonDeleteQueue";
+            this.buttonDeleteQueue.UseVisualStyleBackColor = true;
+            this.buttonDeleteQueue.Click += new System.EventHandler(this.buttonDeleteQueue_Click);
             // 
             // dataGridViewBatch
             // 
@@ -1022,6 +1014,7 @@ namespace VTC
             this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewBatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1029,58 +1022,70 @@ namespace VTC
             this.check_cell,
             this.no_cell,
             this.task_cell});
+            this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            // 
+            // buttonSellectAllQueue
+            // 
+            resources.ApplyResources(this.buttonSellectAllQueue, "buttonSellectAllQueue");
+            this.buttonSellectAllQueue.Name = "buttonSellectAllQueue";
+            this.buttonSellectAllQueue.UseVisualStyleBackColor = true;
+            this.buttonSellectAllQueue.Click += new System.EventHandler(this.buttonSellectAllQueue_Click);
+            // 
+            // buttonUnselectAll
+            // 
+            resources.ApplyResources(this.buttonUnselectAll, "buttonUnselectAll");
+            this.buttonUnselectAll.Name = "buttonUnselectAll";
+            this.buttonUnselectAll.UseVisualStyleBackColor = true;
+            this.buttonUnselectAll.Click += new System.EventHandler(this.buttonUnselectAll_Click);
+            // 
+            // richTextBox3
+            // 
+            resources.ApplyResources(this.richTextBox3, "richTextBox3");
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.tabControl2);
+            this.panel2.Name = "panel2";
             // 
             // check_cell
             // 
+            this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.NullValue = false;
             this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
-            this.check_cell.Frozen = true;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
-            this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // no_cell
             // 
-            this.no_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.no_cell.Frozen = true;
+            this.no_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             resources.ApplyResources(this.no_cell, "no_cell");
             this.no_cell.MaxInputLength = 255;
             this.no_cell.Name = "no_cell";
             this.no_cell.ReadOnly = true;
-            this.no_cell.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.no_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.no_cell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // task_cell
             // 
-            this.task_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.task_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             resources.ApplyResources(this.task_cell, "task_cell");
             this.task_cell.Name = "task_cell";
             this.task_cell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // buttonDeleteQueue
-            // 
-            resources.ApplyResources(this.buttonDeleteQueue, "buttonDeleteQueue");
-            this.buttonDeleteQueue.Name = "buttonDeleteQueue";
-            this.buttonDeleteQueue.UseVisualStyleBackColor = true;
-            this.buttonDeleteQueue.Click += new System.EventHandler(this.buttonDeleteQueue_Click);
-            // 
-            // buttonCancelBatch
-            // 
-            resources.ApplyResources(this.buttonCancelBatch, "buttonCancelBatch");
-            this.buttonCancelBatch.Name = "buttonCancelBatch";
-            this.buttonCancelBatch.UseVisualStyleBackColor = true;
-            this.buttonCancelBatch.Click += new System.EventHandler(this.buttonCancelBatch_Click);
-            // 
-            // buttonStartQueue
-            // 
-            resources.ApplyResources(this.buttonStartQueue, "buttonStartQueue");
-            this.buttonStartQueue.Name = "buttonStartQueue";
-            this.buttonStartQueue.UseVisualStyleBackColor = true;
-            this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
             // Form1
             // 
@@ -1121,11 +1126,11 @@ namespace VTC
             this.panelConvert.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1183,25 +1188,11 @@ namespace VTC
         private System.Windows.Forms.RichTextBox richTextBoxConv;
         private System.Windows.Forms.Button buttonOutConvFile;
         private System.Windows.Forms.Button buttonInputConvFile;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Panel panelBatch;
-        private System.Windows.Forms.Button buttonUnselectAll;
-        private System.Windows.Forms.Button buttonSellectAllQueue;
-        private System.Windows.Forms.DataGridView dataGridViewBatch;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn check_cell;
-        private System.Windows.Forms.DataGridViewTextBoxColumn no_cell;
-        private System.Windows.Forms.DataGridViewTextBoxColumn task_cell;
-        private System.Windows.Forms.Button buttonDeleteQueue;
-        private System.Windows.Forms.Button buttonCancelBatch;
-        private System.Windows.Forms.Button buttonStartQueue;
         private System.Windows.Forms.ComboBox comboBoxAudioStreamNo;
         private System.Windows.Forms.Label labelAudioStream;
         private System.Windows.Forms.Button buttonInfo;
         private System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Button buttonLog2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.GroupBox groupBoxCPU;
         private System.Windows.Forms.CheckBox checkBoxH265;
         private System.Windows.Forms.GroupBox groupBoxSlow;
@@ -1243,6 +1234,20 @@ namespace VTC
         private System.Windows.Forms.CheckBox checkBoxCopyDuration;
         private System.Windows.Forms.TextBox textBoxFromTime;
         private System.Windows.Forms.Label labelFromTime;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Panel panelBatch;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Button buttonUnselectAll;
+        private System.Windows.Forms.Button buttonSellectAllQueue;
+        private System.Windows.Forms.DataGridView dataGridViewBatch;
+        private System.Windows.Forms.Button buttonDeleteQueue;
+        private System.Windows.Forms.Button buttonCancelBatch;
+        private System.Windows.Forms.Button buttonStartQueue;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check_cell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no_cell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn task_cell;
     }
 }
 
