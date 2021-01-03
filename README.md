@@ -1,7 +1,9 @@
 #Sticky info for Linux:
 **Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc. 
 **Just download it, run and it will download all prerequisites and install VCT in your home dir and create desktop shell file to run the app.**
-For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.
+For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
+
+**Update: I have mono on my Debian stretch machine, version 4.6.2, and it renders perfectly. However, I just updated my other Parrot (also Debian based) machine and mono version is 6.8 and there is rendering issue with task list and text box (you have to scroll or move cursor to see the content). Until I fixed it, I'll put special version in folder 1.9.5.7 and "normal" in the main folder on Sourceforge.
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
