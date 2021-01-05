@@ -154,6 +154,10 @@ ffplay -stimeout 1000000 "rtsp://192.168.0.101:8080/video/h264"
 from time copy specific duration (60 seconds) to output:
 ffmpeg -i input.mp3 -ss 00:02:15 -t 1:00 output.mp3
 
+Capture Desktop into video:
+ffmpeg -y -f dshow -f gdigrab -itsoffset 00:00:0.6 -i desktop -c:v libx264rgb -show_region 1 -framerate 24 -crf 25 -preset ultrafast output-file.mp4
+ffmpeg -y -f x11grab -i :0.0 -c:v libx264rgb  -framerate 24 -crf 25 -preset ultrafast output-linux.mp4
+
 //add this in your initialisation
 
 this.Window.AllowUserResizing = true;

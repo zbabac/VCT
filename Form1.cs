@@ -1964,14 +1964,14 @@ namespace VTC
                 {
                     buttonStreamSavePath.Enabled = true;
                     buttonStartRec.Visible = true;
-                    buttonStartRec.Enabled = false;
+                    //buttonStartRec.Enabled = false;
                 }
                 else
                 {
                     richTextBox3.Text += "\n Stream not found!";
-                    buttonStreamSavePath.Enabled = false;
-                    buttonStartRec.Visible = false;
-                    buttonStartRec.Enabled = false;
+                    //buttonStreamSavePath.Enabled = false;
+                    //buttonStartRec.Visible = false;
+                    //buttonStartRec.Enabled = false;
                 }
             }
             catch (Exception x)
@@ -1981,7 +1981,7 @@ namespace VTC
         private void buttonStartRec_Click(object sender, EventArgs e)
         {
             recStreamFFmpeg(richTextBoxStreamCommand.Text);
-            buttonStartRec.Enabled = false;
+            //buttonStartRec.Enabled = false;
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
@@ -2007,6 +2007,56 @@ namespace VTC
         private void textBoxFromTime_TextChanged(object sender, EventArgs e)
         {
             richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
+        }
+
+        private void buttonRecordPath_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
+                openFileDialog.Title = "Choose filename or enter a new file name where desktop recording will be saved";
+                openFileDialog.CheckFileExists = false;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    labelRecordPath.Text = openFileDialog.FileName;
+                    buttonRecordDesktop.Enabled = true;
+                    string komanda;
+                    if (IsLinux == 0)
+                        komanda = "ffmpeg -y -f dshow -f gdigrab -itsoffset 00:00:0.6 -i desktop -c:v libx264rgb -show_region 1 -framerate 24 -crf 25 -preset ultrafast \"" + labelRecordPath.Text + "\"";
+                    else
+                        komanda = " -y -f x11grab -i :0.0 -c:v libx264rgb  -framerate 24 -crf 25 -preset ultrafast \"" + labelRecordPath.Text + "\"";
+                    richTextBoxStreamCommand.Text = komanda;
+                }
+            }
+            catch
+            {
+                Exception ex;
+            }
+        }
+
+        private void buttonRecordDesktop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ffmpeg -f dshow -f gdigrab -itsoffset 00:00:0.6 -i desktop -c:v libx264rgb  -framerate 24 -crf 25 -preset ultrafast  output-file.mp4
+                if (!(labelRecordPath.Text is null))
+                {
+                    
+                    /*for (int c =5;c>0;c--)
+                    {
+                        buttonRecordDesktop.Text = c.ToString();
+                        buttonRecordDesktop.Refresh();
+                        Thread.Sleep(1000);
+                    }*/
+                    //buttonRecordDesktop.Text = "Record Desktop";
+                    recStreamFFmpeg(richTextBoxStreamCommand.Text);
+                }
+            }
+            catch
+            {
+                Exception ex;
+            }
         }
 
         private void textBoxCopyDuration_TextChanged(object sender, EventArgs e)
