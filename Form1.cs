@@ -2025,7 +2025,7 @@ namespace VTC
                     if (IsLinux == 0)
                         komanda = "ffmpeg -y -f dshow -f gdigrab -itsoffset 00:00:0.6 -i desktop -c:v libx264rgb -show_region 1 -framerate 24 -crf 25 -preset ultrafast \"" + labelRecordPath.Text + "\"";
                     else
-                        komanda = " -y -f x11grab -i :0.0 -c:v libx264rgb  -framerate 24 -crf 25 -preset ultrafast \"" + labelRecordPath.Text + "\"";
+                        komanda = " -y -f x11grab -i :0.0 -c:v libx264rgb -framerate 24 -crf 25 -preset ultrafast \"" + labelRecordPath.Text + "\"";
                     richTextBoxStreamCommand.Text = komanda;
                 }
             }
