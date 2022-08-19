@@ -3,17 +3,11 @@
 **Just download it, run and it will download all prerequisites and install VCT in your home dir and create desktop shell file to run the app.**
 For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
 
-**Update: I have mono on my Debian stretch machine, version 4.6.2, and it renders perfectly. However, I just updated my other Parrot (also Debian based) machine and mono version is 6.8 and there is rendering issue with task list (you have to resize row vertically to see the whole line).
+**Update: There was an exception on Linux after update of mono to v 6.12. Version 1.9.6.1 fixes that issue and upgrades .NET framework to 4.8.
 
 ** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
 
-# v1.9.5.7 Copy specific time range to output in Transcode Tab, works also in Convert tab
-- **When copying only certain time range in Convert tab, pay attention that it is possible only for some scenarios:   
-	-**e.g. copy streams with resize option
-	-**copy video stream and encoding audio stream
-	-**it DOES NOT WORK with some full video encodings
-- **Fix of copy from specific time to output in Transcode tab 
-- **Bug fix for task list when some task is deleted
+# v1.9.6.1 The same as 1.9.5.7, but with a fix for Linux exceptions with mono 6.8-6.12 and with .NET framework 4.8.
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -76,7 +70,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.5.7**
+**Latest version 1.9.6.1**
 
 
 
@@ -129,6 +123,8 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
+# v1.9.6.1 The same as 1.9.5.7, but with a fix for Linux exceptions with mono 6.8-6.12 and with .NET framework 4.8.
+
 # v1.9.5.7 Copy specific time range to output in Transcode Tab, works also in Convert tab
 - **When copying only certain time range in Convert tab, pay attention that it is possible only for some scenarios:   
 	-**e.g. copy streams with resize option

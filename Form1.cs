@@ -108,27 +108,31 @@ namespace VTC
 
         public Form1()
         {
-            // uncomment next line to build for specifig language UI - useful if you have Windows installed in english but you want specific language for app UI
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
-            InitializeComponent();
-            DateTime datum = DateTime.Now;
-            if (datum.Month == 1 || datum.Month == 12)
+            try
             {
-                this.buttonAbout.BackgroundImage = VTC.Properties.Resources.santahead_512;
-                this.buttonAbout.BackgroundImageLayout = ImageLayout.Stretch;
-                this.buttonAbout.Text = "";
-                this.buttonAbout.FlatAppearance.BorderSize = 0;
+                // uncomment next line to build for specifig language UI - useful if you have Windows installed in english but you want specific language for app UI
+                //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
+                //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
+                InitializeComponent();
+                DateTime datum = DateTime.Now;
+                if (datum.Month == 1 || datum.Month == 12)
+                {
+                    this.buttonAbout.BackgroundImage = VTC.Properties.Resources.santahead_512;
+                    this.buttonAbout.BackgroundImageLayout = ImageLayout.Stretch;
+                    this.buttonAbout.Text = "";
+                    this.buttonAbout.FlatAppearance.BorderSize = 0;
+                }
+                else
+                {
+                    this.buttonAbout.BackgroundImage = null;
+                    this.buttonAbout.Text = "About";
+                }
+                // Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.
+                // Handler for capturing output data from external process ffmpeg
+                proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
+                proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data
             }
-            else
-            {
-                this.buttonAbout.BackgroundImage = null;
-                this.buttonAbout.Text = "About";
-            }
-            // Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.
-            // Handler for capturing output data from external process ffmpeg
-            proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
-            proc.ErrorDataReceived += (sender, args) => DisplayOutput(args.Data); //same method used for error data
+            catch { }
         }
 
         public static int IsLinux
@@ -765,54 +769,62 @@ namespace VTC
 
         private void DisableButtonsWhenEncoding()
         {									//disable user interaction with controls while encoding in progress
-            panelConvert.Enabled = false;
-            panelTranscode.Enabled = false;
-            groupBoxOptions.Enabled = false;
-            buttonCancelBatch.Enabled = true;
-            //buttonStartQueue.Enabled = false;
-            buttonDeleteQueue.Enabled = false;
-            buttonAddBatchConv.Enabled = false;
-            buttonInputConvFile.Enabled = false;
-            buttonMultiConvFiles.Enabled = false;
-            //buttonOutConvFile.Enabled = false;
-            buttonOutTransFile.Enabled = false;
-            buttonMultiTransFile.Enabled = false;
-            groupBoxAudio.Enabled = false;
-            groupBoxContainer.Enabled = false;
-            groupBoxVideoOrAudio.Enabled = false;
-            buttonAddSubtitle.Enabled = false;
-            buttonInfo.Visible = false;
-            buttonPlay.Visible = false;
-            groupBoxVideoSize.Enabled = false;
-            groupBoxSlow.Enabled = false;
-            groupBoxRotate.Enabled = false;
-            groupBoxCPU.Enabled = false;
-            comboBoxAudioStreamNo.Enabled = false;
+            try
+            {
+                panelConvert.Enabled = false;
+                panelTranscode.Enabled = false;
+                groupBoxOptions.Enabled = false;
+                buttonCancelBatch.Enabled = true;
+                //buttonStartQueue.Enabled = false;
+                buttonDeleteQueue.Enabled = false;
+                buttonAddBatchConv.Enabled = false;
+                buttonInputConvFile.Enabled = false;
+                buttonMultiConvFiles.Enabled = false;
+                //buttonOutConvFile.Enabled = false;
+                buttonOutTransFile.Enabled = false;
+                buttonMultiTransFile.Enabled = false;
+                groupBoxAudio.Enabled = false;
+                groupBoxContainer.Enabled = false;
+                groupBoxVideoOrAudio.Enabled = false;
+                buttonAddSubtitle.Enabled = false;
+                buttonInfo.Visible = false;
+                buttonPlay.Visible = false;
+                groupBoxVideoSize.Enabled = false;
+                groupBoxSlow.Enabled = false;
+                groupBoxRotate.Enabled = false;
+                groupBoxCPU.Enabled = false;
+                comboBoxAudioStreamNo.Enabled = false;
+            }
+            catch { }
         }
         private void EnableButtonsAfterEncoding()
         {									//enable user interaction
-            panelConvert.Enabled = true;
-            panelTranscode.Enabled = true;
-            groupBoxOptions.Enabled = true;
-            buttonCancelBatch.Enabled = false;
-            buttonStartQueue.Enabled = true;
-            buttonDeleteQueue.Enabled = true;
-            buttonAddBatchConv.Enabled = true;
-            buttonInputConvFile.Enabled = true;
-            buttonMultiConvFiles.Enabled = true;
-            //buttonOutConvFile.Enabled = true;
-            buttonOutTransFile.Enabled = true;
-            buttonMultiTransFile.Enabled = true;
-            groupBoxAudio.Enabled = true;
-            groupBoxContainer.Enabled = true;
-            groupBoxVideoOrAudio.Enabled = true;
-            buttonAddSubtitle.Enabled = true;
-            buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
-            groupBoxVideoSize.Enabled = true;
-            groupBoxSlow.Enabled = true;
-            groupBoxRotate.Enabled = true;
-            groupBoxCPU.Enabled = true;
-            comboBoxAudioStreamNo.Enabled = true;
+            try
+            {
+                panelConvert.Enabled = true;
+                panelTranscode.Enabled = true;
+                groupBoxOptions.Enabled = true;
+                buttonCancelBatch.Enabled = false;
+                buttonStartQueue.Enabled = true;
+                buttonDeleteQueue.Enabled = true;
+                buttonAddBatchConv.Enabled = true;
+                buttonInputConvFile.Enabled = true;
+                buttonMultiConvFiles.Enabled = true;
+                //buttonOutConvFile.Enabled = true;
+                buttonOutTransFile.Enabled = true;
+                buttonMultiTransFile.Enabled = true;
+                groupBoxAudio.Enabled = true;
+                groupBoxContainer.Enabled = true;
+                groupBoxVideoOrAudio.Enabled = true;
+                buttonAddSubtitle.Enabled = true;
+                buttonStartQueue.BackColor = System.Drawing.Color.Transparent;
+                groupBoxVideoSize.Enabled = true;
+                groupBoxSlow.Enabled = true;
+                groupBoxRotate.Enabled = true;
+                groupBoxCPU.Enabled = true;
+                comboBoxAudioStreamNo.Enabled = true;
+            }
+            catch { }
         }
         private void ReadParametersFromGUI()
         {
@@ -2226,316 +2238,324 @@ namespace VTC
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //set event handlers for Drag&Drop onto the Input File(s) buttons and dataGridViewBatch
-            this.dataGridViewBatch.DragDrop += new DragEventHandler(dataGridViewBatch_DragDrop);
-            this.dataGridViewBatch.DragEnter += new DragEventHandler(dataGridViewBatch_DragEnter);
-            this.buttonMultiTransFile.DragDrop += new DragEventHandler(buttonMultiTransFile_DragDrop);
-            this.buttonMultiTransFile.DragEnter += new DragEventHandler(buttonMultiTransFile_DragEnter);
-            this.buttonMultiConvFiles.DragDrop += new DragEventHandler(buttonMultiConvFiles_DragDrop);
-            this.buttonMultiConvFiles.DragEnter += new DragEventHandler(buttonMultiConvFiles_DragEnter);
-            this.buttonInputConvFile.DragDrop += new DragEventHandler(buttonInputConvFile_DragDrop);
-            this.buttonInputConvFile.DragEnter += new DragEventHandler(buttonInputConvFile_DragEnter);
-            SetToolTips();
-            //disable buttons while the list is empty, but enable output path buttons
-            //DisableButtonsWhenEncoding();       //initialy, many buttons are disabled until user enters file paths
-            buttonOutConvFile.Enabled = true;
-            buttonOutTransFile.Enabled = true;
-            buttonCancelBatch.Enabled = false;
-            buttonStartQueue.Enabled = false;
+            try
+            {
+                //set event handlers for Drag&Drop onto the Input File(s) buttons and dataGridViewBatch
+                this.dataGridViewBatch.DragDrop += new DragEventHandler(dataGridViewBatch_DragDrop);
+                this.dataGridViewBatch.DragEnter += new DragEventHandler(dataGridViewBatch_DragEnter);
+                this.buttonMultiTransFile.DragDrop += new DragEventHandler(buttonMultiTransFile_DragDrop);
+                this.buttonMultiTransFile.DragEnter += new DragEventHandler(buttonMultiTransFile_DragEnter);
+                this.buttonMultiConvFiles.DragDrop += new DragEventHandler(buttonMultiConvFiles_DragDrop);
+                this.buttonMultiConvFiles.DragEnter += new DragEventHandler(buttonMultiConvFiles_DragEnter);
+                this.buttonInputConvFile.DragDrop += new DragEventHandler(buttonInputConvFile_DragDrop);
+                this.buttonInputConvFile.DragEnter += new DragEventHandler(buttonInputConvFile_DragEnter);
+                SetToolTips();
+                //disable buttons while the list is empty, but enable output path buttons
+                //DisableButtonsWhenEncoding();       //initialy, many buttons are disabled until user enters file paths
+                buttonOutConvFile.Enabled = true;
+                buttonOutTransFile.Enabled = true;
+                buttonCancelBatch.Enabled = false;
+                buttonStartQueue.Enabled = false;
+            }
+            catch { }
         }
         private void SetToolTips()
         {
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl");
-
-            // TooTips for specific buttons
-            // Commented tips for Serbian
-            toolTip1.AutoPopDelay = 5000;
-            toolTip1.InitialDelay = 500;
-            toolTip1.ReshowDelay = 500;
-            toolTip1.ShowAlways = true;
-
-            toolTip2.AutoPopDelay = 5000;
-            toolTip2.InitialDelay = 500;
-            toolTip2.ReshowDelay = 500;
-            toolTip2.ShowAlways = true;
-            toolTip3.AutoPopDelay = 5000;
-            toolTip3.InitialDelay = 500;
-            toolTip3.ReshowDelay = 500;
-            toolTip3.ShowAlways = true;
-
-            toolTip4.AutoPopDelay = 5000;
-            toolTip4.InitialDelay = 500;
-            toolTip4.ReshowDelay = 500;
-            toolTip4.ShowAlways = true;
-            toolTip6.AutoPopDelay = 5000;
-            toolTip6.InitialDelay = 500;
-            toolTip6.ReshowDelay = 500;
-            toolTip6.ShowAlways = true;
-            toolTip9.AutoPopDelay = 5000;
-            toolTip9.InitialDelay = 500;
-            toolTip9.ReshowDelay = 500;
-            toolTip9.ShowAlways = true;
-            toolTip10.AutoPopDelay = 5000;
-            toolTip10.InitialDelay = 500;
-            toolTip10.ReshowDelay = 500;
-            toolTip10.ShowAlways = true;
-            toolTip11.AutoPopDelay = 5000;
-            toolTip11.InitialDelay = 500;
-            toolTip11.ReshowDelay = 500;
-            toolTip11.ShowAlways = true;
-            toolTip12.AutoPopDelay = 5000;
-            toolTip12.InitialDelay = 500;
-            toolTip12.ReshowDelay = 500;
-            toolTip12.ShowAlways = true;
-            toolTip13.AutoPopDelay = 5000;
-            toolTip13.InitialDelay = 500;
-            toolTip13.ReshowDelay = 500;
-            toolTip13.ShowAlways = true;
-            toolTip14.AutoPopDelay = 5000;
-            toolTip14.InitialDelay = 500;
-            toolTip14.ReshowDelay = 500;
-            toolTip14.ShowAlways = true;
-            toolTip15.AutoPopDelay = 5000;
-            toolTip15.InitialDelay = 500;
-            toolTip15.ReshowDelay = 500;
-            toolTip15.ShowAlways = true;
-            toolTip16.AutoPopDelay = 5000;
-            toolTip16.InitialDelay = 500;
-            toolTip16.ReshowDelay = 500;
-            toolTip16.ShowAlways = true;
-            toolTip18.AutoPopDelay = 5000;
-            toolTip18.InitialDelay = 500;
-            toolTip18.ReshowDelay = 500;
-            toolTip18.ShowAlways = true;
-            toolTip19.AutoPopDelay = 5000;
-            toolTip19.InitialDelay = 500;
-            toolTip19.ReshowDelay = 500;
-            toolTip19.ShowAlways = true;
-            toolTip20.AutoPopDelay = 5000;
-            toolTip20.InitialDelay = 500;
-            toolTip20.ReshowDelay = 500;
-            toolTip20.ShowAlways = true;
-            toolTip21.AutoPopDelay = 5000;
-            toolTip21.InitialDelay = 500;
-            toolTip21.ReshowDelay = 500;
-            toolTip21.ShowAlways = true;
-            toolTip22.AutoPopDelay = 5000;
-            toolTip22.InitialDelay = 500;
-            toolTip22.ReshowDelay = 500;
-            toolTip22.ShowAlways = true;
-            toolTip23.AutoPopDelay = 5000;
-            toolTip23.InitialDelay = 500;
-            toolTip23.ReshowDelay = 500;
-            toolTip23.ShowAlways = true;
-            toolTip24.AutoPopDelay = 5000;
-            toolTip24.InitialDelay = 500;
-            toolTip24.ReshowDelay = 500;
-            toolTip24.ShowAlways = true;
-            toolTip25.AutoPopDelay = 5000;
-            toolTip25.InitialDelay = 500;
-            toolTip25.ReshowDelay = 500;
-            toolTip25.ShowAlways = true;
-            toolTip26.AutoPopDelay = 5000;
-            toolTip26.InitialDelay = 500;
-            toolTip26.ReshowDelay = 500;
-            toolTip26.ShowAlways = true;
-            toolTip27.AutoPopDelay = 5000;
-            toolTip27.InitialDelay = 500;
-            toolTip27.ReshowDelay = 500;
-            toolTip27.ShowAlways = true;
-            toolTip28.AutoPopDelay = 5000;
-            toolTip28.InitialDelay = 500;
-            toolTip28.ReshowDelay = 500;
-            toolTip28.ShowAlways = true;
-            toolTip29.AutoPopDelay = 5000;
-            toolTip29.InitialDelay = 500;
-            toolTip29.ReshowDelay = 500;
-            toolTip29.ShowAlways = true;
-            toolTip30.AutoPopDelay = 5000;
-            toolTip30.InitialDelay = 500;
-            toolTip30.ReshowDelay = 500;
-            toolTip30.ShowAlways = true;
-            toolTip31.AutoPopDelay = 5000;
-            toolTip31.InitialDelay = 500;
-            toolTip31.ReshowDelay = 500;
-            toolTip31.ShowAlways = true;
-            toolTip32.AutoPopDelay = 5000;
-            toolTip32.InitialDelay = 500;
-            toolTip32.ReshowDelay = 500;
-            toolTip32.ShowAlways = true;
-            toolTip33.AutoPopDelay = 5000;
-            toolTip33.InitialDelay = 500;
-            toolTip33.ReshowDelay = 500;
-            toolTip33.ShowAlways = true;
-            toolTip34.AutoPopDelay = 5000;
-            toolTip34.InitialDelay = 500;
-            toolTip34.ReshowDelay = 500;
-            toolTip34.ShowAlways = true;
-            toolTip35.AutoPopDelay = 5000;
-            toolTip35.InitialDelay = 500;
-            toolTip35.ReshowDelay = 500;
-            toolTip35.ShowAlways = true;
-            toolTip36.AutoPopDelay = 5000;
-            toolTip36.InitialDelay = 500;
-            toolTip36.ReshowDelay = 500;
-            toolTip36.ShowAlways = true;
-            toolTip37.AutoPopDelay = 5000;
-            toolTip37.InitialDelay = 500;
-            toolTip37.ReshowDelay = 500;
-            toolTip37.ShowAlways = true;
-            toolTip38.AutoPopDelay = 7000;
-            toolTip38.InitialDelay = 500;
-            toolTip38.ReshowDelay = 500;
-            toolTip38.ShowAlways = true;
-            toolTip39.AutoPopDelay = 7000;
-            toolTip39.InitialDelay = 100;
-            toolTip39.ReshowDelay = 500;
-            toolTip39.ShowAlways = true;
-            toolTip40.AutoPopDelay = 7000;
-            toolTip40.InitialDelay = 100;
-            toolTip40.ReshowDelay = 500;
-            toolTip40.ShowAlways = true;
-            toolTip41.AutoPopDelay = 7000;
-            toolTip41.InitialDelay = 100;
-            toolTip41.ReshowDelay = 500;
-            toolTip41.ShowAlways = true;
-            toolTip42.AutoPopDelay = 7000;
-            toolTip42.InitialDelay = 100;
-            toolTip42.ReshowDelay = 500;
-            toolTip42.ShowAlways = true;
-            toolTip43.AutoPopDelay = 7000;
-            toolTip43.InitialDelay = 100;
-            toolTip43.ReshowDelay = 500;
-            toolTip43.ShowAlways = true;
-            toolTip44.AutoPopDelay = 7000;
-            toolTip44.InitialDelay = 100;
-            toolTip44.ReshowDelay = 500;
-            toolTip44.ShowAlways = true;
-            toolTip45.AutoPopDelay = 7000;
-            toolTip45.InitialDelay = 100;
-            toolTip45.ReshowDelay = 500;
-            toolTip45.ShowAlways = true;
-
-            switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
+            try
             {
-                case "en":
-                    toolTip1.SetToolTip(this.tabPage1, "Select this tab if you want to repack MP4/M4V container to MKV or vice versa.\nDepending on your choice, program will automatically choose the other container's extension.");
-                    toolTip2.SetToolTip(this.tabPage2, "Select this tab if you want to convert different types of audio or video files to other formats.\nYou can chhose files individually (button on the left) or multiple (upper right button) and add them to batch job list.\nYou can edit list, change ffmpeg options manually.\nYou can choose to have video only or audio only (e.g. to extract mp3).\nYou can choose quality, conversion speed, etc.\nOr, just select defaults.");
-                    toolTip3.SetToolTip(this.buttonHelp, "Opens PDF help document stored in VTC.exe installation folder.");
-                    toolTip4.SetToolTip(this.buttonOutTransFile, "Select output path where you want to save transcoded file(s).\nThe file name will be given AUTOMATICALLY by adding\n'1.' to the INPUT file name(s) that you select afterwards.");
-                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.\nIMPORTANT HINT: SELECT OPTIONS BELOW FIRST, THEN SELECT FILES!!!");
-                    toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.\nPause if you need to perform some other task on the PC.");
-                    toolTip10.SetToolTip(this.buttonCancelBatch, "Click to cancel execution of all jobs\nYour job list will remain if you want to manually edit it afterwards.");
-                    toolTip11.SetToolTip(this.buttonSellectAllQueue, "Click to select all jobs for deletion.\n NOTE: This will not delete, button 'Delete' will delete selected jobs.");
-                    toolTip12.SetToolTip(this.buttonUnselectAll, "Click to unselect all jobs in the list.");
-                    toolTip13.SetToolTip(this.buttonDeleteQueue, "Click to delete all selected jobs.\nBefore that, use check boxes to select those that you want to delete.");
-                    toolTip14.SetToolTip(this.buttonInputConvFile, "Select input file of various formats of audio or video files.\nPay attention to filters in dialog window.\nThat file will be converted depending on options selected after selecting a file.\nYou can also drop your file onto the button.\nIF YOU WANT TO OUTPUT TO DIFFERENT FOLDER, SELECT OUTPUT PATH FIRST!");
-                    toolTip15.SetToolTip(this.buttonOutConvFile, "Select output path where converted files will be saved.\nBUT AFTER THAT YOU MUST SELECT INPUT FILE OR DROP FILE THERE!\nFile name will be generated from input file by adding\n    '1.' to the end of file.\nIf you want to change file name, use the TEXT BOX BELOW TO MANUALLY enter name after you selected options.");
-                    toolTip16.SetToolTip(this.buttonMultiConvFiles, "Select more files to be converted\nWITH SAME OPTIONS DEFINED ON THIS TAB BEFORE CLICKING THIS BUTTON.\nBatch job list will be populated automatically.\nYou can also drop files onto this button.\nSELECT OPTIONS FIRST, THEN ADD FILES VIA THIS BUTTON!!!");
-                    toolTip18.SetToolTip(this.richTextBoxConv, "When changing options, ffmpeg command is generated in this box.\nYou can tweak ffmpeg options manually if you are advanced user.\nWhen you are happy with command, you can click 'Add To Batch File List'.");
-                    toolTip19.SetToolTip(this.buttonAddBatchConv, "When you select all options, click here to add job to the job list.\nAfterwards, you can select new options or keep the same for new job,\nor just click 'Start' to start encoding jobs in the list.");
-                    toolTip20.SetToolTip(this.panelBatch, "The jobs that you added are displayed here.\nYou can drag and drop multiple files here (same effect as dropping files on Multiple Files button).\nIf you changed your mind regarding some options,\nyou can edit ffmpeg command directly in this table.\nWhen you are done building list, click 'Start' to process the queue.");
-                    toolTip21.SetToolTip(this.checkBoxAudioOnly, "Select if you want to extract only audio from the input file.");
-                    toolTip22.SetToolTip(this.checkBoxVideoOnly, "Select if you want to extract only video from the input file.");
-                    toolTip23.SetToolTip(this.radioButtonMKV, "Select if you want to encode video as MKV.");
-                    toolTip24.SetToolTip(this.radioButtonMP4, "Select if you want to encode video as MP4.");
-                    toolTip25.SetToolTip(this.radioButtonMP3, "Select if you want to encode audio as MP3.");
-                    toolTip26.SetToolTip(this.radioButtonAAC, "Select if you want to encode audio as AAC.");
-                    toolTip27.SetToolTip(this.radioButtonCopyAudio, "Select if you want to copy original audio stream without changing.");
-                    toolTip28.SetToolTip(this.radioButtonCopyVideo, "Select if you want to copy original video stream without changing.");
-                    toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Select bitrate for audio stream selected (AAC or MP3).\nNot relevant if 'audio copy' option used.");
-                    toolTip30.SetToolTip(this.comboBoxPreset, "Select encoding preset speed.\nIMPORTANT: this determines encoding speed but also the size of the output file.\nFor smallest file choose the slowest you can bear!\nNot relevant if 'video copy' selected.");
-                    toolTip31.SetToolTip(this.comboBoxQuality, "Select video quality.\nFor SD sources, 19-21 is excellent quality range.\nFor HD sources, 21-24 is normal range.\nYou can leave defaults to if you are happy with output quality,\nor experiment a little bit to find the best value for you.\nNot relevant if 'video copy' selected.");
-                    toolTip32.SetToolTip(this.buttonAddSubtitle, "Add from .SRT file to mux as a stream.\nIGNORED WHEN USING MULTIPLE FILES.");
-                    toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
-                    toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
-                    toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
-                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
-                    toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
-                    toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
-                    toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
-                    toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nUseful if FFmpeg THROWS an ERROR.");
-                    toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
-                    toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
-                    toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
-                    toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
+                //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl");
 
-                    break;
-                case "sr":
-                    toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
-                    toolTip2.SetToolTip(this.tabPage2, "На овом табу можете направити пуну конверзију различитих формата (AVI, DIVX, XVID, WMV, OGG, FLAC, итд.) у MKV,MP4,AAC,MP3.\nФајлове бирате појединачно (дугме горе лијево) или више одједном (дугме горе десно) и додајете их на листу са десне стране. Можете мијењати листу ручно, као и ffmgeg команду у прозорчићу лијево. Такође можете извући само слику или звук и додати титл у видео фајл.");
-                    toolTip3.SetToolTip(this.buttonHelp, "Отвара ПДФ документ, само на енглеском!");
-                    toolTip4.SetToolTip(this.buttonOutTransFile, "Изаберите путању гдје ћете снимити резултат конверзије. Име фајла је аутоматски одређено\nтако ШТО ЋЕ СЕ ДОДАТИ .1 НА ПОСТОЈЕЋЕ ИМЕ које ћете изабрати након што одредите гдје снимате фајл. Ако не изаберете гдје ћете га сачувати, биће аутоматски сачуван у истом фолдеру као и оргинални фајл.");
-                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Изаберите 1 или више фајлова да се препакују из MKV-->MP4 или MP4-->MKV. Зависно од типа улазног фајла, екстензија MKV или MP4 се одређује аутоматски.");
-                    toolTip9.SetToolTip(this.buttonStartQueue, "Кад направите листу за кодовање, кликните да се изврше редом један по један.\nДоле можете пратити извршавање задатака.");
-                    toolTip10.SetToolTip(this.buttonCancelBatch, "Кликните да прекинете извршавање свих задатака.");
-                    toolTip11.SetToolTip(this.buttonSellectAllQueue, "Кликните да означите задатке за скидање са листе. Ово их неће уклонити.\nДугме Бриши ће их обрисати неповратно са листе.");
-                    toolTip12.SetToolTip(this.buttonUnselectAll, "Кликните да скинете селекцију свих фајлова.");
-                    toolTip13.SetToolTip(this.buttonDeleteQueue, "Кликните да обришете означене задатке.\nОзначити их можете или појединачним кликтањем на листи или думетом Означи.");
-                    toolTip14.SetToolTip(this.buttonInputConvFile, "Изаберите улазне фајлове различитих видео или аудио формата.\nОбратите пажњу на филтере код бирања фајлова.\nЗависно од формата улазног фајла, биће изабран формат излазног, нпр. ако је аудио фајл, биће изабран MP3, итд. Можете такође ОДВУЋИ ВИШЕ ФАЈЛОВА НА ОВО ДУГМЕ.");
-                    toolTip15.SetToolTip(this.buttonOutConvFile, "Изаберите путању гдје ћете сачувати конвертоване фајлове.\nТек након тога треба изабрати фајлове које желите да конвертујете!");
-                    toolTip16.SetToolTip(this.buttonMultiConvFiles, "Изаберите ВИШЕ ФАЈЛОВА за конверзију, али имајте на уму да ће\nСВИ БИТИ КОДОВАНИ СА ИСТИМ ОПЦИЈАМА КОЈЕ СТЕ ПРИЈЕ ТОГА ИЗАБРАЛИ!!!\nЛиста ће се аутоматски попунити (ово је за ултра, мега гига брзу конверзију). Можете такође да превучете фајлове ба ово дугме!");
-                    toolTip18.SetToolTip(this.richTextBoxConv, "Кад мијењате опције, мијења се и команда испод.\nМожете ручно мијењати опције у прозору и онда кликнути Додај на листу.");
-                    toolTip19.SetToolTip(this.buttonAddBatchConv, "Кад изаберете опције, кликните да додате задатак на листу десно.\nНакон тога опције остају за слиједећи задатак или их можете промијенити.");
-                    toolTip20.SetToolTip(this.panelBatch, "Задаци се приказују у овој табели. Можете превући више фајлова директно у ову листу.\nКад желите да прекодујете све задатке, кликните на Старт.");
-                    toolTip21.SetToolTip(this.checkBoxAudioOnly, "Изаберите ако желите да снимите само звук.");
-                    toolTip22.SetToolTip(this.checkBoxVideoOnly, "Изаберите ако желите само слику без звука.");
-                    toolTip23.SetToolTip(this.radioButtonMKV, "Фајл ће бити сачуван у формату MKV.");
-                    toolTip24.SetToolTip(this.radioButtonMP4, "Фајл ће бити сачуван у формату MP4.");
-                    toolTip25.SetToolTip(this.radioButtonMP3, "Аудио ће бити у формату MP3.");
-                    toolTip26.SetToolTip(this.radioButtonAAC, "Аудио ће бити у формату AAC.");
-                    toolTip27.SetToolTip(this.radioButtonCopyAudio, "Аудио ће бити копиран у излазни фајл без промјене.");
-                    toolTip28.SetToolTip(this.radioButtonCopyVideo, "Видео ће бити копиран у излазни фајл без промјене.\nКорисно ако улазни фајл није MP3, па једноставно прекодујете аудио.");
-                    toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Битска брзина за аудио. Занемарено ако се изабере опција Ориг.");
-                    toolTip30.SetToolTip(this.comboBoxPreset, "Важна опција за квалитет и величину фајла.\nАко желите мањи фајл бирајте што спорије (slow).");
-                    toolTip31.SetToolTip(this.comboBoxQuality, "Најважнија опција за квалитет видеа.\nЗа ХД филмове 23 је одлично,\nза ХД са телефона, 25-26 даје мали фајл доброг квалитета,\nза СД филмове 20 је одлично, 22 даје мали фајл доброг квалитета. Мало испробајте да видите шта вам одговара, па онда увијек користите те вриједности до којих дођете емпиријски.");
-                    toolTip32.SetToolTip(this.buttonAddSubtitle, "Додаје титл из вањског .SRT фајла у убацује га у видео.\nКорисно за репродукцију на неким уређајима или кад желите да држите само један фајл без додатних екстерних титлова.");
-                    toolTip33.SetToolTip(this.checkBox180, "Ротирај слику 180 степени, нпр. кад држиш телефон наопако.");
-                    toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
-                    toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
-                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
-                    toolTip38.SetToolTip(this.checkBoxH265, "H.265 !!! Видео ће бити кодован у новом кодеку који даје 2 пута мањи фајл и исти или бољи квалитет.");
-                    break;
-                case "nb":
-                    toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
-                    toolTip2.SetToolTip(this.tabPage2, "Velg denne kategorien hvis du ønsker å konvertere ulike typer lyd- eller videofiler til andre formater.\nDu kan velge filer individuelt (knappen til venstre) eller flere (øvre høyre knapp) og legge dem til batch jobblisten.\nDu kan redigere listen, endre FFMPEG alternativene manuelt.\nDu kan velge å ha kun video eller kun lyd (f.eks for å hente mp3).\nDu kan velge kvalitet, konvertering hastighet, etc.\nEller bare velge mislighold.");
-                    toolTip3.SetToolTip(this.buttonHelp, "Åpner PDF hjelp dokument lagret i installasjonsmappen.");
-                    toolTip4.SetToolTip(this.buttonOutTransFile, "Velg utgang banen der du vil lagre transkodet filen (e).\nFilnavnet vil bli gitt automatisk ved å legge til '1.' til navnet inndatafilen (e) du velge etterpå.");
-                    toolTip6.SetToolTip(this.buttonMultiTransFile, "Velg en eller flere filer som skal pakkes om til MKV eller MP4, avhengig av valg av input filer format.\nBatch jobb Listen fylles ut automatisk.\nEtterpå kan du legge til flere filer på jobblisten fra denne kategorien eller konvertere kategorien.\nDu kan også slippe filer på denne knappen.");
-                    toolTip9.SetToolTip(this.buttonStartQueue, "Klikk når du er ferdig med å lage listen\nAlle jobber i jobblisten er utført i kronologisk rekkefølge.");
-                    toolTip10.SetToolTip(this.buttonCancelBatch, "Klikk for å avbryte kjøringen av alle jobber.\nListen vil forbli hvis du ønsker å manuelt redigere det etterpå.");
-                    toolTip11.SetToolTip(this.buttonSellectAllQueue, "Klikk for å velge alle jobber for sletting \n. MERK: Dette vil ikke slette, knappen 'Slett' vil slette valgte jobbene.");
-                    toolTip12.SetToolTip(this.buttonUnselectAll, "Klikk for å velge bort alle jobber i listen.");
-                    toolTip13.SetToolTip(this.buttonDeleteQueue, "Klikk for å slette alle de valgte jobbene.\nFør det, bruker avmerkingsbokser til å velge de som du vil slette.");
-                    toolTip14.SetToolTip(this.buttonInputConvFile, "Velg inndatafilen av ulike formater av lyd- eller videofiler.\nTa hensyn til filtre i dialogvinduet.\nDen filen vil bli konvertert, avhengig av alternativer valgte etter å ha valgt en fil. \nDu kan også slippe filen til knappen.");
-                    toolTip15.SetToolTip(this.buttonOutConvFile, "Velg utgang banen der konverterte filene skal lagres.\nMen etter at må du velge INPUT fil eller DROP FIL THERE!\nFilnavn vil bli generert fra inngang fil ved å legge '1.' til slutten av filen.\nHvis du vil endre filnavnet, bruke tekstboksen under for å manuelt skrive inn navn ETTER at du har valgt alternativer.");
-                    toolTip16.SetToolTip(this.buttonMultiConvFiles, "Velge flere filer som skal konverteres MED SAMME ALTERNATIVENE defineres under denne fanen FØR DU KLIKKE på denne knappen.\nBatch jobblisten fylles ut automatisk.\nDu kan også slippe filer på denne knappen.");
-                    toolTip18.SetToolTip(this.richTextBoxConv, "Når bytte valg, er ffmpeg kommando generert i denne boksen. Du kan justere FFMPEG alternativer manuelt hvis du er avansert bruker. Når du er fornøyd med kommandoen, kan du klikke knappen 'Legg til batch fil listen'.");
-                    toolTip19.SetToolTip(this.buttonAddBatchConv, "Når du velger alle alternativene, klikk her for å legge jobben til jobblisten.\nEtterpå kan du velge nye alternativer eller beholde den samme for ny jobb, eller bare klikk 'Start' for å starte koding filer i listen.");
-                    toolTip20.SetToolTip(this.panelBatch, "De jobbene som du har lagt vises her.\n.\nDu kan slippe mange filer her.\nHvis du har endret ditt sinn om noen alternativer, kan du redigere ffmpeg kommandoen direkte i denne tabellen.\nNår du er ferdig med å bygge listen, klikk på 'Start' for å behandle køen.");
-                    toolTip21.SetToolTip(this.checkBoxAudioOnly, "Velg om du ønsker å trekke ut bare lyd fra inndatafilen.");
-                    toolTip22.SetToolTip(this.checkBoxVideoOnly, "Velg om du ønsker å trekke ut bare video fra inndatafilen.");
-                    toolTip23.SetToolTip(this.radioButtonMKV, "Velg om du ønsker å kode video som MKV.");
-                    toolTip24.SetToolTip(this.radioButtonMP4, "Velg om du ønsker å kode video som MP4.");
-                    toolTip25.SetToolTip(this.radioButtonMP3, "Velg om du ønsker å kode lyd som MP3.");
-                    toolTip26.SetToolTip(this.radioButtonAAC, "Velg om du ønsker å kode lyd som AAC.");
-                    toolTip27.SetToolTip(this.radioButtonCopyAudio, "Velg om du vil kopiere originale audio strøm uten å endre.");
-                    toolTip28.SetToolTip(this.radioButtonCopyVideo, "Velg om du vil kopiere originale video strøm uten å endre.");
-                    toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Velg bitrate for lyd strøm valgt (AAC eller MP3). \nIkke relevant hvis 'kopi lyd' alternativet brukes.");
-                    toolTip30.SetToolTip(this.comboBoxPreset, "Velg koding forhåndsinnstilt hastighet.\nVIKTIG: Dette bestemmer koding hastighet, men også størrelsen på utdatafilen.\nFor minste fil velger den tregeste du orker!\nIkke relevant hvis 'kopi video' valgt.");
-                    toolTip31.SetToolTip(this.comboBoxQuality, "Velg videokvalitet. For SD-kilder, er 19-21 utmerket kvalitet rekkevidde. For HD-kilder, er 21-24 normalområdet.\nDu kan la standardinnstillingene til hvis du er fornøyd med utskriftskvaliteten, eller eksperimentere litt for å finne den beste verdi for deg.\nIkke relevant hvis 'kopi video' valgt.");
-                    toolTip32.SetToolTip(this.buttonAddSubtitle, "Legg fra .SRT fil til mux som en strøm. Ignorert når BRUKES FLERE FILER .");
-                    toolTip33.SetToolTip(this.checkBox180, "Roter video 180 grader, som i tilfelle når du holder telefonen i landskapsmodus når du tar opp, men snudde opp ned.");
-                    toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
-                    toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
-                    toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
-                    toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
-                    toolTip38.SetToolTip(this.checkBoxH265, "H265 er den besten!!! Filen skal vaere kodert som H265 HEVC.");
-                    break;
+                // TooTips for specific buttons
+                // Commented tips for Serbian
+                toolTip1.AutoPopDelay = 5000;
+                toolTip1.InitialDelay = 500;
+                toolTip1.ReshowDelay = 500;
+                toolTip1.ShowAlways = true;
 
+                toolTip2.AutoPopDelay = 5000;
+                toolTip2.InitialDelay = 500;
+                toolTip2.ReshowDelay = 500;
+                toolTip2.ShowAlways = true;
+                toolTip3.AutoPopDelay = 5000;
+                toolTip3.InitialDelay = 500;
+                toolTip3.ReshowDelay = 500;
+                toolTip3.ShowAlways = true;
+
+                toolTip4.AutoPopDelay = 5000;
+                toolTip4.InitialDelay = 500;
+                toolTip4.ReshowDelay = 500;
+                toolTip4.ShowAlways = true;
+                toolTip6.AutoPopDelay = 5000;
+                toolTip6.InitialDelay = 500;
+                toolTip6.ReshowDelay = 500;
+                toolTip6.ShowAlways = true;
+                toolTip9.AutoPopDelay = 5000;
+                toolTip9.InitialDelay = 500;
+                toolTip9.ReshowDelay = 500;
+                toolTip9.ShowAlways = true;
+                toolTip10.AutoPopDelay = 5000;
+                toolTip10.InitialDelay = 500;
+                toolTip10.ReshowDelay = 500;
+                toolTip10.ShowAlways = true;
+                toolTip11.AutoPopDelay = 5000;
+                toolTip11.InitialDelay = 500;
+                toolTip11.ReshowDelay = 500;
+                toolTip11.ShowAlways = true;
+                toolTip12.AutoPopDelay = 5000;
+                toolTip12.InitialDelay = 500;
+                toolTip12.ReshowDelay = 500;
+                toolTip12.ShowAlways = true;
+                toolTip13.AutoPopDelay = 5000;
+                toolTip13.InitialDelay = 500;
+                toolTip13.ReshowDelay = 500;
+                toolTip13.ShowAlways = true;
+                toolTip14.AutoPopDelay = 5000;
+                toolTip14.InitialDelay = 500;
+                toolTip14.ReshowDelay = 500;
+                toolTip14.ShowAlways = true;
+                toolTip15.AutoPopDelay = 5000;
+                toolTip15.InitialDelay = 500;
+                toolTip15.ReshowDelay = 500;
+                toolTip15.ShowAlways = true;
+                toolTip16.AutoPopDelay = 5000;
+                toolTip16.InitialDelay = 500;
+                toolTip16.ReshowDelay = 500;
+                toolTip16.ShowAlways = true;
+                toolTip18.AutoPopDelay = 5000;
+                toolTip18.InitialDelay = 500;
+                toolTip18.ReshowDelay = 500;
+                toolTip18.ShowAlways = true;
+                toolTip19.AutoPopDelay = 5000;
+                toolTip19.InitialDelay = 500;
+                toolTip19.ReshowDelay = 500;
+                toolTip19.ShowAlways = true;
+                toolTip20.AutoPopDelay = 5000;
+                toolTip20.InitialDelay = 500;
+                toolTip20.ReshowDelay = 500;
+                toolTip20.ShowAlways = true;
+                toolTip21.AutoPopDelay = 5000;
+                toolTip21.InitialDelay = 500;
+                toolTip21.ReshowDelay = 500;
+                toolTip21.ShowAlways = true;
+                toolTip22.AutoPopDelay = 5000;
+                toolTip22.InitialDelay = 500;
+                toolTip22.ReshowDelay = 500;
+                toolTip22.ShowAlways = true;
+                toolTip23.AutoPopDelay = 5000;
+                toolTip23.InitialDelay = 500;
+                toolTip23.ReshowDelay = 500;
+                toolTip23.ShowAlways = true;
+                toolTip24.AutoPopDelay = 5000;
+                toolTip24.InitialDelay = 500;
+                toolTip24.ReshowDelay = 500;
+                toolTip24.ShowAlways = true;
+                toolTip25.AutoPopDelay = 5000;
+                toolTip25.InitialDelay = 500;
+                toolTip25.ReshowDelay = 500;
+                toolTip25.ShowAlways = true;
+                toolTip26.AutoPopDelay = 5000;
+                toolTip26.InitialDelay = 500;
+                toolTip26.ReshowDelay = 500;
+                toolTip26.ShowAlways = true;
+                toolTip27.AutoPopDelay = 5000;
+                toolTip27.InitialDelay = 500;
+                toolTip27.ReshowDelay = 500;
+                toolTip27.ShowAlways = true;
+                toolTip28.AutoPopDelay = 5000;
+                toolTip28.InitialDelay = 500;
+                toolTip28.ReshowDelay = 500;
+                toolTip28.ShowAlways = true;
+                toolTip29.AutoPopDelay = 5000;
+                toolTip29.InitialDelay = 500;
+                toolTip29.ReshowDelay = 500;
+                toolTip29.ShowAlways = true;
+                toolTip30.AutoPopDelay = 5000;
+                toolTip30.InitialDelay = 500;
+                toolTip30.ReshowDelay = 500;
+                toolTip30.ShowAlways = true;
+                toolTip31.AutoPopDelay = 5000;
+                toolTip31.InitialDelay = 500;
+                toolTip31.ReshowDelay = 500;
+                toolTip31.ShowAlways = true;
+                toolTip32.AutoPopDelay = 5000;
+                toolTip32.InitialDelay = 500;
+                toolTip32.ReshowDelay = 500;
+                toolTip32.ShowAlways = true;
+                toolTip33.AutoPopDelay = 5000;
+                toolTip33.InitialDelay = 500;
+                toolTip33.ReshowDelay = 500;
+                toolTip33.ShowAlways = true;
+                toolTip34.AutoPopDelay = 5000;
+                toolTip34.InitialDelay = 500;
+                toolTip34.ReshowDelay = 500;
+                toolTip34.ShowAlways = true;
+                toolTip35.AutoPopDelay = 5000;
+                toolTip35.InitialDelay = 500;
+                toolTip35.ReshowDelay = 500;
+                toolTip35.ShowAlways = true;
+                toolTip36.AutoPopDelay = 5000;
+                toolTip36.InitialDelay = 500;
+                toolTip36.ReshowDelay = 500;
+                toolTip36.ShowAlways = true;
+                toolTip37.AutoPopDelay = 5000;
+                toolTip37.InitialDelay = 500;
+                toolTip37.ReshowDelay = 500;
+                toolTip37.ShowAlways = true;
+                toolTip38.AutoPopDelay = 7000;
+                toolTip38.InitialDelay = 500;
+                toolTip38.ReshowDelay = 500;
+                toolTip38.ShowAlways = true;
+                toolTip39.AutoPopDelay = 7000;
+                toolTip39.InitialDelay = 100;
+                toolTip39.ReshowDelay = 500;
+                toolTip39.ShowAlways = true;
+                toolTip40.AutoPopDelay = 7000;
+                toolTip40.InitialDelay = 100;
+                toolTip40.ReshowDelay = 500;
+                toolTip40.ShowAlways = true;
+                toolTip41.AutoPopDelay = 7000;
+                toolTip41.InitialDelay = 100;
+                toolTip41.ReshowDelay = 500;
+                toolTip41.ShowAlways = true;
+                toolTip42.AutoPopDelay = 7000;
+                toolTip42.InitialDelay = 100;
+                toolTip42.ReshowDelay = 500;
+                toolTip42.ShowAlways = true;
+                toolTip43.AutoPopDelay = 7000;
+                toolTip43.InitialDelay = 100;
+                toolTip43.ReshowDelay = 500;
+                toolTip43.ShowAlways = true;
+                toolTip44.AutoPopDelay = 7000;
+                toolTip44.InitialDelay = 100;
+                toolTip44.ReshowDelay = 500;
+                toolTip44.ShowAlways = true;
+                toolTip45.AutoPopDelay = 7000;
+                toolTip45.InitialDelay = 100;
+                toolTip45.ReshowDelay = 500;
+                toolTip45.ShowAlways = true;
+
+                switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
+                {
+                    case "en":
+                        toolTip1.SetToolTip(this.tabPage1, "Select this tab if you want to repack MP4/M4V container to MKV or vice versa.\nDepending on your choice, program will automatically choose the other container's extension.");
+                        toolTip2.SetToolTip(this.tabPage2, "Select this tab if you want to convert different types of audio or video files to other formats.\nYou can chhose files individually (button on the left) or multiple (upper right button) and add them to batch job list.\nYou can edit list, change ffmpeg options manually.\nYou can choose to have video only or audio only (e.g. to extract mp3).\nYou can choose quality, conversion speed, etc.\nOr, just select defaults.");
+                        toolTip3.SetToolTip(this.buttonHelp, "Opens PDF help document stored in VTC.exe installation folder.");
+                        toolTip4.SetToolTip(this.buttonOutTransFile, "Select output path where you want to save transcoded file(s).\nThe file name will be given AUTOMATICALLY by adding\n'1.' to the INPUT file name(s) that you select afterwards.");
+                        toolTip6.SetToolTip(this.buttonMultiTransFile, "Select one or more files to be repacked to MKV or MP4,\ndepending on choice of input files format.\nBatch job list will be populated automatically.\nAfterwards, you can add more files to the job list from this tab or convert tab.\nYou can also drop files on this button.\nIMPORTANT HINT: SELECT OPTIONS BELOW FIRST, THEN SELECT FILES!!!");
+                        toolTip9.SetToolTip(this.buttonStartQueue, "Click when you are done creating you job list.\nAll jobs in job list are executed in sequential order.\nPause if you need to perform some other task on the PC.");
+                        toolTip10.SetToolTip(this.buttonCancelBatch, "Click to cancel execution of all jobs\nYour job list will remain if you want to manually edit it afterwards.");
+                        toolTip11.SetToolTip(this.buttonSellectAllQueue, "Click to select all jobs for deletion.\n NOTE: This will not delete, button 'Delete' will delete selected jobs.");
+                        toolTip12.SetToolTip(this.buttonUnselectAll, "Click to unselect all jobs in the list.");
+                        toolTip13.SetToolTip(this.buttonDeleteQueue, "Click to delete all selected jobs.\nBefore that, use check boxes to select those that you want to delete.");
+                        toolTip14.SetToolTip(this.buttonInputConvFile, "Select input file of various formats of audio or video files.\nPay attention to filters in dialog window.\nThat file will be converted depending on options selected after selecting a file.\nYou can also drop your file onto the button.\nIF YOU WANT TO OUTPUT TO DIFFERENT FOLDER, SELECT OUTPUT PATH FIRST!");
+                        toolTip15.SetToolTip(this.buttonOutConvFile, "Select output path where converted files will be saved.\nBUT AFTER THAT YOU MUST SELECT INPUT FILE OR DROP FILE THERE!\nFile name will be generated from input file by adding\n    '1.' to the end of file.\nIf you want to change file name, use the TEXT BOX BELOW TO MANUALLY enter name after you selected options.");
+                        toolTip16.SetToolTip(this.buttonMultiConvFiles, "Select more files to be converted\nWITH SAME OPTIONS DEFINED ON THIS TAB BEFORE CLICKING THIS BUTTON.\nBatch job list will be populated automatically.\nYou can also drop files onto this button.\nSELECT OPTIONS FIRST, THEN ADD FILES VIA THIS BUTTON!!!");
+                        toolTip18.SetToolTip(this.richTextBoxConv, "When changing options, ffmpeg command is generated in this box.\nYou can tweak ffmpeg options manually if you are advanced user.\nWhen you are happy with command, you can click 'Add To Batch File List'.");
+                        toolTip19.SetToolTip(this.buttonAddBatchConv, "When you select all options, click here to add job to the job list.\nAfterwards, you can select new options or keep the same for new job,\nor just click 'Start' to start encoding jobs in the list.");
+                        toolTip20.SetToolTip(this.panelBatch, "The jobs that you added are displayed here.\nYou can drag and drop multiple files here (same effect as dropping files on Multiple Files button).\nIf you changed your mind regarding some options,\nyou can edit ffmpeg command directly in this table.\nWhen you are done building list, click 'Start' to process the queue.");
+                        toolTip21.SetToolTip(this.checkBoxAudioOnly, "Select if you want to extract only audio from the input file.");
+                        toolTip22.SetToolTip(this.checkBoxVideoOnly, "Select if you want to extract only video from the input file.");
+                        toolTip23.SetToolTip(this.radioButtonMKV, "Select if you want to encode video as MKV.");
+                        toolTip24.SetToolTip(this.radioButtonMP4, "Select if you want to encode video as MP4.");
+                        toolTip25.SetToolTip(this.radioButtonMP3, "Select if you want to encode audio as MP3.");
+                        toolTip26.SetToolTip(this.radioButtonAAC, "Select if you want to encode audio as AAC.");
+                        toolTip27.SetToolTip(this.radioButtonCopyAudio, "Select if you want to copy original audio stream without changing.");
+                        toolTip28.SetToolTip(this.radioButtonCopyVideo, "Select if you want to copy original video stream without changing.");
+                        toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Select bitrate for audio stream selected (AAC or MP3).\nNot relevant if 'audio copy' option used.");
+                        toolTip30.SetToolTip(this.comboBoxPreset, "Select encoding preset speed.\nIMPORTANT: this determines encoding speed but also the size of the output file.\nFor smallest file choose the slowest you can bear!\nNot relevant if 'video copy' selected.");
+                        toolTip31.SetToolTip(this.comboBoxQuality, "Select video quality.\nFor SD sources, 19-21 is excellent quality range.\nFor HD sources, 21-24 is normal range.\nYou can leave defaults to if you are happy with output quality,\nor experiment a little bit to find the best value for you.\nNot relevant if 'video copy' selected.");
+                        toolTip32.SetToolTip(this.buttonAddSubtitle, "Add from .SRT file to mux as a stream.\nIGNORED WHEN USING MULTIPLE FILES.");
+                        toolTip33.SetToolTip(this.checkBox180, "Rotate video 180 degrees, like in case when you hold phone in landscape mode when recording, but turned upside down.");
+                        toolTip34.SetToolTip(this.checkBox90clockwise, "Rotate video 90 degrees clockwise.");
+                        toolTip35.SetToolTip(this.checkBox90counterclockwise, "Rotate video 90 degrees counter clockwise.");
+                        toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
+                        toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                        toolTip38.SetToolTip(this.checkBoxH265, "H265 rules!!! Output will be encoded as H265 HEVC.");
+                        toolTip39.SetToolTip(this.textBoxFPSout, "Enter desired FPS for output video. Note that if input video is, for example 120, and output FPS is 30, then every 4th frame is encoded and playback speed will be normal.");
+                        toolTip40.SetToolTip(this.textBoxSlowFPS, "Enter how many times you need to slow down. You can click \"Input File\" button, you will get info on actual frame rate.");
+                        toolTip41.SetToolTip(this.checkBoxTransRemoveSubtitle, "If embedded subtitle exists in the input file,\nthen you can remove it from output file with this option.\nUseful if FFmpeg THROWS an ERROR.");
+                        toolTip42.SetToolTip(this.groupBoxVideoSize, "Try to resize video to Full HD, 720p or SD with option to have ratio multiple of 2. You can also manually enter resize values in the box below. If it fails, check the log messages.");
+                        toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
+                        toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
+                        toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
+
+                        break;
+                    case "sr":
+                        toolTip1.SetToolTip(this.tabPage1, "На овом табу можете препаковати MKV-->MP4 и обрнуто.\nАко изаберете MKV, програм ће аутоматски изабрати MP4 и обрнуто.");
+                        toolTip2.SetToolTip(this.tabPage2, "На овом табу можете направити пуну конверзију различитих формата (AVI, DIVX, XVID, WMV, OGG, FLAC, итд.) у MKV,MP4,AAC,MP3.\nФајлове бирате појединачно (дугме горе лијево) или више одједном (дугме горе десно) и додајете их на листу са десне стране. Можете мијењати листу ручно, као и ffmgeg команду у прозорчићу лијево. Такође можете извући само слику или звук и додати титл у видео фајл.");
+                        toolTip3.SetToolTip(this.buttonHelp, "Отвара ПДФ документ, само на енглеском!");
+                        toolTip4.SetToolTip(this.buttonOutTransFile, "Изаберите путању гдје ћете снимити резултат конверзије. Име фајла је аутоматски одређено\nтако ШТО ЋЕ СЕ ДОДАТИ .1 НА ПОСТОЈЕЋЕ ИМЕ које ћете изабрати након што одредите гдје снимате фајл. Ако не изаберете гдје ћете га сачувати, биће аутоматски сачуван у истом фолдеру као и оргинални фајл.");
+                        toolTip6.SetToolTip(this.buttonMultiTransFile, "Изаберите 1 или више фајлова да се препакују из MKV-->MP4 или MP4-->MKV. Зависно од типа улазног фајла, екстензија MKV или MP4 се одређује аутоматски.");
+                        toolTip9.SetToolTip(this.buttonStartQueue, "Кад направите листу за кодовање, кликните да се изврше редом један по један.\nДоле можете пратити извршавање задатака.");
+                        toolTip10.SetToolTip(this.buttonCancelBatch, "Кликните да прекинете извршавање свих задатака.");
+                        toolTip11.SetToolTip(this.buttonSellectAllQueue, "Кликните да означите задатке за скидање са листе. Ово их неће уклонити.\nДугме Бриши ће их обрисати неповратно са листе.");
+                        toolTip12.SetToolTip(this.buttonUnselectAll, "Кликните да скинете селекцију свих фајлова.");
+                        toolTip13.SetToolTip(this.buttonDeleteQueue, "Кликните да обришете означене задатке.\nОзначити их можете или појединачним кликтањем на листи или думетом Означи.");
+                        toolTip14.SetToolTip(this.buttonInputConvFile, "Изаберите улазне фајлове различитих видео или аудио формата.\nОбратите пажњу на филтере код бирања фајлова.\nЗависно од формата улазног фајла, биће изабран формат излазног, нпр. ако је аудио фајл, биће изабран MP3, итд. Можете такође ОДВУЋИ ВИШЕ ФАЈЛОВА НА ОВО ДУГМЕ.");
+                        toolTip15.SetToolTip(this.buttonOutConvFile, "Изаберите путању гдје ћете сачувати конвертоване фајлове.\nТек након тога треба изабрати фајлове које желите да конвертујете!");
+                        toolTip16.SetToolTip(this.buttonMultiConvFiles, "Изаберите ВИШЕ ФАЈЛОВА за конверзију, али имајте на уму да ће\nСВИ БИТИ КОДОВАНИ СА ИСТИМ ОПЦИЈАМА КОЈЕ СТЕ ПРИЈЕ ТОГА ИЗАБРАЛИ!!!\nЛиста ће се аутоматски попунити (ово је за ултра, мега гига брзу конверзију). Можете такође да превучете фајлове ба ово дугме!");
+                        toolTip18.SetToolTip(this.richTextBoxConv, "Кад мијењате опције, мијења се и команда испод.\nМожете ручно мијењати опције у прозору и онда кликнути Додај на листу.");
+                        toolTip19.SetToolTip(this.buttonAddBatchConv, "Кад изаберете опције, кликните да додате задатак на листу десно.\nНакон тога опције остају за слиједећи задатак или их можете промијенити.");
+                        toolTip20.SetToolTip(this.panelBatch, "Задаци се приказују у овој табели. Можете превући више фајлова директно у ову листу.\nКад желите да прекодујете све задатке, кликните на Старт.");
+                        toolTip21.SetToolTip(this.checkBoxAudioOnly, "Изаберите ако желите да снимите само звук.");
+                        toolTip22.SetToolTip(this.checkBoxVideoOnly, "Изаберите ако желите само слику без звука.");
+                        toolTip23.SetToolTip(this.radioButtonMKV, "Фајл ће бити сачуван у формату MKV.");
+                        toolTip24.SetToolTip(this.radioButtonMP4, "Фајл ће бити сачуван у формату MP4.");
+                        toolTip25.SetToolTip(this.radioButtonMP3, "Аудио ће бити у формату MP3.");
+                        toolTip26.SetToolTip(this.radioButtonAAC, "Аудио ће бити у формату AAC.");
+                        toolTip27.SetToolTip(this.radioButtonCopyAudio, "Аудио ће бити копиран у излазни фајл без промјене.");
+                        toolTip28.SetToolTip(this.radioButtonCopyVideo, "Видео ће бити копиран у излазни фајл без промјене.\nКорисно ако улазни фајл није MP3, па једноставно прекодујете аудио.");
+                        toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Битска брзина за аудио. Занемарено ако се изабере опција Ориг.");
+                        toolTip30.SetToolTip(this.comboBoxPreset, "Важна опција за квалитет и величину фајла.\nАко желите мањи фајл бирајте што спорије (slow).");
+                        toolTip31.SetToolTip(this.comboBoxQuality, "Најважнија опција за квалитет видеа.\nЗа ХД филмове 23 је одлично,\nза ХД са телефона, 25-26 даје мали фајл доброг квалитета,\nза СД филмове 20 је одлично, 22 даје мали фајл доброг квалитета. Мало испробајте да видите шта вам одговара, па онда увијек користите те вриједности до којих дођете емпиријски.");
+                        toolTip32.SetToolTip(this.buttonAddSubtitle, "Додаје титл из вањског .SRT фајла у убацује га у видео.\nКорисно за репродукцију на неким уређајима или кад желите да држите само један фајл без додатних екстерних титлова.");
+                        toolTip33.SetToolTip(this.checkBox180, "Ротирај слику 180 степени, нпр. кад држиш телефон наопако.");
+                        toolTip34.SetToolTip(this.checkBox90clockwise, "Ротирај слику 90 степени удесно.");
+                        toolTip35.SetToolTip(this.checkBox90counterclockwise, "Ротирај слику 90 степени улијево.");
+                        toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
+                        toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                        toolTip38.SetToolTip(this.checkBoxH265, "H.265 !!! Видео ће бити кодован у новом кодеку који даје 2 пута мањи фајл и исти или бољи квалитет.");
+                        break;
+                    case "nb":
+                        toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
+                        toolTip2.SetToolTip(this.tabPage2, "Velg denne kategorien hvis du ønsker å konvertere ulike typer lyd- eller videofiler til andre formater.\nDu kan velge filer individuelt (knappen til venstre) eller flere (øvre høyre knapp) og legge dem til batch jobblisten.\nDu kan redigere listen, endre FFMPEG alternativene manuelt.\nDu kan velge å ha kun video eller kun lyd (f.eks for å hente mp3).\nDu kan velge kvalitet, konvertering hastighet, etc.\nEller bare velge mislighold.");
+                        toolTip3.SetToolTip(this.buttonHelp, "Åpner PDF hjelp dokument lagret i installasjonsmappen.");
+                        toolTip4.SetToolTip(this.buttonOutTransFile, "Velg utgang banen der du vil lagre transkodet filen (e).\nFilnavnet vil bli gitt automatisk ved å legge til '1.' til navnet inndatafilen (e) du velge etterpå.");
+                        toolTip6.SetToolTip(this.buttonMultiTransFile, "Velg en eller flere filer som skal pakkes om til MKV eller MP4, avhengig av valg av input filer format.\nBatch jobb Listen fylles ut automatisk.\nEtterpå kan du legge til flere filer på jobblisten fra denne kategorien eller konvertere kategorien.\nDu kan også slippe filer på denne knappen.");
+                        toolTip9.SetToolTip(this.buttonStartQueue, "Klikk når du er ferdig med å lage listen\nAlle jobber i jobblisten er utført i kronologisk rekkefølge.");
+                        toolTip10.SetToolTip(this.buttonCancelBatch, "Klikk for å avbryte kjøringen av alle jobber.\nListen vil forbli hvis du ønsker å manuelt redigere det etterpå.");
+                        toolTip11.SetToolTip(this.buttonSellectAllQueue, "Klikk for å velge alle jobber for sletting \n. MERK: Dette vil ikke slette, knappen 'Slett' vil slette valgte jobbene.");
+                        toolTip12.SetToolTip(this.buttonUnselectAll, "Klikk for å velge bort alle jobber i listen.");
+                        toolTip13.SetToolTip(this.buttonDeleteQueue, "Klikk for å slette alle de valgte jobbene.\nFør det, bruker avmerkingsbokser til å velge de som du vil slette.");
+                        toolTip14.SetToolTip(this.buttonInputConvFile, "Velg inndatafilen av ulike formater av lyd- eller videofiler.\nTa hensyn til filtre i dialogvinduet.\nDen filen vil bli konvertert, avhengig av alternativer valgte etter å ha valgt en fil. \nDu kan også slippe filen til knappen.");
+                        toolTip15.SetToolTip(this.buttonOutConvFile, "Velg utgang banen der konverterte filene skal lagres.\nMen etter at må du velge INPUT fil eller DROP FIL THERE!\nFilnavn vil bli generert fra inngang fil ved å legge '1.' til slutten av filen.\nHvis du vil endre filnavnet, bruke tekstboksen under for å manuelt skrive inn navn ETTER at du har valgt alternativer.");
+                        toolTip16.SetToolTip(this.buttonMultiConvFiles, "Velge flere filer som skal konverteres MED SAMME ALTERNATIVENE defineres under denne fanen FØR DU KLIKKE på denne knappen.\nBatch jobblisten fylles ut automatisk.\nDu kan også slippe filer på denne knappen.");
+                        toolTip18.SetToolTip(this.richTextBoxConv, "Når bytte valg, er ffmpeg kommando generert i denne boksen. Du kan justere FFMPEG alternativer manuelt hvis du er avansert bruker. Når du er fornøyd med kommandoen, kan du klikke knappen 'Legg til batch fil listen'.");
+                        toolTip19.SetToolTip(this.buttonAddBatchConv, "Når du velger alle alternativene, klikk her for å legge jobben til jobblisten.\nEtterpå kan du velge nye alternativer eller beholde den samme for ny jobb, eller bare klikk 'Start' for å starte koding filer i listen.");
+                        toolTip20.SetToolTip(this.panelBatch, "De jobbene som du har lagt vises her.\n.\nDu kan slippe mange filer her.\nHvis du har endret ditt sinn om noen alternativer, kan du redigere ffmpeg kommandoen direkte i denne tabellen.\nNår du er ferdig med å bygge listen, klikk på 'Start' for å behandle køen.");
+                        toolTip21.SetToolTip(this.checkBoxAudioOnly, "Velg om du ønsker å trekke ut bare lyd fra inndatafilen.");
+                        toolTip22.SetToolTip(this.checkBoxVideoOnly, "Velg om du ønsker å trekke ut bare video fra inndatafilen.");
+                        toolTip23.SetToolTip(this.radioButtonMKV, "Velg om du ønsker å kode video som MKV.");
+                        toolTip24.SetToolTip(this.radioButtonMP4, "Velg om du ønsker å kode video som MP4.");
+                        toolTip25.SetToolTip(this.radioButtonMP3, "Velg om du ønsker å kode lyd som MP3.");
+                        toolTip26.SetToolTip(this.radioButtonAAC, "Velg om du ønsker å kode lyd som AAC.");
+                        toolTip27.SetToolTip(this.radioButtonCopyAudio, "Velg om du vil kopiere originale audio strøm uten å endre.");
+                        toolTip28.SetToolTip(this.radioButtonCopyVideo, "Velg om du vil kopiere originale video strøm uten å endre.");
+                        toolTip29.SetToolTip(this.comboBoxAudioBitRate, "Velg bitrate for lyd strøm valgt (AAC eller MP3). \nIkke relevant hvis 'kopi lyd' alternativet brukes.");
+                        toolTip30.SetToolTip(this.comboBoxPreset, "Velg koding forhåndsinnstilt hastighet.\nVIKTIG: Dette bestemmer koding hastighet, men også størrelsen på utdatafilen.\nFor minste fil velger den tregeste du orker!\nIkke relevant hvis 'kopi video' valgt.");
+                        toolTip31.SetToolTip(this.comboBoxQuality, "Velg videokvalitet. For SD-kilder, er 19-21 utmerket kvalitet rekkevidde. For HD-kilder, er 21-24 normalområdet.\nDu kan la standardinnstillingene til hvis du er fornøyd med utskriftskvaliteten, eller eksperimentere litt for å finne den beste verdi for deg.\nIkke relevant hvis 'kopi video' valgt.");
+                        toolTip32.SetToolTip(this.buttonAddSubtitle, "Legg fra .SRT fil til mux som en strøm. Ignorert når BRUKES FLERE FILER .");
+                        toolTip33.SetToolTip(this.checkBox180, "Roter video 180 grader, som i tilfelle når du holder telefonen i landskapsmodus når du tar opp, men snudde opp ned.");
+                        toolTip34.SetToolTip(this.checkBox90clockwise, "Roter video 90 grader med klokken.");
+                        toolTip35.SetToolTip(this.checkBox90counterclockwise, "Roter video 90 grader mot klokken.");
+                        toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
+                        toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
+                        toolTip38.SetToolTip(this.checkBoxH265, "H265 er den besten!!! Filen skal vaere kodert som H265 HEVC.");
+                        break;
+
+                }
             }
+            catch { }
         }
         private void buttonAbout_Click(object sender, EventArgs e)
         {               //display about box
