@@ -192,6 +192,7 @@ namespace VTC
             // 
             // toolStripProgressBar1
             // 
+            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(7, 3, 1, 3);
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
