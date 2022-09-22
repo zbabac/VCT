@@ -157,6 +157,7 @@ namespace VTC
         }
         private void buttonOutTransFile_Click(object sender, EventArgs e)
         {		//raised when user clicks to select output path for transcoding tasks
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 FolderBrowserDialog savePath = new FolderBrowserDialog();
@@ -179,8 +180,7 @@ namespace VTC
                     EnableConvButtons();
                 }
             }
-            catch (Exception x)
-            { }
+            catch { }
         }
         private void buttonMultiTransFile_DragDrop(object sender, DragEventArgs e)
         {
@@ -220,6 +220,7 @@ namespace VTC
         }
         private void MultiTransRow()
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 string from_duration = "";
@@ -290,11 +291,10 @@ namespace VTC
                 tempRow.Cells.Add(task_cell);
                 dataGridViewBatch.Rows.Add(tempRow);	//add new temp row to the batch list
             }
-            catch (Exception x)
-            { }
+            catch { }
         }
         private int ffplay_test(string input)
-        {           //start ffplay to test stream
+        {           //start ffplay to test the Internet stream
             try
             {
                 System.Diagnostics.ProcessStartInfo procffplay;
@@ -310,12 +310,7 @@ namespace VTC
                 buttonLog.Enabled = true;
                 buttonLog2.Enabled = true;
                 buttonLogRec.PerformClick();
-                /*
-                procffplay.RedirectStandardError = true;
-                procffplay.RedirectStandardOutput = true;
-                procffplay.RedirectStandardInput = false; ;
-                procffplay.UseShellExecute = false;
-                procffplay.CreateNoWindow = false;  */
+
                 procffplay.RedirectStandardError = false;
                 procffplay.RedirectStandardOutput = false;
                 procffplay.RedirectStandardInput = false;
@@ -356,10 +351,8 @@ namespace VTC
             {
                 ffplay_output += output; //put it in string to be parsed to get stream info
             }
-            catch (Exception x)
-            {
-                //statustekst = "ERROR:" + x.Message;
-            }
+            catch {}
+
         }
         private int ffprobe(string input)
         {
@@ -381,7 +374,6 @@ namespace VTC
                 procffprobe.CreateNoWindow = true;	// Do not create the black window.
                 procffprobe.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
 
-                //proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
                 Process ffprobeproc = new Process();
                 ffprobeproc.StartInfo = procffprobe;
                 ffprobeproc.OutputDataReceived += (sender, args) => ffprobeOutput(args.Data);
@@ -401,7 +393,6 @@ namespace VTC
             {
                 statustekst = ex.Message;
                 return -1;					//-1 means NOT OK, not used so far
-                //statustekst = "ERROR:" + ex.Message;
             }
         }
         void ffprobeOutput(string output)
@@ -410,10 +401,8 @@ namespace VTC
             {
                 json += output; //put it in string to be parsed to get file info
             }
-            catch (Exception x)
-            {
-                //statustekst = "ERROR:" + x.Message;
-            }
+            catch { }
+
         }
          private void ffmpeg_extract_jpeg(string tstamp)
         {           //start ffmpeg process in separate thread to extract image from video file at specified position
@@ -435,7 +424,6 @@ namespace VTC
 				procff.CreateNoWindow = true;	// Do not create the black window.
 				procff.WorkingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);//set path of vtc.exe same as ffmpeg.exe
 
-				//proc.StartInfo = procStartffmpeg;   // Now we assign process its ProcessStartInfo and start it
 				Process ffproc = new Process();
 				ffproc.StartInfo = procff;
 				ffproc.Start();				//start the ffprobe
@@ -456,10 +444,8 @@ namespace VTC
                 jpeg.RunWorkerCompleted += jpeg_RunWorkerCompleted;					 //handler for finishing thread
                 jpeg.RunWorkerAsync();    //start job as separate thread
             }
-            catch (Exception x)
-            {
+            catch {}
 
-            }
         }
         private void jpeg_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -538,7 +524,6 @@ namespace VTC
             {
                 statustekst = ex.Message;
                 return -1;					//-1 means NOT OK, not used so far
-                //statustekst = "ERROR:" + ex.Message;
             }
         }
         void DisplayOutput(string output)
@@ -574,10 +559,8 @@ namespace VTC
                 output_log += output + "\n";
                 
             }
-            catch (Exception x)
-            {
-                //statustekst = "ERROR:" + x.Message;
-            }
+            catch { }
+
         }
 
         private void buttonStartQueue_Click(object sender, EventArgs e)
@@ -670,7 +653,7 @@ namespace VTC
             {
                 ffmpeg_process_id = -1;
                 statustekst = x.Message;
-                afterCancelOrFinish();
+                afterCancelOrFinish();          //after error occured, call this function to clean-up and reset encoding status
             }
         }
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -690,7 +673,7 @@ namespace VTC
                 MessageBox.Show("At least one file failed to convert. Check output file sizes: usually the very small one (only few kB) is not converted for some reason, e.g. missing header, etc.");
                 error_in_file = false;
             }
-            afterCancelOrFinish(); 
+            afterCancelOrFinish();          //after error occured, call this function to clean-up and reset encoding status
         }
         private void recStreamFFmpeg(string input)
         {           //start ffmpeg to test stream
@@ -830,6 +813,7 @@ namespace VTC
         {
             try
             {					//called whenever user clicks options controls to store new values in variables
+                                //This function is the most important to update preprocessed ffmpeg command from GUI
                 if (checkBoxCopyDuration.Checked)
                     time_duration = " -ss " + textBoxFromTime.Text + " -t " + textBoxCopyDuration.Text;
                 else time_duration = "";
@@ -951,15 +935,13 @@ namespace VTC
                 else video_size = "";
 
             }
-            catch (Exception x)
-            {
-
-            }
+            catch {}
         }
         private string SetupConversionOptions()
         {
             try
             {				//the most important part of preparing values passed as ffmpeg arguments
+                            //depending on options selected in GUI and files selected for encoding
                 NumberFormatInfo nfi = new NumberFormatInfo();
                 nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
                 string ext = "";		//initial file extension
@@ -1059,8 +1041,8 @@ namespace VTC
 
                 return ff;
             }
-            catch (Exception x)
-            { return "null"; }
+            catch { return "null"; }
+
         }
 
         private void buttonMultiConvFiles_Click(object sender, EventArgs e)
@@ -1128,7 +1110,7 @@ namespace VTC
         private void MultiConvRow()
         {
             try
-            {
+            {               //parse selected or dropped files and make a list of encoding jobs based on previously selected options in GUI
                 int str_position = input_file.LastIndexOf('.') + 1;	//find where extension starts
                 str_extension = input_file.Substring(str_position);	//define file extension
                 orig_ext = str_extension;							//store it so it is not lost in later manipulation
@@ -1139,8 +1121,6 @@ namespace VTC
                 if (!use_out_path)           //if no out path set by user, use the same path as input file
                 {
                     out_path = input_file.Substring(0, str_position);
-                    //labelOutConvFile.Text = out_path;
-                    //labelOutTransFile.Text = out_path;
                 }
                 else
                     out_path = labelOutConvFile.Text;
@@ -1165,13 +1145,11 @@ namespace VTC
                 tempRow.Cells.Add(task_cell);
                 dataGridViewBatch.Rows.Add(tempRow);				//add row to batch task
             }
-            catch (Exception x)
-            { }
+            catch { }
+
         }
         private void buttonInputConvFile_Click(object sender, EventArgs e)
         {                   //user clicks to select 1 input file
-            //h265 = false;
-            //checkBoxH265.Checked = false;
             time_position = "5";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files|*.*|Video files|*.m4v;*.mp4;*mkv;*.avi;*.mpg;*.divx;*.mov;*.wmv|Audio files|*.mp3;*.wma;*.wav;*.aac;*.ac3;*.flac";
@@ -1191,8 +1169,6 @@ namespace VTC
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
-                    //labelOutConvFile.Text = out_path;
-                    //labelOutTransFile.Text = out_path;
                 }
                 string in_file = input_file.Substring(str_position);
                 str_position = in_file.LastIndexOf('.') + 1;
@@ -1219,7 +1195,7 @@ namespace VTC
         private void FileProperties()
         {
             try
-            {
+            {               //read file properties with ffprobe (in separate thread)
                 json = "";
                 fps = 0.00;
                 
@@ -1229,13 +1205,11 @@ namespace VTC
                 ff.RunWorkerCompleted += ff_RunWorkerCompleted;					 //handler for finishing thread
                 ff.RunWorkerAsync();    //start job as separate thread
             }
-            catch(Exception x)
-            {
+            catch {}
 
-            }
         }
         private void ff_DoWork(object sender, DoWorkEventArgs e)
-        {
+        {               //thread to read file properties
             try
             {					//new thread started, here we define process start, etc.
                 int ffprobe_id = ffprobe(input_file);	//start ffprobe in this func								
@@ -1246,7 +1220,7 @@ namespace VTC
             }
         }
         private string checkNull(dynamic stringForCheck)
-        {
+        {               //cool WA to check null value without throwing exception in main method (converts null to empty string)
             try
             {
                 if (stringForCheck == null)
@@ -1545,7 +1519,6 @@ namespace VTC
             catch (Exception x)
             {
                 string msg = x.Message;
-                //buttonInfo.Visible = true;
             }
         }
 
@@ -1558,8 +1531,6 @@ namespace VTC
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                //h265 = false;
-                //checkBoxH265.Checked = false;
                 toolStripStatusLabel1.Text = "Please wait, loading file info!";
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 input_file = files[0];
@@ -1573,8 +1544,6 @@ namespace VTC
                 if (out_path == null || out_path == "")
                 {
                     out_path = input_file.Substring(0, str_position);//just in case it is empty take input file vaule as a replacement
-                    //labelOutConvFile.Text = out_path;
-                    //labelOutTransFile.Text = out_path;
                 }
                 string in_file = input_file.Substring(str_position);
                 str_position = in_file.LastIndexOf('.') + 1;
@@ -1641,12 +1610,11 @@ namespace VTC
                 tempRow.Cells.Add(No_cell);
                 tempRow.Cells.Add(task_cell);
                 dataGridViewBatch.Rows.Add(tempRow);		//new row added to batch list
-                //labelOutConvFile.Text = out_path;
                 labelInputConvFile.Text = "";
                 EnableButtonsAfterEncoding();				//allow user to use buttons to start, edit tasks
             }
-            catch (Exception ex)
-            { }
+            catch { }
+
         }
 
         private void comboBoxPreset_SelectedIndexChanged(object sender, EventArgs e)
@@ -1759,7 +1727,8 @@ namespace VTC
                     row.Cells["check_cell"].Value = check_cell.Value;   //check all cells
                 }
             }
-            catch { Exception x; }
+            catch { }
+
         }
 
         private void buttonLog_Click(object sender, EventArgs e)
@@ -1816,6 +1785,7 @@ namespace VTC
 
         private void buttonUnselectAll_Click(object sender, EventArgs e)
         {               //deselect all items in the list
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(true);
@@ -1825,7 +1795,8 @@ namespace VTC
                     row.Cells["check_cell"].Value = check_cell.Value;
                 }
             }
-            catch { Exception x; }
+            catch {}
+
         }
 
         private void checkBoxH265_CheckedChanged(object sender, EventArgs e)
@@ -1967,6 +1938,7 @@ namespace VTC
         }
         private void ffprobe_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {   //it gets ffprobe data after stream check
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 richTextBox3.Text = json;
@@ -1976,24 +1948,20 @@ namespace VTC
                 {
                     buttonStreamSavePath.Enabled = true;
                     buttonStartRec.Visible = true;
-                    //buttonStartRec.Enabled = false;
                 }
                 else
                 {
                     richTextBox3.Text += "\n Stream not found!";
-                    //buttonStreamSavePath.Enabled = false;
-                    //buttonStartRec.Visible = false;
-                    //buttonStartRec.Enabled = false;
                 }
             }
-            catch (Exception x)
+            catch (Exception)
             { }
+
         }
 
         private void buttonStartRec_Click(object sender, EventArgs e)
         {
             recStreamFFmpeg(richTextBoxStreamCommand.Text);
-            //buttonStartRec.Enabled = false;
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
@@ -2041,10 +2009,7 @@ namespace VTC
                     richTextBoxStreamCommand.Text = komanda;
                 }
             }
-            catch
-            {
-                Exception ex;
-            }
+            catch {}
         }
 
         private void buttonRecordDesktop_Click(object sender, EventArgs e)
@@ -2054,21 +2019,10 @@ namespace VTC
                 // ffmpeg -f dshow -f gdigrab -itsoffset 00:00:0.6 -i desktop -c:v libx264rgb  -framerate 24 -crf 25 -preset ultrafast  output-file.mp4
                 if (!(labelRecordPath.Text is null))
                 {
-                    
-                    /*for (int c =5;c>0;c--)
-                    {
-                        buttonRecordDesktop.Text = c.ToString();
-                        buttonRecordDesktop.Refresh();
-                        Thread.Sleep(1000);
-                    }*/
-                    //buttonRecordDesktop.Text = "Record Desktop";
                     recStreamFFmpeg(richTextBoxStreamCommand.Text);
                 }
             }
-            catch
-            {
-                Exception ex;
-            }
+            catch {}
         }
 
         private void textBoxCopyDuration_TextChanged(object sender, EventArgs e)
@@ -2120,7 +2074,6 @@ namespace VTC
             else
             {
                 textBoxFPSout.BackColor = System.Drawing.SystemColors.Window;
-                //set_fps = true;
             }
             richTextBoxConv.Text = SetupConversionOptions();
         }
@@ -2154,7 +2107,6 @@ namespace VTC
             buttonRemoveTransPath.Visible = false;
             labelOutConvFile.Text = "";
             labelOutTransFile.Text = "";
-            //richTextBoxConv.Text = SetupConversionOptions();
         }
 
         private void buttonRemoveTransPath_Click(object sender, EventArgs e)
@@ -2631,6 +2583,7 @@ namespace VTC
 
         private void buttonHelp_Click_1(object sender, EventArgs e)
         {               //open PDF document shipped in the same folder as VTC.exe
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 System.Diagnostics.ProcessStartInfo procStartPdf =
@@ -2639,8 +2592,7 @@ namespace VTC
                 // Now we assign its ProcessStartInfo and start it
                 System.Diagnostics.Process.Start(procStartPdf);
             }
-            catch (Exception x)
-            { }
+            catch { }
         }
 
         private void buttonAddSubtitle_Click(object sender, EventArgs e)
