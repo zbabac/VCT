@@ -32,9 +32,9 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -122,10 +122,11 @@ namespace VTC
             this.buttonInputConvFile = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.labelRecordPath = new System.Windows.Forms.Label();
-            this.buttonRecordPath = new System.Windows.Forms.Button();
+            this.panelRecord = new System.Windows.Forms.Panel();
             this.buttonRecordDesktop = new System.Windows.Forms.Button();
+            this.buttonRecordPath = new System.Windows.Forms.Button();
             this.richTextBoxStreamCommand = new System.Windows.Forms.RichTextBox();
+            this.labelRecordPath = new System.Windows.Forms.Label();
             this.labelSaveStreamPath = new System.Windows.Forms.Label();
             this.buttonStreamSavePath = new System.Windows.Forms.Button();
             this.buttonCheckStream = new System.Windows.Forms.Button();
@@ -167,6 +168,7 @@ namespace VTC
             this.groupBoxContainer.SuspendLayout();
             this.panelConvert.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panelRecord.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panelBatch.SuspendLayout();
@@ -887,12 +889,9 @@ namespace VTC
             // 
             // tabPage4
             // 
-            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.Controls.Add(this.panelRecord);
             this.tabPage4.Controls.Add(this.labelRecordPath);
-            this.tabPage4.Controls.Add(this.buttonRecordPath);
-            this.tabPage4.Controls.Add(this.buttonRecordDesktop);
-            this.tabPage4.Controls.Add(this.richTextBoxStreamCommand);
             this.tabPage4.Controls.Add(this.labelSaveStreamPath);
             this.tabPage4.Controls.Add(this.buttonStreamSavePath);
             this.tabPage4.Controls.Add(this.buttonCheckStream);
@@ -901,19 +900,16 @@ namespace VTC
             this.tabPage4.Controls.Add(this.buttonPlayStream);
             this.tabPage4.Controls.Add(this.textBoxStream);
             this.tabPage4.Controls.Add(this.labelStream);
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             // 
-            // labelRecordPath
+            // panelRecord
             // 
-            resources.ApplyResources(this.labelRecordPath, "labelRecordPath");
-            this.labelRecordPath.Name = "labelRecordPath";
-            // 
-            // buttonRecordPath
-            // 
-            resources.ApplyResources(this.buttonRecordPath, "buttonRecordPath");
-            this.buttonRecordPath.Name = "buttonRecordPath";
-            this.buttonRecordPath.UseVisualStyleBackColor = true;
-            this.buttonRecordPath.Click += new System.EventHandler(this.buttonRecordPath_Click);
+            resources.ApplyResources(this.panelRecord, "panelRecord");
+            this.panelRecord.Controls.Add(this.buttonRecordDesktop);
+            this.panelRecord.Controls.Add(this.buttonRecordPath);
+            this.panelRecord.Controls.Add(this.richTextBoxStreamCommand);
+            this.panelRecord.Name = "panelRecord";
             // 
             // buttonRecordDesktop
             // 
@@ -922,11 +918,23 @@ namespace VTC
             this.buttonRecordDesktop.UseVisualStyleBackColor = true;
             this.buttonRecordDesktop.Click += new System.EventHandler(this.buttonRecordDesktop_Click);
             // 
+            // buttonRecordPath
+            // 
+            resources.ApplyResources(this.buttonRecordPath, "buttonRecordPath");
+            this.buttonRecordPath.Name = "buttonRecordPath";
+            this.buttonRecordPath.UseVisualStyleBackColor = true;
+            this.buttonRecordPath.Click += new System.EventHandler(this.buttonRecordPath_Click);
+            // 
             // richTextBoxStreamCommand
             // 
-            this.richTextBoxStreamCommand.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.richTextBoxStreamCommand, "richTextBoxStreamCommand");
+            this.richTextBoxStreamCommand.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxStreamCommand.Name = "richTextBoxStreamCommand";
+            // 
+            // labelRecordPath
+            // 
+            resources.ApplyResources(this.labelRecordPath, "labelRecordPath");
+            this.labelRecordPath.Name = "labelRecordPath";
             // 
             // labelSaveStreamPath
             // 
@@ -1034,11 +1042,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -1051,19 +1059,19 @@ namespace VTC
             this.task_cell});
             this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
             // check_cell
             // 
             this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle11;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
             this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1151,6 +1159,7 @@ namespace VTC
             this.panelConvert.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panelRecord.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panelBatch.ResumeLayout(false);
@@ -1276,6 +1285,7 @@ namespace VTC
         private System.Windows.Forms.Button buttonRecordDesktop;
         private System.Windows.Forms.Button buttonRecordPath;
         private System.Windows.Forms.Label labelRecordPath;
+        private System.Windows.Forms.Panel panelRecord;
     }
 }
 
