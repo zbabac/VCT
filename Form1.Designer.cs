@@ -32,9 +32,9 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -317,6 +317,7 @@ namespace VTC
             // 
             // labelTransVideoNr
             // 
+            this.labelTransVideoNr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.labelTransVideoNr, "labelTransVideoNr");
             this.labelTransVideoNr.Name = "labelTransVideoNr";
             // 
@@ -352,26 +353,35 @@ namespace VTC
             // 
             // buttonLog2
             // 
+            this.buttonLog2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonLog2.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonLog2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonLog2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonLog2, "buttonLog2");
             this.buttonLog2.Name = "buttonLog2";
-            this.buttonLog2.UseVisualStyleBackColor = true;
+            this.buttonLog2.UseVisualStyleBackColor = false;
             this.buttonLog2.Click += new System.EventHandler(this.buttonLog2_Click);
             // 
             // buttonHelp
             // 
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonHelp.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonHelp, "buttonHelp");
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click_1);
             // 
             // buttonAbout
             // 
+            this.buttonAbout.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.buttonAbout, "buttonAbout");
+            this.buttonAbout.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonAbout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.UseVisualStyleBackColor = false;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // labelMultiTransFile
@@ -383,9 +393,13 @@ namespace VTC
             // buttonMultiTransFile
             // 
             this.buttonMultiTransFile.AllowDrop = true;
+            this.buttonMultiTransFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMultiTransFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonMultiTransFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonMultiTransFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonMultiTransFile, "buttonMultiTransFile");
             this.buttonMultiTransFile.Name = "buttonMultiTransFile";
-            this.buttonMultiTransFile.UseVisualStyleBackColor = true;
+            this.buttonMultiTransFile.UseVisualStyleBackColor = false;
             this.buttonMultiTransFile.Click += new System.EventHandler(this.buttonMultiTransFile_Click);
             // 
             // panelTranscode
@@ -405,9 +419,13 @@ namespace VTC
             // 
             // buttonOutTransFile
             // 
+            this.buttonOutTransFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOutTransFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonOutTransFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonOutTransFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonOutTransFile, "buttonOutTransFile");
             this.buttonOutTransFile.Name = "buttonOutTransFile";
-            this.buttonOutTransFile.UseVisualStyleBackColor = true;
+            this.buttonOutTransFile.UseVisualStyleBackColor = false;
             this.buttonOutTransFile.Click += new System.EventHandler(this.buttonOutTransFile_Click);
             // 
             // tabPage2
@@ -443,8 +461,11 @@ namespace VTC
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Image = global::VTC.Properties.Resources.play;
+            this.buttonPlay.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonPlay, "buttonPlay");
+            this.buttonPlay.Image = global::VTC.Properties.Resources.play;
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
@@ -573,6 +594,7 @@ namespace VTC
             // 
             // comboBoxAudioStreamNo
             // 
+            resources.ApplyResources(this.comboBoxAudioStreamNo, "comboBoxAudioStreamNo");
             this.comboBoxAudioStreamNo.FormattingEnabled = true;
             this.comboBoxAudioStreamNo.Items.AddRange(new object[] {
             resources.GetString("comboBoxAudioStreamNo.Items"),
@@ -584,7 +606,6 @@ namespace VTC
             resources.GetString("comboBoxAudioStreamNo.Items6"),
             resources.GetString("comboBoxAudioStreamNo.Items7"),
             resources.GetString("comboBoxAudioStreamNo.Items8")});
-            resources.ApplyResources(this.comboBoxAudioStreamNo, "comboBoxAudioStreamNo");
             this.comboBoxAudioStreamNo.Name = "comboBoxAudioStreamNo";
             this.comboBoxAudioStreamNo.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioStreamNo_SelectedIndexChanged);
             // 
@@ -639,9 +660,13 @@ namespace VTC
             // 
             // buttonAddSubtitle
             // 
+            this.buttonAddSubtitle.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAddSubtitle.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonAddSubtitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonAddSubtitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonAddSubtitle, "buttonAddSubtitle");
             this.buttonAddSubtitle.Name = "buttonAddSubtitle";
-            this.buttonAddSubtitle.UseVisualStyleBackColor = true;
+            this.buttonAddSubtitle.UseVisualStyleBackColor = false;
             this.buttonAddSubtitle.Click += new System.EventHandler(this.buttonAddSubtitle_Click);
             // 
             // groupBoxVideoOrAudio
@@ -695,6 +720,7 @@ namespace VTC
             // 
             // comboBoxPreset
             // 
+            resources.ApplyResources(this.comboBoxPreset, "comboBoxPreset");
             this.comboBoxPreset.FormattingEnabled = true;
             this.comboBoxPreset.Items.AddRange(new object[] {
             resources.GetString("comboBoxPreset.Items"),
@@ -705,12 +731,12 @@ namespace VTC
             resources.GetString("comboBoxPreset.Items5"),
             resources.GetString("comboBoxPreset.Items6"),
             resources.GetString("comboBoxPreset.Items7")});
-            resources.ApplyResources(this.comboBoxPreset, "comboBoxPreset");
             this.comboBoxPreset.Name = "comboBoxPreset";
             this.comboBoxPreset.SelectedIndexChanged += new System.EventHandler(this.comboBoxPreset_SelectedIndexChanged);
             // 
             // comboBoxAudioBitRate
             // 
+            resources.ApplyResources(this.comboBoxAudioBitRate, "comboBoxAudioBitRate");
             this.comboBoxAudioBitRate.FormattingEnabled = true;
             this.comboBoxAudioBitRate.Items.AddRange(new object[] {
             resources.GetString("comboBoxAudioBitRate.Items"),
@@ -721,12 +747,12 @@ namespace VTC
             resources.GetString("comboBoxAudioBitRate.Items5"),
             resources.GetString("comboBoxAudioBitRate.Items6"),
             resources.GetString("comboBoxAudioBitRate.Items7")});
-            resources.ApplyResources(this.comboBoxAudioBitRate, "comboBoxAudioBitRate");
             this.comboBoxAudioBitRate.Name = "comboBoxAudioBitRate";
             this.comboBoxAudioBitRate.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioBitRate_SelectedIndexChanged);
             // 
             // comboBoxQuality
             // 
+            resources.ApplyResources(this.comboBoxQuality, "comboBoxQuality");
             this.comboBoxQuality.FormattingEnabled = true;
             this.comboBoxQuality.Items.AddRange(new object[] {
             resources.GetString("comboBoxQuality.Items"),
@@ -744,7 +770,6 @@ namespace VTC
             resources.GetString("comboBoxQuality.Items12"),
             resources.GetString("comboBoxQuality.Items13"),
             resources.GetString("comboBoxQuality.Items14")});
-            resources.ApplyResources(this.comboBoxQuality, "comboBoxQuality");
             this.comboBoxQuality.Name = "comboBoxQuality";
             this.comboBoxQuality.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuality_SelectedIndexChanged);
             // 
@@ -832,17 +857,25 @@ namespace VTC
             // 
             // buttonAddBatchConv
             // 
+            this.buttonAddBatchConv.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.buttonAddBatchConv, "buttonAddBatchConv");
+            this.buttonAddBatchConv.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonAddBatchConv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonAddBatchConv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonAddBatchConv.Name = "buttonAddBatchConv";
-            this.buttonAddBatchConv.UseVisualStyleBackColor = true;
+            this.buttonAddBatchConv.UseVisualStyleBackColor = false;
             this.buttonAddBatchConv.Click += new System.EventHandler(this.buttonAddBatchConv_Click);
             // 
             // buttonMultiConvFiles
             // 
             this.buttonMultiConvFiles.AllowDrop = true;
+            this.buttonMultiConvFiles.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMultiConvFiles.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonMultiConvFiles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonMultiConvFiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonMultiConvFiles, "buttonMultiConvFiles");
             this.buttonMultiConvFiles.Name = "buttonMultiConvFiles";
-            this.buttonMultiConvFiles.UseVisualStyleBackColor = true;
+            this.buttonMultiConvFiles.UseVisualStyleBackColor = false;
             this.buttonMultiConvFiles.Click += new System.EventHandler(this.buttonMultiConvFiles_Click);
             // 
             // panelConvert
@@ -859,17 +892,25 @@ namespace VTC
             // 
             // buttonOutConvFile
             // 
+            this.buttonOutConvFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOutConvFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonOutConvFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonOutConvFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonOutConvFile, "buttonOutConvFile");
             this.buttonOutConvFile.Name = "buttonOutConvFile";
-            this.buttonOutConvFile.UseVisualStyleBackColor = true;
+            this.buttonOutConvFile.UseVisualStyleBackColor = false;
             this.buttonOutConvFile.Click += new System.EventHandler(this.buttonOutConvFile_Click);
             // 
             // buttonInputConvFile
             // 
             this.buttonInputConvFile.AllowDrop = true;
+            this.buttonInputConvFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonInputConvFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonInputConvFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonInputConvFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonInputConvFile, "buttonInputConvFile");
             this.buttonInputConvFile.Name = "buttonInputConvFile";
-            this.buttonInputConvFile.UseVisualStyleBackColor = true;
+            this.buttonInputConvFile.UseVisualStyleBackColor = false;
             this.buttonInputConvFile.Click += new System.EventHandler(this.buttonInputConvFile_Click);
             // 
             // buttonInfo
@@ -914,15 +955,25 @@ namespace VTC
             // buttonRecordDesktop
             // 
             resources.ApplyResources(this.buttonRecordDesktop, "buttonRecordDesktop");
+            this.buttonRecordDesktop.AutoEllipsis = true;
+            this.buttonRecordDesktop.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRecordDesktop.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonRecordDesktop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonRecordDesktop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRecordDesktop.Name = "buttonRecordDesktop";
-            this.buttonRecordDesktop.UseVisualStyleBackColor = true;
+            this.buttonRecordDesktop.UseVisualStyleBackColor = false;
             this.buttonRecordDesktop.Click += new System.EventHandler(this.buttonRecordDesktop_Click);
             // 
             // buttonRecordPath
             // 
             resources.ApplyResources(this.buttonRecordPath, "buttonRecordPath");
+            this.buttonRecordPath.AutoEllipsis = true;
+            this.buttonRecordPath.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRecordPath.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonRecordPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonRecordPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRecordPath.Name = "buttonRecordPath";
-            this.buttonRecordPath.UseVisualStyleBackColor = true;
+            this.buttonRecordPath.UseVisualStyleBackColor = false;
             this.buttonRecordPath.Click += new System.EventHandler(this.buttonRecordPath_Click);
             // 
             // richTextBoxStreamCommand
@@ -943,16 +994,25 @@ namespace VTC
             // 
             // buttonStreamSavePath
             // 
+            this.buttonStreamSavePath.AutoEllipsis = true;
+            this.buttonStreamSavePath.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.buttonStreamSavePath, "buttonStreamSavePath");
+            this.buttonStreamSavePath.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonStreamSavePath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonStreamSavePath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonStreamSavePath.Name = "buttonStreamSavePath";
-            this.buttonStreamSavePath.UseVisualStyleBackColor = true;
+            this.buttonStreamSavePath.UseVisualStyleBackColor = false;
             this.buttonStreamSavePath.Click += new System.EventHandler(this.buttonStreamSavePath_Click);
             // 
             // buttonCheckStream
             // 
+            this.buttonCheckStream.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCheckStream.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCheckStream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCheckStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonCheckStream, "buttonCheckStream");
             this.buttonCheckStream.Name = "buttonCheckStream";
-            this.buttonCheckStream.UseVisualStyleBackColor = true;
+            this.buttonCheckStream.UseVisualStyleBackColor = false;
             this.buttonCheckStream.Click += new System.EventHandler(this.buttonCheckStream_Click);
             // 
             // buttonLogRec
@@ -964,16 +1024,26 @@ namespace VTC
             // 
             // buttonStartRec
             // 
+            this.buttonStartRec.AutoEllipsis = true;
+            this.buttonStartRec.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
+            this.buttonStartRec.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonStartRec.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonStartRec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonStartRec.Name = "buttonStartRec";
-            this.buttonStartRec.UseVisualStyleBackColor = true;
+            this.buttonStartRec.UseVisualStyleBackColor = false;
             this.buttonStartRec.Click += new System.EventHandler(this.buttonStartRec_Click);
             // 
             // buttonPlayStream
             // 
+            this.buttonPlayStream.AutoEllipsis = true;
+            this.buttonPlayStream.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPlayStream.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonPlayStream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonPlayStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonPlayStream, "buttonPlayStream");
             this.buttonPlayStream.Name = "buttonPlayStream";
-            this.buttonPlayStream.UseVisualStyleBackColor = true;
+            this.buttonPlayStream.UseVisualStyleBackColor = false;
             this.buttonPlayStream.Click += new System.EventHandler(this.buttonTestStream_Click);
             // 
             // textBoxStream
@@ -1026,15 +1096,23 @@ namespace VTC
             // buttonUnselectAll
             // 
             resources.ApplyResources(this.buttonUnselectAll, "buttonUnselectAll");
+            this.buttonUnselectAll.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonUnselectAll.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonUnselectAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonUnselectAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonUnselectAll.Name = "buttonUnselectAll";
-            this.buttonUnselectAll.UseVisualStyleBackColor = true;
+            this.buttonUnselectAll.UseVisualStyleBackColor = false;
             this.buttonUnselectAll.Click += new System.EventHandler(this.buttonUnselectAll_Click);
             // 
             // buttonSellectAllQueue
             // 
             resources.ApplyResources(this.buttonSellectAllQueue, "buttonSellectAllQueue");
+            this.buttonSellectAllQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSellectAllQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSellectAllQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonSellectAllQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSellectAllQueue.Name = "buttonSellectAllQueue";
-            this.buttonSellectAllQueue.UseVisualStyleBackColor = true;
+            this.buttonSellectAllQueue.UseVisualStyleBackColor = false;
             this.buttonSellectAllQueue.Click += new System.EventHandler(this.buttonSellectAllQueue_Click);
             // 
             // dataGridViewBatch
@@ -1042,13 +1120,13 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
-            this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewBatch.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1059,19 +1137,19 @@ namespace VTC
             this.task_cell});
             this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
             // check_cell
             // 
             this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle14;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
             this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1096,22 +1174,34 @@ namespace VTC
             // buttonDeleteQueue
             // 
             resources.ApplyResources(this.buttonDeleteQueue, "buttonDeleteQueue");
+            this.buttonDeleteQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDeleteQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDeleteQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonDeleteQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDeleteQueue.Name = "buttonDeleteQueue";
-            this.buttonDeleteQueue.UseVisualStyleBackColor = true;
+            this.buttonDeleteQueue.UseVisualStyleBackColor = false;
             this.buttonDeleteQueue.Click += new System.EventHandler(this.buttonDeleteQueue_Click);
             // 
             // buttonCancelBatch
             // 
+            this.buttonCancelBatch.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCancelBatch.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCancelBatch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCancelBatch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonCancelBatch, "buttonCancelBatch");
             this.buttonCancelBatch.Name = "buttonCancelBatch";
-            this.buttonCancelBatch.UseVisualStyleBackColor = true;
+            this.buttonCancelBatch.UseVisualStyleBackColor = false;
             this.buttonCancelBatch.Click += new System.EventHandler(this.buttonCancelBatch_Click);
             // 
             // buttonStartQueue
             // 
+            this.buttonStartQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStartQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonStartQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonStartQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonStartQueue, "buttonStartQueue");
             this.buttonStartQueue.Name = "buttonStartQueue";
-            this.buttonStartQueue.UseVisualStyleBackColor = true;
+            this.buttonStartQueue.UseVisualStyleBackColor = false;
             this.buttonStartQueue.Click += new System.EventHandler(this.buttonStartQueue_Click);
             // 
             // panel2
