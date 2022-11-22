@@ -32,9 +32,9 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -253,6 +253,7 @@ namespace VTC
             // 
             // textBoxCopyDuration
             // 
+            this.textBoxCopyDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.textBoxCopyDuration, "textBoxCopyDuration");
             this.textBoxCopyDuration.Name = "textBoxCopyDuration";
             this.textBoxCopyDuration.TextChanged += new System.EventHandler(this.textBoxCopyDuration_TextChanged);
@@ -271,6 +272,7 @@ namespace VTC
             // 
             // textBoxFromTime
             // 
+            this.textBoxFromTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.textBoxFromTime, "textBoxFromTime");
             this.textBoxFromTime.Name = "textBoxFromTime";
             this.textBoxFromTime.TextChanged += new System.EventHandler(this.textBoxFromTime_TextChanged);
@@ -292,6 +294,7 @@ namespace VTC
             // 
             // numericUpDownAudioNr
             // 
+            this.numericUpDownAudioNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
             this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
             99,
@@ -302,6 +305,7 @@ namespace VTC
             // 
             // numericUpDownVideoNr
             // 
+            this.numericUpDownVideoNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
             this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
             99,
@@ -353,7 +357,7 @@ namespace VTC
             // 
             // buttonLog2
             // 
-            this.buttonLog2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonLog2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonLog2.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonLog2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonLog2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -364,7 +368,7 @@ namespace VTC
             // 
             // buttonHelp
             // 
-            this.buttonHelp.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.Control;
             this.buttonHelp.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -393,7 +397,7 @@ namespace VTC
             // buttonMultiTransFile
             // 
             this.buttonMultiTransFile.AllowDrop = true;
-            this.buttonMultiTransFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMultiTransFile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonMultiTransFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonMultiTransFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonMultiTransFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -419,7 +423,7 @@ namespace VTC
             // 
             // buttonOutTransFile
             // 
-            this.buttonOutTransFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOutTransFile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonOutTransFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonOutTransFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonOutTransFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -552,6 +556,7 @@ namespace VTC
             // 
             // textBoxSlowFPS
             // 
+            this.textBoxSlowFPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.textBoxSlowFPS, "textBoxSlowFPS");
             this.textBoxSlowFPS.Name = "textBoxSlowFPS";
             this.textBoxSlowFPS.TextChanged += new System.EventHandler(this.textBoxSlowFPS_TextChanged);
@@ -563,6 +568,7 @@ namespace VTC
             // 
             // textBoxFPSout
             // 
+            this.textBoxFPSout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.textBoxFPSout, "textBoxFPSout");
             this.textBoxFPSout.Name = "textBoxFPSout";
             this.textBoxFPSout.TextChanged += new System.EventHandler(this.textBoxFPSout_TextChanged);
@@ -583,7 +589,7 @@ namespace VTC
             // 
             // buttonLog
             // 
-            this.buttonLog.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLog.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.buttonLog, "buttonLog");
             this.buttonLog.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
@@ -660,7 +666,7 @@ namespace VTC
             // 
             // buttonAddSubtitle
             // 
-            this.buttonAddSubtitle.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAddSubtitle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonAddSubtitle.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonAddSubtitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonAddSubtitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -857,7 +863,7 @@ namespace VTC
             // 
             // buttonAddBatchConv
             // 
-            this.buttonAddBatchConv.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAddBatchConv.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.buttonAddBatchConv, "buttonAddBatchConv");
             this.buttonAddBatchConv.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonAddBatchConv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
@@ -869,7 +875,7 @@ namespace VTC
             // buttonMultiConvFiles
             // 
             this.buttonMultiConvFiles.AllowDrop = true;
-            this.buttonMultiConvFiles.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMultiConvFiles.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonMultiConvFiles.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonMultiConvFiles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonMultiConvFiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -892,7 +898,7 @@ namespace VTC
             // 
             // buttonOutConvFile
             // 
-            this.buttonOutConvFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOutConvFile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonOutConvFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonOutConvFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonOutConvFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -904,7 +910,7 @@ namespace VTC
             // buttonInputConvFile
             // 
             this.buttonInputConvFile.AllowDrop = true;
-            this.buttonInputConvFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonInputConvFile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonInputConvFile.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonInputConvFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonInputConvFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -956,7 +962,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.buttonRecordDesktop, "buttonRecordDesktop");
             this.buttonRecordDesktop.AutoEllipsis = true;
-            this.buttonRecordDesktop.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRecordDesktop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonRecordDesktop.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRecordDesktop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonRecordDesktop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -968,7 +974,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.buttonRecordPath, "buttonRecordPath");
             this.buttonRecordPath.AutoEllipsis = true;
-            this.buttonRecordPath.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRecordPath.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonRecordPath.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRecordPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonRecordPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -995,7 +1001,7 @@ namespace VTC
             // buttonStreamSavePath
             // 
             this.buttonStreamSavePath.AutoEllipsis = true;
-            this.buttonStreamSavePath.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStreamSavePath.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.buttonStreamSavePath, "buttonStreamSavePath");
             this.buttonStreamSavePath.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonStreamSavePath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
@@ -1006,7 +1012,7 @@ namespace VTC
             // 
             // buttonCheckStream
             // 
-            this.buttonCheckStream.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCheckStream.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonCheckStream.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonCheckStream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonCheckStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1017,15 +1023,19 @@ namespace VTC
             // 
             // buttonLogRec
             // 
+            this.buttonLogRec.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonLogRec.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonLogRec.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonLogRec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.buttonLogRec, "buttonLogRec");
             this.buttonLogRec.Name = "buttonLogRec";
-            this.buttonLogRec.UseVisualStyleBackColor = true;
+            this.buttonLogRec.UseVisualStyleBackColor = false;
             this.buttonLogRec.Click += new System.EventHandler(this.buttonLogRec_Click);
             // 
             // buttonStartRec
             // 
             this.buttonStartRec.AutoEllipsis = true;
-            this.buttonStartRec.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStartRec.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.buttonStartRec, "buttonStartRec");
             this.buttonStartRec.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonStartRec.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
@@ -1037,7 +1047,7 @@ namespace VTC
             // buttonPlayStream
             // 
             this.buttonPlayStream.AutoEllipsis = true;
-            this.buttonPlayStream.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPlayStream.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonPlayStream.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonPlayStream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonPlayStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1049,6 +1059,7 @@ namespace VTC
             // textBoxStream
             // 
             this.textBoxStream.AllowDrop = true;
+            this.textBoxStream.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.textBoxStream, "textBoxStream");
             this.textBoxStream.Name = "textBoxStream";
             // 
@@ -1096,7 +1107,7 @@ namespace VTC
             // buttonUnselectAll
             // 
             resources.ApplyResources(this.buttonUnselectAll, "buttonUnselectAll");
-            this.buttonUnselectAll.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonUnselectAll.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonUnselectAll.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonUnselectAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonUnselectAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1107,7 +1118,7 @@ namespace VTC
             // buttonSellectAllQueue
             // 
             resources.ApplyResources(this.buttonSellectAllQueue, "buttonSellectAllQueue");
-            this.buttonSellectAllQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSellectAllQueue.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonSellectAllQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSellectAllQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonSellectAllQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1120,11 +1131,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -1137,19 +1148,19 @@ namespace VTC
             this.task_cell});
             this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
             // check_cell
             // 
             this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
             this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1174,7 +1185,7 @@ namespace VTC
             // buttonDeleteQueue
             // 
             resources.ApplyResources(this.buttonDeleteQueue, "buttonDeleteQueue");
-            this.buttonDeleteQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDeleteQueue.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonDeleteQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDeleteQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonDeleteQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1184,7 +1195,7 @@ namespace VTC
             // 
             // buttonCancelBatch
             // 
-            this.buttonCancelBatch.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCancelBatch.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonCancelBatch.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonCancelBatch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonCancelBatch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -1195,7 +1206,7 @@ namespace VTC
             // 
             // buttonStartQueue
             // 
-            this.buttonStartQueue.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStartQueue.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonStartQueue.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.buttonStartQueue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.buttonStartQueue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
