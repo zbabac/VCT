@@ -253,7 +253,7 @@ namespace VTC
             // 
             // textBoxCopyDuration
             // 
-            this.textBoxCopyDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCopyDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxCopyDuration, "textBoxCopyDuration");
             this.textBoxCopyDuration.Name = "textBoxCopyDuration";
             this.textBoxCopyDuration.TextChanged += new System.EventHandler(this.textBoxCopyDuration_TextChanged);
@@ -272,7 +272,7 @@ namespace VTC
             // 
             // textBoxFromTime
             // 
-            this.textBoxFromTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFromTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxFromTime, "textBoxFromTime");
             this.textBoxFromTime.Name = "textBoxFromTime";
             this.textBoxFromTime.TextChanged += new System.EventHandler(this.textBoxFromTime_TextChanged);
@@ -294,7 +294,7 @@ namespace VTC
             // 
             // numericUpDownAudioNr
             // 
-            this.numericUpDownAudioNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownAudioNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.numericUpDownAudioNr, "numericUpDownAudioNr");
             this.numericUpDownAudioNr.Maximum = new decimal(new int[] {
             99,
@@ -305,7 +305,7 @@ namespace VTC
             // 
             // numericUpDownVideoNr
             // 
-            this.numericUpDownVideoNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownVideoNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.numericUpDownVideoNr, "numericUpDownVideoNr");
             this.numericUpDownVideoNr.Maximum = new decimal(new int[] {
             99,
@@ -556,7 +556,7 @@ namespace VTC
             // 
             // textBoxSlowFPS
             // 
-            this.textBoxSlowFPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSlowFPS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxSlowFPS, "textBoxSlowFPS");
             this.textBoxSlowFPS.Name = "textBoxSlowFPS";
             this.textBoxSlowFPS.TextChanged += new System.EventHandler(this.textBoxSlowFPS_TextChanged);
@@ -568,7 +568,7 @@ namespace VTC
             // 
             // textBoxFPSout
             // 
-            this.textBoxFPSout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFPSout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxFPSout, "textBoxFPSout");
             this.textBoxFPSout.Name = "textBoxFPSout";
             this.textBoxFPSout.TextChanged += new System.EventHandler(this.textBoxFPSout_TextChanged);
@@ -1059,7 +1059,7 @@ namespace VTC
             // textBoxStream
             // 
             this.textBoxStream.AllowDrop = true;
-            this.textBoxStream.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxStream.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxStream, "textBoxStream");
             this.textBoxStream.Name = "textBoxStream";
             // 
