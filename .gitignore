@@ -198,3 +198,5 @@ ModelManifest.xml
 
 #custom folders
 VCT_mono/*
+/setup_nsis.nsi.bak
+/README.md.bak
