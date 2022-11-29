@@ -114,6 +114,11 @@ namespace VTC
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
                 InitializeComponent();
+                comboBoxPreset.SelectedIndex = 0;
+                comboBoxQuality.SelectedIndex = 0;
+                comboBoxAudioBitRate.SelectedIndex = 0;
+                comboBoxAudioStreamNo.SelectedIndex = 0;
+                
                 DateTime datum = DateTime.Now;
                 if (datum.Month == 1 || datum.Month == 12)
                 {
