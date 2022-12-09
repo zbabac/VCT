@@ -1,9 +1,11 @@
 #Sticky info for Linux:
-**Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc. 
+Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/.  
+#I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu;  
+#`install_vct_yum.sh` for Fedora, Centos, etc. 
 **Just download it, run and it will download all prerequisites and install VCT in your home dir.**  
 For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
 
-** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
+** 64-bit MacOS don't work with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
 
 # v1.9.7.1 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%. Default encoding presets are set to balance between output file size and quality.
 
@@ -41,10 +43,10 @@ In any case, if using "Multiple Input Files" option to load bunch of files to be
 you MUST SET ALL OPTIONS FIRST, THEN CLICK TO LOAD FILES.
 
 **NOTE FOR LINUX**: Please go to the bottom of this readme to see how to install.
-Source code for Linux is the same, but check file **Form1.cs** and commented lines marked with __"Linux"__.
+Source code for Linux is the same, in theory you could use `monodevelop` to build and test but I never tried it.
 
-**If you want to use precompiled binaries with Linux, you have 2 choices: use Linux mono binary, or use Windows Setup with Wine. 
-My experience in the 2019 is that Windows Setup installed with Wine works better. However, Mono may give you better performance, since native Linux FFmpeg binary is used.**
+**If you want to use precompiled binaries with Linux, I strongly suggest to use automated installation scripts `install_vct_apt.sh` and `install_vct_yum.sh`. They will download end unpack VCT to `~/VCT_mono/` and copy ffplay, ffmpeg and ffprobe to `/usr/bin/` and set correct permissions. You can also manually unpack `VCT_Linux_mono_binary.zip` to some other location (read those scripts and modify them to your needs).
+**I am now mainly using Linux and I can confirm that VCT with Mono gives superior performance, since native Linux FFmpeg binary is used.**
 
 ## VCT has its limitations: 
 - when you define options and drop multiple files "Multiple Input Files" button or to the list, you can't use subtitles;
@@ -194,8 +196,7 @@ Changelog since v1.6.0.1
 Avast on XP could block setup execution with strange messages like: "path could not be found...". Please scan VCT_setup.exe with AV program, then disable file shield and run setup again. It could be the case with other AV software.
 On Windows 7 and 8, there is DEP active and once you confirm that you want to run the setup, it will install without problems.
 
-Antivirus software can cause problems after installation. Windows can give message: "windows cannot access the specified device path or file you may not have appropriate permissions". Avast antivirus is blocking execution. If you are worried about security, please scan this app first or compile it yourself from the source. However, there is simple remendy to overcome this problem, please check the following link:
-http://www.getavast.net/support/stop-blocking-a-program/
+Antivirus software can cause problems after installation. Windows can give message: "windows cannot access the specified device path or file you may not have appropriate permissions". Avast antivirus is blocking execution. If you are worried about security, please scan this app first or compile it yourself from the source.  
 You basically need to add scanning exclusion to the installation path, default is: "C:\Program Files (x86)\VCT" or "C:\Program Files\VCT".
 
 **Update**: new Avast version uses Deep scan at first run, so everything is ok.
@@ -204,27 +205,26 @@ You basically need to add scanning exclusion to the installation path, default i
 
 
 ### Prerequisities:
-If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except **.NET 4.0 client profile. Please download it from Microsoft if VCT doesn't start.**
-Some antivirus programs (mine is Avast) will complain that "File reputation/prevalence is low". It will be sandboxed. This is due to the fact that application does not have commercial signature. If you are worried about it, please scan it first. There is no virus, full source code is available. After checking, you can instruct your antivirus to execute anyway, or in case of Avast on Windows XP, you need to disable shield (after scanning first, of course) in order to install program.
+If you download setup, all neccessary dependencies are installed (ffpmeg, pdf help), except **.NET 4.8 Framework. It is included with Windows 10, bu tperhaps not with Windows 7 and 8. Please download it from Microsoft if VCT doesn't start.**
 
 
 ### Visual Studio usage:
-Source code files created by VS 2017 Community Edition for Desktop, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
+Source code files created by VS 2022 Community Edition, so just unpack and opeb the solution with VS. However you can create project in VS 2010 (tested) or VS 2012, just create a new folder and copy all files except *.sln and *.suo to that folder. Then, simply open VCT.csproj with your version of Visual Studio.
 Whenever I add new version I provide the latest ffmpeg.exe and ffprobe static build compiled by zeranoe, but if you want a more recent one, just download and replace the existing one. License, download paths are mentioned in About box.
 
 
 
 ### LINUX MONO USAGE
 
-Application is built using Winforms so it has MS Windows looks, not the native Linux looks.
+Application is built using Winforms so it has MS Windows looks, not the native Linux looks you would expect in Gnome or KDE. I changed GUI elements to be flat in appeareance so that win and linux looks don't differ much.
 
 UPDATE: **I added small scripts to automate installations.**
 
 For **Debian, Ubuntu**, etc. with APT package manager download  **install_vct_apt.sh**, and run it(provide sudo credentials):
-`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.desktop** which you can double click to run the program (edit it manually to reflect your program path if you intalled in location other that $HOME).  
 
 For **Fedora, Centos**, etc. with YUM package manager download **install_vct_apt.sh**, and run it(provide sudo credentials):
-`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.sh** which you can double click to run the program.
+`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.desktop** which you can double click to run the program (edit it manually to reflect your program path if you intalled in location other that $HOME).  
 
 Program will be installed in $HOME/VCT_mono/.
 
@@ -233,6 +233,7 @@ For other distros that use other package managers, please read INSTALL_README.tx
 #### Prerequisities:
 - You must have mono installed to run .NET application.
 - You must have ffmpeg packages installed.
+- Exact installation procedure is within those 2 scripts mentioned above so you can use them as template to modify installation process.
 
 After you install ffmpeg and mono, unpack VCT_Linux_mono_binary.zip to directory of your choice. I will give example as if you put it in your home dir. Use sudo bash if permissions are inadequate.
 The same procedure applies to MacOS.
@@ -259,7 +260,6 @@ or create launcher at desktop or menu.
 
 ### Compiling from source code on Linux
 
-Since beta v1.9.5, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located.
+Since beta v1.9.5, the source is the same for Linux, Mac and Windows. You can use Mono Develop to compile from source. The difference is only in ffmpeg, ffprobe and ffplay binaries. These are included with VCT binary download, but if you build from source, you must provide those 3 binaries and copy them to the same directory where the VCT.exe and Newtonsoft.Json.dll are located (or inlude path to ff* binaries: export PATH=$PATH:<ffmpeg_path>)
 
-**If you use Wine on Linux, then just download Windows installer: VCT_setup.exe and install it via Wine. The prerequisite is that you have .NET Framework 4 Client installed in Wine.**
 
