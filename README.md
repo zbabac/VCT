@@ -1,11 +1,11 @@
 #Sticky info for Linux:
 **Since new version needs ffplay and it can't be found as a static build for Linux, you have to both install ffmpeg package and copy the binaries that I included, ffmpeg and ffprobe manually to /usr/bin/. I created script to automate installations: `install_vct_apt.sh` for Debian, Ubuntu; and `install_vct_yum.sh` for Fedora, Centos, etc. 
-**Just download it, run and it will download all prerequisites and install VCT in your home dir and create desktop shell file to run the app.**
+**Just download it, run and it will download all prerequisites and install VCT in your home dir.**  
 For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
 
-** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs!
+** 64-bit Macs seems to have a problem with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
 
-# v1.9.7 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%.
+# v1.9.7.1 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%. Default encoding presets are set to balance between output file size and quality.
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/

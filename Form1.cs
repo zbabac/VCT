@@ -114,9 +114,9 @@ namespace VTC
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
                 InitializeComponent();
-                comboBoxPreset.SelectedIndex = 0;
-                comboBoxQuality.SelectedIndex = 0;
-                comboBoxAudioBitRate.SelectedIndex = 0;
+                comboBoxPreset.SelectedIndex = 5;
+                comboBoxQuality.SelectedIndex = 6;
+                comboBoxAudioBitRate.SelectedIndex = 2;
                 comboBoxAudioStreamNo.SelectedIndex = 0;
                 
                 DateTime datum = DateTime.Now;
