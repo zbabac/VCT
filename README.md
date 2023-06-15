@@ -223,8 +223,8 @@ UPDATE: **I added small scripts to automate installations.**
 For **Debian, Ubuntu**, etc. with APT package manager download  **install_vct_apt.sh**, and run it(provide sudo credentials):
 `./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.desktop** which you can double click to run the program (edit it manually to reflect your program path if you intalled in location other that $HOME).  
 
-For **Fedora, Centos**, etc. with YUM package manager download **install_vct_apt.sh**, and run it(provide sudo credentials):
-`./install_vct_apt.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.desktop** which you can double click to run the program (edit it manually to reflect your program path if you intalled in location other that $HOME).  
+For **Fedora, Centos**, etc. with YUM package manager download **install_vct_yum.sh**, and run it(provide sudo credentials):
+`./install_vct_yum.sh`  or just double click it - execute in terminal! It will update packages, download VCT_mono_binary and create desktop file **vct.desktop** which you can double click to run the program (edit it manually to reflect your program path if you intalled in location other that $HOME).  
 
 Program will be installed in $HOME/VCT_mono/.
 
