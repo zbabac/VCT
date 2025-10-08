@@ -32,9 +32,9 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -149,6 +149,8 @@ namespace VTC
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBoxAllSubtitles = new System.Windows.Forms.GroupBox();
+            this.checkBoxKeepSubtitles = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -174,6 +176,7 @@ namespace VTC
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBoxAllSubtitles.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -436,6 +439,7 @@ namespace VTC
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.groupBoxAllSubtitles);
             this.tabPage2.Controls.Add(this.buttonPlay);
             this.tabPage2.Controls.Add(this.groupBoxVideoSize);
             this.tabPage2.Controls.Add(this.buttonRemoveOutPath);
@@ -1131,11 +1135,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -1148,19 +1152,19 @@ namespace VTC
             this.task_cell});
             this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
             // check_cell
             // 
             this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle8;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
             this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1221,6 +1225,20 @@ namespace VTC
             this.panel2.Controls.Add(this.tabControl2);
             this.panel2.Name = "panel2";
             // 
+            // groupBoxAllSubtitles
+            // 
+            this.groupBoxAllSubtitles.Controls.Add(this.checkBoxKeepSubtitles);
+            resources.ApplyResources(this.groupBoxAllSubtitles, "groupBoxAllSubtitles");
+            this.groupBoxAllSubtitles.Name = "groupBoxAllSubtitles";
+            this.groupBoxAllSubtitles.TabStop = false;
+            // 
+            // checkBoxKeepSubtitles
+            // 
+            resources.ApplyResources(this.checkBoxKeepSubtitles, "checkBoxKeepSubtitles");
+            this.checkBoxKeepSubtitles.Name = "checkBoxKeepSubtitles";
+            this.checkBoxKeepSubtitles.UseVisualStyleBackColor = true;
+            this.checkBoxKeepSubtitles.CheckedChanged += new System.EventHandler(this.checkBoxKeepSubtitles_CheckedChanged);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1266,6 +1284,8 @@ namespace VTC
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.groupBoxAllSubtitles.ResumeLayout(false);
+            this.groupBoxAllSubtitles.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1387,6 +1407,8 @@ namespace VTC
         private System.Windows.Forms.Button buttonRecordPath;
         private System.Windows.Forms.Label labelRecordPath;
         private System.Windows.Forms.Panel panelRecord;
+        private System.Windows.Forms.GroupBox groupBoxAllSubtitles;
+        private System.Windows.Forms.CheckBox checkBoxKeepSubtitles;
     }
 }
 

@@ -7,7 +7,7 @@ For other distros you need to do it manually. Please scroll to the end of this f
 
 ** 64-bit MacOS don't work with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
 
-# v1.9.7.1 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%. Default encoding presets are set to balance between output file size and quality.
+# v1.10.0.0 added option "keep subtitles", ffmpeg bump to v8.0
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -123,6 +123,10 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
+# v1.10.0.0 added option "keep subtitles", ffmpeg bump to v8.0  
+On the GUI only check box "Keep Subtitle" is added, but it is applied for Transcode as well as Multiple Files options. When checked, you will copy all subtitles to the output file. This doesn't apply when you add external subtitle, so take care of that. You can keep subtitles and add a new one ONLY by manual edit of the ffmpeg command.
+ffmpeg is updated to the lates version 8.0 "Huffman".
+
 # v1.9.7 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%.
 
 # v1.9.6.2 The same as 1.9.5.7, but with a fix for Linux exceptions with mono 6.8-6.12 and with .NET framework 4.8  and updated Newtonsoft dll.

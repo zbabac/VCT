@@ -46,6 +46,7 @@ namespace VTC
         static string video = "", audio_part = "", task = "", video_size=""; //video;audio part of parameters string; ffmpeg command string
         static string time_duration = ""; //used if only specific part of file is needed
         static string vf = ""; //video filter part, used currently to rotate video
+        static string srt_options = "", keep_subtitles = ""; //empty if subtitles are not copied to the output, but if kept with the checkbox keep_subtitles, then this would be added to stream_option
         static bool h265 = false; //use H.264 codec or not, controlled by checkBoxH265
         static bool set_fps = false; //set if different target FPS is to be used
         static bool slow_motion = false; //check if video is converted to slow motion from e.g. high FPS video source
@@ -105,6 +106,7 @@ namespace VTC
         ToolTip toolTip43 = new ToolTip();
         ToolTip toolTip44 = new ToolTip();
         ToolTip toolTip45 = new ToolTip();
+        ToolTip toolTip46 = new ToolTip();
 
         public Form1()
         {
@@ -269,7 +271,7 @@ namespace VTC
                 out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
                 string _subs = " -map 0:s? ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
-                    _subs = " -map -0:s? ";  //remove all subs streams
+                    _subs = "";  //remove all subs streams
                 string _copy_all_streams = " -map 0:v? -map 0:a? ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
                 {
@@ -906,6 +908,18 @@ namespace VTC
                         vf = " -vf \"rotate=-PI/2\"";
                 }
                 //
+                if (checkBoxKeepSubtitles.Checked)
+                {
+                    keep_subtitles = " -map 0:s:?";
+                    srt_options = " -c:s copy";
+                    subtitle_stream = "";
+                    add_sub_stream = false;
+                    buttonRemoveSubtitle.Enabled = false;
+                    buttonRemoveSubtitle.Visible = false;
+                    labelAddSubtitle.Text = "Select srt subtitle stream file.";
+                }
+                else keep_subtitles = "";
+                //
                 preset = comboBoxPreset.SelectedItem.ToString();
                 //
                 crf = comboBoxQuality.SelectedItem.ToString();
@@ -951,8 +965,7 @@ namespace VTC
                 nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
                 string ext = "";		//initial file extension
                 string input_srt = "";
-                string srt_options = "";
-                string stream_option = " -map 0:0 -map 0:" + audio_stream + "?"; //used when user selects audio stream and/or subtitle stream
+                string stream_option = " -map 0:0 -map 0:" + audio_stream + "?"; //bydefault 1 audio stream and no subtitle streams are selected
                 vf = "";
                 string input_fps = ""; //if option to set input FPS is used
                 out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
@@ -1040,9 +1053,9 @@ namespace VTC
                 }
                 // complete string to be passed to process start
                 if (IsLinux==0)
-                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
+                    ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + keep_subtitles + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 else
-                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + keep_subtitles + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1134,7 +1147,7 @@ namespace VTC
                 in_file = in_file.Substring(0, str_position);       //get just file name without extension
 
                 out_file = out_path + in_file;						//build output file name from input file name
-                subtitle_stream = "";                               //don't use subtitles for many files
+                subtitle_stream = "";                               //don't use additional subtitles for many files
                 add_sub_stream = false;
                 string command = SetupConversionOptions();			//get ffmpeg command for that file
                 number_of_rows++;									//increase for another job in the list
@@ -1988,6 +2001,15 @@ namespace VTC
             }
             richTextBoxConv.Text = SetupConversionOptions();	//stores the change & sets up other options
         }
+        private void checkBoxKeepSubtitles_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // if Keep Subtitles is checked then string "-map 0:s:?" is added to the stream_option
+                richTextBoxConv.Text = SetupConversionOptions();    //implements the change by calling ReadParametersFromGUI & sets up other options
+            }
+            catch { }
+        }
 
         private void textBoxFromTime_TextChanged(object sender, EventArgs e)
         {
@@ -2390,6 +2412,10 @@ namespace VTC
                 toolTip45.InitialDelay = 100;
                 toolTip45.ReshowDelay = 500;
                 toolTip45.ShowAlways = true;
+                toolTip46.AutoPopDelay = 7000;
+                toolTip46.InitialDelay = 100;
+                toolTip46.ReshowDelay = 500;
+                toolTip46.ShowAlways = true;
 
                 switch (Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2))
                 {
@@ -2435,6 +2461,7 @@ namespace VTC
                         toolTip43.SetToolTip(this.checkBoxTranscodeAllStreams, "Try to copy all streams from original to output (map -0: option). If it FAILS, then remove from batch, and try without this option.\n If UNCHECKED, ENTER STREAM NUMBERS TO BE ENCODED TO THE RIGHT.\nUseful if you want to REMOVE ADDITIONAL AUDIO STREAMS.");
                         toolTip44.SetToolTip(this.checkBoxKeepExtension, "Do NOT change file extension (if it's MP4 it stays, the same for other containers).\nUseful if you want to extract only 1st video, audio and keep file type.\nUSE TOGETHER WITH UNCHECKED option above - DO NOT copy all video&audio).");
                         toolTip45.SetToolTip(this.buttonLog, "Click to display or hide the FFmpeg log.");
+                        toolTip46.SetToolTip(this.checkBoxKeepSubtitles, "Choose to keep already existing subtitles. BUT, additional subtitle is then REMOVED - use manual edit if you want to keep subtitles and add a new one.");
 
                         break;
                     case "sr":
@@ -2472,6 +2499,7 @@ namespace VTC
                         toolTip36.SetToolTip(this.comboBoxAudioStreamNo, "IMPORTANT: if audio stream doesn't exist, FIRST stream will be used.\nIf single file selected via Input File button, only existing streams will be displayed.");
                         toolTip37.SetToolTip(this.buttonInfo, "Show details about selected input file.");
                         toolTip38.SetToolTip(this.checkBoxH265, "H.265 !!! Видео ће бити кодован у новом кодеку који даје 2 пута мањи фајл и исти или бољи квалитет.");
+                        toolTip46.SetToolTip(this.checkBoxKeepSubtitles, "Задржи постојеће титлове. У том случају се НЕ МОЖЕ додати нови титл. Едитујте ффмпег РУЧНО да задржите титл и додате нови.");
                         break;
                     case "nb":
                         toolTip1.SetToolTip(this.tabPage1, "Velg denne kategorien hvis du ønsker å pakke MP4 / M4V container til MKV eller vice versa. \nAvhengig av ditt valg, vil programmet automatisk velge den andre filen forlengelse.");
@@ -2612,6 +2640,7 @@ namespace VTC
                 buttonRemoveSubtitle.Visible = true;
                 add_sub_stream = true;
                 labelAddSubtitle.Text = subtitle_stream;
+                checkBoxKeepSubtitles.Checked = false; //if subtitle added, then don't copy existing subtitles, if any
                 richTextBoxConv.Text = SetupConversionOptions();
             }
         }
