@@ -7,7 +7,7 @@ For other distros you need to do it manually. Please scroll to the end of this f
 
 ** 64-bit MacOS don't work with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
 
-# v1.9.7.1 Functionality the same as 1.9.5.6. but with updated GUI look: Windows and Linux with mono have similar look; fixed issues with lower resolutions (works from 1200x800 and higher); for res. 1920x1080 and higher works with scaling up to 150%. Default encoding presets are set to balance between output file size and quality.
+# v1.9.7.2 Updated with ffpmeg version 6.1
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/

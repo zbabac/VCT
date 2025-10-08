@@ -10,6 +10,7 @@ VCT_setup*
 *mono*
 bin
 obj
+*.exe
 
 # Build results
 [Dd]ebug/
