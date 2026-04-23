@@ -13,6 +13,7 @@ using System.Globalization;
 using Microsoft.CSharp.RuntimeBinder;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace VTC
 {
@@ -42,7 +43,7 @@ namespace VTC
         static int ffmpeg_process_id; //process id of started ffmpeg process - used to close it if user cancels or pauses
         static bool canceled = false, video_only = false, audio_only = false; //flags to mark cancel job; if video or audio only is encoded
         static bool add_sub_stream = false, error_in_file = false, use_out_path = false, paused = false, started = false; // paused or started encoding
-        static string preset = "veryfast", crf = "23", audio = "libmp3lame", container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
+        static string preset = "veryfast", crf = "23", audio, container = "mkv", audiobitrate = "128k"; //options values used as ffmpeg encodin parameters
         static string video = "", audio_part = "", task = "", video_size=""; //video;audio part of parameters string; ffmpeg command string
         static string time_duration = ""; //used if only specific part of file is needed
         static string vf = ""; //video filter part, used currently to rotate video
@@ -59,6 +60,35 @@ namespace VTC
         static string pass_labelFileName2, pass_labelFormat2, pass_labelDuration2, pass_labelSize2, pass_labelvideobitrate; 
         static bool log = false; //output from ffmpeg visible or not
         static string output_log, out_fps = "";
+        // vars for settings.xml file
+        static string settingsPath = "";
+        static int IcomboBoxPreset;
+        static int IcomboBoxQuality;
+        static int IcomboBoxAudioBitRate;
+        static bool BcheckBox180;
+        static bool BcheckBox90clockwise;
+        static bool BcheckBox90counterclockwise;
+        static bool BcheckBoxVideoOnly;
+        static bool BcheckBoxAudioOnly;
+        static string IcomboBoxAudioStreamNo;
+        static bool BcheckBoxH265;
+        static bool BradioButton_1080p;
+        static bool BradioButton_720p;
+        static bool BradioButton_480p;
+        static bool BradioButton_No_Video_Resize;
+        static bool BcheckBoxSetFPS;
+        static string TtextBoxFPSout;
+        static bool BcheckBoxSlowFPS;
+        static string TtextBoxSlowFPS;
+        static bool BcheckBoxTransRemoveSubtitle;
+        static bool BcheckBoxTranscodeAllStreams;
+        static bool BcheckBoxKeepExtension;
+        static bool BcheckBoxCopyDuration;
+        static string TtextBoxFromTime;
+        static string TtextBoxCopyDuration;
+        static bool BcheckBoxKeepSubtitles;
+        static int VnumericUpDownVideoNr;
+        static int VnumericUpDownAudioNr;
         Form logForm = new Form();
         // Create the ToolTips and associate with the Form container.
         ToolTip toolTip1 = new ToolTip();
@@ -116,11 +146,15 @@ namespace VTC
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("nb"); 
                 //Thread.CurrentThread.CurrentUICulture = new CultureInfo("sr-Cyrl"); 
                 InitializeComponent();
+                // define events for showing the Form1 (load settings from file)
+                // and closing Form1 (saving the settings into the file)
+                //Shown += Form1_Shown;
+                FormClosing += Form1_FormClosing;
                 comboBoxPreset.SelectedIndex = 5;
-                comboBoxQuality.SelectedIndex = 6;
+                comboBoxQuality.SelectedIndex = 7;
                 comboBoxAudioBitRate.SelectedIndex = 2;
                 comboBoxAudioStreamNo.SelectedIndex = 0;
-                
+
                 DateTime datum = DateTime.Now;
                 if (datum.Month == 1 || datum.Month == 12)
                 {
@@ -134,6 +168,13 @@ namespace VTC
                     this.buttonAbout.BackgroundImage = null;
                     this.buttonAbout.Text = "About";
                 }
+
+                string userHome = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                if (IsLinux == 1)
+                    settingsPath = "settings.xml";
+                else
+                        settingsPath = userHome + "\\" + "VCT\\settings.xml"; //adds settings to Windows user home folder
+                loadAppSettings();
                 // Use 'Transcode' tab to repack h.264 containers (MP4 vs MKV), or 'Convert' tab for full range of conversion options.
                 // Handler for capturing output data from external process ffmpeg
                 proc.OutputDataReceived += (sender, args) => DisplayOutput(args.Data);
@@ -142,7 +183,32 @@ namespace VTC
             catch { }
         }
 
-        public static int IsLinux
+ /*       private void Form1_Shown(object sender, EventArgs e)
+        {
+            try
+            {
+                // Invoked when the main window is shown: load settings.xml and fill in app parameters from file
+                loadAppSettings();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }*/
+
+        private void Form1_FormClosing(object sender, EventArgs e)
+        {
+            try
+            {
+                // Invoked when the maini window is closed: save settings.xml with parameters set in the GUI
+                saveAppSettings();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        static int IsLinux
         {       // check if OS is Linux (4, 128) or Mac (6)
             get
             {
@@ -1616,6 +1682,8 @@ namespace VTC
         {								//after selecting input, output and options for conversion of 1 files user adds it to a list
             try
             {
+                //first save settings
+                saveAppSettings();
                 number_of_rows++;		//another row in a list
                 DataGridViewRow tempRow = new DataGridViewRow();					//temp rows to store values to be added
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);
@@ -1822,14 +1890,14 @@ namespace VTC
             if (checkBoxH265.Checked)
             {
                 h265 = true;  // use h.265 codec
-                crf = "28";   // set quality factor for h.265, equivalent to 23 for h.264
-                comboBoxQuality.SelectedItem = "28";
+                //crf = "28";   // set quality factor for h.265, equivalent to 23 for h.264
+                //comboBoxQuality.SelectedItem = "28";
             }
             else
             {
                 h265 = false; // use h.264
-                crf = "23";   // set quality factor for h.264, equivalent to 20 for SD
-                comboBoxQuality.SelectedItem = "23";
+                //crf = "23";   // set quality factor for h.264, equivalent to 20 for SD
+                //comboBoxQuality.SelectedItem = "23";
             }
             richTextBoxConv.Text = SetupConversionOptions();//now setup new options
         }
@@ -2688,6 +2756,152 @@ namespace VTC
             richTextBox3.SelectionStart = richTextBox3.Text.Length;
             // scroll it automatically
             richTextBox3.ScrollToCaret();
+        }
+
+        private void loadAppSettings()
+        {
+            try
+            {
+                // Get user's home dir. and save config there
+                XmlDocument doc = new XmlDocument();
+                doc.Load(settingsPath);
+
+                IcomboBoxPreset = int.Parse(doc.SelectSingleNode("/AppSettings/IcomboBoxPreset").InnerText);
+                IcomboBoxQuality = int.Parse(doc.SelectSingleNode("/AppSettings/IcomboBoxQuality").InnerText);
+                IcomboBoxAudioBitRate = int.Parse(doc.SelectSingleNode("/AppSettings/IcomboBoxAudioBitRate").InnerText);
+                BcheckBox180 = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBox180").InnerText);
+                BcheckBox90clockwise = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBox90clockwise").InnerText);
+                BcheckBox90counterclockwise = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBox90counterclockwise").InnerText);
+                BcheckBoxVideoOnly = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxVideoOnly").InnerText);
+                BcheckBoxAudioOnly = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxAudioOnly").InnerText);
+                IcomboBoxAudioStreamNo = doc.SelectSingleNode("/AppSettings/IcomboBoxAudioStreamNo").InnerText;
+                BcheckBoxH265 = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxH265").InnerText);
+                BradioButton_1080p = bool.Parse(doc.SelectSingleNode("/AppSettings/BradioButton_1080p").InnerText);
+                BradioButton_720p = bool.Parse(doc.SelectSingleNode("/AppSettings/BradioButton_720p").InnerText);
+                BradioButton_480p = bool.Parse(doc.SelectSingleNode("/AppSettings/BradioButton_480p").InnerText);
+                BradioButton_No_Video_Resize = bool.Parse(doc.SelectSingleNode("/AppSettings/BradioButton_No_Video_Resize").InnerText);
+                BcheckBoxSetFPS = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxSetFPS").InnerText);
+                TtextBoxFPSout = doc.SelectSingleNode("/AppSettings/TtextBoxFPSout").InnerText;
+                BcheckBoxSlowFPS = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxSlowFPS").InnerText);
+                TtextBoxSlowFPS = doc.SelectSingleNode("/AppSettings/TtextBoxSlowFPS").InnerText;
+                BcheckBoxTransRemoveSubtitle = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxTransRemoveSubtitle").InnerText);
+                BcheckBoxTranscodeAllStreams = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxTranscodeAllStreams").InnerText);
+                BcheckBoxKeepExtension = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxKeepExtension").InnerText);
+                BcheckBoxCopyDuration = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxCopyDuration").InnerText);
+                TtextBoxFromTime = doc.SelectSingleNode("/AppSettings/TtextBoxFromTime").InnerText;
+                TtextBoxCopyDuration = doc.SelectSingleNode("/AppSettings/TtextBoxCopyDuration").InnerText;
+                BcheckBoxKeepSubtitles = bool.Parse(doc.SelectSingleNode("/AppSettings/BcheckBoxKeepSubtitles").InnerText);
+                VnumericUpDownVideoNr = int.Parse(doc.SelectSingleNode("/AppSettings/VnumericUpDownVideoNr").InnerText);
+                VnumericUpDownAudioNr = int.Parse(doc.SelectSingleNode("/AppSettings/VnumericUpDownAudioNr").InnerText);
+
+                // set GUI items to the values from settings.xml file
+                comboBoxPreset.SelectedIndex = IcomboBoxPreset;
+                comboBoxQuality.SelectedIndex = IcomboBoxQuality;
+                comboBoxAudioBitRate.SelectedIndex = IcomboBoxAudioBitRate;
+                checkBox180.Checked = BcheckBox180;
+                checkBox90clockwise.Checked = BcheckBox90clockwise;
+                checkBox90counterclockwise.Checked = BcheckBox90counterclockwise;
+                checkBoxVideoOnly.Checked = BcheckBoxVideoOnly;
+                checkBoxAudioOnly.Checked = BcheckBoxAudioOnly;
+                comboBoxAudioStreamNo.Text = IcomboBoxAudioStreamNo;
+                checkBoxH265.Checked = BcheckBoxH265;
+                radioButton_1080p.Checked = BradioButton_1080p;
+                radioButton_720p.Checked = BradioButton_720p;
+                radioButton_480p.Checked = BradioButton_480p;
+                radioButton_No_Video_Resize.Checked =  BradioButton_No_Video_Resize;
+                checkBoxSetFPS.Checked = BcheckBoxSetFPS;
+                textBoxFPSout.Text = TtextBoxFPSout;
+                checkBoxSlowFPS.Checked = BcheckBoxSlowFPS;
+                textBoxSlowFPS.Text = TtextBoxSlowFPS;
+                checkBoxTransRemoveSubtitle.Checked = BcheckBoxTransRemoveSubtitle;
+                checkBoxTranscodeAllStreams.Checked = BcheckBoxTranscodeAllStreams;
+                checkBoxKeepExtension.Checked = BcheckBoxKeepExtension;
+                checkBoxCopyDuration.Checked = BcheckBoxCopyDuration;
+                textBoxFromTime.Text = TtextBoxFromTime;
+                textBoxCopyDuration.Text = TtextBoxCopyDuration;
+                checkBoxKeepSubtitles.Checked = BcheckBoxKeepSubtitles;
+                numericUpDownVideoNr.Value = VnumericUpDownVideoNr;
+                numericUpDownAudioNr.Value = VnumericUpDownAudioNr;
+
+                audio = doc.SelectSingleNode("/AppSettings/audio").InnerText;
+                out_path = doc.SelectSingleNode("/AppSettings/out_path").InnerText;
+                labelOutConvFile.Text = out_path;
+                labelOutTransFile.Text = out_path;
+                if (audio == "libmp3lame")
+                {
+                    radioButtonMP3.Checked = true;
+                }
+                else if (audio == "aac")
+                {
+                    radioButtonAAC.Checked = true;
+                }
+                else radioButtonCopyAudio.Checked = true;
+
+                container = doc.SelectSingleNode("/AppSettings/container").InnerText;
+                if (container == "mkv")
+                {
+                    radioButtonMKV.Checked = true;
+                }
+                else if (container == "mp4")
+                {
+                    radioButtonMP4.Checked = true;
+                }
+                else radioButtonCopyVideo.Checked = true;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+        }
+
+        private void saveAppSettings()
+        {
+            try
+            {
+                XmlWriter writer = XmlWriter.Create(settingsPath);
+
+                writer.WriteStartDocument();
+                writer.WriteStartElement("AppSettings");
+
+                writer.WriteElementString("IcomboBoxPreset", comboBoxPreset.SelectedIndex.ToString());
+                writer.WriteElementString("IcomboBoxQuality", comboBoxQuality.SelectedIndex.ToString());
+                writer.WriteElementString("IcomboBoxAudioBitRate", comboBoxAudioBitRate.SelectedIndex.ToString());
+                writer.WriteElementString("BcheckBox180", checkBox180.Checked.ToString());
+                writer.WriteElementString("BcheckBox90clockwise", checkBox90clockwise.Checked.ToString());
+                writer.WriteElementString("BcheckBox90counterclockwise", checkBox90counterclockwise.Checked.ToString());
+                writer.WriteElementString("BcheckBoxVideoOnly", checkBoxVideoOnly.Checked.ToString());
+                writer.WriteElementString("BcheckBoxAudioOnly", checkBoxAudioOnly.Checked.ToString());
+                writer.WriteElementString("IcomboBoxAudioStreamNo", comboBoxAudioStreamNo.Text);
+                writer.WriteElementString("BcheckBoxH265", checkBoxH265.Checked.ToString());
+                writer.WriteElementString("BradioButton_1080p", radioButton_1080p.Checked.ToString());
+                writer.WriteElementString("BradioButton_720p", radioButton_720p.Checked.ToString());
+                writer.WriteElementString("BradioButton_480p", radioButton_480p.Checked.ToString());
+                writer.WriteElementString("BradioButton_No_Video_Resize", radioButton_No_Video_Resize.Checked.ToString());
+                writer.WriteElementString("BcheckBoxSetFPS", checkBoxSetFPS.Checked.ToString());
+                writer.WriteElementString("TtextBoxFPSout", textBoxFPSout.Text);
+                writer.WriteElementString("BcheckBoxSlowFPS", checkBoxSlowFPS.Checked.ToString());
+                writer.WriteElementString("TtextBoxSlowFPS", textBoxSlowFPS.Text);
+                writer.WriteElementString("BcheckBoxTransRemoveSubtitle", checkBoxTransRemoveSubtitle.Checked.ToString());
+                writer.WriteElementString("BcheckBoxTranscodeAllStreams", checkBoxTranscodeAllStreams.Checked.ToString());
+                writer.WriteElementString("BcheckBoxKeepExtension", checkBoxKeepExtension.Checked.ToString());
+                writer.WriteElementString("BcheckBoxCopyDuration", checkBoxCopyDuration.Checked.ToString());
+                writer.WriteElementString("TtextBoxFromTime", textBoxFromTime.Text);
+                writer.WriteElementString("TtextBoxCopyDuration", textBoxCopyDuration.Text);
+                writer.WriteElementString("BcheckBoxKeepSubtitles", checkBoxKeepSubtitles.Checked.ToString());
+                writer.WriteElementString("VnumericUpDownVideoNr", numericUpDownVideoNr.Value.ToString());
+                writer.WriteElementString("VnumericUpDownAudioNr", numericUpDownAudioNr.Value.ToString());
+                writer.WriteElementString("audio", audio);
+                writer.WriteElementString("out_path", out_path);
+                writer.WriteElementString("container", container);
+
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+                writer.Close();
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
         }
 
     }

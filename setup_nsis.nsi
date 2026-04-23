@@ -18,7 +18,7 @@ FunctionEnd
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "VCT"
-!define PRODUCT_VERSION "1.10.0.0"
+!define PRODUCT_VERSION "1.11.0.0"
 !define PRODUCT_PUBLISHER "Zlatko Babic"
 !define PRODUCT_WEB_SITE "https://sourceforge.net/projects/videoconvertertranscoder/?source=directory"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\VCT.exe"
@@ -66,6 +66,7 @@ Section "MainSection" SEC01
   SetOverwrite ifnewer
   File "bin\Release\VCT.exe"
   CreateDirectory "$SMPROGRAMS\VCT"
+	CreateDirectory "$APPDATA\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\VCT.lnk" "$INSTDIR\VCT.exe"
   CreateShortCut "$DESKTOP\VCT.lnk" "$INSTDIR\VCT.exe"
   File "ffmpeg.exe"
@@ -73,6 +74,7 @@ Section "MainSection" SEC01
   File "ffplay.exe"
   File "Newtonsoft.Json.dll"
   File "VCT_help.pdf"
+	File "settings.xml"
   CreateDirectory "$PROGRAMFILES\VCT"
   CreateShortCut "$SMPROGRAMS\VCT\Help.lnk" "$INSTDIR\VCT_help.pdf"
   File "copying.txt"
@@ -84,6 +86,7 @@ Section -AdditionalIcons
 SectionEnd
 
 Section -Post
+  CopyFiles "$INSTDIR\settings.xml" "$APPDATA\VCT\settings.xml"
   WriteUninstaller "$INSTDIR\uninst.exe"
   WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\VCT.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
@@ -115,6 +118,7 @@ Section Uninstall
   Delete "$INSTDIR\ffplay.exe"
   Delete "$INSTDIR\Newtonsoft.Json.dll"
   Delete "$INSTDIR\VCT.exe"
+	Delete "$INSTDIR\settings.xml"
   
   Delete "$SMPROGRAMS\VCT\Uninstall.lnk"
   Delete "$$SMPROGRAMS\VCT\Help.lnk"

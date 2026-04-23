@@ -28,7 +28,7 @@
     <PublisherName>Zlatko Babic</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.10.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.11.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -168,6 +168,7 @@
     <None Include="images\play.png" />
     <Content Include="images\santahead-512.png" />
     <Content Include="images\test.jpg" />
+    <Content Include="settings.xml" />
     <Content Include="VCT_help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

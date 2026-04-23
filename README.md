@@ -5,9 +5,8 @@ Since new version needs ffplay and it can't be found as a static build for Linux
 **Just download it, run and it will download all prerequisites and install VCT in your home dir.**  
 For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
 
-** 64-bit MacOS don't work with recent mono releases: WinForms are not ported to 64-bit, so it doesn't work. That's why I didn't include it in main release. Older Macs (I have OSX Lion 10.7) seem to work with some GUI rendering issues. Plase try the Windows release with Crossover for Mac on new Macs, although performance is not on par with natively compiled ffmpeg binaries.
 
-# v1.10.0.0 added option "keep subtitles", ffmpeg bump to v8.0
+# v1.11.0.0 App settings are now saved automatically. i.e. almost everything you set on the GUI is preserved for next run
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -15,9 +14,11 @@ https://sourceforge.net/projects/videoconvertertranscoder/files/
 ### and source code from GITHUB, plus releases with binaries:
 https://github.com/zbabac/VCT
 
-**VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation
-It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.
-I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265. Handbrake can do it, but I have to click to every file, select path, etc.**
+**VCT is _frontend_ for `ffmpeg` tool which I believe, is the best tool for video/audio files manipulation  
+It is command line tool, so it may be inconvenient for those users that can only work with some kind of GUI.  
+I've created this tool because I needed some app that can help me convert my entire video library quickly to the H.264 or H.265.   
+  
+Nowadays, I use it mostly to convert videos from mobile phone and reduce their size.**
 
 ## I wanted to achieve 4 goals:
 
@@ -123,6 +124,9 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
+# v1.11.0.0 App settings are now saved automatically. i.e. almost everything you set on the GUI is preserved for next run  
+Changes to the settings are saved when the app is closed. In case of the crash, there is safety mechanism - save is done when file is added to the batch list (button "Add To batch List" is clicked).
+
 # v1.10.0.0 added option "keep subtitles", ffmpeg bump to v8.0  
 On the GUI only check box "Keep Subtitle" is added, but it is applied for Transcode as well as Multiple Files options. When checked, you will copy all subtitles to the output file. This doesn't apply when you add external subtitle, so take care of that. You can keep subtitles and add a new one ONLY by manual edit of the ffmpeg command.
 ffmpeg is updated to the lates version 8.0 "Huffman".

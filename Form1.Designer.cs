@@ -32,9 +32,9 @@ namespace VTC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -67,6 +67,8 @@ namespace VTC
             this.labelInputTransFile = new System.Windows.Forms.Label();
             this.buttonOutTransFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxAllSubtitles = new System.Windows.Forms.GroupBox();
+            this.checkBoxKeepSubtitles = new System.Windows.Forms.CheckBox();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.groupBoxVideoSize = new System.Windows.Forms.GroupBox();
             this.radioButton_No_Video_Resize = new System.Windows.Forms.RadioButton();
@@ -149,8 +151,6 @@ namespace VTC
             this.buttonCancelBatch = new System.Windows.Forms.Button();
             this.buttonStartQueue = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBoxAllSubtitles = new System.Windows.Forms.GroupBox();
-            this.checkBoxKeepSubtitles = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -160,6 +160,7 @@ namespace VTC
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAudioNr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBoxAllSubtitles.SuspendLayout();
             this.groupBoxVideoSize.SuspendLayout();
             this.groupBoxSlow.SuspendLayout();
             this.groupBoxCPU.SuspendLayout();
@@ -176,7 +177,6 @@ namespace VTC
             this.panelBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).BeginInit();
             this.panel2.SuspendLayout();
-            this.groupBoxAllSubtitles.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -466,6 +466,22 @@ namespace VTC
             this.tabPage2.Controls.Add(this.buttonInputConvFile);
             this.tabPage2.Controls.Add(this.buttonInfo);
             this.tabPage2.Name = "tabPage2";
+            // 
+            // groupBoxAllSubtitles
+            // 
+            this.groupBoxAllSubtitles.Controls.Add(this.checkBoxKeepSubtitles);
+            resources.ApplyResources(this.groupBoxAllSubtitles, "groupBoxAllSubtitles");
+            this.groupBoxAllSubtitles.Name = "groupBoxAllSubtitles";
+            this.groupBoxAllSubtitles.TabStop = false;
+            // 
+            // checkBoxKeepSubtitles
+            // 
+            resources.ApplyResources(this.checkBoxKeepSubtitles, "checkBoxKeepSubtitles");
+            this.checkBoxKeepSubtitles.Checked = true;
+            this.checkBoxKeepSubtitles.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxKeepSubtitles.Name = "checkBoxKeepSubtitles";
+            this.checkBoxKeepSubtitles.UseVisualStyleBackColor = true;
+            this.checkBoxKeepSubtitles.CheckedChanged += new System.EventHandler(this.checkBoxKeepSubtitles_CheckedChanged);
             // 
             // buttonPlay
             // 
@@ -796,23 +812,22 @@ namespace VTC
             // 
             resources.ApplyResources(this.radioButtonCopyAudio, "radioButtonCopyAudio");
             this.radioButtonCopyAudio.Name = "radioButtonCopyAudio";
-            this.radioButtonCopyAudio.TabStop = true;
             this.radioButtonCopyAudio.UseVisualStyleBackColor = true;
             this.radioButtonCopyAudio.CheckedChanged += new System.EventHandler(this.radioButtonCopyAudio_CheckedChanged);
             // 
             // radioButtonMP3
             // 
             resources.ApplyResources(this.radioButtonMP3, "radioButtonMP3");
-            this.radioButtonMP3.Checked = true;
             this.radioButtonMP3.Name = "radioButtonMP3";
-            this.radioButtonMP3.TabStop = true;
             this.radioButtonMP3.UseVisualStyleBackColor = true;
             this.radioButtonMP3.CheckedChanged += new System.EventHandler(this.radioButtonMP3_CheckedChanged);
             // 
             // radioButtonAAC
             // 
             resources.ApplyResources(this.radioButtonAAC, "radioButtonAAC");
+            this.radioButtonAAC.Checked = true;
             this.radioButtonAAC.Name = "radioButtonAAC";
+            this.radioButtonAAC.TabStop = true;
             this.radioButtonAAC.UseVisualStyleBackColor = true;
             this.radioButtonAAC.CheckedChanged += new System.EventHandler(this.radioButtonAAC_CheckedChanged);
             // 
@@ -829,7 +844,6 @@ namespace VTC
             // 
             resources.ApplyResources(this.radioButtonCopyVideo, "radioButtonCopyVideo");
             this.radioButtonCopyVideo.Name = "radioButtonCopyVideo";
-            this.radioButtonCopyVideo.TabStop = true;
             this.radioButtonCopyVideo.UseVisualStyleBackColor = true;
             this.radioButtonCopyVideo.CheckedChanged += new System.EventHandler(this.radioButtonCopyVideo_CheckedChanged);
             // 
@@ -837,7 +851,6 @@ namespace VTC
             // 
             resources.ApplyResources(this.radioButtonMP4, "radioButtonMP4");
             this.radioButtonMP4.Name = "radioButtonMP4";
-            this.radioButtonMP4.TabStop = true;
             this.radioButtonMP4.UseVisualStyleBackColor = true;
             this.radioButtonMP4.CheckedChanged += new System.EventHandler(this.radioButtonMP4_CheckedChanged);
             // 
@@ -1135,11 +1148,11 @@ namespace VTC
             this.dataGridViewBatch.AllowDrop = true;
             this.dataGridViewBatch.AllowUserToAddRows = false;
             this.dataGridViewBatch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewBatch, "dataGridViewBatch");
             this.dataGridViewBatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBatch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -1152,19 +1165,19 @@ namespace VTC
             this.task_cell});
             this.dataGridViewBatch.MultiSelect = false;
             this.dataGridViewBatch.Name = "dataGridViewBatch";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBatch.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewBatch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
             // check_cell
             // 
             this.check_cell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.NullValue = false;
-            this.check_cell.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.NullValue = false;
+            this.check_cell.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.check_cell, "check_cell");
             this.check_cell.Name = "check_cell";
             this.check_cell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1225,20 +1238,6 @@ namespace VTC
             this.panel2.Controls.Add(this.tabControl2);
             this.panel2.Name = "panel2";
             // 
-            // groupBoxAllSubtitles
-            // 
-            this.groupBoxAllSubtitles.Controls.Add(this.checkBoxKeepSubtitles);
-            resources.ApplyResources(this.groupBoxAllSubtitles, "groupBoxAllSubtitles");
-            this.groupBoxAllSubtitles.Name = "groupBoxAllSubtitles";
-            this.groupBoxAllSubtitles.TabStop = false;
-            // 
-            // checkBoxKeepSubtitles
-            // 
-            resources.ApplyResources(this.checkBoxKeepSubtitles, "checkBoxKeepSubtitles");
-            this.checkBoxKeepSubtitles.Name = "checkBoxKeepSubtitles";
-            this.checkBoxKeepSubtitles.UseVisualStyleBackColor = true;
-            this.checkBoxKeepSubtitles.CheckedChanged += new System.EventHandler(this.checkBoxKeepSubtitles_CheckedChanged);
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1263,6 +1262,8 @@ namespace VTC
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVideoNr)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxAllSubtitles.ResumeLayout(false);
+            this.groupBoxAllSubtitles.PerformLayout();
             this.groupBoxVideoSize.ResumeLayout(false);
             this.groupBoxSlow.ResumeLayout(false);
             this.groupBoxSlow.PerformLayout();
@@ -1284,8 +1285,6 @@ namespace VTC
             this.panelBatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatch)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.groupBoxAllSubtitles.ResumeLayout(false);
-            this.groupBoxAllSubtitles.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

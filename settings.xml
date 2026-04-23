@@ -1,31 +1,32 @@
 <AppSettings>
-  <preset>medium</preset>
-  <crf>100</crf>
+  <IcomboBoxPreset>6</IcomboBoxPreset>
+  <IcomboBoxQuality>7</IcomboBoxQuality>
+  <IcomboBoxAudioBitRate>2</IcomboBoxAudioBitRate>
   <audio>aac</audio>
   <container>mkv</container>
-  <audiobitrate>128k</audiobitrate>
-  <checkBox180>false</checkBox180>
-  <checkBox90clockwise>false</checkBox90clockwise>
-  <checkBox90counterclockwise>false</checkBox90counterclockwise>
-  <checkBoxVideoOnly>false</checkBoxVideoOnly>
-  <checkBoxAudioOnly>false</checkBoxAudioOnly>
+  <BcheckBox180>false</BcheckBox180>
+  <BcheckBox90clockwise>false</BcheckBox90clockwise>
+  <BcheckBox90counterclockwise>false</BcheckBox90counterclockwise>
+  <BcheckBoxVideoOnly>false</BcheckBoxVideoOnly>
+  <BcheckBoxAudioOnly>false</BcheckBoxAudioOnly>
   <out_path></out_path>
-  <audio_stream>1</audio_stream>
-  <h265>false</h265>
-  <radioButton_1080p>false</radioButton_1080p>
-  <radioButton_720p>false</radioButton_720p>
-  <radioButton_480p>false</radioButton_480p>
-  <radioButton_No_Video_Resize>true</radioButton_No_Video_Resize>
-  <checkBoxSetFPS>false</checkBoxSetFPS>  //use FPS
-  <textBoxFPSout></textBoxFPSout>  //set FPS
-  <checkBoxSlowFPS>false</checkBoxSlowFPS>  //use slow motion
-  <textBoxSlowFPS></textBoxSlowFPS>   //set slow motion factor
-  <checkBoxTransRemoveSubtitle>true</checkBoxTransRemoveSubtitle>
-  <checkBoxTranscodeAllStreams>false</checkBoxTranscodeAllStreams>
-  <checkBoxKeepExtension>false</checkBoxKeepExtension>
-  <checkBoxCopyDuration>false</checkBoxCopyDuration>
-  <textBoxFromTime>00:00:00</textBoxFromTime>
-  <textBoxCopyDuration>01:00</textBoxCopyDuration>
-  <numericUpDownVideoNr>0</numericUpDownVideoNr>
-  <numericUpDownAudioNr>0</numericUpDownAudioNr>
+  <IcomboBoxAudioStreamNo>1</IcomboBoxAudioStreamNo>
+  <BcheckBoxH265>false</BcheckBoxH265>
+  <BradioButton_1080p>false</BradioButton_1080p>
+  <BradioButton_720p>false</BradioButton_720p>
+  <BradioButton_480p>false</BradioButton_480p>
+  <BradioButton_No_Video_Resize>true</BradioButton_No_Video_Resize>
+  <BcheckBoxSetFPS>false</BcheckBoxSetFPS>  //use FPS
+  <TtextBoxFPSout></TtextBoxFPSout>  //set FPS
+  <BcheckBoxSlowFPS>false</BcheckBoxSlowFPS>  //use slow motion
+  <TtextBoxSlowFPS></TtextBoxSlowFPS>   //set slow motion factor
+  <BcheckBoxTransRemoveSubtitle>true</BcheckBoxTransRemoveSubtitle>
+  <BcheckBoxTranscodeAllStreams>false</BcheckBoxTranscodeAllStreams>
+  <BcheckBoxKeepExtension>false</BcheckBoxKeepExtension>
+  <BcheckBoxCopyDuration>false</BcheckBoxCopyDuration>
+  <TtextBoxFromTime>00:00:00</TtextBoxFromTime>
+  <TtextBoxCopyDuration>01:00</TtextBoxCopyDuration>
+	<BcheckBoxKeepSubtitles>false</BcheckBoxKeepSubtitles>
+  <VnumericUpDownVideoNr>0</VnumericUpDownVideoNr>
+  <VnumericUpDownAudioNr>0</VnumericUpDownAudioNr>
 </AppSettings>
