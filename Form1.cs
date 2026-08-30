@@ -332,9 +332,13 @@ namespace VTC
                 }
                 else
                     out_path = labelOutTransFile.Text;
+
                 str_position = in_file.LastIndexOf('.') + 1;	//get position just before extension
                 in_file = in_file.Substring(0, str_position);	//set temp var in_file with input file name
-                out_file = out_path + in_file;					//set temp var out_file as selected path + input file name
+                if (IsLinux == 0)
+                    out_file = out_path + "\\" + in_file;					//set temp var out_file as selected path + input file name Windows
+                else //Linux
+                    out_file = out_path + "/" + in_file;
                 string _subs = " -map 0:s? ";     //include all subs streams
                 if (checkBoxTransRemoveSubtitle.Checked)
                     _subs = "";  //remove all subs streams
@@ -977,7 +981,7 @@ namespace VTC
                 if (checkBoxKeepSubtitles.Checked)
                 {
                     keep_subtitles = " -map 0:s:?";
-                    srt_options = " -c:s copy";
+                    srt_options = " -c:s copy -disposition:s:0 default ";
                     subtitle_stream = "";
                     add_sub_stream = false;
                     buttonRemoveSubtitle.Enabled = false;
@@ -1031,7 +1035,7 @@ namespace VTC
                 nfi.NumberDecimalSeparator = "."; //use . as number separator as ffmpeg requests it
                 string ext = "";		//initial file extension
                 string input_srt = "";
-                string stream_option = " -map 0:0 -map 0:" + audio_stream + "?"; //bydefault 1 audio stream and no subtitle streams are selected
+                string stream_option = " -map 0:v:0 -map 0:a:" + audio_stream + "?"; //by default 1 audio stream and all subtitle streams are selected
                 vf = "";
                 string input_fps = ""; //if option to set input FPS is used
                 out_fps = ""; //if option to set output FPS is used. i.e. creation of slow motion video
@@ -1111,17 +1115,19 @@ namespace VTC
                 if (add_sub_stream && !audio_only)
                 {
                     input_srt = " -f srt -i \"" + subtitle_stream + "\" ";
-                    stream_option += " -map 1:0";
+                    stream_option += " -map 1:s:0";
                     if (ext == "mp4")
-                        srt_options = " -c:s mov_text";
+                        srt_options = " -c:s mov_text" + " -disposition:s:0 default ";
                     else if (ext == "mkv")
-                        srt_options = " -c:s srt";
+                        srt_options = " -c:s srt" + " -disposition:s:0 default ";
                 }
+
                 // complete string to be passed to process start
                 if (IsLinux==0)
                     ff = "ffmpeg "+ "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + keep_subtitles + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; // Windows
                 else
-                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + keep_subtitles + video + vf + " " + audio_part + srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
+                    ff = " " + "-y" + input_fps + " -i \"" + input_file + "\"" + input_srt + time_duration + stream_option + keep_subtitles + video + vf + " " + audio_part + 
+                      srt_options + out_fps + " \"" + out_file + "1." + ext + "\""; //Linux
 
                 return ff;
             }
@@ -1212,7 +1218,11 @@ namespace VTC
                 str_position = in_file.LastIndexOf('.') + 1;		//get where extension starts
                 in_file = in_file.Substring(0, str_position);       //get just file name without extension
 
-                out_file = out_path + in_file;						//build output file name from input file name
+                if (IsLinux == 0)
+                    out_file = out_path + "\\" + in_file;					//set temp var out_file as selected path + input file name Windows
+                else //Linux
+                    out_file = out_path + "/" + in_file;           //build output file name from input file name
+
                 subtitle_stream = "";                               //don't use additional subtitles for many files
                 add_sub_stream = false;
                 string command = SetupConversionOptions();			//get ffmpeg command for that file
@@ -1338,7 +1348,7 @@ namespace VTC
                 Dictionary<int, string> comboSource = new Dictionary<int, string>(); //create new collection for combo
                 for (int i = 1; i <= count_aud_streams; i++)
                 {
-                    comboSource.Add(i, i.ToString()); //add stream numbers sequentially
+                    comboSource.Add(i, (i-1).ToString()); //add stream numbers sequentially starting from 0
                 }
                 //After adding values to Dictionary, use this as combobox datasource.
                 if (count_aud_streams > 0)
@@ -1540,7 +1550,7 @@ namespace VTC
                         { Audio_info[i - 1].channel_layout = ""; }
                         try
                         {
-                            j_duration = JSON_helper.streams[i].duration;
+                            j_duration = JSON_helper.streams[i-1].duration;
                         }
                         catch (RuntimeBinderException)
                         { j_duration = ""; }
@@ -1563,7 +1573,7 @@ namespace VTC
                         { }
                         if (j_bitrate != "" && j_bitrate !=null )
                             Audio_info[i - 1].bit_rate = Convert.ToDouble(j_bitrate);
-                        pass_audio_info += "Stream: " + i + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
+                        pass_audio_info += "Stream: " + (i-1) + "\nCodec: \t" + Audio_info[i - 1].codec_long_name +
                             "\nBit rate: \t" + String.Format("{0:0}", Audio_info[i - 1].bit_rate / 1000) + " kb/s\nDuration: \t" +
                             Audio_info[i - 1].duration + "\nLanguage: \t";
                         try
@@ -1593,7 +1603,7 @@ namespace VTC
                         }
                         catch (RuntimeBinderException)
                         { Subtitle_info[i - 1].language = ""; }
-                        pass_subtitle_info += "Stream: " + i + "\nLanguage: \t" +
+                        pass_subtitle_info += "Stream: " + (i-1) + "\nLanguage: \t" +
                             Subtitle_info[i - 1].language + "\nCodec: \t" + Subtitle_info[i - 1].codec_long_name + "\n\n";
                     }
                 }
@@ -1753,7 +1763,7 @@ namespace VTC
         {           //select which audio stream to encode in output file, useful if encoding multiple audio file
             audio_stream = comboBoxAudioStreamNo.Text;
             if (audio_stream.Contains(","))
-                audio_stream = "1";
+                audio_stream = "0";
             richTextBoxConv.Text = SetupConversionOptions();
         }
 

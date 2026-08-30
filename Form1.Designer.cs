@@ -631,7 +631,8 @@ namespace VTC
             resources.GetString("comboBoxAudioStreamNo.Items5"),
             resources.GetString("comboBoxAudioStreamNo.Items6"),
             resources.GetString("comboBoxAudioStreamNo.Items7"),
-            resources.GetString("comboBoxAudioStreamNo.Items8")});
+            resources.GetString("comboBoxAudioStreamNo.Items8"),
+            resources.GetString("comboBoxAudioStreamNo.Items9")});
             this.comboBoxAudioStreamNo.Name = "comboBoxAudioStreamNo";
             this.comboBoxAudioStreamNo.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioStreamNo_SelectedIndexChanged);
             // 

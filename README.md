@@ -6,7 +6,7 @@ Since new version needs ffplay and it can't be found as a static build for Linux
 For other distros you need to do it manually. Please scroll to the end of this file to see how, and read INSTALL_README.txt included with download to learn how.  
 
 
-# v1.11.0.0 App settings are now saved automatically. i.e. almost everything you set on the GUI is preserved for next run
+# v1.11.1.0 Streams are now copied/added according to the ffmpeg manual, this applies especially for subtitles: if there is a subtitle it is copied as default
 
 ### You can download binaries and source code from Sourceforge:
 https://sourceforge.net/projects/videoconvertertranscoder/files/
@@ -71,7 +71,7 @@ If you want files to be stored in different folder than input files, then select
 	
 You can use **drag&drop** instead to click "Input File(s)..." buttons. Just drag file(s) on those buttons from Windows Explorer.
 
-**Latest version 1.9.7**
+**Latest version 1.11.1**
 
 
 
@@ -124,6 +124,10 @@ Added git repository. It is now preferred method to get source code. To clone us
 Please contact me via discussion board if you want to collaborate or send me an email: zlatko.babic@mail.com.
 
 ### Change log
+
+# v1.11.1.0 Streams are now copied/added according to the ffmpeg manual.  
+This applies especially for subtitles: if there is a subtitle it is copied as default
+
 # v1.11.0.0 App settings are now saved automatically. i.e. almost everything you set on the GUI is preserved for next run  
 Changes to the settings are saved when the app is closed. In case of the crash, there is safety mechanism - save is done when file is added to the batch list (button "Add To batch List" is clicked).
 
