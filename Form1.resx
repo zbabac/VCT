@@ -2589,7 +2589,7 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
     <value>40</value>
   </data>
   <data name="comboBoxAudioStreamNo.Text" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;comboBoxAudioStreamNo.Name" xml:space="preserve">
     <value>comboBoxAudioStreamNo</value>
