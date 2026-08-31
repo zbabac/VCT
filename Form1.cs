@@ -340,8 +340,13 @@ namespace VTC
                 else //Linux
                     out_file = out_path + "/" + in_file;
                 string _subs = " -map 0:s? ";     //include all subs streams
+                string _copy = " -c copy "; //what streams to copy
                 if (checkBoxTransRemoveSubtitle.Checked)
                     _subs = "";  //remove all subs streams
+                else if (str_extension == "1.mkv")
+                    _copy = " -c:v copy -c:a copy -c:s srt ";
+                else 
+                    _copy = " -c:v copy -c:a copy -c:s mov_text ";
                 string _copy_all_streams = " -map 0:v? -map 0:a? ";  //include all v&a streams
                 if (!checkBoxTranscodeAllStreams.Checked)
                 {
@@ -352,9 +357,9 @@ namespace VTC
                     from_duration = " -ss " + textBoxFromTime.Text + " -t " + textBoxCopyDuration.Text + " ";
                 string command = "";
                 if (IsLinux == 0)
-                    command = "ffmpeg -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\"";//define ffmpeg command Windows
+                    command = "ffmpeg -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + _copy + " \"" + out_file + str_extension + "\"";//define ffmpeg command Windows
                 else
-                    command = " -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + " -c copy \"" + out_file + str_extension + "\""; //Linux or Mac mono
+                    command = " -y -i \"" + input_file + "\" " + from_duration + _copy_all_streams + _subs + _copy + " \"" + out_file + str_extension + "\""; //Linux or Mac mono
                 number_of_rows++;								//increase counter so we know how many files in the list are
                 DataGridViewRow tempRow = new DataGridViewRow();//define row that will store command
                 DataGridViewCell check_cell = new DataGridViewCheckBoxCell(false);//define each column i a row -cell

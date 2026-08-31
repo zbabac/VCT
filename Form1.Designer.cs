@@ -623,16 +623,7 @@ namespace VTC
             resources.ApplyResources(this.comboBoxAudioStreamNo, "comboBoxAudioStreamNo");
             this.comboBoxAudioStreamNo.FormattingEnabled = true;
             this.comboBoxAudioStreamNo.Items.AddRange(new object[] {
-            resources.GetString("comboBoxAudioStreamNo.Items"),
-            resources.GetString("comboBoxAudioStreamNo.Items1"),
-            resources.GetString("comboBoxAudioStreamNo.Items2"),
-            resources.GetString("comboBoxAudioStreamNo.Items3"),
-            resources.GetString("comboBoxAudioStreamNo.Items4"),
-            resources.GetString("comboBoxAudioStreamNo.Items5"),
-            resources.GetString("comboBoxAudioStreamNo.Items6"),
-            resources.GetString("comboBoxAudioStreamNo.Items7"),
-            resources.GetString("comboBoxAudioStreamNo.Items8"),
-            resources.GetString("comboBoxAudioStreamNo.Items9")});
+            resources.GetString("comboBoxAudioStreamNo.Items")});
             this.comboBoxAudioStreamNo.Name = "comboBoxAudioStreamNo";
             this.comboBoxAudioStreamNo.SelectedIndexChanged += new System.EventHandler(this.comboBoxAudioStreamNo_SelectedIndexChanged);
             // 

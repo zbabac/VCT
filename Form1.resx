@@ -2549,33 +2549,6 @@ or Drag'n'Drop files to the button 'Input Files...or to the list to the right!'.
   <data name="comboBoxAudioStreamNo.Items" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="comboBoxAudioStreamNo.Items1" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items2" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items3" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items4" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items5" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items6" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items7" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items8" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="comboBoxAudioStreamNo.Items9" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="comboBoxAudioStreamNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 323</value>
   </data>
